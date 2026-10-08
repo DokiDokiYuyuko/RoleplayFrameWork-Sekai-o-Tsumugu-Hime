@@ -1,0 +1,46 @@
+[
+  {
+    "id": "wenkai",
+    "name": "霞鹜文楷轻便版",
+    "source": "https://raw.githubusercontent.com/lxgw/LxgwWenKai-Lite/50c4bf6dab2ba39db6ec885e68449caa36bde38d/fonts/TTF/LXGWWenKaiLite-Regular.ttf",
+    "commit": "50c4bf6dab2ba39db6ec885e68449caa36bde38d",
+    "license": "SIL-OFL-1.1",
+    "license_source": "https://github.com/lxgw/LxgwWenKai-Lite/blob/50c4bf6dab2ba39db6ec885e68449caa36bde38d/OFL.txt",
+    "file": "/fonts/wenkai.ttf",
+    "bytes": 13872424,
+    "sha256": "140c99ba4e28e817cec49bf82a0c5fcdc4fe633fb9dfda16d0ee8d59a8545f15"
+  },
+  {
+    "id": "xiaowei",
+    "name": "站酷小薇",
+    "source": "https://raw.githubusercontent.com/google/fonts/6e8069ff8ba3dab2a397fb30e7fbd243aba9b57a/ofl/zcoolxiaowei/ZCOOLXiaoWei-Regular.ttf",
+    "commit": "6e8069ff8ba3dab2a397fb30e7fbd243aba9b57a",
+    "license": "SIL-OFL-1.1",
+    "license_source": "https://github.com/google/fonts/blob/6e8069ff8ba3dab2a397fb30e7fbd243aba9b57a/ofl/zcoolxiaowei/OFL.txt",
+    "file": "/fonts/xiaowei.ttf",
+    "bytes": 6313808,
+    "sha256": "a42b620140f493db42f741351dfbf343c0936d58588ee8004b8b2a218d997ff1"
+  },
+  {
+    "id": "huangyou",
+    "name": "站酷庆科黄油",
+    "source": "https://raw.githubusercontent.com/google/fonts/6e8069ff8ba3dab2a397fb30e7fbd243aba9b57a/ofl/zcoolqingkehuangyou/ZCOOLQingKeHuangYou-Regular.ttf",
+    "commit": "6e8069ff8ba3dab2a397fb30e7fbd243aba9b57a",
+    "license": "SIL-OFL-1.1",
+    "license_source": "https://github.com/google/fonts/blob/6e8069ff8ba3dab2a397fb30e7fbd243aba9b57a/ofl/zcoolqingkehuangyou/OFL.txt",
+    "file": "/fonts/huangyou.ttf",
+    "bytes": 8328684,
+    "sha256": "54f0c0df4308cd74cd0f2fd3494ae054dbc4a1fd6fa7d71f4807eb4cdd8b4136"
+  },
+  {
+    "id": "mashan",
+    "name": "马善政毛笔楷书",
+    "source": "https://raw.githubusercontent.com/google/fonts/6e8069ff8ba3dab2a397fb30e7fbd243aba9b57a/ofl/mashanzheng/MaShanZheng-Regular.ttf",
+    "commit": "6e8069ff8ba3dab2a397fb30e7fbd243aba9b57a",
+    "license": "SIL-OFL-1.1",
+    "license_source": "https://github.com/google/fonts/blob/6e8069ff8ba3dab2a397fb30e7fbd243aba9b57a/ofl/mashanzheng/OFL.txt",
+    "file": "/fonts/mashan.ttf",
+    "bytes": 5857936,
+    "sha256": "6d2546bb189c732a8ca29af9e22457b152387d158aa459e4ac2ce1e51788b7fb"
+  }
+]

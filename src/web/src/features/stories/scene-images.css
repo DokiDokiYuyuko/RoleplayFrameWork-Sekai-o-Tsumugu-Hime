@@ -1,0 +1,17 @@
+@layer ui.pages {
+.story-scene-image { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius-control); margin-bottom: var(--space-3); }
+.scene-image-failure { color: var(--text-2); font-size: var(--fs-xs); }
+.scene-image-picker { position: fixed; inset: 50% auto auto 50%; transform: translate(-50%, -50%); width: min(720px, calc(100vw - 32px)); max-height: calc(100dvh - 32px); overflow: auto; padding: var(--space-5); border: var(--border-width) solid var(--border-default); border-radius: var(--radius-panel); background: var(--surface-1); color: var(--text-1); box-shadow: var(--shadow-e3); }
+.scene-image-picker__head, .scene-image-picker__foot { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); }
+.scene-image-picker__head h2 { margin: 0; font: var(--fw-regular) var(--fs-2xl)/var(--lh-ui) var(--font-display); }
+.scene-image-picker__hint { color: var(--text-2); font-size: var(--fs-sm); line-height: var(--lh-ui); }
+.scene-image-picker__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); }
+.scene-image-picker .scene-image-picker__choice { display: block; height: auto; min-width: 0; padding: var(--space-2); border: var(--border-width) solid var(--border-default); text-align: left; overflow: hidden; }
+.scene-image-picker__choice .ui-btn__label { display: flex; flex-direction: column; align-items: stretch; gap: var(--space-label); width: 100%; white-space: normal; }
+.scene-image-picker__choice img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius-mark); }
+.scene-image-picker__empty { display: grid; place-items: center; min-height: 90px; }
+.scene-image-picker__choice[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); outline: var(--border-width) solid var(--accent); outline-offset: calc(var(--border-width) * -1); }
+.scene-image-picker__error { color: var(--danger); font-size: var(--fs-sm); }
+.scene-image-picker__foot { justify-content: flex-end; margin-top: var(--space-4); }
+@media (max-width: 560px) { .scene-image-picker { padding: var(--space-4); } .scene-image-picker__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+}

@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "collection": "Moon-white Iris Picturebook",
+  "createdOn": "2026-10-07",
+  "purpose": "Public decorative UI art only. No private story or character media was read or provided.",
+  "generation": {
+    "tool": "image_gen.imagegen (built-in)",
+    "mode": "generate",
+    "transparent_background": true,
+    "inputImages": [],
+    "model": "Tool-controlled; no model name asserted"
+  },
+  "sharedDirection": "Japanese fantasy picturebook; soft watercolor and gouache, thin violet lines, upper-left moonlight; moon-white/iris-violet #7460B5/pale-lavender #B7A2EC; objects and scene, no public protagonist, no writing or portrait.",
+  "processing": "Pillow LANCZOS delivery downsampling only; RGBA alpha preserved. Generated originals remain in external validation evidence and the built-in tool output. No repainting or silhouette extraction.",
+  "themeStrategy": {
+    "light": [
+      "#F7F7FC",
+      "#FFFFFF"
+    ],
+    "dark": [
+      "#171622",
+      "#242233"
+    ],
+    "method": "Identical transparent artwork in both modes. PageArt uses existing --color-primary for a faint radial CSS support wash. No baked rectangular backdrop, no inversion or recoloring."
+  },
+  "accessibility": "Decorative span aria-hidden=true, image alt empty; no interactive element.",
+  "failureFallback": "Image onError sets hidden=true; CSS hides the entire art including its support wash. Wrapper retains its aspect ratio and dimensions; no broken-image symbol or private-media substitute.",
+  "licensingNotes": "New artwork generated through the built-in tool for the authorized project, without reference photographs or third-party downloaded assets. Use remains subject to the tool/service terms; this manifest does not claim exclusive rights or provide a separate third-party license.",
+  "assets": [
+    {
+      "kind": "story",
+      "file": "moon-bridge-v1.png",
+      "pixels": [
+        640,
+        360
+      ],
+      "bytes": 353019,
+      "sha256": "f67e6272887e6a17acc28c8b9f23f88bfd70cc18af66a61463ab4ed4fb22208d",
+      "generatedPixels": [
+        1672,
+        941
+      ],
+      "generationOutputId": "exec-a6edbd09-9d6e-40ec-a65b-a73716f6dae8.png",
+      "displayPixels": [
+        320,
+        180
+      ],
+      "compactPixels": [
+        64,
+        36
+      ],
+      "transparent": true,
+      "prompt": "Use case: illustration-story.\nAsset type: public decorative UI illustration for a Japanese fantasy writing app, first of a coherent three-asset picture-book series.\nPrimary request: \"moon bridge and distant lights\": an empty, gently arched pale stone footbridge crossing a ribbon of water, a small distant lantern glow beyond it, and a slender crescent moon above. No people.\nStyle/medium: elegant Japanese fantasy picture-book watercolor and lightly opaque gouache on paper, fine hand-drawn violet lines, soft pigment texture, airy and fresh, gently feathered silhouette edges. Flat painted art, not photorealistic or 3D.\nComposition/framing: one isolated wide scene, 16:9 canvas, centered, broad horizontal silhouette that stays understandable displayed at 320x180 and 64x36. Keep all major silhouettes within safe margins. Sparse details, graceful large shapes. Scene islands fade into actual transparent alpha around the whole composition, no rectangular landscape backdrop.\nLighting/mood: consistent soft moonlight from upper left, tiny warm distant lamp accents, quiet anticipation.\nColor palette: moon-white, iris violet #7460B5, pale lavender #B7A2EC, muted periwinkle and a very restrained pale gold. Shapes must read over both near-white #F7F7FC and deep purple-black #171622.\nConstraints: genuinely transparent background, generous empty transparent margins, preserve watercolor feathering without white opaque halo. No text, no glyphs, no numbers, no logo, no watermark, no portrait, no girl or protagonist, no game metal frame, no UI widgets, no symbols resembling interface icons. Produce a finished bitmap illustration."
+    },
+    {
+      "kind": "characters",
+      "file": "library-characters-v1.png",
+      "pixels": [
+        320,
+        192
+      ],
+      "bytes": 102336,
+      "sha256": "73b3af4c8d89267ee30e91b1e384a2342ff9472ca110b71dc3780873699879a0",
+      "generatedPixels": [
+        1619,
+        971
+      ],
+      "generationOutputId": "exec-eb0fe333-c0d9-44bb-96e6-3e1c6f7331ff.png",
+      "displayPixels": [
+        160,
+        96
+      ],
+      "compactPixels": [
+        80,
+        48
+      ],
+      "transparent": true,
+      "prompt": "Use case: illustration-story.\nAsset type: public decorative UI illustration for a Japanese fantasy writing app, second of a coherent three-asset picture-book series.\nPrimary request: a small enchanting library vignette with violet-bound books arranged in a low open shelf and three abstract bookmark cards resting among the books. The cards have only plain colored fields and simple border lines: absolutely no face, no figure, no portrait and no text.\nStyle/medium: elegant Japanese fantasy picture-book watercolor and lightly opaque gouache on paper, fine hand-drawn violet lines, soft pigment texture, airy and fresh, gently feathered silhouette edges. Flat painted art, not photorealistic or 3D. Painterly warm paper and violet binding match a moonlit bridge picture-book series.\nComposition/framing: one isolated compact library vignette, 5:3 landscape canvas, balanced silhouette, centered and all objects within safe margins. Readable at 160x96 and 80x48; use large simple book and card shapes rather than dense details. Bookshelf cropped into a complete miniature room-object vignette, without a rectangular room background or outer frame.\nLighting/mood: soft moonlight from upper left, warm ivory page highlights, calm and inviting.\nColor palette: moon-white, iris violet #7460B5, pale lavender #B7A2EC, muted periwinkle, a very restrained pale gold accent. Shapes must read over near-white #F7F7FC and deep purple-black #171622.\nConstraints: genuinely transparent background with empty transparent margins; soft watercolor feathering without an opaque white halo. No text, handwriting, letters, glyphs, numbers, title lettering, logo or watermark. No people or characters, no human-shaped silhouette; bookmark cards are fully abstract. No realistic 3D, game metal frame or interface icons. Produce a finished bitmap illustration."
+    },
+    {
+      "kind": "character-editor",
+      "file": "editor-character-v1.png",
+      "pixels": [
+        240,
+        240
+      ],
+      "bytes": 65294,
+      "sha256": "4b9c5064563f0596a30ae77e55804b941692305d200ccf3a99317641e7c24d24",
+      "generatedPixels": [
+        1254,
+        1254
+      ],
+      "generationOutputId": "exec-0b5b2468-2d46-4624-9345-1ee4b5a13b41.png",
+      "displayPixels": [
+        120,
+        120
+      ],
+      "compactPixels": [
+        72,
+        72
+      ],
+      "transparent": true,
+      "prompt": "Use case: illustration-story.\nAsset type: public decorative UI illustration for a Japanese fantasy writing app, third of a coherent three-asset picture-book series.\nPrimary request: an open character-setting notebook with entirely blank ivory pages, violet binding and a graceful translucent lavender glass dip pen resting diagonally across the notebook. One soft violet ribbon bookmark. The notebook is an object only, no user character.\nStyle/medium: elegant Japanese fantasy picture-book watercolor and lightly opaque gouache on paper, fine hand-drawn violet lines, soft pigment texture, airy and fresh, gently feathered silhouette edges. Flat painted art, not photorealistic or 3D. Match the moonlit pale-violet bridge and enchanted violet library picture-book collection.\nComposition/framing: one isolated object vignette, square canvas, viewed from a slight overhead angle, open book and pen centered with safe transparent margins. Readable at 120x120 and 72x72; use broad blank page shapes, clear pen silhouette, modest details.\nLighting/mood: consistent soft moonlight from upper left, quiet creative invitation, softly luminous glass.\nColor palette: moon-white, iris violet #7460B5, pale lavender #B7A2EC, muted periwinkle and very restrained pale gold. Shapes must read over near-white #F7F7FC and deep purple-black #171622.\nConstraints: genuinely transparent background, empty transparent margins, preserve soft watercolor feathering without opaque white halo. Absolutely no text or writing, no letters, numbers, glyphs, drawing diagrams, portrait, human silhouette, people, logo or watermark. Blank notebook pages, no metallic game UI or interface icons. Produce a finished bitmap illustration."
+    }
+  ]
+}

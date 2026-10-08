@@ -1,0 +1,1528 @@
+[
+  {
+    "file": "src/web/public/brand/sekai-o-tsumugu-hime-emblem.png",
+    "bytes": 963754,
+    "sha256": "ce0b0efa647b21220588434ac27709eae4a2f2a489aea153d9090e14b4578b2b"
+  },
+  {
+    "file": "src/web/public/brand/sekai-o-tsumugu-hime-wordmark.png",
+    "bytes": 1531520,
+    "sha256": "f94386129fbb18e7bdb042d2b4d6ba2862adf00f69fb8f19d3c949c728dd7baf"
+  },
+  {
+    "file": "src/web/public/fonts/huangyou.ttf",
+    "bytes": 8328684,
+    "sha256": "54f0c0df4308cd74cd0f2fd3494ae054dbc4a1fd6fa7d71f4807eb4cdd8b4136"
+  },
+  {
+    "file": "src/web/public/fonts/mashan.ttf",
+    "bytes": 5857936,
+    "sha256": "6d2546bb189c732a8ca29af9e22457b152387d158aa459e4ac2ce1e51788b7fb"
+  },
+  {
+    "file": "src/web/public/fonts/wenkai.ttf",
+    "bytes": 13872424,
+    "sha256": "140c99ba4e28e817cec49bf82a0c5fcdc4fe633fb9dfda16d0ee8d59a8545f15"
+  },
+  {
+    "file": "src/web/public/fonts/xiaowei.ttf",
+    "bytes": 6313808,
+    "sha256": "a42b620140f493db42f741351dfbf343c0936d58588ee8004b8b2a218d997ff1"
+  },
+  {
+    "file": "src/web/public/brand/picturebook/editor-character-v1.png",
+    "bytes": 65294,
+    "sha256": "4b9c5064563f0596a30ae77e55804b941692305d200ccf3a99317641e7c24d24"
+  },
+  {
+    "file": "src/web/public/brand/picturebook/library-characters-v1.png",
+    "bytes": 102336,
+    "sha256": "73b3af4c8d89267ee30e91b1e384a2342ff9472ca110b71dc3780873699879a0"
+  },
+  {
+    "file": "src/web/public/brand/picturebook/moon-bridge-v1.png",
+    "bytes": 353019,
+    "sha256": "f67e6272887e6a17acc28c8b9f23f88bfd70cc18af66a61463ab4ed4fb22208d"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/v1/characters-enchanted-library.png",
+    "bytes": 473037,
+    "sha256": "afa394e3a3075cc8edf25add2f4df2ece364d73c0efaefae86757eaf628b602b"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/v1/characters-enchanted-library.webp",
+    "bytes": 110020,
+    "sha256": "3c416c5c21e582ada066e25801e7e9fa23eca143bcfa838b17b9b02d10b45553"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/v1/moonweave-crest.png",
+    "bytes": 66872,
+    "sha256": "3fbadb0b946853edc2022eae09b37d561b6248417ecb614b402b07f6ccbfb0f0"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/v1/moonweave-crest.webp",
+    "bytes": 23332,
+    "sha256": "8a7c28b52421d7fe27437df7a02194b1f9b47ef701be988c15c49495cfc068a9"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/avatar-frames/gilt-enamel-256.webp",
+    "bytes": 20032,
+    "sha256": "7e474e1a24eba6abfa1fb4b1256088df1ea4b1f7fa56f8d674046891c293e7d0"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/avatar-frames/gilt-enamel.png",
+    "bytes": 218242,
+    "sha256": "01e9becf9cacd85e39e41270b1f90ccbc4dec7d25a75f508439e3537d3ade41e"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/avatar-frames/gilt-enamel.webp",
+    "bytes": 57024,
+    "sha256": "2a7479a12228afd0df397481784ac1c2a1e5a7ef3ec6e1219c093048f6deb0fd"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/avatar-frames/iris-wreath-256.webp",
+    "bytes": 15328,
+    "sha256": "8ec5fccdd6660bf1e8354e74437b1cf9d39483e290cb8981264127118b3ad365"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/avatar-frames/iris-wreath.png",
+    "bytes": 161153,
+    "sha256": "4e17fce0812f3dcac4de1315bf3ed0670c859b7d1b3375c041d0586fe92c532f"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/avatar-frames/iris-wreath.webp",
+    "bytes": 41756,
+    "sha256": "f7b1e39a893dfd2a0cef828dc0df58e9b5542f81c5bb79bc2b1a61d571b235d8"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/avatar-frames/moon-silver-256.webp",
+    "bytes": 14396,
+    "sha256": "03c858a6b1b48d6cf35abce02743eb1bdebcfdab09e5386cbe95bea5c7ce4b5e"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/avatar-frames/moon-silver.png",
+    "bytes": 158845,
+    "sha256": "916952d5c18fdb8403b48da2e104754f9920bbcc9acdf798b4fd60f7291698b5"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/avatar-frames/moon-silver.webp",
+    "bytes": 37774,
+    "sha256": "54e49b0324a05de012c730cfcaf482b88bf79ae49d44c5e01e9323c78521439d"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/avatar-frames/rose-vine-256.webp",
+    "bytes": 17640,
+    "sha256": "f0d3ff0b2059bcc86fc8dc5731f567b5590dc6cce87581af4be5c91a0ac1cf0c"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/avatar-frames/rose-vine.png",
+    "bytes": 193326,
+    "sha256": "23aa54c1d83a46d1661ebdff73b046dca148b091987b7453cb87c4425ff2883d"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/avatar-frames/rose-vine.webp",
+    "bytes": 49846,
+    "sha256": "5e1bb0f8941db19c1da31430a8555c4dc54783c7cff206e91bdfa95a0d3dea6e"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/avatar-frames/starburst-256.webp",
+    "bytes": 18508,
+    "sha256": "1d7effe51a0f32d79e6ec234685934e6315d3145dfd5fe33e2aa718afd0ba4b4"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/avatar-frames/starburst.png",
+    "bytes": 177777,
+    "sha256": "58f682b5696768865a9784661ae3b34980a1e37c85d80a64e3c7fe01d7e860c1"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/avatar-frames/starburst.webp",
+    "bytes": 50296,
+    "sha256": "f7526d6191da577ab577e0cc77e6ea7da693a076d1483267030cb553b196155e"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/avatar-frames/tide-teal-256.webp",
+    "bytes": 18540,
+    "sha256": "5b7a3ed18a65758986653b4812cfdfabbe3cdebe9eedad29dab10a61b65befea"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/avatar-frames/tide-teal.png",
+    "bytes": 196650,
+    "sha256": "11f6d7694686c2d4e13234ec2911ad18e04b9ad2647316c124c973d4e3cfc2fa"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/avatar-frames/tide-teal.webp",
+    "bytes": 51530,
+    "sha256": "37e60f7aaa779d155bf47ad96a3d7ba8071e5fcd3c87fa541ea7171de5d92768"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/backdrops/ambient-light.png",
+    "bytes": 676880,
+    "sha256": "c918eeee5eefd9d21f21be0db5972c46cad6ce3eafc693c0ae58c67060298cc0"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/backdrops/ambient-light.webp",
+    "bytes": 122718,
+    "sha256": "c0573aa7e97c21bb297bcb2d480546373c15851528c5e4812ba20e685e0a671a"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/backdrops/ambient-night.png",
+    "bytes": 849200,
+    "sha256": "d7397c3befcd960ddba70c1ce431002100674e33f97ccdb2cc25ae53373f3c60"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/backdrops/ambient-night.webp",
+    "bytes": 125354,
+    "sha256": "93bfd64e3cb9a9bd737cac2539d7cc73239effef5e467d351ad89a6077729df5"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/backdrops/header-band-light.png",
+    "bytes": 409531,
+    "sha256": "439dc547dc8b36e92b521dd7ed33674fa6f96f380979d2e2cf3d6b8938a97ec5"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/backdrops/header-band-light.webp",
+    "bytes": 89988,
+    "sha256": "5014e06095ba5df1e2029bb5d90ac405c865d0ee9197f0898998bdbd5caa8b3f"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/backdrops/header-band-night.png",
+    "bytes": 417582,
+    "sha256": "15fbe047f2c22ecd90262ca934b552d9595035363298d5f273f844cd9d145900"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/backdrops/header-band-night.webp",
+    "bytes": 78136,
+    "sha256": "395ce337e313bb2170ae6ff85a3ccbf47ab54ae657eb21c347ca314b7ac34d89"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/backdrops/nav-light.png",
+    "bytes": 572826,
+    "sha256": "9f9d48df20a4dc5eee577eee609ee61a467bdd5dc3e0faf8e613ba2b26257d17"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/backdrops/nav-light.webp",
+    "bytes": 35350,
+    "sha256": "7decf1e8d9e9859a32b7e8e369ee9f1f1fcdac48dc4c05b944a547a4a0da197c"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/backdrops/nav-night.png",
+    "bytes": 778469,
+    "sha256": "b4eab3b709651a9a0b756ec9e5d7e57ff396a79252c31e1ec3344afb8e5ac4d1"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/backdrops/nav-night.webp",
+    "bytes": 60792,
+    "sha256": "a579f35a06b77aa7b3ed9766ccae6e11f56251fad867093e23f180b95e983901"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/backdrops/weave-light.png",
+    "bytes": 52911,
+    "sha256": "5b82c70fd5bf650103c71a3c807d06f4b61f99c45b64bac0d902d25e90edc88b"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/backdrops/weave-light.webp",
+    "bytes": 698,
+    "sha256": "7a5bbaf42f42897ad690d3a919572d302c06934c147505d14be34eb97356aa86"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/backdrops/weave-night.png",
+    "bytes": 76952,
+    "sha256": "812ded2b8af57a304aa5b21d2a8f2936c544103d38bda040a1b93f857f7211b7"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/backdrops/weave-night.webp",
+    "bytes": 2178,
+    "sha256": "15310c4b6c44558a21a2cf737b162ea574ef6bf304e655abb82124d1e305443f"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/cards/card-frame-night.png",
+    "bytes": 59425,
+    "sha256": "9a0fe3a0a40083a5840f0ef3902575972675bfdde23fb3ec73372eca6d50be11"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/cards/card-frame-night.webp",
+    "bytes": 21772,
+    "sha256": "0e1dcb888f7d62da84ba968f6e4e0cde3f4ff14221fcad4121416c5bf1710d00"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/cards/card-frame.png",
+    "bytes": 57485,
+    "sha256": "4809cdecc56fcb2d62c93a1589cda6bb9a782547cc43e74feff1966cfde769c5"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/cards/card-frame.webp",
+    "bytes": 21616,
+    "sha256": "bac098b82e131202acd1d14039ec2645392cc5db68177047a17ed98ebc51d0c0"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/cards/nameplate-left-night.png",
+    "bytes": 16502,
+    "sha256": "932898a08e9eb53793a3da12261f0ee154425ddf411caf71934df818019c8a15"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/cards/nameplate-left-night.webp",
+    "bytes": 8942,
+    "sha256": "5ee2ae6321dc7a0eba30a0cce9e71b7dd66aef897ffce829e89aad21130cbd96"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/cards/nameplate-left.png",
+    "bytes": 18262,
+    "sha256": "07ee108946802ad924b86f502255fb4b52137c386f721b7836782d50be807fbe"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/cards/nameplate-left.webp",
+    "bytes": 9598,
+    "sha256": "5684e8749ea7409ed5f652a291410adab145c0965f1d59a1b7a3796e104d0aa1"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/cards/portrait-edge-night.png",
+    "bytes": 49270,
+    "sha256": "12087f27da9f3bcd93a02bbb1ad1a9bcb7c5c7b70441e52370dfc326e15892da"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/cards/portrait-edge-night.webp",
+    "bytes": 19282,
+    "sha256": "7b6e2a4c00f783dbfa58437d49457ce77333d94ea06d37c2ae9902dd086552c5"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/cards/portrait-edge.png",
+    "bytes": 57998,
+    "sha256": "f3e3b3e173ad1a56f311290662a2fe592f9217385d119dcc36886a21de164a5a"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/cards/portrait-edge.webp",
+    "bytes": 23148,
+    "sha256": "d07589db3a7eb6283c7ec4a514ff4b02b040ee52765199d3c2920a6d33b3d2e3"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/controls/check-jewel-night.png",
+    "bytes": 3742,
+    "sha256": "459a549c7557663cf005dbf4d0c14fba7e4b3102b2b03a2e804ecd4556c636b3"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/controls/check-jewel-night.webp",
+    "bytes": 1616,
+    "sha256": "c4c2d6f9966fae97f7eb92a1e59b7666d10ca968da8b195667f73fa1ec804429"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/controls/check-jewel.png",
+    "bytes": 4955,
+    "sha256": "6968b7d547f2965b9bc252a08ee9a842db861583a2991d76dbab4a90c31bd2a3"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/controls/check-jewel.webp",
+    "bytes": 1806,
+    "sha256": "5019bb64e7ed7b5307ede329bde8cbc2665fb0fc0d13949a7a0de1fc49b6e60e"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/controls/nav-marker-night.png",
+    "bytes": 3929,
+    "sha256": "39a542783ee6e163d44b689d9d0f552aaf7725bc096b82b32814495619c051a6"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/controls/nav-marker-night.webp",
+    "bytes": 1764,
+    "sha256": "532e5bfaf1d7631e7642ad9b78f7d7143fa716097ed819c2bafe748128b59a79"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/controls/nav-marker.png",
+    "bytes": 3659,
+    "sha256": "44250d906f97dbc1def82d472753fcbbe73aa650519d9a5b31252b63432b8cd7"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/controls/nav-marker.webp",
+    "bytes": 1700,
+    "sha256": "910bd0170680ae92dd0fa14df1c12574f786ae044df57b3be5ae8ea1da1ef076"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/controls/node-current-night.png",
+    "bytes": 6457,
+    "sha256": "456845d5da708995c41f678ab7a6f0cb582b3db386b1e30c6948d56747e9af53"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/controls/node-current-night.webp",
+    "bytes": 2562,
+    "sha256": "bd6732880c9b4b79cdbff77e658142d7b51c3359e93bb909a17cd619a6edf686"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/controls/node-current.png",
+    "bytes": 7000,
+    "sha256": "1e53354ed4646a81cf6b35a695a4913edcb08b452dafb1fb02f515580edcb02a"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/controls/node-current.webp",
+    "bytes": 2582,
+    "sha256": "5c8c797f77bd0fe3c917ca3114e6e35f09809cd97738289179da1e3491c0726b"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/controls/node-empty-night.png",
+    "bytes": 3839,
+    "sha256": "235386bf9c8018fd622f4ff28bf6039713fa5761a27539e8061f289e032b188e"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/controls/node-empty-night.webp",
+    "bytes": 2222,
+    "sha256": "b941c5a26660620a6c8c711496f3cdb806254dc0e726fc99158991b3828fc4c7"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/controls/node-empty.png",
+    "bytes": 5301,
+    "sha256": "30167155598d3f45841f612345d48385c0adcd07804773cf02f6cac8a9bf44aa"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/controls/node-empty.webp",
+    "bytes": 2710,
+    "sha256": "5fe126cddd6d2fcb71f6dc32f0a4df03b39fac7a6cc06737a96a22c9147d196e"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/controls/node-filled-night.png",
+    "bytes": 8033,
+    "sha256": "f30dcf1c2bdeb5a3a0329e0ae36f77f2bba5abaf5f25000923807611645bee0b"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/controls/node-filled-night.webp",
+    "bytes": 2374,
+    "sha256": "84b4facb9b4c10c1214a2e211729bc259fdebf494d0bb0003be3d2265fd6ccc1"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/controls/node-filled.png",
+    "bytes": 7585,
+    "sha256": "215a6c9a7ef1b5a835489b89fe17c6631f95b00269b3cd1ce1988439784ef192"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/controls/node-filled.webp",
+    "bytes": 2212,
+    "sha256": "bae63437210cd7969a41216bfce909eea91114ee09ba469545e6ac2eecf24455"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/controls/tab-flourish-night.png",
+    "bytes": 4734,
+    "sha256": "c86530a32aba76da0774895641a52bba779e4755b6969c4dd209f10ee9e9ab6a"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/controls/tab-flourish-night.webp",
+    "bytes": 2438,
+    "sha256": "6c2359a1c948cddc61afeed9f6ee2ac537a5f1b4a49a5bd4703c808d69331d9c"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/controls/tab-flourish.png",
+    "bytes": 4455,
+    "sha256": "057ee62e40475163284f9436d16fdc5739c464b6af736ca6adbb388ffcebd8a2"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/controls/tab-flourish.webp",
+    "bytes": 2290,
+    "sha256": "1aec5833dfc0269ed082c8c630c9165c32f20d44c21a4672a71ac11338dfbf84"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/emblems/emblem-chat.png",
+    "bytes": 249757,
+    "sha256": "451cd9b26c805b9b3c12a49aecbb643096c95975322463ecfdad2c56374b5568"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/emblems/emblem-chat.webp",
+    "bytes": 61084,
+    "sha256": "9b5cb30e831828f2310093617530e0927d641c3bfee782f58e189ea6f87aa156"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/emblems/emblem-import.png",
+    "bytes": 301114,
+    "sha256": "f81177e4373ee2e31d53af35ccb565f81f91a68bc71f5bbe5de0b19c54fca15c"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/emblems/emblem-import.webp",
+    "bytes": 64498,
+    "sha256": "8d9c3b78ad6e3c8b95c18fee2c37eb92a1c117729a1774287cc473c1a59fa293"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/emblems/emblem-lorebook.png",
+    "bytes": 272470,
+    "sha256": "f2c5d2318b57332dbded6d72222b67e0371e3b1af928283f1517130b8d41252c"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/emblems/emblem-lorebook.webp",
+    "bytes": 64096,
+    "sha256": "8f834140ca04d9ee6376a7efd96fa6a624b7269aa6c317c89c43e226990ffb11"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/emblems/emblem-scenes.png",
+    "bytes": 319930,
+    "sha256": "662b0c6483b7c30821b4251ca8948ec399d35f27e23b91f317d14b5cca6b8a00"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/emblems/emblem-scenes.webp",
+    "bytes": 70840,
+    "sha256": "28f791874771f338ff7aea6287b19ca8544da9aea49829c366ee8a38cf1133dd"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/emblems/emblem-settings.png",
+    "bytes": 291076,
+    "sha256": "3bd945d202d7ea7fc13d7c263b8621001602cb9ef463f49fbd7f2f5942c301dc"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/emblems/emblem-settings.webp",
+    "bytes": 73382,
+    "sha256": "c60f1559a9753d0b3d19c630c8cc58cc7aa5b52df877400abf517f6531630596"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/emblems/emblem-story.png",
+    "bytes": 243943,
+    "sha256": "0b2550d0521617967e8a15b842366fabc2f91c5ad7ced142b7e291fb135466d5"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/emblems/emblem-story.webp",
+    "bytes": 65238,
+    "sha256": "77df08fce1df4c67e3b68d6869d719c1d351fefb373dadd28f55fbec922a13d9"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/emblems/emblem-workshop.png",
+    "bytes": 273892,
+    "sha256": "f9d1df66483b624e5c5976665d0d8ea1ef96fefee8cca79adcc61f910b31886b"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/emblems/emblem-workshop.webp",
+    "bytes": 68582,
+    "sha256": "65d84cb3247b9af30a44ef90674f38c4e1dbd09db20a5964a6bca7a9f499167c"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/emblems/emblem-worlds.png",
+    "bytes": 245882,
+    "sha256": "0dd0d17f3a44c84ece7a1d6e3fe3fce59f785f0a0017f27ec4dd4d59f4fc663b"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/emblems/emblem-worlds.webp",
+    "bytes": 71350,
+    "sha256": "03261cf535635e867a60d9eb4e4971c4b519865a379c3233eb2ec5e67c95d385"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/emblems/empty-characters.png",
+    "bytes": 108511,
+    "sha256": "f1b1c7fb625c4d37a3a7a097cc47267f46650c23cfbf30df6beabb10a8e79cdd"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/emblems/empty-characters.webp",
+    "bytes": 39796,
+    "sha256": "212a6e5c889d5dab88cbbd064422df4ef052022c2ac9d1fdbc1854be90e0e476"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/emblems/empty-chat.png",
+    "bytes": 104008,
+    "sha256": "e256ed174b8463b946dd9f098ed78d2b3dddce05df3c75c8b0a12337305345f5"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/emblems/empty-chat.webp",
+    "bytes": 24880,
+    "sha256": "183928d7d4fb0614ad29037eedaafb97d1b54a7bd535b26c2eca120c19c40dd2"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/emblems/empty-error.png",
+    "bytes": 128751,
+    "sha256": "f71580ca159581855f7f5c6b2187180bd7ffc0e75e0fb1098930a83703f7e46e"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/emblems/empty-error.webp",
+    "bytes": 33986,
+    "sha256": "38e90bfcf6f0c4ec4518a9de41024f171d9145dc8b1803b1c15c773fd77049d8"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/emblems/empty-results.png",
+    "bytes": 73079,
+    "sha256": "63a2b054abfe75180f50792ae53f34f9cc46cf3a0c86a77714e6ef1b7e24b9c4"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/emblems/empty-results.webp",
+    "bytes": 22410,
+    "sha256": "e760be232681681e7b95f176ae41ce3b1891348b0e62e710c9c235a3e1eed491"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/emblems/empty-stories.png",
+    "bytes": 124257,
+    "sha256": "6ae921bc2dbdff92feea4941882231be749d78478981282354a608a32275e554"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/emblems/empty-stories.webp",
+    "bytes": 22864,
+    "sha256": "5834bf4e068ff3b4652f1fe62e241728f8595caec60cbb539455a65c9f262708"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/emblems/empty-worlds.png",
+    "bytes": 154530,
+    "sha256": "e10f49daf5af2b390ce3f18896c5a46a0acd63ad57474ac8b52d5c7a68e63b17"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/emblems/empty-worlds.webp",
+    "bytes": 34318,
+    "sha256": "3e53264e20cc32f4c197bfadee0bc91e4b34735379c15c91125d3e603c421c8f"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-iris-bl.png",
+    "bytes": 85305,
+    "sha256": "0ac07fc16b150be071cb005b4eeefc9edc3841593fb682a053a21d4e3fa861b8"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-iris-bl.webp",
+    "bytes": 32636,
+    "sha256": "8e0d4aa0a51b6fff7d8242e3cc122fb3ed3afb29635d42bf3a65616a75c19abc"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-iris-br.png",
+    "bytes": 85644,
+    "sha256": "74d551a5b7a22644fa66a3bc55fddb598d5a2dbc6c2812c3ad1ff8e81857a961"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-iris-br.webp",
+    "bytes": 32474,
+    "sha256": "b2a6c58db526ef40d84e7fb5ec1261c3e8b1291e831bf58089b38bdccab383a6"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-iris-night-bl.png",
+    "bytes": 82967,
+    "sha256": "6e9a9ae1df324486983e26da15acd010270b0793691f2ed301c7be31d158f769"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-iris-night-bl.webp",
+    "bytes": 29820,
+    "sha256": "0f69493980468319617f75d96c1e1a2a267788771379e6f4fe5df44772f673ac"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-iris-night-br.png",
+    "bytes": 83211,
+    "sha256": "4a2e833b49ada80bddaec0143f31c8b60c67642e54f177d81df7db22ed1dc174"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-iris-night-br.webp",
+    "bytes": 29784,
+    "sha256": "02ab8bf18092735738a26006a35bf768dea201f10e056ed24451ea9214c66df6"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-iris-night-tl.png",
+    "bytes": 83132,
+    "sha256": "fac19e3910a66bf727ddc71d12b3ade6865f31253776ecccbe89d68c018eff73"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-iris-night-tl.webp",
+    "bytes": 29860,
+    "sha256": "0bb96527e51c35a6c690f56f8d14dc3a84428862ccedeb68b927dda1f7517245"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-iris-night-tr.png",
+    "bytes": 83307,
+    "sha256": "630c40ef6fc130f0c051b3f0be1ad74c712bafb07bd7a44bd98ac9c3407ecacd"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-iris-night-tr.webp",
+    "bytes": 29786,
+    "sha256": "42a700dfb74ceb064202bd7f5b2e9f312020bc8aec837bb9df4289947312801c"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-iris-tl.png",
+    "bytes": 85580,
+    "sha256": "2e03fbe36860c5aac0f756ee81116c114df0ae7e51ff2e9107f1ecbc1c9423c9"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-iris-tl.webp",
+    "bytes": 32688,
+    "sha256": "cd7aab6163c8588bf961b3317451c0d678817affb9779cff13822f6a9a030b04"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-iris-tr.png",
+    "bytes": 85633,
+    "sha256": "48ebb845314b0d8581e1784713c9629d1812b5af49919dd23bc31b4cc55da362"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-iris-tr.webp",
+    "bytes": 32614,
+    "sha256": "81c68d298d61a954aa01627ed56a5c7e2aae9d4b5d7dfc8b0fb44ff3a7e9e428"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-rose-bl.png",
+    "bytes": 90470,
+    "sha256": "a4f40aa314df17ae93af5de9dc96dceb8de7f7d2b07995dda08d33cc74251483"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-rose-bl.webp",
+    "bytes": 31300,
+    "sha256": "6302b03e2abc0f229ca01bd7d1411af947b5c1c8d076af535d37ed6a4c3af39a"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-rose-br.png",
+    "bytes": 90716,
+    "sha256": "076d687e0f5f57a691e8a0370fe81f63cfb916a3c585a6191638329d0101e3d7"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-rose-br.webp",
+    "bytes": 31286,
+    "sha256": "4c545050edc0690b4b1ea15c9d5db25b9c2b609de18f42138ce5bd50a6f4d257"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-rose-night-bl.png",
+    "bytes": 82957,
+    "sha256": "0574912fdb4054aad54e6d4e4b7707cb591e4c98ac60b5feb5ae4c48c2057d9e"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-rose-night-bl.webp",
+    "bytes": 28394,
+    "sha256": "c7611217ed1c99937da5ba19c6abc5823de998d72b9787e53ec986418a01ba31"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-rose-night-br.png",
+    "bytes": 83149,
+    "sha256": "2bea839d53dadcf096947dbb76cf7a6f0b4de933c0181a71b808edef6f795feb"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-rose-night-br.webp",
+    "bytes": 28372,
+    "sha256": "d8c89042197260dfdd42d3d5276afb0a20c8f4d84bc35ea64ac33ebc21e38066"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-rose-night-tl.png",
+    "bytes": 83170,
+    "sha256": "8cef705d2eb372f925a5a4b9154da46e23e27c8e6a808016f3bf407f01b97f60"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-rose-night-tl.webp",
+    "bytes": 28530,
+    "sha256": "8be6e3bb4350e999d06afdba976d7aadc55d4a4c5c9d492585d0266c0991ee44"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-rose-night-tr.png",
+    "bytes": 83228,
+    "sha256": "97caa4242a06eec5492a10afca4c521b53b9ec962d91a0be8e28b17dde062c09"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-rose-night-tr.webp",
+    "bytes": 28436,
+    "sha256": "45dac16e5589cf1f09de9c7976e6698c46101d76ce09c8c51e69cfd0a426d3a0"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-rose-tl.png",
+    "bytes": 90318,
+    "sha256": "fe773d0d50acca10dc116fe43ae1be44c02448c5dd8b446b6b2ee19b38b7061f"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-rose-tl.webp",
+    "bytes": 31360,
+    "sha256": "78f0993bb8be2f03763118530d18c901f872fa9415f3400b4042f76ab83e1595"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-rose-tr.png",
+    "bytes": 90362,
+    "sha256": "2e2c3be75de9d298a0ed9319bee9930e5a2938c912923e5a35c5b1c74dc69183"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-rose-tr.webp",
+    "bytes": 31222,
+    "sha256": "4d6589bac4d451dee9ed7f3cd972ee5f1558ae6e72a07bee991f93ea19d0bfa9"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-teal-bl.png",
+    "bytes": 76253,
+    "sha256": "41bc6c58668ae9ecb30e05c2e64cd39067ec8b4a37f9f046769b49a2551d934d"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-teal-bl.webp",
+    "bytes": 26962,
+    "sha256": "944c354c9c51391bbf8cd6104cec1c7458325d9e2fd82324c250e7449186e131"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-teal-br.png",
+    "bytes": 76441,
+    "sha256": "10d23721878e0baa30fafe2e47ed713b7668d04cfe6d173d923aabf76097d29d"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-teal-br.webp",
+    "bytes": 26826,
+    "sha256": "9aca055d29530ce7e55540278415c29c7fd137b32c9a34c2bdf4f06f8553ef71"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-teal-night-bl.png",
+    "bytes": 74670,
+    "sha256": "dcc41c77806f244b123155ee82b80dc0b6bb4e2953b0e86a845416d140e11a7a"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-teal-night-bl.webp",
+    "bytes": 25894,
+    "sha256": "4fd3d86b57e7f4947a282dbb8488a93df8cb8a57968c01053586efc72b31522d"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-teal-night-br.png",
+    "bytes": 74843,
+    "sha256": "8b2e28d231f054906d75b244aed588a3c1d6c906f3df5f89c1491e698aaa83ab"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-teal-night-br.webp",
+    "bytes": 25832,
+    "sha256": "86a1cebc200eecf205d62828d1a24aaaff8f00c913dc90c0c51594ab9e54b91c"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-teal-night-tl.png",
+    "bytes": 74634,
+    "sha256": "2fda96fb961f5b68063f8248a2ecb6a89a2d3cb262380183c642894cf11e01a7"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-teal-night-tl.webp",
+    "bytes": 25972,
+    "sha256": "08997b304a10dc83a7a9ffbde562408f7566323c6bd008aab658cb7eea55e68a"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-teal-night-tr.png",
+    "bytes": 74845,
+    "sha256": "3be7b22c879d912477989ebb7a8f13866aab1125ae7d9bb656fa0e8a751d16bd"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-teal-night-tr.webp",
+    "bytes": 25944,
+    "sha256": "331402860fd69fe9b4d68372408da6034b39700852b0256fc6feb3bb311be5ac"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-teal-tl.png",
+    "bytes": 76303,
+    "sha256": "8afe42c6ee7df897a50826646802b7807406276b9ca94a614dc6d3a21f3f5cfe"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-teal-tl.webp",
+    "bytes": 26964,
+    "sha256": "74820bf2067b990cb4ec1fa035309a167f08979409ff97be0c07198e563e419f"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-teal-tr.png",
+    "bytes": 76505,
+    "sha256": "1f3b87aea71e90fcb305fee1ffed18c5f61fdc274579d1f9a60c83181c09336c"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/corner-teal-tr.webp",
+    "bytes": 26922,
+    "sha256": "3b9cafa477cdfc49d91e57100ea4712efe16fa1abacf792b69c434f16dc64b0e"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/dialog-crest-night.png",
+    "bytes": 88446,
+    "sha256": "91574254c351634eb570c1b0034f459bba228aa41acca56b94cfbd397a84484e"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/dialog-crest-night.webp",
+    "bytes": 33812,
+    "sha256": "ca82c1c64014f060246696f5ce2faebf09f6cd17de78d79ab02bdf4e0ee211a4"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/dialog-crest.png",
+    "bytes": 88672,
+    "sha256": "23f19ae6404ab8c82300b903903565fe36729b9b6fa341c0a441a302fd38b15b"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/dialog-crest.webp",
+    "bytes": 34316,
+    "sha256": "98826940da78e23ffaf03aade5063a52cfb16af95022c73870b0aac1817a6fd2"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/divider-night.png",
+    "bytes": 56114,
+    "sha256": "dd27f5303833d46da84d35da3dc7a7061bcc7ee6e22535d764ebddaec1c73f2b"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/divider-night.webp",
+    "bytes": 23756,
+    "sha256": "b40c7c6fb2915475e31d36700ea2ca25bb7c06796abbcf889c99c93af0d647fa"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/divider.png",
+    "bytes": 51395,
+    "sha256": "feaad48e7ef1284f878d0958e0581950ccf168cba0e872478138222715953848"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/divider.webp",
+    "bytes": 23168,
+    "sha256": "5cda856fdff6e523941070d8944a4ded07b7369053fdd56c2db21c87c56c70ba"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/medallion-iris-night.png",
+    "bytes": 60680,
+    "sha256": "60db0f15dc0ba4401013e9e57fe8e5889a3a6473dc0f8c1087424aabfb5a1886"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/medallion-iris-night.webp",
+    "bytes": 21434,
+    "sha256": "7f535db9bf8f48930c475e522dc02789f0352da1c21563982a2c284211b6ff9b"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/medallion-iris.png",
+    "bytes": 54289,
+    "sha256": "3863588632301f53715283b507f98537b76e535015cb974c28ea778d0b59cde5"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/medallion-iris.webp",
+    "bytes": 19872,
+    "sha256": "64ed08270ba0a7f6ca83e0a35ec1cad24e08dde6a66013e90cd7c24360bbb06c"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/medallion-rose-night.png",
+    "bytes": 52774,
+    "sha256": "7583078884807843081271bd7e6ff5cde31c7d8afdb8dd9956e03c26fe1c4639"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/medallion-rose-night.webp",
+    "bytes": 19120,
+    "sha256": "5ad36513eb520535b9aa9f99310a8012937b5df9b9c5e0f9f1fe8bde3cfff6cf"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/medallion-rose.png",
+    "bytes": 49714,
+    "sha256": "85c51244d2b31df801282c64b4b1511fb0222a51ef5bf1c3efe2587e33d36408"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/medallion-rose.webp",
+    "bytes": 18636,
+    "sha256": "4279dba44b739dbede6012a1bd1602acc75cca3899d094e05c6fe5d2f0a407be"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/medallion-teal-night.png",
+    "bytes": 60601,
+    "sha256": "25578f51f46831bea349b4c9227e394d9c8f8c2a4fd49d8235b59830e1693ff7"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/medallion-teal-night.webp",
+    "bytes": 21652,
+    "sha256": "68e5bdf9236f245943db54892ad4915008d7a47b43fd567fb7e25a8f14e88c16"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/medallion-teal.png",
+    "bytes": 56213,
+    "sha256": "cee06a76b36ad32d52e842963090ac4561570320898552995a6103073e993de2"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/frames/medallion-teal.webp",
+    "bytes": 21200,
+    "sha256": "8beb1d92f385b870cbdb090b04f8e5cb59c296c5590209421e434a2a0c8a6868"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/worlds/cover-ancient-forest-800.webp",
+    "bytes": 94608,
+    "sha256": "25c0761daf2813e05407b1ff9872be94e1b15627be515735a5c31884bb71aae7"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/worlds/cover-ancient-forest.webp",
+    "bytes": 279110,
+    "sha256": "94beed4b2e57942978511cabe172522a34d61ad0e70cd8d68b1624a830bc4c42"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/worlds/cover-deep-palace-800.webp",
+    "bytes": 96136,
+    "sha256": "fdb8f72635346b388b033c91d946254cf71e2879bc9123e88b132db7df748ff3"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/worlds/cover-deep-palace.webp",
+    "bytes": 284538,
+    "sha256": "4ec6e40faf775bf8cfd1c40ecff38f3e834bff000d6eb7daee8b9c0dad1c4d57"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/worlds/cover-sky-academy-800.webp",
+    "bytes": 61748,
+    "sha256": "9dc7cef42764dbffaa8c9ed4e98d7dad9912ee58974458b3e0a84173d4606e9b"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/worlds/cover-sky-academy.webp",
+    "bytes": 170806,
+    "sha256": "fd54b74ebca8c37933e1a184d20e033be6c84e29e365dc6c0b05c62039eb1754"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/worlds/cover-snow-citadel-800.webp",
+    "bytes": 92786,
+    "sha256": "60192e55571cd8ebf6019591ae26a30829509da9470d1387428465a041a24278"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/worlds/cover-snow-citadel.webp",
+    "bytes": 272152,
+    "sha256": "06931e0131ed53cf510af607495d30b5204e91017c903e7055433f877c6ecf82"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/worlds/cover-star-isles-800.webp",
+    "bytes": 79750,
+    "sha256": "e041db11bbb805ebccc2429508ca2281dacb9a90d321333dfc8ccb3b0d3f4bab"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/worlds/cover-star-isles.webp",
+    "bytes": 234848,
+    "sha256": "57d335f40009c903641227bdb261136d91fa8bebd1e4425baeccae1c5a6ef339"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/ambient/ambient-rose-writing-edge.png",
+    "bytes": 827465,
+    "sha256": "dd84ee300bba85428d8730e8add4a2ac31240e8c50d4935727624c0d7d2e5f47"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/ambient/ambient-teal-tide-edge.png",
+    "bytes": 789214,
+    "sha256": "55c23c00f345b9fcefb4c104f3cb7321d829797064a766970ad9e86db39a175f"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/avatar-frames/avatar-frost-crystal-512.png",
+    "bytes": 45680,
+    "sha256": "f30fe38098b917069f6eaa5b032e362dd0ced072c14398d7f94bfe2bfad49080"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/avatar-frames/avatar-silver-feather-512.png",
+    "bytes": 45614,
+    "sha256": "dce2a40b15d11c35a228b5fe1e352632b99a8d1f1855cbd8c364bce218708ae0"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/avatar-frames/avatar-vine-moon-512.png",
+    "bytes": 44519,
+    "sha256": "d1fbfd90e7a70aa9418ec9b2c57b6a12db66a028d846b35f4e34e1b5c324a71b"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/avatar-frames/avatar-woven-knot-512.png",
+    "bytes": 43842,
+    "sha256": "a9ea55081753e6b9516f45efa11d42111f12a2b9cc03b0846691d4072af59cab"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/avatar-frames-v1-fixed/moon-silver.png",
+    "bytes": 171531,
+    "sha256": "fdb6763bc55103d4008e763dadcfc763c06535c411d0f35bd61fac15eb4124e1"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/avatar-frames-v1-fixed/rose-vine.png",
+    "bytes": 207114,
+    "sha256": "2f79a0a8209c72b5a2e7b07bb508a450c79ab2a42d805e46377575af5278702c"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/avatar-frames-v1-fixed/tide-teal.png",
+    "bytes": 218514,
+    "sha256": "5f82966c4d2f6c53e7b486caf0e10c01260389a75452b07cf94ff80f2d8981d4"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/brand/brand-horizontal-dark.png",
+    "bytes": 47725,
+    "sha256": "36dc747aaaccaa2376f698f4866fc20cae82e92975dcd851943dac5ca0aeac63"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/brand/brand-horizontal.png",
+    "bytes": 47804,
+    "sha256": "9591b251d3695a41591169cbc4808ca411aa27a8f9b1182ad59f2acdcdc83a91"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/brand/brand-navigation.png",
+    "bytes": 428385,
+    "sha256": "e04a14799ec1ea67f0063e16d62483ce01cf8079bdaacd1441fdea26946b9daf"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/bubbles/bubble-book-note-corner.webp",
+    "bytes": 75582,
+    "sha256": "161afd41ffdb6786129ede06ae45619b4cd6db1738b908e593056fca106515f5"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/bubbles/bubble-book-note-end.webp",
+    "bytes": 112672,
+    "sha256": "22941421096ff6924c5cf8e70bb1028546650bfe5c4599710d7183b5ba649746"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/bubbles/bubble-crystal-corner.webp",
+    "bytes": 247604,
+    "sha256": "afc190b3ee2dd1e0c7f744e2a5bfa3e5445c141abda1421f19b16a7ea0a57462"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/bubbles/bubble-crystal-end.webp",
+    "bytes": 89888,
+    "sha256": "0202e825e64f9e95146f5faf1e24ff3e433e94763f5a82a3b78a762c5bf1240d"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/bubbles/bubble-moonlight-corner.webp",
+    "bytes": 94912,
+    "sha256": "dc411ea11aef01c9d5d2bf424fec1c0b3169ade7a85097524184ce7efaf64806"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/bubbles/bubble-moonlight-end.webp",
+    "bytes": 123798,
+    "sha256": "88a1c31c0a7976e1838ab3c34646d9a946deaf7e454b4d0642aa30f74c1ead63"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/bubbles/bubble-star-track-corner.webp",
+    "bytes": 192136,
+    "sha256": "81c756bc89bf8730e8a8769d1a8027bf7b1a3b27e5e1f1901b0fd03d09b6c950"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/bubbles/bubble-star-track-end.webp",
+    "bytes": 58992,
+    "sha256": "5e981814187562dfc393689f7429e76b0534b658c66d2e5a1ae099a966c04f7b"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/cards/card-champagne-orrery.webp",
+    "bytes": 558090,
+    "sha256": "466c0cc31b50e5c1bad803be5957947a0392b774bca006cfa8b73493a6af144a"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/cards/card-rose-greenhouse.webp",
+    "bytes": 671378,
+    "sha256": "8ae6c1d9d411c48f23684cce6a9d57ff2493328850ee433358cfc40b90f7469b"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/cards/card-silver-archive-room.webp",
+    "bytes": 512590,
+    "sha256": "dcd49053baec3f8d7961f93be141397b478f650db75e3ebf68c7ab9db24f4cc3"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/cards/card-teal-navigation-window.webp",
+    "bytes": 493704,
+    "sha256": "622d429a06c96e7240d30aeede52f7226b2fe02b3e7b1be10155f6583f58e118"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/conversation/chapter-transition.webp",
+    "bytes": 110084,
+    "sha256": "c8c3993bf1d082f5977123cd74658c0bb4ee60c80afd814c23f22e1b8d8b3e40"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/conversation/composer-teal-quill-corner.webp",
+    "bytes": 62586,
+    "sha256": "e1a681c0549590eb40fba1412c55f2bde718980c0e51c87d1cfb87f81f507086"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/conversation/editor-rose-page-corner.webp",
+    "bytes": 38320,
+    "sha256": "38695075b14d8e220692d738c91ce045e62ff8c3892ad9bcea6815a6ca915162"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/conversation/group-thread-knot.webp",
+    "bytes": 149666,
+    "sha256": "95d7af20dfe82d18160f5b89da5e63cafb50d817b8ed746a84a6554e8a2524e1"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/conversation/linked-thread-emblem.webp",
+    "bytes": 305208,
+    "sha256": "c850d67e27d8dee79c3bb1a6e1fcefbab45de491901bd44a8250b7eda552e032"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/pageart/empty-unfinished-manuscript.png",
+    "bytes": 1698379,
+    "sha256": "3737e268a5494b96514676f9c3e03a3aa3132214b0e9dbf9f4e65b6726fec85f"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/pageart/empty-unselected-route.png",
+    "bytes": 470225,
+    "sha256": "f1d5a6bfd157c58983ec180be137931a5f35780ece45cc98a4b7502219fde2f9"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/pageart/page-connections.png",
+    "bytes": 820007,
+    "sha256": "f88a18f134f138d9dc658f90c03d8c31e2c996c4b03b8b2bfabecdc473d0a21d"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/pageart/page-memory.png",
+    "bytes": 1650029,
+    "sha256": "17621f100f934e404508dc432d12a8d323f5a5a7f79ef5bb0ea72f5135ce866f"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/pageart/page-voice.png",
+    "bytes": 792534,
+    "sha256": "c1bef3277dd308ffe0a29782b60e0a850948824578cc1bb44bef79f40bd3f3b7"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/pageart/page-worldline.png",
+    "bytes": 717695,
+    "sha256": "7ab2f4f1a19167420ff49db070b09a68fb320f56149a4f20745f2c5c0ae97434"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/scenes/scene-coast-ferry-day.webp",
+    "bytes": 758556,
+    "sha256": "c8f9f264627cf257b44e0d88d5979a13e268d5017fbcbb7743ace2c28649b1fd"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/scenes/scene-coast-ferry-night.webp",
+    "bytes": 693350,
+    "sha256": "c6be96a1f7b9db7d759871d8f77d0c9deb7df6e78c2eccf37243a993387967ac"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/scenes/scene-forest-path-clear.webp",
+    "bytes": 1023242,
+    "sha256": "fb383f918546e906b1a441260d2cfce774b6d34302af3c1e4b5fc07b2628feb2"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/scenes/scene-forest-path-rain.webp",
+    "bytes": 938300,
+    "sha256": "cb4f486c97ce6c13a72f39540831a88d86d67b8b8f08c911667617b8fee7b0b7"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/scenes/scene-greenhouse-tea-morning.webp",
+    "bytes": 961954,
+    "sha256": "e0ea57f2fc9b6abfb7d78b421ec0fffb180d226bc1799c564698853724a7a98a"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/scenes/scene-greenhouse-tea-night.webp",
+    "bytes": 823542,
+    "sha256": "a9c93132c05f52a139b0e5ec6795edbca9fc54f116d255a418e8bf239dd9390a"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/scenes/scene-inn-lounge.webp",
+    "bytes": 661784,
+    "sha256": "46c73c3af7c6a956d82c51747625362d7580d8876270958d16081fec883d177f"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/scenes/scene-rain-alley.webp",
+    "bytes": 861462,
+    "sha256": "d74f08e0320c104a0348046965d2af809881bc921bf986b6525afae31a5895e2"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/scenes/scene-starship-observation.webp",
+    "bytes": 654280,
+    "sha256": "46de882941b5c0bd82c01ee7d0e88ca55d3010405402067afc82d40f9f2984ba"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/scenes/scene-study-archive.webp",
+    "bytes": 691082,
+    "sha256": "85253af08a1931f17296581c1677969f3f6f2235420f446d4403d4f9e561d293"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/scenes/scene-sunny-alley.webp",
+    "bytes": 810750,
+    "sha256": "b75bbea677c63aa0f055dce0341420e2d71947b861b99385ec99c464a82c8c95"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/scenes/scene-train-compartment.webp",
+    "bytes": 678238,
+    "sha256": "854bd92d349739922874215f82fb8f55a8cf9702a4889656df0f8e6f83764a11"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/worlds/world-classical-market-cover-1664.webp",
+    "bytes": 503150,
+    "sha256": "05b5b882e4841c3bf5101cf0ffd647e4f6c23e58e5b30930d223f39693176487"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/worlds/world-classical-market-cover.webp",
+    "bytes": 796774,
+    "sha256": "d5929018c7ecadd8c3c5fe40f171d521bd1699480106fa031a847c1cfc1b2375"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/worlds/world-cyber-district-cover-1664.webp",
+    "bytes": 556046,
+    "sha256": "4a28ce5e021bb8212e8acd2b8a0c86e04bc4cf398821d2b9d3ee69048c9c9a7a"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/worlds/world-cyber-district-cover.webp",
+    "bytes": 858422,
+    "sha256": "6c8c075a35ff02638c11e3008b6ec428d24e0cf71493c5f6764c96a0d94f76e5"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/worlds/world-desert-route-banner.webp",
+    "bytes": 311818,
+    "sha256": "183b0a8f9fad9074bca581a4e10a3e3faf41a498bfcc884597962f0770977d92"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/worlds/world-desert-route-cover-1664.webp",
+    "bytes": 377606,
+    "sha256": "5a62ce99ef2a0f11eeaed35b6c46ac8917af5c2d57cc7c3a3ff079ed7b1f3931"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/worlds/world-desert-route-cover.webp",
+    "bytes": 682218,
+    "sha256": "e56a7bd92e46c445683a45c6a720289e0da3ef899460f9afb005a49debad5e7f"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/worlds/world-flower-valley-banner.webp",
+    "bytes": 560494,
+    "sha256": "d3e9ebe36120e2aa545831026a7f8269a1a111bcbf1628c40d21b4bbd42cae95"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/worlds/world-flower-valley-cover-1664.webp",
+    "bytes": 638438,
+    "sha256": "0e0cfcf4d42b5eb9ffa9a592183ba97fc15d6d70d41452c07025c4a57cb1b20f"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/worlds/world-flower-valley-cover.webp",
+    "bytes": 972350,
+    "sha256": "59bc2604d2393a72e338072d35f2f631bd87e849f44262b3e4eba8ce10033297"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/worlds/world-mirror-lake-cover-1664.webp",
+    "bytes": 331258,
+    "sha256": "470a5ccda37b5c760eba852364ead2cfb871075e23b4acc07b8fd2ef7ce9630a"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/worlds/world-mirror-lake-cover.webp",
+    "bytes": 661684,
+    "sha256": "883926c344910c49baade63213b8c129a0ef51b26fa1cb99ff07af82ad3fd1eb"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/worlds/world-modern-coast-banner.webp",
+    "bytes": 456668,
+    "sha256": "462b980d163f7ef4e7f7ccfcf321f0fec1492aa32a8af6a1736a43652179a100"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/worlds/world-modern-coast-cover-1664.webp",
+    "bytes": 501746,
+    "sha256": "e2a7fe1854a3672ab09803457089af1715211d0af7947341399a7ea0b7ca2b60"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/worlds/world-modern-coast-cover.webp",
+    "bytes": 809908,
+    "sha256": "2e3ac07ab241a1b3f47efe6d15e663177be553da40f692f0902fbdde265a2e13"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/worlds/world-mountain-folk-cover-1664.webp",
+    "bytes": 645848,
+    "sha256": "b5a0fb152c1e168c073a8344ecfdddbe46ba86ecf001bb773ac532239176ca51"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/worlds/world-mountain-folk-cover.webp",
+    "bytes": 925308,
+    "sha256": "e3122cfba591f46e3f3ac13db764f8e5632c723e9d8bb3774a0434c4f8ee57b9"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/worlds/world-orbital-station-banner.webp",
+    "bytes": 417218,
+    "sha256": "a43249fc42e4b90260758049a635a1133e10096fc070725ce5350f0a86956ae3"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/worlds/world-orbital-station-cover-1664.webp",
+    "bytes": 383420,
+    "sha256": "c4d23a988814c6711f11efd5d3bbde414948e1eb505f8c8d81a8b40bea66c11b"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/worlds/world-orbital-station-cover.webp",
+    "bytes": 709024,
+    "sha256": "7a47b994da343c0f11d2c4796fc2b78b5b5a1ce1a91ec11722130c0f97154f35"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/worlds/world-rain-mystery-cover-1664.webp",
+    "bytes": 597814,
+    "sha256": "2df6b9af736d11b2235012edf24d18a5da5f5692e250d7151d02ea7c46ccc7b4"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/worlds/world-rain-mystery-cover.webp",
+    "bytes": 858270,
+    "sha256": "f04e347996cb6609f092868347616ffa187864d1ca48b2dba15bbb0faedaf4d7"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/worlds/world-steam-workshop-cover-1664.webp",
+    "bytes": 598138,
+    "sha256": "5fafd1feac15bebad94f68b922c7ff3a47cc4f952b455d30de178076f0dd4e27"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/worlds/world-steam-workshop-cover.webp",
+    "bytes": 860252,
+    "sha256": "52781aa27b8919ec51d519079c8c6d12983c5b5be74747d35fbe52dd22d281c2"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/worlds/world-volcanic-fort-cover-1664.webp",
+    "bytes": 375554,
+    "sha256": "78cf89bea8a6aa1f6f23a9134b41d183307618e7fae76ba5d5c83e1e2d4ac6b3"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/worlds/world-volcanic-fort-cover.webp",
+    "bytes": 680650,
+    "sha256": "8f5eda67ee5c8c3512740a8bf27ba5d0f196800457f90ff4f2a1c5ea155454d9"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/worlds/world-wasteland-railway-cover-1664.webp",
+    "bytes": 488012,
+    "sha256": "dad4bb4b12a9f140dddde969b2fee790ddaa5d1f3b77491ec4ad53c17fc087df"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/worlds/world-wasteland-railway-cover.webp",
+    "bytes": 760506,
+    "sha256": "0d5006b707dcf9ad74a02c9186731265b732973bcccc0271fc6994c474701d9d"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-primary-center.png",
+    "bytes": 660,
+    "sha256": "a40114a198383f77b901b44e30510e74defe0ce0fae39919ff2fa8e36d5121e0"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-primary-hover-center.png",
+    "bytes": 684,
+    "sha256": "b5f1cf846fdc72f9439444f8d25eab463f1fd592d8687915f211a5473c0419a8"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-primary-hover-left.png",
+    "bytes": 24943,
+    "sha256": "8320b1bd0ea7b2d0553cc6ceb97017976b4ef0f97012ef9fa69c475083066f39"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-primary-hover-night-center.png",
+    "bytes": 749,
+    "sha256": "457f909fbc088fb42b0d71896a9fbeaf6b4723dcb02ee4a96ef17415ad0abfaa"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-primary-hover-night-left.png",
+    "bytes": 29698,
+    "sha256": "2680b3cbf943be819fc168c774c703d9cbec377849e85d7a47923f5e6dbb7ffa"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-primary-hover-night-right.png",
+    "bytes": 29951,
+    "sha256": "593fb8a316a68cb5a73120505ba65bf3b460c2566c419be934fa0931066c5357"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-primary-hover-right.png",
+    "bytes": 25142,
+    "sha256": "7fcfa4d61a396d41bc8f7b54d1a71323a5e5cc539bf41441d53bb937a58cda39"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-primary-left.png",
+    "bytes": 24413,
+    "sha256": "4647e6b5900e07df21fda006dad1d0b992b2d52685fa22fa7f3f4723891a928a"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-primary-night-center.png",
+    "bytes": 683,
+    "sha256": "dc325ef66e0ef66b0c1b6ffe56c65df54db39bd769c647d512d53d400e7637b5"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-primary-night-left.png",
+    "bytes": 24514,
+    "sha256": "6b8bec5c20bbbc2ca6f9240c5ebcd26e93b8e3c379b4f597395e0e479fbf8568"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-primary-night-right.png",
+    "bytes": 24733,
+    "sha256": "5d3fdb810016cc7a4b663b495004e01d45a00f951738851a96acf9bba990ca12"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-primary-pressed-center.png",
+    "bytes": 662,
+    "sha256": "e0c849fb67395f186f00c34450f73dd5b16157e2a2353a582a8dbebc8836fe6c"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-primary-pressed-left.png",
+    "bytes": 24252,
+    "sha256": "ea171386eac81b79b1c69aa54fc414434939597bb00d3288aa0d8bf7937af8e2"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-primary-pressed-night-center.png",
+    "bytes": 769,
+    "sha256": "2bb442686d622faed86a584a5642058c7d40215d90db90a3ebcc2ef776fb6004"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-primary-pressed-night-left.png",
+    "bytes": 29119,
+    "sha256": "c245451c2fd75bb68df38fe64eab2fd4464eb067e5d908ddcc45ecda3a1cd040"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-primary-pressed-night-right.png",
+    "bytes": 28870,
+    "sha256": "922207a9b95834189d821d73a239d0033b50bee589588251c257899e8f1d2f6b"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-primary-pressed-right.png",
+    "bytes": 24622,
+    "sha256": "09e435c250b93944915ddc6927ae7716f67051c6f8c20b1d8dd9987a8f177aff"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-primary-right.png",
+    "bytes": 24478,
+    "sha256": "ff92546d94d5145f8169d1fdf7423b5db4da65daab578e201de8813102562f14"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-secondary-center.png",
+    "bytes": 703,
+    "sha256": "17aa478afb1abec1468654a6707fef3949b71701bcd5f2cd529c0a9f12d717d0"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-secondary-hover-center.png",
+    "bytes": 682,
+    "sha256": "4002e7f47228e2a5a4709a9f0e432d75c2667f09f079b26bd751f1c656e9ca87"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-secondary-hover-left.png",
+    "bytes": 26722,
+    "sha256": "b8bf0d8f9d882382cf86e0268692bf9d03a79dc3fc12d3e88752ac965361f1ba"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-secondary-hover-night-center.png",
+    "bytes": 753,
+    "sha256": "8ee0e43f5c7d9f98ee9724a42fed8e2bbf1757909988801999b87d1cd92480b5"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-secondary-hover-night-left.png",
+    "bytes": 29168,
+    "sha256": "06959d2c5ae6c3244bc0e83f4e8b0b826606f167d090f80c5a04009ecd22b628"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-secondary-hover-night-right.png",
+    "bytes": 28035,
+    "sha256": "2787ec078a05ec4a4f65e0b03c80fccf03a3d0a669f55357686e0161ca9b8706"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-secondary-hover-right.png",
+    "bytes": 26709,
+    "sha256": "4d1926c47d82dd4face1376824345b349cd2a8128b13da827a4949bcbd1de77f"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-secondary-left.png",
+    "bytes": 25443,
+    "sha256": "2fad1f4d82d2b9627dcc5d4c5c676903283035f7dacd272fb45bbf7d84dd6a9a"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-secondary-night-center.png",
+    "bytes": 743,
+    "sha256": "2c754e59b68f8a9e25ab371a1c2f7976729ed5bbcb413df8994ec7dd1cbeefae"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-secondary-night-left.png",
+    "bytes": 24487,
+    "sha256": "0a074f2de19fe5fb1771dc08ce4c1c05bd84f05050447e293f8a18b8efb3c412"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-secondary-night-right.png",
+    "bytes": 24595,
+    "sha256": "bd3213bbd43b71709660ee36ba097cfe6028b11476819b9027ff8122a284b3a5"
+  },
+  {
+    "file": "src/web/public/brand/moonweave/ui-v3/v3/controls/slices/btn-secondary-right.png",
+    "bytes": 25478,
+    "sha256": "84c0cb69cf16557d84c90f9790c34fbecb05831f9726506a697f9cc8c0ec6400"
+  },
+  {
+    "file": "src/web/public/brand/themes/astral/sidebar-palace.jpg",
+    "bytes": 310154,
+    "sha256": "9a1f8cf4f59546d257cc541c7cb7da8b7528854143b9aa7b0e4a7ab759de8faf"
+  },
+  {
+    "file": "src/web/public/brand/themes/astral/story-forest.jpg",
+    "bytes": 616154,
+    "sha256": "e2e6c2eb873d3b8d5b6e28b3473d5b98929492a45283492fd9935a7ac6946d26"
+  },
+  {
+    "file": "src/web/public/brand/themes/astral/story-moon.jpg",
+    "bytes": 425199,
+    "sha256": "cc8ad7d3943772dc912a518350ba3f88345b7e3dce1996c1a1b1f26a150c6ae4"
+  },
+  {
+    "file": "src/web/public/brand/themes/astral/story-ocean.jpg",
+    "bytes": 416180,
+    "sha256": "29905520464144c3215a1daa350c1bca5426694ceda3dad35738d660a6aa227c"
+  },
+  {
+    "file": "docs/images/character-editor.png",
+    "bytes": 178003,
+    "sha256": "80143895e54e27badb5991eea80e1f70ed5292ab929bcc3384b930775bd78a56",
+    "kind": "approved-synthetic-documentation-screenshot"
+  },
+  {
+    "file": "docs/images/creation-workshop.png",
+    "bytes": 183290,
+    "sha256": "9cdfc7d76380d226b00a19a942034974829dc3e3c0f439bf323af8980887e054",
+    "kind": "approved-synthetic-documentation-screenshot"
+  },
+  {
+    "file": "docs/images/empty-start.png",
+    "bytes": 360031,
+    "sha256": "3da4bb2cf71139e5ed84488016ab377298e47edb92f398d631ad20cd0371c4c5",
+    "kind": "approved-synthetic-documentation-screenshot"
+  },
+  {
+    "file": "docs/images/lorebook-workspace.png",
+    "bytes": 172857,
+    "sha256": "a8605f2f7e98fd907d2146e688ca59b61b5e6b5348d3be3e6e49667e981c3d0d",
+    "kind": "approved-synthetic-documentation-screenshot"
+  },
+  {
+    "file": "docs/images/story-workspace.png",
+    "bytes": 276928,
+    "sha256": "991cfb1749e83110c38955881bb0e4120bdfc36afac3d8ddc621da1864e6173f",
+    "kind": "approved-synthetic-documentation-screenshot"
+  },
+  {
+    "file": "docs/images/world-workspace.png",
+    "bytes": 433324,
+    "sha256": "bc2ec0b2e460ff1373c7c64173ec203064bb6eb083f291413528fc101c21e6b7",
+    "kind": "approved-synthetic-documentation-screenshot"
+  }
+]

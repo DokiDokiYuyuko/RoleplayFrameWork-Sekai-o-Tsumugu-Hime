@@ -1,0 +1,44 @@
+/* Avatar: round, sizes 24 / 32 / 40 / 56 / 72. Spec section 5. */
+@layer ui.primitives {
+  .ui-avatar {
+    --av: 40px;
+    display: inline-grid;
+    flex: none;
+    place-items: center;
+    box-sizing: border-box;
+    width: var(--av);
+    height: var(--av);
+    overflow: hidden;
+    border-radius: var(--radius-pill);
+    background: var(--surface-2);
+    color: var(--text-2);
+    font: var(--fw-semibold) var(--fs-sm) / 1 var(--font-ui);
+    user-select: none;
+  }
+  .ui-avatar--24 { --av: 24px; font-size: var(--fs-xs); }
+  .ui-avatar--32 { --av: 32px; }
+  .ui-avatar--40 { --av: 40px; }
+  .ui-avatar--56 { --av: 56px; font-size: var(--fs-lg); }
+  .ui-avatar--72 { --av: 72px; font-size: var(--fs-2xl); }
+  .ui-avatar__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+/* Frame overflow is intentional: its transparent aperture shares the face centre. */
+@layer ui.primitives {
+  .ui-avatar { position: relative; overflow: visible; background: transparent; }
+  .ui-avatar__face { display: grid; place-items: center; width: 100%; height: 100%; overflow: hidden; border-radius: var(--radius-pill); background: var(--surface-2); }
+  .ui-avatar[data-frame="ring"] .ui-avatar__face { outline: var(--border-width) solid var(--border-strong); }
+  .ui-avatar__frame { position: absolute; top: 50%; left: 50%; width: 160%; height: 160%; max-width: none; transform: translate(-50%, -50%); pointer-events: none; user-select: none; object-fit: contain; }
+}
+
+@layer ui.primitives {
+  .ui-avatar__frame { mask-image: radial-gradient(circle at center, transparent calc(var(--av) / 2 + .25px), currentColor calc(var(--av) / 2 + .3px)); }
+}
+@layer ui.primitives {
+  .ui-avatar-trigger { display: inline-flex; flex: none; padding: 0; border: 0; border-radius: var(--radius-pill); background: transparent; cursor: pointer; }
+  .ui-avatar-trigger:focus-visible { outline: var(--focus-width) solid var(--focus); outline-offset: var(--focus-offset); }
+}

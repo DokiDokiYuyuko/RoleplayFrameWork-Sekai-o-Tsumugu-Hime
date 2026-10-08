@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "id": "forest",
+  "name": "碧林",
+  "note": "浅苔绿与翡翠色",
+  "order": 6,
+  "color_scheme": "light",
+  "preview": [
+    "#f2f7ef",
+    "#365e45",
+    "#89602d",
+    "#969bb3"
+  ],
+  "palette": {
+    "page": "#f2f7ef",
+    "surface": "#fbfdf8",
+    "surfaceSoft": "#e5eee2",
+    "text": "#29382d",
+    "textMuted": "#596e5f",
+    "border": "#d6e2d4",
+    "primary": "#365e45",
+    "primaryHover": "#294b36",
+    "primaryButton": "#365e45",
+    "primaryButtonHover": "#294b36",
+    "onPrimary": "#ffffff",
+    "primarySoft": "#e1ecdf",
+    "accent": "#89602d",
+    "secondary": "#969bb3",
+    "nav": "#233e2e",
+    "navText": "#f0f7ed",
+    "navMuted": "#bbcdbd",
+    "rail": "#e7efe3",
+    "focus": "#426f51",
+    "danger": "#a74b4e",
+    "dangerSoft": "#fcecec",
+    "success": "#2c6c59",
+    "successSoft": "#e7f3eb",
+    "warningSoft": "#f6eadb",
+    "brandStart": "#f7fbf4",
+    "brandEnd": "#e1ecdd"
+  },
+  "shadows": {
+    "panel": "0 14px 40px rgba(35, 47, 83, 0.07)",
+    "card": "0 8px 28px rgba(43, 58, 99, 0.06)"
+  },
+  "assets": {
+    "nav_art": "/brand/themes/astral/sidebar-palace.jpg",
+    "story_cover_forest": "/brand/themes/astral/story-forest.jpg",
+    "story_cover_ocean": "/brand/themes/astral/story-ocean.jpg",
+    "story_cover_moon": "/brand/themes/astral/story-moon.jpg"
+  }
+}

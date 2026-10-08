@@ -1,0 +1,12 @@
+.pointer-effects { position:fixed; inset:0; width:100vw; height:100vh; z-index:9999; pointer-events:none; user-select:none; }
+@media (hover:hover) and (pointer:fine) {
+  html[data-cursor="star"] .app-shell { cursor:url('/appearance/cursors/star-arrow.svg') 3 2, auto; }
+  html[data-cursor="star"] :is(a,button,summary,label[for],select,[role="button"],[role="tab"],[role="menuitem"],.home-dropdown [role="menuitem"]) { cursor:url('/appearance/cursors/star-hand.svg') 12 2, pointer; }
+  html[data-cursor="star"] :is(input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),textarea,[contenteditable="true"]) { cursor:text; }
+  html[data-cursor="star"] :is(input[type="checkbox"],input[type="radio"]) { cursor:url('/appearance/cursors/star-hand.svg') 12 2, pointer; }
+  html[data-cursor="star"] :is(button:disabled,input:disabled,select:disabled,textarea:disabled,[aria-disabled="true"]) { cursor:not-allowed; }
+  html[data-cursor="star"] :is([data-cursor="grab"],.react-flow__pane) { cursor:grab; }
+  html[data-cursor="star"] :is([data-cursor="grabbing"],.react-flow__pane.dragging) { cursor:grabbing; }
+  html[data-cursor="star"] [data-cursor="ew-resize"] { cursor:ew-resize; }
+}
+@media (hover:none),(pointer:coarse),(prefers-reduced-motion:reduce) { .pointer-effects { display:none; } }

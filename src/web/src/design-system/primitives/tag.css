@@ -1,0 +1,59 @@
+/* Tag / Badge: pill, 24 high, 12px text. Spec section 5. */
+@layer ui.primitives {
+  .ui-tag,
+  .ui-tag__x {
+    box-sizing: border-box;
+  }
+
+  .ui-tag {
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    gap: var(--space-1);
+    height: var(--size-tag);
+    max-width: 100%;
+    padding: 0 var(--space-2);
+    border: var(--border-width) solid transparent;
+    border-radius: var(--radius-pill);
+    background: var(--surface-2);
+    color: var(--text-2);
+    font: var(--fw-regular) var(--fs-xs) / 1 var(--font-ui);
+    white-space: nowrap;
+  }
+  .ui-tag--accent { background: var(--accent-soft); color: var(--accent); }
+  .ui-tag--region { background: var(--region-soft); color: var(--region); }
+  .ui-tag--success { background: var(--success-soft); color: var(--success); }
+  .ui-tag--warning { background: var(--warning-soft); color: var(--warning); }
+  .ui-tag--danger { background: var(--danger-soft); color: var(--danger); }
+  .ui-tag--strong { font-weight: var(--fw-semibold); }
+  .ui-tag--dot::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: var(--radius-pill);
+    background: currentColor;
+  }
+
+  /* The × sits flush right; its hit area is the full tag height */
+  .ui-tag--removable { padding-right: 0; }
+  .ui-tag__x {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    aspect-ratio: 1;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: var(--radius-pill);
+    background: transparent;
+    box-shadow: var(--shadow-none);
+    color: inherit;
+    cursor: pointer;
+  }
+  .ui-tag__x:hover { background: var(--overlay-hover); }
+  .ui-tag__x:active { background: var(--overlay-active); }
+  .ui-tag__x:focus-visible {
+    outline: var(--focus-width) solid var(--focus);
+    outline-offset: calc(var(--focus-width) * -1);
+  }
+}

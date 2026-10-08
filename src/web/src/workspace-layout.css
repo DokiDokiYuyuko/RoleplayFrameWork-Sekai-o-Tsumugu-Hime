@@ -1,0 +1,14 @@
+:root { --workspace-gutter: clamp(24px, 1.4vw, 32px); --workspace-gap: 20px; }
+.workspace-page { width:100%; min-width:0; padding:24px var(--workspace-gutter) 36px; box-sizing:border-box; }
+.workspace-body { width:100%; min-width:0; margin:0; }
+.workspace-card-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr)); gap:18px; align-items:start; }
+.workspace-card-grid > * { min-width:0; }
+.workspace-readable { max-width:80ch; }
+@media (max-width:760px) {
+  :root { --workspace-gutter:16px; --workspace-gap:14px; }
+  .workspace-page { padding-block:18px 24px; }
+  .workspace-card-grid { grid-template-columns:repeat(auto-fill,minmax(min(100%,270px),1fr)); gap:14px; }
+}
+@media (max-width:380px) { :root { --workspace-gutter:12px; } }
+
+.v7-message-quick-actions > button, .v7-message-actions-toggle { white-space:nowrap; flex-shrink:0; }

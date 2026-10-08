@@ -1,0 +1,84 @@
+/* Long-text panel: one outer border, borderless textarea. Spec section 5. */
+@layer ui.primitives {
+  .ui-writing,
+  .ui-writing__area {
+    box-sizing: border-box;
+  }
+
+  .ui-writing {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    min-width: 0;
+    padding: var(--space-3) var(--space-4);
+    border: var(--border-width) solid var(--border-strong);
+    border-radius: var(--radius-card);
+    background: var(--surface-1);
+    box-shadow: var(--shadow-none);
+    transition: border-color var(--dur-hover) var(--ease);
+  }
+  .ui-writing:hover { border-color: var(--border-strong-hover); }
+  /* Ring around the whole panel while the text area has keyboard focus */
+  .ui-writing:has(.ui-writing__area:focus-visible) {
+    border-color: var(--accent);
+    outline: var(--focus-width) solid var(--focus);
+    outline-offset: var(--focus-offset);
+  }
+  .ui-writing:has([aria-invalid="true"]) { border-color: var(--danger); }
+  .ui-writing:has(.ui-writing__area:disabled) {
+    border-color: var(--border-default);
+    background: var(--surface-2);
+    opacity: var(--opacity-disabled);
+    pointer-events: none;
+  }
+
+  .ui-writing__head,
+  .ui-writing__foot {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: var(--size-sm);
+  }
+  .ui-writing__foot {
+    color: var(--text-3);
+    font-size: var(--fs-xs);
+  }
+  /* A head without a title keeps the tools on the right */
+  .ui-writing__head--tools { justify-content: flex-end; }
+  .ui-writing__title {
+    margin: 0 auto 0 0;
+    color: var(--text-1);
+    font: var(--fw-semibold) var(--fs-sm) / var(--lh-ui) var(--font-ui);
+  }
+
+  .ui-writing__area {
+    display: block;
+    width: 100%;
+    min-height: calc(var(--size-lg) * 2);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: inherit;
+    outline: 0;
+    background: transparent;
+    box-shadow: var(--shadow-none);
+    color: var(--text-1);
+    font: var(--fw-regular) var(--fs-md) / var(--lh-ui) var(--font-ui);
+    resize: none;
+  }
+  .ui-writing__area::placeholder {
+    color: var(--text-3);
+    opacity: 1;
+  }
+  .ui-writing--reading .ui-writing__area {
+    font-family: var(--font-reading);
+    font-size: var(--reading-size);
+    line-height: var(--reading-lh);
+  }
+  .ui-writing__count {
+    margin-left: auto;
+    color: var(--text-3);
+    font-size: var(--fs-xs);
+  }
+}

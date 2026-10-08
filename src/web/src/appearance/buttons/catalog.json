@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "frames": ["celestial", "ink", "prism", "starship", "quiet", "moonweave"],
+  "styles": [
+    {
+      "id": "picturebook",
+      "frame": "moonweave",
+      "name": "月光织锦",
+      "note": "月白玻璃、鸢尾紫珐琅与完整花蔓窗框，织就华丽幻想书房。"
+    },
+    {
+      "id": "celestial-atelier",
+      "frame": "celestial",
+      "name": "星织绮庭",
+      "note": "柔曲轮廓、银金细饰与星仪书卷层次。"
+    },
+    {
+      "id": "ink-scroll",
+      "frame": "ink",
+      "name": "墨绘山水",
+      "note": "宣纸肌理、直线书框与山水留白。"
+    },
+    {
+      "id": "prism",
+      "frame": "prism",
+      "name": "琉璃幻境",
+      "note": "通透圆角、柔彩光晕与玻璃边缘。"
+    },
+    {
+      "id": "starship",
+      "frame": "starship",
+      "name": "星舰终端",
+      "note": "利落切角、网格航线与精密刻度。"
+    },
+    {
+      "id": "quiet-study",
+      "frame": "quiet",
+      "name": "静谧书房",
+      "note": "平整纸页、素雅线条与安静的阅读空间。"
+    }
+  ]
+}

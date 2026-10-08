@@ -1,0 +1,38 @@
+.player-control-bar { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:10px; font-size:12px; color:var(--muted); }
+.player-control-person { display:flex; align-items:center; gap:8px; min-width:0; }
+.player-control-person strong { color:var(--ink); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.player-control-bar > button { min-height:40px; flex-shrink:0; }
+.player-prior-drafts { font-size:12px; color:var(--muted); margin-bottom:8px; }
+.player-prior-drafts summary { cursor:pointer; padding:6px 0; }
+.player-prior-drafts button { display:block; width:100%; min-height:44px; text-align:left; padding:8px; color:var(--ink); border-bottom:1px solid var(--line); overflow-wrap:anywhere; }
+.player-switch-dialog.v7-dialog-content { display:flex; flex-direction:column; width:min(760px,calc(100vw - 24px)); max-height:calc(100dvh - 32px); padding:0; color:var(--ink); background:var(--surface); overflow:hidden; }
+.player-switch-dialog header { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; padding:20px; border-bottom:1px solid var(--line); flex-shrink:0; }
+.player-switch-dialog header h2 { font-size:22px; }
+.player-switch-dialog header p { font-size:13px; color:var(--muted); margin-top:6px; }
+.player-switch-scroll { min-height:0; overflow:auto; padding:20px; overscroll-behavior:contain; }
+.player-switch-dialog .player-switch-search { display:flex; align-items:center; gap:8px; padding:8px 12px; border:1px solid var(--line); border-radius:10px; margin-bottom:16px; }
+.player-switch-dialog .player-switch-search input { flex:1; min-width:0; width:100%; margin:0; padding:4px 0; border:0; color:var(--ink); background:transparent; outline:none; font-size:16px; }
+.player-switch-search:focus-within { outline:2px solid var(--focus,var(--sea)); outline-offset:2px; }
+.player-switch-columns { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:16px; }
+.player-switch-list h3,.player-switch-preview h3 { margin:0 0 10px; font-weight:600; font-size:14px; }
+.player-switch-list { margin-bottom:16px; }
+.player-switch-list button { display:flex; align-items:center; gap:10px; text-align:left; width:100%; min-height:56px; padding:9px 10px; margin-bottom:6px; border:1px solid var(--line); border-radius:10px; color:var(--ink); background:var(--surface); }
+.player-switch-list button[aria-pressed=true] { border-color:var(--sea); background:var(--sea-soft); }
+.player-switch-list button:focus-visible { outline:2px solid var(--focus); outline-offset:2px; }
+.player-switch-list button span { min-width:0; }
+.player-switch-list strong { font-size:13px; display:block; overflow-wrap:anywhere; }
+.player-switch-list small { display:block; font-size:11px; color:var(--muted); margin-top:4px; }
+.player-switch-preview { padding:14px; border-radius:12px; background:var(--surface-soft); min-width:0; }
+.player-switch-preview p { white-space:pre-wrap; overflow-wrap:anywhere; font-size:13px; line-height:1.7; max-height:240px; overflow:auto; }
+.player-switch-preview details { margin-top:12px; }
+.player-switch-preview summary { cursor:pointer; font-size:12px; color:var(--sea); }
+.player-switch-empty { font-size:12px; color:var(--muted); }
+.player-switch-fate { margin-top:18px; padding:14px; border:1px solid var(--line); border-radius:12px; }
+.player-switch-fate legend { padding:0 5px; font-size:13px; font-weight:600; }
+.player-switch-fate label { display:flex; align-items:center; gap:8px; min-height:44px; font-size:13px; }
+.player-switch-dialog .player-switch-fate input[type=radio] { width:16px; height:16px; flex:0 0 16px; margin:0; padding:0; accent-color:var(--sea); }
+.player-switch-fate p { font-size:12px; color:var(--muted); }
+.player-switch-dialog footer { display:flex; justify-content:space-between; align-items:center; gap:10px; padding:14px 20px max(14px,env(safe-area-inset-bottom)); border-top:1px solid var(--line); background:var(--surface); flex-shrink:0; }
+.player-switch-dialog footer span { font-size:12px; color:var(--muted); }
+.player-switch-dialog footer button { min-height:44px; display:flex; align-items:center; gap:8px; }
+@media(max-width:600px) { .player-switch-columns { grid-template-columns:minmax(0,1fr); } .player-switch-dialog header,.player-switch-scroll { padding:16px; } .player-switch-dialog footer { padding-left:16px; padding-right:16px; } }

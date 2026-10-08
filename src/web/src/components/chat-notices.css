@@ -1,0 +1,13 @@
+.chat-error-notice { display: flex; align-items: flex-start; gap: 10px; padding: 10px 24px; border-bottom: 1px solid var(--line); background: var(--danger-soft, var(--panel)); color: var(--danger); font-size: 13px; }
+.chat-error-notice > svg { flex: none; margin-top: 3px; }
+.chat-error-notice .v7-icon-btn { --btn-icon-size: 28px; --btn-ink: inherit; width: 28px; height: 28px; flex: none; color: inherit; }
+.chat-error-content { flex: 1; min-width: 0; }
+.chat-error-content p { margin: 2px 0; overflow-wrap: anywhere; }
+.chat-error-content summary, .chat-turn-details summary { cursor: pointer; font-size: 12px; padding: 5px 0; }
+.chat-error-content pre, .chat-turn-details pre { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 180px; overflow: auto; font: 12px/1.6 var(--font-mono, monospace); margin: 4px 0 0; }
+.chat-turn-recovery { padding: 12px 24px; border-bottom: 1px solid var(--line); background: var(--warning-soft); color: var(--ink); font-size: 14px; }
+.chat-turn-recovery.is-collapsed { padding-block: 5px; background: var(--panel); color: var(--muted); font-size: 12px; }
+.chat-turn-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.chat-turn-actions { display: flex; align-items: center; gap: 8px; }
+.chat-turn-help { font-size: 12px; color: var(--muted); margin: 4px 0 0; }
+.chat-turn-details { color: var(--muted); }

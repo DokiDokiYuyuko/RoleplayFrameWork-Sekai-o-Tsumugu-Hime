@@ -1,0 +1,790 @@
+{
+  "version": "v3-candidate-2026-10-08",
+  "covers": [
+    {
+      "id": "modern-coast",
+      "name": "现代海岸",
+      "source": "v3",
+      "file": "assets/v3/worlds/world-modern-coast-cover.webp",
+      "fileLarge": "assets/v3/worlds/world-modern-coast-cover-1664.webp",
+      "sigil": "assets/v3/sigils/sigil-modern-coast.svg",
+      "banner": "assets/v3/worlds/world-modern-coast-banner.webp",
+      "category": "城镇人文"
+    },
+    {
+      "id": "rain-mystery",
+      "name": "雨夜悬案",
+      "source": "v3",
+      "file": "assets/v3/worlds/world-rain-mystery-cover.webp",
+      "fileLarge": "assets/v3/worlds/world-rain-mystery-cover-1664.webp",
+      "sigil": "assets/v3/sigils/sigil-rain-mystery.svg",
+      "category": "城镇人文"
+    },
+    {
+      "id": "orbital-station",
+      "name": "轨道站",
+      "source": "v3",
+      "file": "assets/v3/worlds/world-orbital-station-cover.webp",
+      "fileLarge": "assets/v3/worlds/world-orbital-station-cover-1664.webp",
+      "sigil": "assets/v3/sigils/sigil-orbital-station.svg",
+      "banner": "assets/v3/worlds/world-orbital-station-banner.webp",
+      "category": "科幻与险地"
+    },
+    {
+      "id": "cyber-district",
+      "name": "赛博街区",
+      "source": "v3",
+      "file": "assets/v3/worlds/world-cyber-district-cover.webp",
+      "fileLarge": "assets/v3/worlds/world-cyber-district-cover-1664.webp",
+      "sigil": "assets/v3/sigils/sigil-cyber-district.svg",
+      "category": "科幻与险地"
+    },
+    {
+      "id": "steam-workshop",
+      "name": "蒸汽工坊",
+      "source": "v3",
+      "file": "assets/v3/worlds/world-steam-workshop-cover.webp",
+      "fileLarge": "assets/v3/worlds/world-steam-workshop-cover-1664.webp",
+      "sigil": "assets/v3/sigils/sigil-steam-workshop.svg",
+      "category": "城镇人文"
+    },
+    {
+      "id": "desert-route",
+      "name": "沙漠路线",
+      "source": "v3",
+      "file": "assets/v3/worlds/world-desert-route-cover.webp",
+      "fileLarge": "assets/v3/worlds/world-desert-route-cover-1664.webp",
+      "sigil": "assets/v3/sigils/sigil-desert-route.svg",
+      "banner": "assets/v3/worlds/world-desert-route-banner.webp",
+      "category": "自然风光"
+    },
+    {
+      "id": "wasteland-railway",
+      "name": "废土铁路",
+      "source": "v3",
+      "file": "assets/v3/worlds/world-wasteland-railway-cover.webp",
+      "fileLarge": "assets/v3/worlds/world-wasteland-railway-cover-1664.webp",
+      "sigil": "assets/v3/sigils/sigil-wasteland-railway.svg",
+      "category": "科幻与险地"
+    },
+    {
+      "id": "mountain-folk",
+      "name": "山地民居",
+      "source": "v3",
+      "file": "assets/v3/worlds/world-mountain-folk-cover.webp",
+      "fileLarge": "assets/v3/worlds/world-mountain-folk-cover-1664.webp",
+      "sigil": "assets/v3/sigils/sigil-mountain-folk.svg",
+      "category": "自然风光"
+    },
+    {
+      "id": "flower-valley",
+      "name": "花谷",
+      "source": "v3",
+      "file": "assets/v3/worlds/world-flower-valley-cover.webp",
+      "fileLarge": "assets/v3/worlds/world-flower-valley-cover-1664.webp",
+      "sigil": "assets/v3/sigils/sigil-flower-valley.svg",
+      "banner": "assets/v3/worlds/world-flower-valley-banner.webp",
+      "category": "自然风光"
+    },
+    {
+      "id": "classical-market",
+      "name": "古典集市",
+      "source": "v3",
+      "file": "assets/v3/worlds/world-classical-market-cover.webp",
+      "fileLarge": "assets/v3/worlds/world-classical-market-cover-1664.webp",
+      "sigil": "assets/v3/sigils/sigil-classical-market.svg",
+      "category": "城镇人文"
+    },
+    {
+      "id": "volcanic-fort",
+      "name": "火山要塞",
+      "source": "v3",
+      "file": "assets/v3/worlds/world-volcanic-fort-cover.webp",
+      "fileLarge": "assets/v3/worlds/world-volcanic-fort-cover-1664.webp",
+      "sigil": "assets/v3/sigils/sigil-volcanic-fort.svg",
+      "category": "科幻与险地"
+    },
+    {
+      "id": "mirror-lake",
+      "name": "镜湖",
+      "source": "v3",
+      "file": "assets/v3/worlds/world-mirror-lake-cover.webp",
+      "fileLarge": "assets/v3/worlds/world-mirror-lake-cover-1664.webp",
+      "sigil": "assets/v3/sigils/sigil-mirror-lake.svg",
+      "category": "自然风光"
+    },
+    {
+      "id": "v1-ancient-forest",
+      "name": "古林",
+      "source": "v1",
+      "file": "assets/worlds/cover-ancient-forest-800.webp",
+      "fileLarge": "assets/worlds/cover-ancient-forest.webp",
+      "sigil": null,
+      "category": "早期封面"
+    },
+    {
+      "id": "v1-deep-palace",
+      "name": "水下宫殿",
+      "source": "v1",
+      "file": "assets/worlds/cover-deep-palace-800.webp",
+      "fileLarge": "assets/worlds/cover-deep-palace.webp",
+      "sigil": null,
+      "category": "早期封面"
+    },
+    {
+      "id": "v1-sky-academy",
+      "name": "天空学院",
+      "source": "v1",
+      "file": "assets/worlds/cover-sky-academy-800.webp",
+      "fileLarge": "assets/worlds/cover-sky-academy.webp",
+      "sigil": null,
+      "category": "早期封面"
+    },
+    {
+      "id": "v1-snow-citadel",
+      "name": "雪山要塞",
+      "source": "v1",
+      "file": "assets/worlds/cover-snow-citadel-800.webp",
+      "fileLarge": "assets/worlds/cover-snow-citadel.webp",
+      "sigil": null,
+      "category": "早期封面"
+    },
+    {
+      "id": "v1-star-isles",
+      "name": "星之群岛",
+      "source": "v1",
+      "file": "assets/worlds/cover-star-isles-800.webp",
+      "fileLarge": "assets/worlds/cover-star-isles.webp",
+      "sigil": null,
+      "category": "早期封面"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "inn-lounge",
+      "name": "旅店大厅",
+      "file": "assets/v3/scenes/scene-inn-lounge.webp",
+      "variant": "",
+      "group": "inn"
+    },
+    {
+      "id": "study-archive",
+      "name": "书房档案室",
+      "file": "assets/v3/scenes/scene-study-archive.webp",
+      "variant": "",
+      "group": "study"
+    },
+    {
+      "id": "greenhouse-tea-morning",
+      "name": "温室茶座",
+      "file": "assets/v3/scenes/scene-greenhouse-tea-morning.webp",
+      "variant": "白昼",
+      "group": "greenhouse"
+    },
+    {
+      "id": "train-compartment",
+      "name": "列车车厢",
+      "file": "assets/v3/scenes/scene-train-compartment.webp",
+      "variant": "",
+      "group": "train"
+    },
+    {
+      "id": "forest-path-clear",
+      "name": "林间小径",
+      "file": "assets/v3/scenes/scene-forest-path-clear.webp",
+      "variant": "晴",
+      "group": "forest"
+    },
+    {
+      "id": "rain-alley",
+      "name": "小巷",
+      "file": "assets/v3/scenes/scene-rain-alley.webp",
+      "variant": "雨",
+      "group": "alley"
+    },
+    {
+      "id": "coast-ferry-day",
+      "name": "渡口",
+      "file": "assets/v3/scenes/scene-coast-ferry-day.webp",
+      "variant": "白昼",
+      "group": "ferry"
+    },
+    {
+      "id": "starship-observation",
+      "name": "飞船观景台",
+      "file": "assets/v3/scenes/scene-starship-observation.webp",
+      "variant": "",
+      "group": "starship"
+    },
+    {
+      "id": "coast-ferry-night",
+      "name": "渡口",
+      "file": "assets/v3/scenes/scene-coast-ferry-night.webp",
+      "variant": "夜",
+      "group": "ferry"
+    },
+    {
+      "id": "forest-path-rain",
+      "name": "林间小径",
+      "file": "assets/v3/scenes/scene-forest-path-rain.webp",
+      "variant": "雨",
+      "group": "forest"
+    },
+    {
+      "id": "greenhouse-tea-night",
+      "name": "温室茶座",
+      "file": "assets/v3/scenes/scene-greenhouse-tea-night.webp",
+      "variant": "夜",
+      "group": "greenhouse"
+    },
+    {
+      "id": "sunny-alley",
+      "name": "小巷",
+      "file": "assets/v3/scenes/scene-sunny-alley.webp",
+      "variant": "晴",
+      "group": "alley"
+    }
+  ],
+  "backplates": {
+    "iris": {
+      "id": "silver-archive-room",
+      "name": "银色档案室",
+      "file": "assets/v3/cards/card-silver-archive-room.webp"
+    },
+    "teal": {
+      "id": "teal-navigation-window",
+      "name": "航海窗",
+      "file": "assets/v3/cards/card-teal-navigation-window.webp"
+    },
+    "rose": {
+      "id": "rose-greenhouse",
+      "name": "玫瑰温室",
+      "file": "assets/v3/cards/card-rose-greenhouse.webp"
+    },
+    "gold": {
+      "id": "champagne-orrery",
+      "name": "星象仪",
+      "file": "assets/v3/cards/card-champagne-orrery.webp"
+    }
+  },
+  "frames": [
+    {
+      "id": "none",
+      "name": "无框",
+      "file": null,
+      "source": "css",
+      "status": "builtin"
+    },
+    {
+      "id": "ring",
+      "name": "细环",
+      "file": null,
+      "source": "css",
+      "status": "builtin"
+    },
+    {
+      "id": "moon-silver",
+      "name": "月相银环",
+      "file": "assets/v3/avatar-frames-v1-fixed/moon-silver.png",
+      "source": "v1-fixed",
+      "status": "fixed",
+      "inner": 161.3,
+      "ratio": 1.597
+    },
+    {
+      "id": "iris-wreath",
+      "name": "鸢尾花环",
+      "file": "assets/avatar-frames/iris-wreath.png",
+      "source": "v1",
+      "status": "pass",
+      "inner": 168.5,
+      "ratio": 1.528
+    },
+    {
+      "id": "gilt-enamel",
+      "name": "香槟金珐琅",
+      "file": "assets/avatar-frames/gilt-enamel.png",
+      "source": "v1",
+      "status": "pass",
+      "inner": 167.3,
+      "ratio": 1.539
+    },
+    {
+      "id": "starburst",
+      "name": "星芒",
+      "file": "assets/avatar-frames/starburst.png",
+      "source": "v1",
+      "status": "pass",
+      "inner": 169.3,
+      "ratio": 1.521
+    },
+    {
+      "id": "tide-teal",
+      "name": "青蓝潮纹",
+      "file": "assets/v3/avatar-frames-v1-fixed/tide-teal.png",
+      "source": "v1-fixed",
+      "status": "fixed",
+      "inner": 161.2,
+      "ratio": 1.598
+    },
+    {
+      "id": "rose-vine",
+      "name": "蔷薇藤",
+      "file": "assets/v3/avatar-frames-v1-fixed/rose-vine.png",
+      "source": "v1-fixed",
+      "status": "fixed",
+      "inner": 166.7,
+      "ratio": 1.545
+    },
+    {
+      "id": "silver-feather",
+      "name": "银羽",
+      "file": "assets/v3/avatar-frames/avatar-silver-feather-512.png",
+      "source": "v3",
+      "status": "pass",
+      "inner": 160.7,
+      "ratio": 1.603
+    },
+    {
+      "id": "vine-moon",
+      "name": "藤月",
+      "file": "assets/v3/avatar-frames/avatar-vine-moon-512.png",
+      "source": "v3",
+      "status": "pass",
+      "inner": 160.7,
+      "ratio": 1.603
+    },
+    {
+      "id": "frost-crystal",
+      "name": "霜晶",
+      "file": "assets/v3/avatar-frames/avatar-frost-crystal-512.png",
+      "source": "v3",
+      "status": "pass",
+      "inner": 160.7,
+      "ratio": 1.603
+    },
+    {
+      "id": "woven-knot",
+      "name": "织结",
+      "file": "assets/v3/avatar-frames/avatar-woven-knot-512.png",
+      "source": "v3",
+      "status": "pass",
+      "inner": 160.7,
+      "ratio": 1.603
+    }
+  ],
+  "bubbles": {
+    "plain": null,
+    "star-track": {
+      "corner": "assets/v3/bubbles/bubble-star-track-corner.webp",
+      "cornerSize": {
+        "w": 40,
+        "h": 39.3
+      },
+      "end": "assets/v3/bubbles/bubble-star-track-end.webp",
+      "endSize": {
+        "w": 96,
+        "h": 26.25
+      }
+    },
+    "book-note": {
+      "corner": "assets/v3/bubbles/bubble-book-note-corner.webp",
+      "cornerSize": {
+        "w": 40,
+        "h": 36.72
+      },
+      "end": "assets/v3/bubbles/bubble-book-note-end.webp",
+      "endSize": {
+        "w": 60.83,
+        "h": 24
+      }
+    },
+    "crystal": {
+      "corner": "assets/v3/bubbles/bubble-crystal-corner.webp",
+      "cornerSize": {
+        "w": 34.38,
+        "h": 40
+      },
+      "end": "assets/v3/bubbles/bubble-crystal-end.webp",
+      "endSize": {
+        "w": 64,
+        "h": 17.5
+      }
+    },
+    "moonlight": {
+      "corner": "assets/v3/bubbles/bubble-moonlight-corner.webp",
+      "cornerSize": {
+        "w": 39.49,
+        "h": 40
+      },
+      "end": "assets/v3/bubbles/bubble-moonlight-end.webp",
+      "endSize": {
+        "w": 37.81,
+        "h": 24
+      },
+      "endNote": "compact; keep centered, never stretch to 3:1"
+    }
+  },
+  "conversation": {
+    "chapter": {
+      "file": "assets/v3/conversation/chapter-transition.webp",
+      "size": {
+        "w": 480,
+        "h": 48.84
+      },
+      "visible": {
+        "w": 480,
+        "h": 44
+      }
+    },
+    "group": {
+      "file": "assets/v3/conversation/group-thread-knot.webp",
+      "size": {
+        "w": 320,
+        "h": 55.29
+      },
+      "visible": {
+        "w": 320,
+        "h": 52
+      }
+    },
+    "linked": {
+      "file": "assets/v3/conversation/linked-thread-emblem.webp",
+      "sizeMin": {
+        "w": 48,
+        "h": 43.34
+      },
+      "sizeMax": {
+        "w": 64,
+        "h": 57.79
+      }
+    },
+    "composer": {
+      "file": "assets/v3/conversation/composer-teal-quill-corner.webp",
+      "sizeMin": {
+        "w": 68.36,
+        "h": 80
+      },
+      "sizeMax": {
+        "w": 82.04,
+        "h": 96
+      }
+    },
+    "editor": {
+      "file": "assets/v3/conversation/editor-rose-page-corner.webp",
+      "sizeMin": {
+        "w": 80,
+        "h": 72.89
+      },
+      "sizeMax": {
+        "w": 96,
+        "h": 87.47
+      }
+    }
+  },
+  "pageart": {
+    "worldline": {
+      "file": "assets/v3/pageart/page-worldline.png",
+      "size": {
+        "w": 160,
+        "h": 100
+      },
+      "compact": {
+        "w": 96,
+        "h": 60
+      },
+      "slot": null,
+      "slotNote": "no matching page in the demo"
+    },
+    "memory": {
+      "file": "assets/v3/pageart/page-memory.png",
+      "size": {
+        "w": 160,
+        "h": 100
+      },
+      "compact": {
+        "w": 96,
+        "h": 60
+      },
+      "slot": "story-memory-section"
+    },
+    "connections": {
+      "file": "assets/v3/pageart/page-connections.png",
+      "size": {
+        "w": 160,
+        "h": 100
+      },
+      "compact": {
+        "w": 96,
+        "h": 60
+      },
+      "slot": "settings-connections-section"
+    },
+    "voice": {
+      "file": "assets/v3/pageart/page-voice.png",
+      "size": {
+        "w": 160,
+        "h": 100
+      },
+      "compact": {
+        "w": 96,
+        "h": 60
+      },
+      "slot": "settings-voice-section"
+    }
+  },
+  "empty": {
+    "unselectedRoute": {
+      "file": "assets/v3/pageart/empty-unselected-route.png",
+      "size": {
+        "w": 240,
+        "h": 180
+      },
+      "use": "master-detail, nothing selected"
+    },
+    "unfinishedManuscript": {
+      "file": "assets/v3/pageart/empty-unfinished-manuscript.png",
+      "size": {
+        "w": 240,
+        "h": 180
+      },
+      "use": "long-form or item list without content"
+    }
+  },
+  "ambient": {
+    "teal": {
+      "file": "assets/v3/ambient/ambient-teal-tide-edge.png",
+      "region": "story",
+      "size": {
+        "w": 780,
+        "h": 502
+      }
+    },
+    "rose": {
+      "file": "assets/v3/ambient/ambient-rose-writing-edge.png",
+      "region": "character",
+      "size": {
+        "w": 780,
+        "h": 502
+      }
+    }
+  },
+  "brand": {
+    "navigation": {
+      "file": "assets/v3/brand/brand-navigation.png",
+      "size": {
+        "w": 56,
+        "h": 56
+      },
+      "pixels": [
+        512,
+        512
+      ]
+    },
+    "horizontal": {
+      "file": "assets/v3/brand/brand-horizontal.png",
+      "fileDark": "assets/v3/brand/brand-horizontal-dark.png",
+      "size": {
+        "w": 200,
+        "h": 44
+      },
+      "pixels": [
+        720,
+        160
+      ],
+      "note": "wordmark is baked into the raster; keep the product name in the DOM as text for screen readers and use alt=\"\""
+    },
+    "compact": {
+      "file": "assets/v3/brand/brand-compact.svg",
+      "fileDark": null,
+      "size": {
+        "w": 40,
+        "h": 40
+      },
+      "note": "v3 ships no dark variant; the lilac fill and violet stroke were checked on both themes in v3-lab"
+    },
+    "monochrome": {
+      "file": "assets/v3/brand/brand-monochrome.svg",
+      "fileDark": "assets/v3/brand/brand-monochrome-dark.svg",
+      "size": {
+        "w": 40,
+        "h": 40
+      }
+    }
+  },
+  "sigils": {
+    "modern-coast": "assets/v3/sigils/sigil-modern-coast.svg",
+    "rain-mystery": "assets/v3/sigils/sigil-rain-mystery.svg",
+    "orbital-station": "assets/v3/sigils/sigil-orbital-station.svg",
+    "cyber-district": "assets/v3/sigils/sigil-cyber-district.svg",
+    "steam-workshop": "assets/v3/sigils/sigil-steam-workshop.svg",
+    "desert-route": "assets/v3/sigils/sigil-desert-route.svg",
+    "wasteland-railway": "assets/v3/sigils/sigil-wasteland-railway.svg",
+    "mountain-folk": "assets/v3/sigils/sigil-mountain-folk.svg",
+    "flower-valley": "assets/v3/sigils/sigil-flower-valley.svg",
+    "classical-market": "assets/v3/sigils/sigil-classical-market.svg",
+    "volcanic-fort": "assets/v3/sigils/sigil-volcanic-fort.svg",
+    "mirror-lake": "assets/v3/sigils/sigil-mirror-lake.svg"
+  },
+  "controls": {
+    "capWidthPerHeight": 0.9090909090909091,
+    "canvas": [
+      600,
+      132
+    ],
+    "manifest": "assets/v3/controls/manifest.json",
+    "primary": {
+      "light": {
+        "normal": {
+          "left": "assets/v3/controls/slices/btn-primary-left.png",
+          "center": "assets/v3/controls/slices/btn-primary-center.png",
+          "right": "assets/v3/controls/slices/btn-primary-right.png",
+          "labelOffsetYRatio": -0.003787878787878788,
+          "visibleAlpha16Bbox": [
+            0,
+            17,
+            600,
+            114
+          ],
+          "visibleCenterY": 65.5
+        },
+        "hover": {
+          "left": "assets/v3/controls/slices/btn-primary-hover-left.png",
+          "center": "assets/v3/controls/slices/btn-primary-hover-center.png",
+          "right": "assets/v3/controls/slices/btn-primary-hover-right.png",
+          "labelOffsetYRatio": -0.003787878787878788,
+          "visibleAlpha16Bbox": [
+            0,
+            17,
+            600,
+            114
+          ],
+          "visibleCenterY": 65.5
+        },
+        "pressed": {
+          "left": "assets/v3/controls/slices/btn-primary-pressed-left.png",
+          "center": "assets/v3/controls/slices/btn-primary-pressed-center.png",
+          "right": "assets/v3/controls/slices/btn-primary-pressed-right.png",
+          "labelOffsetYRatio": -0.003787878787878788,
+          "visibleAlpha16Bbox": [
+            0,
+            17,
+            600,
+            114
+          ],
+          "visibleCenterY": 65.5
+        }
+      },
+      "night": {
+        "normal": {
+          "left": "assets/v3/controls/slices/btn-primary-night-left.png",
+          "center": "assets/v3/controls/slices/btn-primary-night-center.png",
+          "right": "assets/v3/controls/slices/btn-primary-night-right.png",
+          "labelOffsetYRatio": 0,
+          "visibleAlpha16Bbox": [
+            0,
+            18,
+            600,
+            114
+          ],
+          "visibleCenterY": 66
+        },
+        "hover": {
+          "left": "assets/v3/controls/slices/btn-primary-hover-night-left.png",
+          "center": "assets/v3/controls/slices/btn-primary-hover-night-center.png",
+          "right": "assets/v3/controls/slices/btn-primary-hover-night-right.png",
+          "labelOffsetYRatio": 0,
+          "visibleAlpha16Bbox": [
+            0,
+            15,
+            600,
+            117
+          ],
+          "visibleCenterY": 66
+        },
+        "pressed": {
+          "left": "assets/v3/controls/slices/btn-primary-pressed-night-left.png",
+          "center": "assets/v3/controls/slices/btn-primary-pressed-night-center.png",
+          "right": "assets/v3/controls/slices/btn-primary-pressed-night-right.png",
+          "labelOffsetYRatio": -0.003787878787878788,
+          "visibleAlpha16Bbox": [
+            0,
+            17,
+            600,
+            114
+          ],
+          "visibleCenterY": 65.5
+        }
+      }
+    },
+    "secondary": {
+      "light": {
+        "normal": {
+          "left": "assets/v3/controls/slices/btn-secondary-left.png",
+          "center": "assets/v3/controls/slices/btn-secondary-center.png",
+          "right": "assets/v3/controls/slices/btn-secondary-right.png",
+          "labelOffsetYRatio": 0,
+          "visibleAlpha16Bbox": [
+            0,
+            18,
+            600,
+            114
+          ],
+          "visibleCenterY": 66
+        },
+        "hover": {
+          "left": "assets/v3/controls/slices/btn-secondary-hover-left.png",
+          "center": "assets/v3/controls/slices/btn-secondary-hover-center.png",
+          "right": "assets/v3/controls/slices/btn-secondary-hover-right.png",
+          "labelOffsetYRatio": -0.011363636363636364,
+          "visibleAlpha16Bbox": [
+            0,
+            14,
+            600,
+            115
+          ],
+          "visibleCenterY": 64.5
+        },
+        "pressed": null
+      },
+      "night": {
+        "normal": {
+          "left": "assets/v3/controls/slices/btn-secondary-night-left.png",
+          "center": "assets/v3/controls/slices/btn-secondary-night-center.png",
+          "right": "assets/v3/controls/slices/btn-secondary-night-right.png",
+          "labelOffsetYRatio": 0,
+          "visibleAlpha16Bbox": [
+            0,
+            17,
+            600,
+            115
+          ],
+          "visibleCenterY": 66
+        },
+        "hover": {
+          "left": "assets/v3/controls/slices/btn-secondary-hover-night-left.png",
+          "center": "assets/v3/controls/slices/btn-secondary-hover-night-center.png",
+          "right": "assets/v3/controls/slices/btn-secondary-hover-night-right.png",
+          "labelOffsetYRatio": 0,
+          "visibleAlpha16Bbox": [
+            0,
+            17,
+            600,
+            115
+          ],
+          "visibleCenterY": 66
+        },
+        "pressed": null
+      }
+    },
+    "note": "secondary has no pressed artwork in v3: use a translate-down feedback, do not invent a pressed skin"
+  },
+  "retired": {
+    "covers": [
+      "canal-city",
+      "mist-harbor",
+      "sand-ruins"
+    ],
+    "coverNote": "v1 covers retired because their topic duplicates a v3 cover; files are left in assets/worlds/"
+  }
+}

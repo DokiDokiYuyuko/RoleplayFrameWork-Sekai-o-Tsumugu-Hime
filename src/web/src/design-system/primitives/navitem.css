@@ -1,0 +1,53 @@
+/* NavItem: a navigation link or button, 40px high, with a marker when current. */
+@layer ui.primitives {
+  .ui-navitem,
+  .ui-navitem::before,
+  .ui-navitem::after {
+    box-sizing: border-box;
+  }
+
+  .ui-navitem {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    width: 100%;
+    height: var(--size-nav-item);
+    margin: 0;
+    padding: 0 var(--space-3);
+    border: 0;
+    border-radius: var(--radius-control);
+    background: transparent;
+    color: var(--text-2);
+    font: var(--fw-semibold) var(--fs-sm) / 1 var(--font-ui);
+    text-align: left;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color var(--dur-hover) var(--ease), color var(--dur-hover) var(--ease);
+  }
+  .ui-navitem:focus-visible {
+    outline: var(--focus-width) solid var(--focus);
+    outline-offset: var(--focus-offset);
+  }
+  .ui-navitem .ui-icon { width: var(--icon-md); height: var(--icon-md); }
+  .ui-navitem:hover { background: var(--overlay-hover); color: var(--text-1); }
+  .ui-navitem:active { background: var(--overlay-active); }
+  .ui-navitem[aria-current="page"] {
+    background: var(--accent-soft);
+    box-shadow: var(--nav-active-shadow, var(--shadow-none));
+    color: var(--accent);
+  }
+  .ui-navitem[aria-current="page"]::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: var(--space-2);
+    bottom: var(--space-2);
+    width: 3px;
+    border-radius: var(--radius-pill);
+    background: var(--accent);
+  }
+  .ui-navitem:disabled,
+  .ui-navitem[aria-disabled="true"] { opacity: var(--opacity-disabled); pointer-events: none; }
+}

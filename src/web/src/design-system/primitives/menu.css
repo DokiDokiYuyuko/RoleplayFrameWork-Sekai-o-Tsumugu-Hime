@@ -1,0 +1,87 @@
+/* Menu surface and items (Radix DropdownMenu). Select lists use the same classes. Spec section 5. */
+@layer ui.primitives {
+  .ui-menu__content,
+  .ui-menu__item {
+    box-sizing: border-box;
+  }
+
+  .ui-menu__content {
+    z-index: var(--z-menu);
+    min-width: var(--menu-min-w, 180px);
+    max-width: min(360px, calc(100vw - var(--space-6)));
+    max-height: min(320px, var(--radix-popper-available-height, 60vh));
+    margin: 0;
+    padding: var(--space-1);
+    overflow-y: auto;
+    border: var(--border-width) solid var(--border-subtle);
+    border-radius: var(--radius-card);
+    background: var(--surface-3);
+    color: var(--text-1);
+    box-shadow: var(--shadow-e2);
+    font: var(--fw-regular) var(--fs-sm) / var(--lh-ui) var(--font-ui);
+  }
+  .ui-menu__content[data-state="open"] { animation: ui-menu-in var(--dur-layer) var(--ease); }
+  .ui-menu__content[data-side="top"][data-state="open"] { animation-name: ui-menu-in-up; }
+
+  .ui-menu__item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    width: 100%;
+    height: var(--size-md);
+    margin: 0;
+    padding: 0 var(--pad-md);
+    border: 0;
+    border-radius: var(--radius-control);
+    background: transparent;
+    color: var(--text-1);
+    font: inherit;
+    text-align: left;
+    white-space: nowrap;
+    cursor: pointer;
+    outline: 0;
+    user-select: none;
+  }
+  .ui-menu__item > svg { color: var(--text-2); }
+  .ui-menu__item[data-highlighted] { background: var(--overlay-hover); }
+  .ui-menu__item:active { background: var(--overlay-active); }
+  .ui-menu__item:focus-visible {
+    outline: var(--focus-width) solid var(--focus);
+    outline-offset: calc(var(--focus-width) * -1);
+  }
+  .ui-menu__item[data-state="checked"] {
+    color: var(--accent);
+    font-weight: var(--fw-semibold);
+  }
+  .ui-menu__item[data-state="checked"] > svg { color: var(--accent); }
+  .ui-menu__item[data-disabled] {
+    opacity: var(--opacity-disabled);
+    pointer-events: none;
+  }
+  .ui-menu__item--danger,
+  .ui-menu__item--danger > svg { color: var(--danger); }
+
+  .ui-menu__text {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .ui-menu__check { margin-left: auto; }
+  .ui-menu__sep {
+    height: var(--border-width);
+    margin: var(--space-1) 0;
+    background: var(--border-subtle);
+  }
+  .ui-menu__empty {
+    padding: var(--space-2) var(--pad-md);
+    color: var(--text-3);
+  }
+
+  @keyframes ui-menu-in { from { opacity: 0; transform: translateY(4px); } }
+  @keyframes ui-menu-in-up { from { opacity: 0; transform: translateY(-4px); } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ui-menu__content[data-state="open"] { animation: none; }
+  }
+}

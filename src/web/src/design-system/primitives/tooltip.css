@@ -1,0 +1,23 @@
+/* Tooltip bubble (Radix Tooltip content). Position comes from Radix. */
+@layer ui.primitives {
+  .ui-tooltip {
+    z-index: var(--z-tooltip);
+    box-sizing: border-box;
+    max-width: 240px;
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-control);
+    background: var(--text-1);
+    color: var(--surface-1);
+    box-shadow: var(--shadow-e2);
+    font: var(--fw-regular) var(--fs-xs) / var(--lh-ui) var(--font-ui);
+    pointer-events: none;
+  }
+  .ui-tooltip[data-state="delayed-open"],
+  .ui-tooltip[data-state="instant-open"] { animation: ui-tooltip-in var(--dur-layer) var(--ease); }
+
+  @keyframes ui-tooltip-in { from { opacity: 0; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ui-tooltip[data-state] { animation: none; }
+  }
+}

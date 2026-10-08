@@ -1,0 +1,36 @@
+import { api } from '../../api/client';
+import type { Api } from '../../api/Api';
+
+/** Story execution has an explicit client surface, independent of library/settings tools. */
+export const storyApi: Pick<Api,
+  'acceptDependencies' | 'confirmDirector' | 'continueMessage' | 'controlTurn' | 'createPinnedFact' | 'createSession' | 'deleteMessage' | 'deletePinnedFact' | 'editInputGroup' | 'editMessage' | 'generateCandidates' | 'getStoryView' | 'listSessions' | 'pauseConversation' | 'recheckHygiene' | 'regenerateDependents' | 'regenerateMessage' | 'regenerateOne' | 'rejectDirector' | 'replyGroup' | 'resumeConversation' | 'sendMessage' | 'startConversation' | 'stopConversation' | 'swipeGroup' | 'swipeMessage' | 'switchPlayer' | 'switchVariant' | 'updatePinnedFact'> = {
+  acceptDependencies: api.acceptDependencies,
+  confirmDirector: api.confirmDirector,
+  continueMessage: api.continueMessage,
+  controlTurn: api.controlTurn,
+  createPinnedFact: api.createPinnedFact,
+  createSession: api.createSession,
+  deleteMessage: api.deleteMessage,
+  deletePinnedFact: api.deletePinnedFact,
+  editInputGroup: api.editInputGroup,
+  editMessage: api.editMessage,
+  generateCandidates: api.generateCandidates,
+  getStoryView: api.getStoryView,
+  listSessions: api.listSessions,
+  pauseConversation: api.pauseConversation,
+  recheckHygiene: api.recheckHygiene,
+  regenerateDependents: api.regenerateDependents,
+  regenerateMessage: api.regenerateMessage,
+  regenerateOne: api.regenerateOne,
+  rejectDirector: api.rejectDirector,
+  replyGroup: api.replyGroup,
+  resumeConversation: api.resumeConversation,
+  sendMessage: api.sendMessage,
+  startConversation: api.startConversation,
+  stopConversation: api.stopConversation,
+  swipeGroup: api.swipeGroup,
+  swipeMessage: api.swipeMessage,
+  switchPlayer: api.switchPlayer,
+  switchVariant: api.switchVariant,
+  updatePinnedFact: api.updatePinnedFact,
+};

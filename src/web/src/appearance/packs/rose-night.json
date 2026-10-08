@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "id": "rose-night",
+  "name": "绯樱夜色",
+  "note": "莓粉月光与暗紫纸色",
+  "order": 7,
+  "color_scheme": "dark",
+  "preview": [
+    "#211a22",
+    "#f0a1bc",
+    "#e6c18b",
+    "#c4a1dd"
+  ],
+  "palette": {
+    "page": "#211a22",
+    "surface": "#2d242f",
+    "surfaceSoft": "#3b2e3c",
+    "text": "#f5edf4",
+    "textMuted": "#c2afbf",
+    "border": "#524152",
+    "primary": "#f0a1bc",
+    "primaryHover": "#f8bfd0",
+    "primaryButton": "#8c506c",
+    "primaryButtonHover": "#754059",
+    "onPrimary": "#ffffff",
+    "primarySoft": "#493344",
+    "accent": "#e6c18b",
+    "secondary": "#c4a1dd",
+    "nav": "#181219",
+    "navText": "#f5edf4",
+    "navMuted": "#c2afbf",
+    "rail": "#281f29",
+    "focus": "#f4b4ca",
+    "danger": "#f0aaa0",
+    "dangerSoft": "color-mix(in srgb, #783f3d 34%, var(--surface))",
+    "success": "#a4d9b8",
+    "successSoft": "color-mix(in srgb, #286044 34%, var(--surface))",
+    "warningSoft": "color-mix(in srgb, #755b2e 38%, var(--surface))",
+    "brandStart": "#f4e9f0",
+    "brandEnd": "#e6d6e0"
+  },
+  "shadows": {
+    "panel": "0 14px 40px rgba(0, 0, 0, 0.16)",
+    "card": "0 8px 24px rgba(0, 0, 0, 0.2)"
+  },
+  "assets": {
+    "nav_art": "/brand/themes/astral/sidebar-palace.jpg",
+    "story_cover_forest": "/brand/themes/astral/story-forest.jpg",
+    "story_cover_ocean": "/brand/themes/astral/story-ocean.jpg",
+    "story_cover_moon": "/brand/themes/astral/story-moon.jpg"
+  }
+}

@@ -1,0 +1,16 @@
+/*
+ * What is left of the old shell stylesheet: rules that style unmigrated pages and
+ * must keep their original place in the cascade. The shell itself is
+ * design-system/layouts/shell.css. Delete each rule together with the page it serves.
+ */
+.app-shell[data-layout="conversation"] .sc-layout { height:auto; flex:1; min-height:0; } /* SimpleChat fills the content column */
+.app-shell .v7-chat-sidebar.is-open { left:var(--app-rail-width); } /* ChatPage session overlay sits beside the nav */
+@media (max-width:899px) { .app-shell .v7-chat-sidebar.is-open { left:0; top:calc(48px + env(safe-area-inset-top)); } } /* ...and below the phone bar */
+@media (max-width:760px) { /* iOS zoom guard and touch targets of the legacy phone layouts */
+  .app-shell :is(input[type="text"],input[type="search"],input[type="password"],textarea,select) { font-size:16px; }
+  .story-home :is(.home-icon-button,.home-tool-button,.home-worldline-link) { min-width:44px; min-height:44px; }
+  .story-home .home-button-continue { min-height:44px; }
+}
+/* story-workspace.css paints the offline dot with --warning, which was never defined, so it rendered nothing.
+   The design system defines --warning now; keep the dot as it was until the story workspace migrates. */
+.story-connection:not(.is-online)::before { background:transparent; }

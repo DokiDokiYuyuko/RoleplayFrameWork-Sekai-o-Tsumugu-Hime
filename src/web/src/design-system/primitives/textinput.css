@@ -1,0 +1,88 @@
+/* Single-line input box. Select reuses this box for its trigger. Spec section 5. */
+@layer ui.primitives {
+  .ui-input,
+  .ui-input::before,
+  .ui-input::after {
+    box-sizing: border-box;
+  }
+
+  .ui-input {
+    --ctl-h: var(--size-md);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    width: 100%;
+    min-width: 0;
+    height: var(--ctl-h);
+    margin: 0;
+    padding: 0 var(--pad-md);
+    border: var(--border-width) solid var(--border-strong);
+    border-radius: var(--radius-control);
+    background: var(--surface-1);
+    box-shadow: var(--shadow-none);
+    color: var(--text-1);
+    font: var(--fw-regular) var(--fs-sm) / var(--lh-ui) var(--font-ui);
+    text-align: left;
+    transition: border-color var(--dur-hover) var(--ease), background-color var(--dur-hover) var(--ease);
+  }
+  .ui-input--sm { --ctl-h: var(--size-sm); padding: 0 var(--pad-sm); }
+  .ui-input--lg { --ctl-h: var(--size-lg); padding: 0 var(--pad-lg); font-size: var(--fs-md); }
+
+  .ui-input:hover { border-color: var(--border-strong-hover); }
+  /* Only the input itself draws the ring, so a trailing button keeps its own ring */
+  .ui-input:has(.ui-input__el:focus-visible) {
+    border-color: var(--accent);
+    outline: var(--focus-width) solid var(--focus);
+    outline-offset: var(--focus-offset);
+  }
+  .ui-input:has([aria-invalid="true"]) { border-color: var(--danger); }
+  .ui-input:has(.ui-input__el:read-only),
+  .ui-input:has(.ui-input__el:disabled) {
+    border-color: var(--border-default);
+    background: var(--surface-2);
+    color: var(--text-3);
+  }
+  .ui-input:has(.ui-input__el:disabled) {
+    opacity: var(--opacity-disabled);
+    pointer-events: none;
+  }
+
+  .ui-input__el {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: inherit;
+    outline: 0;
+    background: transparent;
+    box-shadow: var(--shadow-none);
+    color: inherit;
+    font: inherit;
+    appearance: none;
+  }
+  .ui-input__el::placeholder {
+    color: var(--text-3);
+    opacity: 1;
+  }
+  .ui-input > svg { color: var(--text-3); }
+  .ui-input__trailing {
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    margin-right: calc(var(--space-1) * -1);
+  }
+
+  .ui-input--quiet {
+    border-color: transparent;
+    background: transparent;
+    color: var(--text-2);
+  }
+  .ui-input--quiet:hover {
+    border-color: transparent;
+    background: var(--overlay-hover);
+    color: var(--text-1);
+  }
+  .ui-input--quiet:has(.ui-input__el:focus-visible) { border-color: transparent; }
+}

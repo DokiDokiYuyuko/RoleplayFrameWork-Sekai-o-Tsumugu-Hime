@@ -1,0 +1,883 @@
+@import './moonweave.css';
+
+/*
+ * Action-button frames.
+ *
+ * Pages keep their classes. This file maps those classes onto one press and
+ * five frames. A new style that reuses a frame only needs catalog.json.
+ * A new frame needs one @container style(--btn-kind: …) block below, plus a
+ * frame id in catalog.json. Do not restyle buttons from a page stylesheet.
+ *
+ * Frame paint is selected by the nearest container named button-frame.
+ * html carries the saved style. A settings preview carries another --btn-kind,
+ * so the sample does not inherit the page frame.
+ * Role colors stay on the button as variables. The longhands read them there,
+ * which keeps a theme swatch's palette live.
+ */
+
+html {
+  --btn-kind: celestial;
+  --btn-gem: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath fill='%23fff' d='M5 0 10 5 5 10 0 5Z'/%3E%3C/svg%3E");
+  --btn-bracket-nw: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath fill='%23fff' d='M0 0h12v2H2v10H0Z'/%3E%3C/svg%3E");
+  --btn-bracket-ne: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath fill='%23fff' d='M0 0h12v12h-2V2H0Z'/%3E%3C/svg%3E");
+  --btn-bracket-sw: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath fill='%23fff' d='M0 0h2v10h10v2H0Z'/%3E%3C/svg%3E");
+  --btn-bracket-se: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath fill='%23fff' d='M10 0h2v12H0v-2h10Z'/%3E%3C/svg%3E");
+  container-name: button-frame;
+}
+
+.appearance-style-preview {
+  container-name: button-frame;
+}
+
+html[data-visual-style] :is(
+  .v7-btn,
+  .home-button,
+  .home-tool-button,
+  .sc-primary,
+  .sc-stop,
+  .v7-icon-btn,
+  .v7-group-add,
+  .v7-group-draft-button,
+  .v7-input-box > button,
+  button.is-primary,
+  .v7-legacy-surface :is(button, a)[class*="bg-indigo-"]
+) {
+  position: relative;
+  isolation: isolate;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  overflow: visible;
+  border: 0;
+  border-radius: var(--btn-radius, 20px 9px 18px 9px);
+  clip-path: var(--btn-clip-role, var(--btn-clip-frame, none));
+  background-color: var(--btn-fill, var(--surface));
+  background-image: var(--btn-rest-image, linear-gradient(180deg, color-mix(in srgb, white 18%, transparent), transparent 46%));
+  color: var(--btn-ink, var(--sea));
+  box-shadow: var(--btn-shadow, var(--btn-shadow-rest));
+  --btn-shadow-rest:
+    0 0 0 1px color-mix(in srgb, var(--btn-frame, color-mix(in srgb, var(--gold) 72%, var(--sea))) 88%, white),
+    0 0 0 3px transparent,
+    0 0 0 4px color-mix(in srgb, var(--btn-frame, color-mix(in srgb, var(--gold) 72%, var(--sea))) 62%, transparent);
+  filter: var(--btn-filter, drop-shadow(0 0 0 transparent));
+  outline: var(--btn-outline, none);
+  outline-offset: var(--btn-outline-offset, 2px);
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    transform 140ms ease-out,
+    filter 120ms ease-out,
+    box-shadow 140ms ease-out,
+    background-color 120ms ease-out,
+    color 120ms ease-out;
+}
+
+html[data-visual-style] :is(
+  .v7-btn,
+  .home-button,
+  .home-tool-button,
+  .sc-primary,
+  .sc-stop,
+  .v7-icon-btn,
+  .v7-group-add,
+  .v7-group-draft-button,
+  .v7-input-box > button,
+  button.is-primary,
+  .v7-legacy-surface :is(button, a)[class*="bg-indigo-"]
+)::before,
+html[data-visual-style] :is(
+  .v7-btn,
+  .home-button,
+  .home-tool-button,
+  .sc-primary,
+  .sc-stop,
+  .v7-icon-btn,
+  .v7-group-add,
+  .v7-group-draft-button,
+  .v7-input-box > button,
+  button.is-primary,
+  .v7-legacy-surface :is(button, a)[class*="bg-indigo-"]
+)::after {
+  /* Leave content alone. This :is() is as specific as the legacy chip,
+     so a content: none here would hide every frame's star, seal and lamp. */
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+html[data-visual-style] :is(
+  .v7-btn,
+  .home-button,
+  .home-tool-button,
+  .sc-primary,
+  .sc-stop,
+  .v7-icon-btn,
+  .v7-group-add,
+  .v7-group-draft-button,
+  .v7-input-box > button,
+  button.is-primary,
+  .v7-legacy-surface :is(button, a)[class*="bg-indigo-"]
+)::after {
+  inset: var(--btn-after-inset-role, var(--btn-after-inset-soft, 0px));
+  padding: var(--btn-after-pad, 0px);
+  border-radius: inherit;
+  background: var(--btn-after-bg, var(--btn-frame, var(--gold)));
+  -webkit-mask: var(--btn-mask-role, var(--btn-mask-soft, none));
+  mask: var(--btn-mask-role, var(--btn-mask-soft, none));
+}
+
+/* Roles set variables. The shared rule above paints them. */
+html[data-visual-style] :is(
+  .v7-btn-primary,
+  .home-button-primary,
+  .sc-primary,
+  .v7-group-add,
+  .v7-group-draft-button
+),
+html[data-visual-style] .v7-input-box > button,
+html[data-visual-style] button.is-primary,
+html[data-visual-style] .v7-legacy-surface :is(button, a)[class*="bg-indigo-"] {
+  --btn-frame: var(--gold);
+  --btn-fill: var(--sea-button);
+  --btn-ink: var(--on-sea-button);
+  --btn-rest-image:
+    linear-gradient(180deg, color-mix(in srgb, white 34%, transparent), transparent 42%),
+    linear-gradient(145deg, color-mix(in srgb, var(--sea) 55%, var(--surface)), var(--sea-button) 62%);
+  --btn-mask-role: var(--btn-mask-primary);
+  --btn-after-inset-role: var(--btn-after-inset-primary);
+}
+
+html[data-visual-style] :is(.v7-btn-danger) {
+  --btn-frame: var(--danger);
+  --btn-fill: var(--danger);
+  --btn-ink: var(--on-danger, #fff);
+  --btn-rest-image: linear-gradient(180deg, color-mix(in srgb, white 28%, transparent), transparent 46%);
+  --btn-mask-role: var(--btn-mask-primary);
+  --btn-after-inset-role: var(--btn-after-inset-primary);
+}
+
+html[data-visual-style] .sc-stop {
+  --btn-frame: var(--danger);
+  --btn-fill: var(--danger-soft);
+  --btn-ink: var(--danger);
+  --btn-rest-image: linear-gradient(180deg, color-mix(in srgb, white 16%, transparent), transparent 50%);
+}
+
+html[data-visual-style] .home-button-continue {
+  --btn-mask-role: var(--btn-mask-continue, var(--btn-mask-primary));
+  --btn-after-inset-role: var(--btn-after-inset-continue, var(--btn-after-inset-primary));
+}
+
+html[data-visual-style] .v7-icon-btn.v7-icon-btn {
+  width: var(--btn-icon-size, 40px);
+  height: var(--btn-icon-size, 40px);
+  min-height: var(--btn-icon-size, 40px);
+  padding: 0;
+}
+
+html[data-visual-style] :is(
+  .v7-btn-soft,
+  .home-button,
+  .home-tool-button,
+  .v7-icon-btn
+):is(.is-active, [aria-pressed="true"]):not(.home-button-primary):not(.v7-btn-primary):not(.v7-btn-danger) {
+  --btn-fill: var(--sea-soft);
+  --btn-rest-image: none;
+  --btn-outline: 2px solid var(--sea);
+  --btn-outline-offset: -4px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  html[data-visual-style] :is(
+    .v7-btn,
+    .home-button,
+    .home-tool-button,
+    .sc-primary,
+    .sc-stop,
+    .v7-icon-btn,
+    .v7-group-add,
+    .v7-group-draft-button,
+    .v7-input-box > button,
+    button.is-primary,
+    .v7-legacy-surface :is(button, a)[class*="bg-indigo-"]
+  ):hover:not(:disabled):not([aria-disabled="true"]):not(:active) {
+    filter: var(--btn-filter-hover, var(--btn-filter, drop-shadow(0 0 0 transparent)) brightness(1.07));
+  }
+}
+
+html[data-visual-style] :is(
+  .v7-btn,
+  .home-button,
+  .home-tool-button,
+  .sc-primary,
+  .sc-stop,
+  .v7-icon-btn,
+  .v7-group-add,
+  .v7-group-draft-button,
+  .v7-input-box > button,
+  button.is-primary,
+  .v7-legacy-surface :is(button, a)[class*="bg-indigo-"]
+):active:not(:disabled):not([aria-disabled="true"]) {
+  transform: translateY(1px);
+  filter: var(--btn-filter-press, var(--btn-filter, drop-shadow(0 0 0 transparent)) brightness(0.84));
+  transition-duration: 80ms;
+}
+
+html[data-visual-style] :is(
+  .v7-btn,
+  .home-button,
+  .home-tool-button,
+  .sc-primary,
+  .sc-stop,
+  .v7-icon-btn,
+  .v7-group-add,
+  .v7-group-draft-button,
+  .v7-input-box > button,
+  button.is-primary,
+  .v7-legacy-surface :is(button, a)[class*="bg-indigo-"]
+):focus {
+  outline: none;
+}
+
+html[data-visual-style] :is(
+  .v7-btn,
+  .home-button,
+  .home-tool-button,
+  .sc-primary,
+  .sc-stop,
+  .v7-icon-btn,
+  .v7-group-add,
+  .v7-group-draft-button,
+  .v7-input-box > button,
+  button.is-primary,
+  .v7-legacy-surface :is(button, a)[class*="bg-indigo-"]
+):focus-visible {
+  outline: 2px solid var(--focus, var(--sea));
+  outline-offset: 2px;
+}
+
+html[data-visual-style] :is(
+  .v7-btn,
+  .home-button,
+  .home-tool-button,
+  .sc-primary,
+  .sc-stop,
+  .v7-icon-btn,
+  .v7-group-add,
+  .v7-group-draft-button,
+  .v7-input-box > button,
+  button.is-primary,
+  .v7-legacy-surface :is(button, a)[class*="bg-indigo-"]
+):is(:disabled, [aria-disabled="true"]) {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  filter: var(--btn-filter, drop-shadow(0 0 0 transparent));
+}
+
+html[data-visual-style] :is(
+  .v7-btn,
+  .home-button,
+  .home-tool-button,
+  .sc-primary,
+  .v7-icon-btn,
+  .v7-group-add,
+  .v7-group-draft-button,
+  .v7-input-box > button,
+  button.is-primary
+)[aria-busy="true"] {
+  cursor: progress;
+  pointer-events: none;
+}
+
+/* 星织绮庭：牌匾、双金线、四角菱星。菱星随装饰开关。 */
+@container button-frame style(--btn-kind: celestial) {
+  html[data-visual-style] :is(
+    .v7-btn,
+    .home-button,
+    .home-tool-button,
+    .sc-primary,
+    .sc-stop,
+    .v7-icon-btn,
+    .v7-group-add,
+    .v7-group-draft-button,
+    .v7-input-box > button,
+    button.is-primary,
+    .v7-legacy-surface :is(button, a)[class*="bg-indigo-"]
+  ) {
+    --btn-mask-primary:
+      var(--btn-gem) 4.5px 4.5px / 7px 7px no-repeat,
+      var(--btn-gem) calc(100% - 11.5px) 4.5px / 7px 7px no-repeat,
+      var(--btn-gem) 4.5px calc(100% - 11.5px) / 7px 7px no-repeat,
+      var(--btn-gem) calc(100% - 11.5px) calc(100% - 11.5px) / 7px 7px no-repeat;
+    --btn-mask-soft:
+      var(--btn-gem) 4px 4px / 5px 5px no-repeat,
+      var(--btn-gem) calc(100% - 9px) 4px / 5px 5px no-repeat,
+      var(--btn-gem) 4px calc(100% - 9px) / 5px 5px no-repeat,
+      var(--btn-gem) calc(100% - 9px) calc(100% - 9px) / 5px 5px no-repeat;
+    --btn-mask-continue:
+      var(--btn-gem) 10.5px 10.5px / 7px 7px no-repeat,
+      var(--btn-gem) calc(100% - 17.5px) 10.5px / 7px 7px no-repeat,
+      var(--btn-gem) 10.5px calc(100% - 17.5px) / 7px 7px no-repeat,
+      var(--btn-gem) calc(100% - 17.5px) calc(100% - 17.5px) / 7px 7px no-repeat,
+      var(--btn-gem) 8px 50% / 8px 8px no-repeat,
+      var(--btn-gem) calc(100% - 16px) 50% / 8px 8px no-repeat;
+    --btn-after-inset-primary: -8px;
+    --btn-after-inset-soft: 0px;
+    --btn-after-inset-continue: -14px;
+  }
+
+  html[data-visual-style] :is(
+    .v7-btn,
+    .home-button,
+    .home-tool-button,
+    .sc-primary,
+    .sc-stop,
+    .v7-icon-btn,
+    .v7-group-add,
+    .v7-group-draft-button,
+    .v7-input-box > button,
+    button.is-primary,
+    .v7-legacy-surface :is(button, a)[class*="bg-indigo-"]
+  )::after {
+    content: "";
+  }
+
+  html[data-visual-style] :is(
+    .v7-btn-primary,
+    .home-button-primary,
+    .sc-primary,
+    .v7-btn-danger,
+    .v7-group-add,
+    .v7-group-draft-button
+  )::before,
+  html[data-visual-style] .v7-input-box > button::before,
+  html[data-visual-style] button.is-primary::before,
+  html[data-visual-style] .v7-legacy-surface :is(button, a)[class*="bg-indigo-"]::before {
+    content: "";
+    top: -6px;
+    left: calc(50% - 5px);
+    width: 10px;
+    height: 10px;
+    background: var(--btn-frame, var(--gold));
+    clip-path: polygon(50% 0, 62% 36%, 100% 36%, 68% 56%, 80% 100%, 50% 72%, 20% 100%, 32% 56%, 0 36%, 38% 36%);
+  }
+
+  html[data-visual-style] .v7-icon-btn::before {
+    content: none;
+  }
+
+  html[data-visual-style] .home-button-continue {
+    margin-inline: 12px;
+  }
+}
+
+/* 墨绘山水：装裱折栏常在，朱印随装饰开关。 */
+@container button-frame style(--btn-kind: ink) {
+  html[data-visual-style] :is(
+    .v7-btn,
+    .home-button,
+    .home-tool-button,
+    .sc-primary,
+    .sc-stop,
+    .v7-icon-btn,
+    .v7-group-add,
+    .v7-group-draft-button,
+    .v7-input-box > button,
+    button.is-primary,
+    .v7-legacy-surface :is(button, a)[class*="bg-indigo-"]
+  ) {
+    --btn-radius: 1px;
+    --btn-shadow:
+      0 0 0 1px color-mix(in srgb, var(--ink) 62%, var(--gold)),
+      0 0 0 3px var(--surface),
+      0 0 0 4px color-mix(in srgb, var(--ink) 40%, var(--line)),
+      3px 4px 0 color-mix(in srgb, var(--ink) 12%, transparent);
+    --btn-shadow-press:
+      0 0 0 1px color-mix(in srgb, var(--ink) 62%, var(--gold)),
+      0 0 0 3px var(--surface),
+      0 0 0 4px color-mix(in srgb, var(--ink) 40%, var(--line)),
+      1px 1px 0 color-mix(in srgb, var(--ink) 16%, transparent);
+    --btn-mask-soft:
+      var(--btn-bracket-nw) left 3px top 3px / 13px 13px no-repeat,
+      var(--btn-bracket-ne) right 3px top 3px / 13px 13px no-repeat,
+      var(--btn-bracket-sw) left 3px bottom 3px / 13px 13px no-repeat,
+      var(--btn-bracket-se) right 3px bottom 3px / 13px 13px no-repeat;
+    --btn-mask-primary: var(--btn-mask-soft);
+    --btn-after-bg: color-mix(in srgb, var(--ink) 75%, var(--gold));
+    --btn-after-inset-primary: 0px;
+    --btn-after-inset-soft: 0px;
+    --btn-after-inset-continue: 0px;
+  }
+
+  html[data-visual-style] :is(
+    .v7-btn,
+    .home-button,
+    .home-tool-button,
+    .sc-primary,
+    .sc-stop,
+    .v7-icon-btn,
+    .v7-group-add,
+    .v7-group-draft-button
+  ),
+  html[data-visual-style] .v7-input-box > button,
+  html[data-visual-style] button.is-primary,
+  html[data-visual-style] .v7-legacy-surface :is(button, a)[class*="bg-indigo-"] {
+    --btn-rest-image:
+      linear-gradient(180deg, color-mix(in srgb, white 10%, transparent), transparent 40%),
+      repeating-linear-gradient(96deg, transparent 0 3px, color-mix(in srgb, var(--ink) 5%, transparent) 3px 4px);
+  }
+
+  html[data-visual-style] :is(
+    .v7-btn-primary,
+    .home-button-primary,
+    .sc-primary,
+    .v7-group-add,
+    .v7-group-draft-button
+  ),
+  html[data-visual-style] .v7-input-box > button,
+  html[data-visual-style] button.is-primary,
+  html[data-visual-style] .v7-legacy-surface :is(button, a)[class*="bg-indigo-"] {
+    --btn-rest-image:
+      linear-gradient(180deg, color-mix(in srgb, white 16%, transparent), transparent 36%),
+      repeating-linear-gradient(96deg, transparent 0 3px, rgb(255 255 255 / 8%) 3px 4px);
+  }
+
+  html[data-visual-style] :is(
+    .v7-btn,
+    .home-button,
+    .home-tool-button,
+    .sc-primary,
+    .sc-stop,
+    .v7-icon-btn,
+    .v7-group-add,
+    .v7-group-draft-button,
+    .v7-input-box > button,
+    button.is-primary,
+    .v7-legacy-surface :is(button, a)[class*="bg-indigo-"]
+  )::after {
+    content: "";
+  }
+
+  html[data-visual-style] :is(
+    .v7-btn,
+    .home-button,
+    .home-tool-button,
+    .sc-primary,
+    .sc-stop,
+    .v7-icon-btn,
+    .v7-group-add,
+    .v7-group-draft-button,
+    .v7-input-box > button,
+    button.is-primary,
+    .v7-legacy-surface :is(button, a)[class*="bg-indigo-"]
+  ):active:not(:disabled):not([aria-disabled="true"]) {
+    --btn-shadow: var(--btn-shadow-press);
+  }
+
+  html[data-visual-style] :is(.v7-btn-primary, .home-button-primary, .sc-primary, .v7-btn-danger)::before,
+  html[data-visual-style] .v7-input-box > button::before,
+  html[data-visual-style] button.is-primary::before,
+  html[data-visual-style] .v7-legacy-surface :is(button, a)[class*="bg-indigo-"]::before {
+    content: "";
+    right: 6px;
+    bottom: 5px;
+    width: 9px;
+    height: 9px;
+    border: 1px solid var(--danger);
+    background: color-mix(in srgb, var(--danger) 18%, transparent);
+    box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--danger) 55%, transparent);
+  }
+}
+
+/* 琉璃幻境：宝石切角与虹彩边。切边本身是纹样。 */
+@container button-frame style(--btn-kind: prism) {
+  html[data-visual-style] :is(
+    .v7-btn,
+    .home-button,
+    .home-tool-button,
+    .sc-primary,
+    .sc-stop,
+    .v7-icon-btn,
+    .v7-group-add,
+    .v7-group-draft-button,
+    .v7-input-box > button,
+    button.is-primary,
+    .v7-legacy-surface :is(button, a)[class*="bg-indigo-"]
+  ) {
+    --btn-radius: 0px;
+    --btn-clip-frame: polygon(16px 0, calc(100% - 16px) 0, 100% 11px, 100% calc(100% - 11px), calc(100% - 16px) 100%, 16px 100%, 0 calc(100% - 11px), 0 11px);
+    --btn-shadow: none;
+    --btn-filter: drop-shadow(0 8px 10px color-mix(in srgb, var(--sea) 32%, transparent));
+    --btn-filter-hover:
+      drop-shadow(0 8px 14px color-mix(in srgb, var(--sea) 48%, transparent))
+      drop-shadow(0 0 8px color-mix(in srgb, var(--gold) 40%, transparent));
+    --btn-filter-press: drop-shadow(0 2px 4px color-mix(in srgb, var(--sea) 30%, transparent)) brightness(0.84);
+  }
+
+  html[data-visual-style] :is(
+    .v7-btn,
+    .home-button,
+    .home-tool-button,
+    .sc-primary,
+    .sc-stop,
+    .v7-icon-btn,
+    .v7-group-add,
+    .v7-group-draft-button
+  ),
+  html[data-visual-style] .v7-input-box > button,
+  html[data-visual-style] button.is-primary,
+  html[data-visual-style] .v7-legacy-surface :is(button, a)[class*="bg-indigo-"] {
+    --btn-rest-image: linear-gradient(115deg, rgb(255 255 255 / 50%), transparent 34%);
+  }
+
+  html[data-visual-style] .v7-icon-btn {
+    --btn-clip-icon: polygon(9px 0, calc(100% - 9px) 0, 100% 9px, 100% calc(100% - 9px), calc(100% - 9px) 100%, 9px 100%, 0 calc(100% - 9px), 0 9px);
+    --btn-clip-role: var(--btn-clip-icon);
+  }
+
+  html[data-visual-style] :is(
+    .v7-btn-primary,
+    .home-button-primary,
+    .sc-primary,
+    .v7-group-add,
+    .v7-group-draft-button
+  ),
+  html[data-visual-style] .v7-input-box > button,
+  html[data-visual-style] button.is-primary,
+  html[data-visual-style] .v7-legacy-surface :is(button, a)[class*="bg-indigo-"] {
+    --btn-rest-image:
+      linear-gradient(115deg, rgb(255 255 255 / 55%), transparent 28%),
+      linear-gradient(180deg, color-mix(in srgb, white 20%, transparent), transparent 48%),
+      linear-gradient(145deg, color-mix(in srgb, var(--sea) 70%, white), var(--sea-button));
+  }
+
+  html[data-visual-style] :is(
+    .v7-btn,
+    .home-button,
+    .home-tool-button,
+    .sc-primary,
+    .sc-stop,
+    .v7-icon-btn,
+    .v7-group-add,
+    .v7-group-draft-button,
+    .v7-input-box > button,
+    button.is-primary,
+    .v7-legacy-surface :is(button, a)[class*="bg-indigo-"]
+  )::after {
+    content: "";
+    inset: 0;
+    padding: 1.5px;
+    background: conic-gradient(from 30deg, var(--gold), var(--sea), white, var(--gold), var(--sea), var(--gold));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+  }
+}
+
+/* 星舰终端：切角、角刻度、航线。航灯随装饰开关。 */
+@container button-frame style(--btn-kind: starship) {
+  html[data-visual-style] :is(
+    .v7-btn,
+    .home-button,
+    .home-tool-button,
+    .sc-primary,
+    .sc-stop,
+    .v7-icon-btn,
+    .v7-group-add,
+    .v7-group-draft-button,
+    .v7-input-box > button,
+    button.is-primary,
+    .v7-legacy-surface :is(button, a)[class*="bg-indigo-"]
+  ) {
+    --btn-radius: 0px;
+    --btn-clip-frame: polygon(12px 0, calc(100% - 12px) 0, 100% 12px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 12px 100%, 0 calc(100% - 12px), 0 12px);
+    --btn-shadow: none;
+    --btn-filter: drop-shadow(0 0 7px color-mix(in srgb, var(--sea) 42%, transparent));
+    --btn-filter-hover: drop-shadow(0 0 10px color-mix(in srgb, var(--sea) 62%, transparent)) brightness(1.07);
+    --btn-filter-press: drop-shadow(0 0 3px color-mix(in srgb, var(--sea) 35%, transparent)) brightness(0.84);
+    --btn-mask-soft:
+      var(--btn-bracket-nw) left 2px top 2px / 11px 11px no-repeat,
+      var(--btn-bracket-ne) right 2px top 2px / 11px 11px no-repeat,
+      var(--btn-bracket-sw) left 2px bottom 2px / 11px 11px no-repeat,
+      var(--btn-bracket-se) right 2px bottom 2px / 11px 11px no-repeat;
+    --btn-mask-primary: var(--btn-mask-soft);
+    --btn-after-bg: var(--sea);
+    --btn-after-inset-primary: 0px;
+    --btn-after-inset-soft: 0px;
+    --btn-after-inset-continue: 0px;
+  }
+
+  html[data-visual-style] .v7-icon-btn {
+    --btn-clip-icon: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px);
+    --btn-clip-role: var(--btn-clip-icon);
+  }
+
+  html[data-visual-style] :is(
+    .v7-btn,
+    .home-button,
+    .home-tool-button,
+    .sc-primary,
+    .sc-stop,
+    .v7-icon-btn,
+    .v7-group-add,
+    .v7-group-draft-button
+  ),
+  html[data-visual-style] .v7-input-box > button,
+  html[data-visual-style] button.is-primary,
+  html[data-visual-style] .v7-legacy-surface :is(button, a)[class*="bg-indigo-"] {
+    --btn-rest-image:
+      linear-gradient(90deg, transparent, color-mix(in srgb, var(--sea) 55%, transparent), transparent) top / 100% 1px no-repeat,
+      repeating-linear-gradient(90deg, transparent 0 5px, color-mix(in srgb, var(--sea) 45%, transparent) 5px 6px) bottom / 70% 2px no-repeat,
+      linear-gradient(180deg, color-mix(in srgb, var(--sea) 8%, transparent), transparent 40%);
+  }
+
+  html[data-visual-style] :is(
+    .v7-btn-primary,
+    .home-button-primary,
+    .sc-primary,
+    .v7-group-add,
+    .v7-group-draft-button
+  ),
+  html[data-visual-style] .v7-input-box > button,
+  html[data-visual-style] button.is-primary,
+  html[data-visual-style] .v7-legacy-surface :is(button, a)[class*="bg-indigo-"] {
+    --btn-rest-image:
+      linear-gradient(90deg, transparent, rgb(255 255 255 / 70%), transparent) top / 100% 1px no-repeat,
+      repeating-linear-gradient(90deg, transparent 0 5px, rgb(255 255 255 / 45%) 5px 6px) bottom / 70% 2px no-repeat,
+      linear-gradient(145deg, color-mix(in srgb, var(--sea) 40%, var(--surface)), var(--sea-button));
+  }
+
+  html[data-visual-style] :is(
+    .v7-btn,
+    .home-button,
+    .home-tool-button,
+    .sc-primary,
+    .sc-stop,
+    .v7-icon-btn,
+    .v7-group-add,
+    .v7-group-draft-button,
+    .v7-input-box > button,
+    button.is-primary,
+    .v7-legacy-surface :is(button, a)[class*="bg-indigo-"]
+  )::after {
+    content: "";
+    filter: drop-shadow(0 0 4px var(--sea));
+  }
+
+  html[data-visual-style]:not([data-decoration="none"]) :is(
+    .v7-btn-primary,
+    .home-button-primary,
+    .sc-primary,
+    .v7-group-add,
+    .v7-group-draft-button
+  ):not(.v7-icon-btn),
+  html[data-visual-style]:not([data-decoration="none"]) .v7-input-box > button,
+  html[data-visual-style]:not([data-decoration="none"]) button.is-primary,
+  html[data-visual-style]:not([data-decoration="none"]) .v7-legacy-surface :is(button, a)[class*="bg-indigo-"] {
+    padding-left: 26px;
+  }
+
+  html[data-visual-style] :is(.v7-btn-primary, .home-button-primary, .sc-primary)::before,
+  html[data-visual-style] .v7-input-box > button::before,
+  html[data-visual-style] button.is-primary::before,
+  html[data-visual-style] .v7-legacy-surface :is(button, a)[class*="bg-indigo-"]::before {
+    content: "";
+    left: 12px;
+    top: calc(50% - 3px);
+    width: 6px;
+    height: 6px;
+    background: var(--sea);
+    box-shadow: 0 0 8px var(--sea), 0 0 0 1px rgb(255 255 255 / 40%);
+  }
+}
+
+/* 静谧书房：暖金双细线。短金线随装饰开关。 */
+@container button-frame style(--btn-kind: quiet) {
+  html[data-visual-style] :is(
+    .v7-btn,
+    .home-button,
+    .home-tool-button,
+    .sc-primary,
+    .sc-stop,
+    .v7-icon-btn,
+    .v7-group-add,
+    .v7-group-draft-button,
+    .v7-input-box > button,
+    button.is-primary,
+    .v7-legacy-surface :is(button, a)[class*="bg-indigo-"]
+  ) {
+    --btn-radius: 4px;
+    --btn-shadow:
+      0 0 0 1px color-mix(in srgb, var(--gold) 55%, var(--line)),
+      inset 0 0 0 1px color-mix(in srgb, var(--gold) 28%, transparent);
+  }
+
+  html[data-visual-style] :is(
+    .v7-btn,
+    .home-button,
+    .home-tool-button,
+    .sc-primary,
+    .sc-stop,
+    .v7-icon-btn,
+    .v7-group-add,
+    .v7-group-draft-button,
+    .v7-input-box > button,
+    button.is-primary,
+    .v7-legacy-surface :is(button, a)[class*="bg-indigo-"]
+  )::before {
+    content: "";
+    top: 3px;
+    left: calc(50% - 12px);
+    width: 24px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+}
+
+/* 文字按钮只留一条底边，不铺整圈框。 */
+html[data-visual-style] :is(a.v7-back, .worlds-text-action) {
+  position: relative;
+  background: transparent;
+  box-shadow: none;
+  color: var(--sea);
+  transition: transform 140ms ease-out, filter 120ms ease-out, background-color 120ms ease-out;
+}
+
+html[data-visual-style]:not([data-decoration="none"]) :is(a.v7-back, .worlds-text-action)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  pointer-events: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  html[data-visual-style] :is(a.v7-back, .worlds-text-action):hover {
+    background: var(--sea-soft);
+    filter: none;
+  }
+}
+
+html[data-visual-style] :is(a.v7-back, .worlds-text-action):active {
+  transform: translateY(1px);
+  filter: brightness(0.84);
+  transition-duration: 80ms;
+}
+
+html[data-visual-style] :is(a.v7-back, .worlds-text-action):focus-visible {
+  outline: 2px solid var(--focus, var(--sea));
+  outline-offset: 2px;
+}
+
+/* 装饰关掉后，星星、朱印、航灯、短金线收起。框留着。 */
+html[data-decoration="none"] :is(
+  .v7-btn,
+  .home-button,
+  .home-tool-button,
+  .sc-primary,
+  .sc-stop,
+  .v7-icon-btn,
+  .v7-group-add,
+  .v7-group-draft-button,
+  .v7-input-box > button,
+  button.is-primary,
+  .v7-legacy-surface :is(button, a)[class*="bg-indigo-"]
+)::before {
+  content: none;
+}
+
+@container button-frame style(--btn-kind: celestial) {
+  html[data-decoration="none"][data-visual-style] :is(
+    .v7-btn,
+    .home-button,
+    .home-tool-button,
+    .sc-primary,
+    .sc-stop,
+    .v7-icon-btn,
+    .v7-group-add,
+    .v7-group-draft-button,
+    .v7-input-box > button,
+    button.is-primary,
+    .v7-legacy-surface :is(button, a)[class*="bg-indigo-"]
+  )::after,
+  html[data-decoration="none"] :is(
+    .v7-btn,
+    .home-button,
+    .home-tool-button,
+    .sc-primary,
+    .sc-stop,
+    .v7-icon-btn,
+    .v7-group-add,
+    .v7-group-draft-button,
+    .v7-input-box > button,
+    button.is-primary
+  )::after {
+    content: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-visual-style] :is(
+    .v7-btn,
+    .home-button,
+    .home-tool-button,
+    .sc-primary,
+    .sc-stop,
+    .v7-icon-btn,
+    .v7-group-add,
+    .v7-group-draft-button,
+    .v7-input-box > button,
+    button.is-primary,
+    .v7-legacy-surface :is(button, a)[class*="bg-indigo-"],
+    a.v7-back,
+    .worlds-text-action
+  ),
+  html[data-visual-style] :is(
+    .v7-btn,
+    .home-button,
+    .home-tool-button,
+    .sc-primary,
+    .sc-stop,
+    .v7-icon-btn,
+    .v7-group-add,
+    .v7-group-draft-button,
+    .v7-input-box > button,
+    button.is-primary,
+    .v7-legacy-surface :is(button, a)[class*="bg-indigo-"],
+    a.v7-back,
+    .worlds-text-action
+  ):active:not(:disabled):not([aria-disabled="true"]) {
+    transition: none;
+    transform: none;
+  }
+}
+
+@media (max-width: 760px), (pointer: coarse) {
+  html[data-visual-style] .v7-icon-btn {
+    --btn-icon-size: 44px;
+  }
+
+  html[data-visual-style] :is(
+    .v7-btn,
+    .home-button,
+    .home-tool-button,
+    .sc-primary,
+    .sc-stop,
+    .v7-group-add,
+    .v7-group-draft-button,
+    .v7-input-box > button,
+    button.is-primary,
+    .v7-legacy-surface :is(button, a)[class*="bg-indigo-"]
+  ) {
+    min-height: 44px;
+  }
+}

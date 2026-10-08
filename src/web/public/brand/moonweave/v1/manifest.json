@@ -1,0 +1,473 @@
+{
+  "schemaVersion": 1,
+  "collection": "Moonlit Brocade / 月光织锦",
+  "revision": "v1",
+  "createdOn": "2026-10-07",
+  "generation": {
+    "tool": "image_gen.imagegen (built-in)",
+    "model": "Tool-controlled; no model name asserted",
+    "transparent_background": true,
+    "inputImages": [],
+    "privateInputs": false
+  },
+  "prompts": {
+    "crest": "Use case: stylized-concept.\nAsset type: ornate public decorative crest for a Japanese fantasy writing app, the Moonlit Brocade collection.\nPrimary request: one sumptuous moon-phase and iris-flower crest, centered, genuinely transparent background. A luminous moon-white crescent in a translucent lavender glass oval, embraced by gracefully interwoven mist-silver filigree, two iris-violet enamel iris flowers and fine champagne-gold accents. Tiny moon phases follow a graceful ornamental arc above; flowing woven threads form elegant curls around the base. The crest must feel like a precious window ornament from an illustrated Japanese fantasy book.\nStyle and material: lavish, polished painted fantasy ornament, layered iris-violet enamel gradients, softly luminous glass, dimensional fine metallic silver lines, subtle pearl highlights and small warm gold nodes. Clear elegant curves, controlled delicate relief and soft shadows. Not flat, not a cut-corner bookmark, not a shield, not chunky medieval armor.\nComposition: square canvas, balanced near-symmetrical silhouette with generous transparent margins, complete ornament fully visible, legible at 96x96 and 48x48. The moon and iris shapes stay dominant, with filigree as graceful structure rather than dense noise.\nLighting: one soft moonlight source at upper left; highlights on upper-left edges, shallow shadows down-right. Color palette moon-white #F7F7FC, iris violet #7D54C8, pale lavender #B99AEF, cool glass blue #C8DAFF, mist-silver and restrained champagne gold #BCA071. Must read on near-white and deep purple #211A32 without white extraction halos.\nConstraints: actual transparent alpha, not black or white backdrop; no writing, no letters, no numbers, no logo text, no watermark, no person, no portrait, no protagonist, no user character. Only the single finished decorative crest.",
+    "charactersLibrary": "Use case: illustration-story.\nAsset type: public page illustration for a Japanese fantasy character library, Moonlit Brocade collection.\nPrimary request: a sumptuous enchanted library window vignette: a gracefully arched moon-white glass window behind violet-enamel bookcases, richly bound purple books and rolled ivory manuscripts, a delicate lavender glass lantern, a faint crescent moon beyond the window, and iris flowers with mist-silver curling woven ornament. No people or character cards. This is the room-and-objects illustration inside the app's separately scalable UI frame; do not add an outer rectangular UI border.\nStyle: lavish illustrated Japanese fantasy, polished painted surfaces and soft brushwork, layered purple enamel gradients, pearly translucent glass and cool highlights, fine silver filigree with sparse champagne-gold detail. Visible dimensional shading and gentle depth, elegantly ornamental but readable. Match a precious moon-phase/iris crest with moon-white glass, purple enamel irises, interwoven silver arcs and small gold nodes.\nComposition: one isolated 8:5 landscape vignette, centered complete architectural window, both low shelves and glass lantern fully visible, generous transparent margins. Strong recognizable silhouette for display at 320x200 and 160x100. The shelves contain books, scrolls and glass objects only, absolutely no front-facing bookmark cards or portrait panels. Background around the entire illustrated window is genuinely transparent, not a rectangular room wash. No writing baked into books.\nLighting: soft cool moonlight from upper left, small warm lamp glimmer, shallow shadows toward lower right. Color palette moon-white #F7F7FC, iris violet #7D54C8, pale lavender #B99AEF, cool glass blue #C8DAFF, mist-silver, sparse champagne gold #BCA071. Fine transparent edges must read on near-white and deep purple #211A32.\nConstraints: actual transparent alpha with no opaque white extraction halo; no text, letters, numbers, labels, logos or watermark; no person, no face, no protagonist, no user character; no flat cut-corner bookmark motif. Finish as a cohesive ornamental fantasy painting, not a UI screenshot."
+  },
+  "frameConcept": {
+    "generationOutputId": "exec-f0f44136-b27e-4062-86ab-ece3f69afb9c.png",
+    "delivery": "Concept reference for project-authored scalable SVG/CSS decoration; the concept raster is not bundled."
+  },
+  "assets": [
+    {
+      "file": "moonweave-crest.png",
+      "pixels": [
+        192,
+        192
+      ],
+      "originalPixels": [
+        1254,
+        1254
+      ],
+      "bytes": 66872,
+      "webpBytes": 23332,
+      "sha256": "3fbadb0b946853edc2022eae09b37d561b6248417ecb614b402b07f6ccbfb0f0",
+      "webpSha256": "8a7c28b52421d7fe27437df7a02194b1f9b47ef701be988c15c49495cfc068a9",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "fullyTransparentPixels": 18136,
+      "partiallyTransparentPixels": 17506,
+      "originalOutputId": "exec-9ad643f6-015e-4738-a3d5-91c90f8dd06e.png"
+    },
+    {
+      "file": "characters-enchanted-library.png",
+      "pixels": [
+        640,
+        400
+      ],
+      "originalPixels": [
+        1586,
+        992
+      ],
+      "bytes": 473037,
+      "webpBytes": 110020,
+      "sha256": "afa394e3a3075cc8edf25add2f4df2ece364d73c0efaefae86757eaf628b602b",
+      "webpSha256": "3c416c5c21e582ada066e25801e7e9fa23eca143bcfa838b17b9b02d10b45553",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "fullyTransparentPixels": 73740,
+      "partiallyTransparentPixels": 181311,
+      "originalOutputId": "exec-3caf3675-3036-436c-8a71-296b3ca3649a.png"
+    },
+    {
+      "file": "iris-corner-tl.svg",
+      "viewBox": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "bytes": 3124,
+      "sha256": "04aee3b52ee3e7c3f9f5a03cc70b50fa57721944be4b2c6898770d675251f617",
+      "transparent": true,
+      "source": "Original SVG code; visual reference is generated frame concept; no image tracing or external download.",
+      "canonicalLfSha256": "f808c003c815966495a6acd79a47d4120727727e6ed762de4059b9f174d171a5",
+      "canonicalLfBytes": 3102,
+      "lineEnding": "Current retained working-tree file uses CRLF; canonical LF source unchanged."
+    },
+    {
+      "file": "iris-corner-tr.svg",
+      "viewBox": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "bytes": 3343,
+      "sha256": "81f3bad4b2fed9d4b2d61e30f8e477a799a00397b991e74803688b530f8f105d",
+      "transparent": true,
+      "source": "Original SVG code; visual reference is generated frame concept; no image tracing or external download.",
+      "canonicalLfSha256": "8a951178be49c129105e8e47c03b722cae4ba03b6cd8d74702832fd6b28f44df",
+      "canonicalLfBytes": 3321,
+      "lineEnding": "Current retained working-tree file uses CRLF; canonical LF source unchanged."
+    },
+    {
+      "file": "iris-corner-bl.svg",
+      "viewBox": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "bytes": 3343,
+      "sha256": "3cd46f658eb083ce16bbf814a8868b7f16dd8d4874ac5b521e48cc7d0290b5f4",
+      "transparent": true,
+      "source": "Original SVG code; visual reference is generated frame concept; no image tracing or external download.",
+      "canonicalLfSha256": "c87f32c2abfdda51a5a0a4a01e067526dc1bda4626adcba6259a54dc22487997",
+      "canonicalLfBytes": 3321,
+      "lineEnding": "Current retained working-tree file uses CRLF; canonical LF source unchanged."
+    },
+    {
+      "file": "iris-corner-br.svg",
+      "viewBox": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "bytes": 3353,
+      "sha256": "61f039ea580476f4e167cc71a45648d69257bb02c3fc6fbc740463c82f48d6de",
+      "transparent": true,
+      "source": "Original SVG code; visual reference is generated frame concept; no image tracing or external download.",
+      "canonicalLfSha256": "2c95a0ea248008bf2e67eae4b29d7067c2ce2c3e2603075b72a707185940e2ec",
+      "canonicalLfBytes": 3331,
+      "lineEnding": "Current retained working-tree file uses CRLF; canonical LF source unchanged."
+    },
+    {
+      "file": "iris-corner-tl-night.svg",
+      "viewBox": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "bytes": 3124,
+      "sha256": "e4f82deab5db79290c209eb3ac48413b18b0e97e0730888cec1924e4c2368084",
+      "transparent": true,
+      "source": "Original SVG code; visual reference is generated frame concept; no image tracing or external download.",
+      "canonicalLfSha256": "a54f456cec10b66caef2a6db0b40b54ab323b29580c7f44d39f639c3ff6952e5",
+      "canonicalLfBytes": 3102,
+      "lineEnding": "Current retained working-tree file uses CRLF; canonical LF source unchanged."
+    },
+    {
+      "file": "iris-corner-tr-night.svg",
+      "viewBox": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "bytes": 3343,
+      "sha256": "a8644873042af47106bcee052c50c9274c231a91662f28b6627550af9485b6c5",
+      "transparent": true,
+      "source": "Original SVG code; visual reference is generated frame concept; no image tracing or external download.",
+      "canonicalLfSha256": "8a7a59c1d07ac5d887cfd86bb0c111d51a4f11f0529a50945a3a0b985eb50b6a",
+      "canonicalLfBytes": 3321,
+      "lineEnding": "Current retained working-tree file uses CRLF; canonical LF source unchanged."
+    },
+    {
+      "file": "iris-corner-bl-night.svg",
+      "viewBox": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "bytes": 3343,
+      "sha256": "f69846ba087461b44f764577aa0ada3515394d794c94e72845e14b9070d09dd2",
+      "transparent": true,
+      "source": "Original SVG code; visual reference is generated frame concept; no image tracing or external download.",
+      "canonicalLfSha256": "157be0549025dca2bed147019a4c01a38966d292063cb08f32725166135388e1",
+      "canonicalLfBytes": 3321,
+      "lineEnding": "Current retained working-tree file uses CRLF; canonical LF source unchanged."
+    },
+    {
+      "file": "iris-corner-br-night.svg",
+      "viewBox": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "bytes": 3353,
+      "sha256": "d47a51f7ab4b4d0db1df2ee83e28b0e194f1a4bdc703fb6aecf8647f67db3394",
+      "transparent": true,
+      "source": "Original SVG code; visual reference is generated frame concept; no image tracing or external download.",
+      "canonicalLfSha256": "cf8bfc7cfef6e4fd633d915992808f82133009ed80f038e33e55fb0ac80ca4dd",
+      "canonicalLfBytes": 3331,
+      "lineEnding": "Current retained working-tree file uses CRLF; canonical LF source unchanged."
+    },
+    {
+      "file": "iris-corner-tl-teal.svg",
+      "viewBox": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "bytes": 3102,
+      "sha256": "f83cc815f0d7e1de8492be7ac305368bb2b079e38fd64aae00a5226e56841b90",
+      "transparent": true,
+      "source": "Original code-native teal palette variant of iris-corner-tl.svg; enamel/glass stops and veins only; silver/gold and all geometry/lighting preserved."
+    },
+    {
+      "file": "iris-corner-tr-teal.svg",
+      "viewBox": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "bytes": 3321,
+      "sha256": "73699e9850a325740312c4068517fc828560d336ec8e21a19cad05ec776d0a4e",
+      "transparent": true,
+      "source": "Original code-native teal palette variant of iris-corner-tr.svg; enamel/glass stops and veins only; silver/gold and all geometry/lighting preserved."
+    },
+    {
+      "file": "iris-corner-bl-teal.svg",
+      "viewBox": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "bytes": 3321,
+      "sha256": "e0acfe777cf771bedd32590b7682758cca87d10367b8b8fdc5acd50091f16975",
+      "transparent": true,
+      "source": "Original code-native teal palette variant of iris-corner-bl.svg; enamel/glass stops and veins only; silver/gold and all geometry/lighting preserved."
+    },
+    {
+      "file": "iris-corner-br-teal.svg",
+      "viewBox": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "bytes": 3331,
+      "sha256": "d94ed10ac37d8d8a9640cbc562794c19c3821523e10a6427d68684a1770c9937",
+      "transparent": true,
+      "source": "Original code-native teal palette variant of iris-corner-br.svg; enamel/glass stops and veins only; silver/gold and all geometry/lighting preserved."
+    },
+    {
+      "file": "iris-corner-tl-teal-night.svg",
+      "viewBox": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "bytes": 3102,
+      "sha256": "03153fd66fabb62c26c221cd0b4b73c19ca73bd73b2e97355930c3af7cd625f5",
+      "transparent": true,
+      "source": "Original code-native teal palette variant of iris-corner-tl-night.svg; enamel/glass stops and veins only; silver/gold and all geometry/lighting preserved."
+    },
+    {
+      "file": "iris-corner-tr-teal-night.svg",
+      "viewBox": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "bytes": 3321,
+      "sha256": "f5b989da8ffc5f5fc7a55efb0f845935d2abdc8c601e07d86545a2f2c40bfaaf",
+      "transparent": true,
+      "source": "Original code-native teal palette variant of iris-corner-tr-night.svg; enamel/glass stops and veins only; silver/gold and all geometry/lighting preserved."
+    },
+    {
+      "file": "iris-corner-bl-teal-night.svg",
+      "viewBox": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "bytes": 3321,
+      "sha256": "b791a610b6467cc47a1a8f098f01833506aff1e54afab06e0356f1e1e3c864aa",
+      "transparent": true,
+      "source": "Original code-native teal palette variant of iris-corner-bl-night.svg; enamel/glass stops and veins only; silver/gold and all geometry/lighting preserved."
+    },
+    {
+      "file": "iris-corner-br-teal-night.svg",
+      "viewBox": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "bytes": 3331,
+      "sha256": "8b13544b673ae3d5473932b155a321e83e83ef1da699cdf554771c9195bb80d2",
+      "transparent": true,
+      "source": "Original code-native teal palette variant of iris-corner-br-night.svg; enamel/glass stops and veins only; silver/gold and all geometry/lighting preserved."
+    },
+    {
+      "file": "iris-corner-tl-rose.svg",
+      "viewBox": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "bytes": 3102,
+      "sha256": "8d61a0b71b9af37a3360f5a17ab2adc0b3c7bc23b2dc2eba423730bd4836bd5e",
+      "transparent": true,
+      "source": "Original code-native rose palette variant of iris-corner-tl.svg; enamel/glass stops and veins only; silver/gold and all geometry/lighting preserved."
+    },
+    {
+      "file": "iris-corner-tr-rose.svg",
+      "viewBox": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "bytes": 3321,
+      "sha256": "f44b4776ca380f57e346406e2c4e41ecf7cb4478fcad5f36708504bafba757e8",
+      "transparent": true,
+      "source": "Original code-native rose palette variant of iris-corner-tr.svg; enamel/glass stops and veins only; silver/gold and all geometry/lighting preserved."
+    },
+    {
+      "file": "iris-corner-bl-rose.svg",
+      "viewBox": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "bytes": 3321,
+      "sha256": "414ec3f7adaf69ff9c8b5e61f0d2a5b0b452d2cb12571912075a42710b88c82b",
+      "transparent": true,
+      "source": "Original code-native rose palette variant of iris-corner-bl.svg; enamel/glass stops and veins only; silver/gold and all geometry/lighting preserved."
+    },
+    {
+      "file": "iris-corner-br-rose.svg",
+      "viewBox": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "bytes": 3331,
+      "sha256": "156c6f54a28d9d4e011698eeb0b40ffb74e6b4dac516fb1809fbea92fd5e6e1f",
+      "transparent": true,
+      "source": "Original code-native rose palette variant of iris-corner-br.svg; enamel/glass stops and veins only; silver/gold and all geometry/lighting preserved."
+    },
+    {
+      "file": "iris-corner-tl-rose-night.svg",
+      "viewBox": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "bytes": 3102,
+      "sha256": "ef0fb60c0ec6624afd56f229b7b56c08bdb94747931712e2ea9d938aafa608b3",
+      "transparent": true,
+      "source": "Original code-native rose palette variant of iris-corner-tl-night.svg; enamel/glass stops and veins only; silver/gold and all geometry/lighting preserved."
+    },
+    {
+      "file": "iris-corner-tr-rose-night.svg",
+      "viewBox": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "bytes": 3321,
+      "sha256": "b976c22d26cf3b378642dba30846a35bbef6ae25ca38b5d789fd1d123fe52fc8",
+      "transparent": true,
+      "source": "Original code-native rose palette variant of iris-corner-tr-night.svg; enamel/glass stops and veins only; silver/gold and all geometry/lighting preserved."
+    },
+    {
+      "file": "iris-corner-bl-rose-night.svg",
+      "viewBox": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "bytes": 3321,
+      "sha256": "1b4c076eee3b1f2887d7232f195ad6b2cf3c03d5fb9fc05e3755684d46d384f7",
+      "transparent": true,
+      "source": "Original code-native rose palette variant of iris-corner-bl-night.svg; enamel/glass stops and veins only; silver/gold and all geometry/lighting preserved."
+    },
+    {
+      "file": "iris-corner-br-rose-night.svg",
+      "viewBox": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "bytes": 3331,
+      "sha256": "8d53d718de91d4e4af18f6a1ad6b79fbb7445b8bd756dc6f7044f9e3346ab4c6",
+      "transparent": true,
+      "source": "Original code-native rose palette variant of iris-corner-br-night.svg; enamel/glass stops and veins only; silver/gold and all geometry/lighting preserved."
+    }
+  ],
+  "processing": "Generated PNGs downsampled using Pillow LANCZOS with RGBA retained. WebP browser variants quality 88/method 6, original alpha preserved. No subject editing, cutout extraction, repainting or private-media processing.",
+  "svgSource": "Original code-native curves, enamel/glass/silver/gold gradients and iris forms, guided by the generated full-frame concept. Geometry orientations have inverse gradient transforms to keep upper-left lighting. No third-party downloads, automatic trace or full-frame bitmap stretch.",
+  "display": {
+    "crest": [
+      96,
+      96
+    ],
+    "library": [
+      320,
+      200
+    ],
+    "libraryMobile": [
+      160,
+      100
+    ],
+    "cornerViewBox": [
+      96,
+      96
+    ],
+    "cornerDesktop": {
+      "main": 72,
+      "panel": 48,
+      "dialog": 80
+    },
+    "cornerMobile": {
+      "main": 40,
+      "panel": 32,
+      "dialog": 44
+    }
+  },
+  "themes": {
+    "bitmap": "Same transparent subjects in light and dark; inspected on #FCFBFF and #211A32. No inverted or recolored bitmap.",
+    "corners": "Dedicated light/night SVG palettes; existing data-color-scheme selects night. CSS-only frame colors use --mw-frame-* to avoid overriding global button tokens."
+  },
+  "budgets": {
+    "defaultWebpBytes": 133352,
+    "allEightSvgBytes": 26326,
+    "oneThemeSvgBytes": 13163,
+    "defaultNewArtAndAllSvgBytes": 211978,
+    "microComponentGzipBytes": 729,
+    "microMeasurement": "Ornament plus actual PageArt loader and mapping, React external, esbuild minified + node gzip. Does not substitute for fixed whole-app performance gate.",
+    "pngFallbackBytes": 539909,
+    "multicolorVariantSvgBytes": 52300,
+    "allTwentyFourSvgBytes": 78626
+  },
+  "failure": "WebP fails once to same-subject PNG. Failed PNG hides only art and its wash, retaining dimensions. Failed SVGs omit their corner pixels while CSS continuous three-layer frame remains. Frame decoration never changes content, requests, drafts, mutation state or private-media semantics.",
+  "accessibility": "Ornament absolute, aria-hidden, pointer-events:none; host pseudos untouched. Forced colors remove decorative corner and crest images, preserve system-colored continuous outline.",
+  "licensing": "Generated artwork for the authorized project, without private inputs, photographs or downloaded third-party images. Use remains subject to tool/service terms; no exclusive copyright or additional third-party license is asserted. Original SVG/CSS authored for the project.",
+  "multicolorRevision": {
+    "date": "2026-10-07",
+    "direction": "Moon-white reading; teal story tools; rose character surfaces; champagne gold main actions; purple navigation and common crest.",
+    "generationCalls": 0,
+    "privateInputs": false,
+    "adoption": "Original purple corner files remain for navigation/common dialogs. Story workspace frames use teal; character library/editor frames use rose. Transparent scene bitmaps and crest retain original colors; no CSS hue-rotate, inversion or destructive repainting.",
+    "cssTokens": [
+      "--mw-frame-accent",
+      "--mw-frame-rim",
+      "--mw-frame-silver",
+      "--mw-frame-gold",
+      "--mw-frame-highlight",
+      "--mw-frame-shadow"
+    ],
+    "inheritance": "Hosts define private defaults only; public frame tokens inherit from page/ancestors and are resolved on Ornament. --mw-frame-enamel remains a legacy fallback after accent.",
+    "nativeColorLimits": "CSS tints continuous frame rails, highlights and shadows via tokens. Separate SVG palette files change enamel/glass and small petal/leaf details only; preserve all silver/gold stops, shape data, gradient transforms and upper-left lighting. Raster scenes/crest and private avatars must not be hue-rotated.",
+    "newSvgFiles": 16,
+    "newSvgBytes": 52300,
+    "newRuntimeJsBytes": 0,
+    "failure": "Same original CSS continuous frame when SVG unavailable; existing WebP/PNG scene failure semantics unchanged.",
+    "licensing": "Original project-authored SVG color variants of original geometry; no new third-party assets or image-generation outputs."
+  }
+}

@@ -1,0 +1,43 @@
+/* Multi-line input. Height is set by the auto-size hook, so the handle is hidden. */
+@layer ui.primitives {
+  .ui-textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: calc(var(--size-md) * 2.5);
+    margin: 0;
+    padding: var(--space-2) var(--pad-md);
+    overflow: hidden;
+    border: var(--border-width) solid var(--border-strong);
+    border-radius: var(--radius-control);
+    background: var(--surface-1);
+    box-shadow: var(--shadow-none);
+    box-sizing: border-box;
+    color: var(--text-1);
+    font: var(--fw-regular) var(--fs-sm) / var(--lh-ui) var(--font-ui);
+    text-align: left;
+    resize: none;
+    transition: border-color var(--dur-hover) var(--ease), background-color var(--dur-hover) var(--ease);
+  }
+  .ui-textarea:hover { border-color: var(--border-strong-hover); }
+  .ui-textarea:focus-visible {
+    border-color: var(--accent);
+    outline: var(--focus-width) solid var(--focus);
+    outline-offset: var(--focus-offset);
+  }
+  .ui-textarea[aria-invalid="true"] { border-color: var(--danger); }
+  .ui-textarea::placeholder {
+    color: var(--text-3);
+    opacity: 1;
+  }
+  .ui-textarea:read-only,
+  .ui-textarea:disabled {
+    border-color: var(--border-default);
+    background: var(--surface-2);
+    color: var(--text-3);
+  }
+  .ui-textarea:disabled {
+    opacity: var(--opacity-disabled);
+    pointer-events: none;
+  }
+}

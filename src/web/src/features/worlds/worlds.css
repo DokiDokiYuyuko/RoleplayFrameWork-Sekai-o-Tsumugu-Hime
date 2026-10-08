@@ -1,0 +1,1037 @@
+.worlds-page {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 24px var(--workspace-gutter) 36px;
+  color: #243047;
+}
+.worlds-page h1,
+.worlds-page h2,
+.worlds-page h3,
+.worlds-page p {
+  margin-top: 0;
+}
+.worlds-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #64748b;
+  font-size: 13px;
+  text-decoration: none;
+  margin-bottom: 28px;
+}
+.worlds-back:hover {
+  color: #4f46e5;
+}
+.worlds-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 24px;
+  margin-bottom: 38px;
+}
+.worlds-heading h1,
+.worlds-detail-head h1 {
+  font-family: Georgia, "Noto Serif SC", serif;
+  font-size: clamp(30px, 3.2vw, 44px);
+  line-height: 1.2;
+  margin: 8px 0 10px;
+  color: #202b42;
+}
+.worlds-heading p,
+.worlds-detail-head p {
+  color: #69778b;
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0;
+}
+.worlds-heading-actions,
+.worlds-books-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.worlds-heading-actions .v7-btn,
+.worlds-books-actions .v7-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.worlds-list-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.worlds-list-toolbar h2 {
+  font-size: 19px;
+  margin: 0;
+}
+.worlds-list-toolbar small {
+  font-size: 13px;
+  color: #8b94a5;
+  margin-left: 5px;
+}
+.worlds-list-toolbar input,
+.worlds-search input,
+.worlds-modal input,
+.worlds-modal select,
+.worlds-modal textarea,
+.worlds-overview-form input,
+.worlds-overview-form textarea,
+.worlds-field input,
+.worlds-field textarea,
+.worlds-field select {
+  border: 1px solid #d8deea;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 12px;
+  color: #26334c;
+  outline: 0;
+  font: inherit;
+}
+.worlds-list-toolbar input:focus,
+.worlds-modal input:focus,
+.worlds-modal textarea:focus,
+.worlds-overview-form textarea:focus,
+.worlds-field input:focus,
+.worlds-field textarea:focus,
+.worlds-field select:focus {
+  border-color: #8177c7;
+  box-shadow: 0 0 0 3px #8177c71f;
+}
+.worlds-list-toolbar input {
+  width: min(260px, 45%);
+  font-size: 13px;
+}
+.worlds-card-icon,
+.worlds-title-icon {
+  display: grid;
+  place-items: center;
+  background: #eeeaf8;
+  color: #6c62a5;
+  border-radius: 13px;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 18px;
+}
+.worlds-guide,
+.worlds-panel {
+  border: 1px solid #e5e8ee;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 28px #28335a08;
+}
+.worlds-guide {
+  padding: 26px;
+}
+.worlds-guide h3 {
+  font-size: 19px;
+  margin: 8px 0 21px;
+}
+.worlds-guide ol {
+  margin: 0;
+  padding-left: 21px;
+  display: grid;
+  gap: 20px;
+}
+.worlds-guide li {
+  padding-left: 4px;
+  color: #8176aa;
+}
+.worlds-guide li strong {
+  display: block;
+  color: #344054;
+  font-size: 14px;
+}
+.worlds-guide li span {
+  display: block;
+  margin-top: 4px;
+  color: #778294;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.worlds-guide > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 24px;
+  font-size: 13px;
+  color: #6255a8;
+  text-decoration: none;
+}
+.worlds-empty,
+.worlds-record-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 300px;
+  padding: 40px;
+  border: 1px dashed #d4d8e3;
+  border-radius: 18px;
+  background: #fcfcfe;
+  color: #718099;
+}
+.worlds-empty h3,
+.worlds-record-empty h2,
+.worlds-record-empty h3 {
+  font-size: 20px;
+  color: #32415a;
+  margin: 17px 0 6px;
+}
+.worlds-empty p,
+.worlds-record-empty p {
+  max-width: 520px;
+  line-height: 1.65;
+}
+.worlds-empty .v7-btn,
+.worlds-record-empty .v7-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 10px;
+}
+.worlds-modal-shade {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: #1c243c91;
+}
+.worlds-modal {
+  width: min(100%, 500px);
+  padding: 28px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 25px 80px #13172940;
+}
+.worlds-modal h2 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+.worlds-modal p {
+  color: #6c778a;
+  font-size: 14px;
+  line-height: 1.55;
+}
+.worlds-modal label,
+.worlds-overview-form label,
+.worlds-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 650;
+  color: #4c596e;
+  margin-top: 18px;
+}
+.worlds-modal input,
+.worlds-modal textarea,
+.worlds-modal select,
+.worlds-overview-form input,
+.worlds-overview-form textarea,
+.worlds-field input,
+.worlds-field textarea,
+.worlds-field select {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+}
+.worlds-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 9px;
+  margin-top: 25px;
+}
+.worlds-detail-head {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+.worlds-detail-head .worlds-title-icon {
+  width: 61px;
+  height: 61px;
+  flex: none;
+  margin: 0;
+  border-radius: 17px;
+}
+.worlds-archived {
+  margin-left: auto;
+  font-size: 12px;
+  background: #f5ebde;
+  color: #9b6a33;
+  padding: 6px 10px;
+  border-radius: 30px;
+}
+.worlds-tabs {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  border-bottom: 1px solid #e1e5ee;
+  margin-bottom: 28px;
+}
+.worlds-tabs a {
+  display: block;
+  padding: 0 3px 15px;
+  color: #69768a;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 650;
+  border-bottom: 2px solid transparent;
+}
+.worlds-tabs a.active {
+  color: #5f51a3;
+  border-color: #7568bc;
+}
+.worlds-overview {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 290px;
+  gap: 24px;
+  align-items: start;
+}
+.worlds-overview-main {
+  display: grid;
+  gap: 18px;
+}
+.worlds-overview-aside {
+  display: grid;
+  gap: 18px;
+}
+.worlds-panel {
+  padding: 25px;
+}
+.worlds-panel h2 {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+.worlds-panel h3 {
+  font-size: 17px;
+}
+.worlds-panel p {
+  color: #6b798b;
+  line-height: 1.7;
+}
+.worlds-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.worlds-panel-head a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #6859a9;
+  font-size: 13px;
+  text-decoration: none;
+}
+.worlds-brief-text {
+  white-space: pre-wrap;
+  font-size: 15px;
+  color: #38475f !important;
+  line-height: 1.85 !important;
+  margin: 0 0 22px;
+}
+.worlds-note,
+.worlds-draft-note {
+  background: #f4f2fa;
+  color: #655b89;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 13px;
+  line-height: 1.55;
+}
+.worlds-overview-form textarea {
+  resize: vertical;
+}
+.worlds-overview-form small {
+  display: block;
+  color: #8a94a5;
+  margin: 10px 0 18px;
+}
+.worlds-overview-tiles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 13px;
+}
+.worlds-overview-tiles a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  border: 1px solid #e5e8ee;
+  border-radius: 15px;
+  background: #fff;
+  color: #7264ac;
+  text-decoration: none;
+}
+.worlds-overview-tiles a strong {
+  color: #354158;
+  font-size: 15px;
+}
+.worlds-overview-tiles a span {
+  font-size: 12px;
+  color: #8590a1;
+}
+.worlds-overview-tiles a svg:last-child {
+  position: absolute;
+  right: 18px;
+  bottom: 19px;
+}
+.worlds-recent {
+  display: grid;
+  gap: 7px;
+}
+.worlds-recent a {
+  display: grid;
+  grid-template-columns: 48px 130px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 9px;
+  text-decoration: none;
+  color: #58677d;
+}
+.worlds-recent a:hover {
+  background: #f8f7fc;
+}
+.worlds-recent span {
+  font-size: 11px;
+  color: #8175b4;
+}
+.worlds-recent strong {
+  font-size: 13px;
+  color: #35435a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.worlds-recent small {
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.worlds-muted {
+  font-size: 13px;
+  color: #8b97a8;
+  line-height: 1.65;
+}
+.worlds-overview-aside .v7-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+.worlds-text-action {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  background: transparent;
+  color: #665aa6;
+  padding: 8px 0;
+  cursor: pointer;
+  text-align: left;
+}
+.worlds-overview-aside small {
+  display: block;
+  color: #9aa4b2;
+  line-height: 1.5;
+}
+.worlds-subtabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 17px;
+}
+.worlds-subtabs button {
+  border: 1px solid #e1e4ec;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-weight: 600;
+  color: #778196;
+  cursor: pointer;
+}
+.worlds-subtabs button.active {
+  background: #ece9f7;
+  border-color: #d4cdeb;
+  color: #6758a7;
+}
+.worlds-subtabs small {
+  margin-left: 4px;
+  font-weight: 400;
+}
+.worlds-archive-layout {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  min-height: 650px;
+  border: 1px solid #e3e7ef;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+}
+.worlds-archive-list {
+  border-right: 1px solid #e6e9ef;
+  min-width: 0;
+}
+.worlds-list-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 19px 18px 11px;
+}
+.worlds-list-head > div { flex: 1 1 auto; min-width: 0; }
+.worlds-list-head > div:first-child { flex: 1 1 5.5em; min-width: 5.5em; }
+.worlds-list-head > .worlds-list-actions {
+  flex: 1 1 auto;
+  min-width: max-content;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+.worlds-list-head h2 {
+  font-size: 18px;
+  margin: 3px 0 0;
+}
+.worlds-list-head button {
+  display: grid;
+  place-items: center;
+  width: 29px;
+  height: 29px;
+  border: 0;
+  border-radius: 8px;
+  background: #ece9f7;
+  color: #6656a5;
+  cursor: pointer;
+}
+.worlds-list-head .worlds-import-button {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-width: 46px;
+  height: 32px;
+  padding: 0 8px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.worlds-list-head .worlds-import-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.worlds-list-head .worlds-create-button { flex: 0 0 32px; width: 32px; height: 32px; }
+.worlds-search {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin: 8px 14px 15px;
+  padding-left: 10px;
+  border: 1px solid #e5e7ed;
+  border-radius: 9px;
+  color: #8994a2;
+}
+.worlds-search input {
+  border: 0;
+  box-shadow: none !important;
+  width: 100%;
+  font-size: 12px;
+  padding: 9px 5px;
+}
+.worlds-record-list {
+  max-height: 800px;
+  overflow: auto;
+  padding: 0 8px 20px;
+}
+.worlds-record-list > button {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  text-align: left;
+  padding: 13px 12px;
+  cursor: pointer;
+}
+.worlds-record-list > button.active,
+.worlds-record-list > button:hover {
+  background: #f3f1fa;
+}
+.worlds-record-list strong,
+.worlds-record-list span,
+.worlds-record-list small {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.worlds-record-list strong {
+  font-size: 13px;
+  color: #344159;
+}
+.worlds-record-list span {
+  font-size: 12px;
+  color: #8490a2;
+  margin-top: 5px;
+}
+.worlds-record-list small {
+  font-size: 11px;
+  color: #a49bba;
+  margin-top: 7px;
+}
+.worlds-record-list .worlds-muted {
+  padding: 15px;
+}
+.worlds-record-detail {
+  min-width: 0;
+  padding: 30px clamp(22px, 3vw, 48px);
+}
+.worlds-record-detail .worlds-record-empty {
+  border: 0;
+  min-height: 540px;
+  background: transparent;
+}
+.worlds-record-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 12px;
+  margin: 0 0 26px;
+}
+.worlds-record-head h2 {
+  font-family: Georgia, "Noto Serif SC", serif;
+  font-size: 27px;
+  margin: 7px 0 0;
+}
+.worlds-record-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.worlds-danger {
+  border: 1px solid #f0d4d6;
+  border-radius: 9px;
+  padding: 9px;
+  color: #bb6970;
+  background: #fff;
+  cursor: pointer;
+}
+.worlds-editor {
+  max-width: 830px;
+}
+.worlds-editor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px;
+}
+.worlds-field small {
+  color: #9aa4af;
+  font-size: 11px;
+  font-weight: 400;
+}
+.worlds-field textarea {
+  resize: vertical;
+  line-height: 1.7;
+}
+.worlds-body-field textarea {
+  min-height: 400px;
+  font-family: ui-monospace, Consolas, "Noto Sans SC", monospace;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.worlds-bio-fields {
+  margin-top: 24px;
+  padding-top: 10px;
+  border-top: 1px solid #e9eaf0;
+}
+.worlds-bio-fields h3 {
+  font-size: 17px;
+}
+.worlds-visibility {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 17px;
+  font-size: 13px;
+  color: #44516a;
+}
+.worlds-visibility small {
+  color: #8a95a5;
+}
+.worlds-editor-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 26px;
+}
+.worlds-reader {
+  max-width: 790px;
+}
+.worlds-reader-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 22px;
+}
+.worlds-reader-meta span {
+  padding: 4px 9px;
+  background: #f0eff7;
+  border-radius: 30px;
+  color: #7468a4;
+  font-size: 11px;
+}
+.worlds-reader-summary {
+  border-left: 3px solid #b4a9de;
+  padding-left: 17px;
+  color: #51607a;
+  line-height: 1.75;
+}
+.worlds-reader-field {
+  margin-top: 23px;
+}
+.worlds-reader h3 {
+  font-size: 16px;
+  margin: 28px 0 9px;
+  color: #35425a;
+}
+.worlds-reader-field p,
+.worlds-reader-body {
+  white-space: pre-wrap;
+  line-height: 1.9;
+  color: #46546c;
+  font-size: 14px;
+}
+.worlds-reader-body {
+  min-height: 170px;
+  overflow-wrap: anywhere;
+}
+.worlds-reader-foot {
+  border-top: 1px solid #e9eaf0;
+  margin-top: 38px;
+  padding-top: 18px;
+  color: #8995a6;
+  font-size: 12px;
+}
+.worlds-mobile-back {
+  display: none;
+}
+.worlds-books-intro {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: end;
+  margin-bottom: 21px;
+}
+.worlds-books-intro h2 {
+  font-size: 22px;
+  margin: 7px 0;
+}
+.worlds-books-intro p {
+  font-size: 13px;
+  color: #78869a;
+  margin: 0;
+}
+.worlds-books-editor {
+  border: 1px solid #e3e7ef;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  min-height: 620px;
+}
+.worlds-books-editor .v7-lorebook-page {
+  min-height: 620px;
+}
+.worlds-books > .worlds-record-empty {
+  min-height: 360px;
+}
+.worlds-record-empty > a {
+  margin-top: 14px;
+  font-size: 13px;
+  color: #6f61a9;
+}
+.worlds-draft-note {
+  margin: 0 0 19px;
+}
+@media (max-width: 1100px) {
+  .worlds-index-layout,
+  .worlds-overview {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .worlds-guide {
+    max-width: none;
+  }
+  .worlds-guide ol {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .worlds-overview-aside {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 700px) {
+  .worlds-page {
+    padding: 24px 16px 60px;
+  }
+  .worlds-heading,
+  .worlds-books-intro {
+    align-items: start;
+    flex-direction: column;
+  }
+  .worlds-card-grid,
+  .worlds-overview-tiles,
+  .worlds-overview-aside,
+  .worlds-guide ol {
+    grid-template-columns: 1fr;
+  }
+  .worlds-list-toolbar {
+    align-items: start;
+    flex-direction: column;
+  }
+  .worlds-list-toolbar input {
+    width: 100%;
+  }
+  .worlds-detail-head {
+    align-items: start;
+  }
+  .worlds-detail-head .worlds-title-icon {
+    width: 45px;
+    height: 45px;
+  }
+  .worlds-tabs {
+    gap: 18px;
+  }
+  .worlds-archive-layout {
+    display: block;
+    min-height: 0;
+  }
+  .worlds-archive-layout.has-detail .worlds-archive-list {
+    display: none;
+  }
+  .worlds-archive-layout:not(.has-detail) .worlds-record-detail {
+    display: none;
+  }
+  .worlds-archive-list {
+    border-right: 0;
+  }
+  .worlds-record-list {
+    max-height: none;
+  }
+  .worlds-record-detail {
+    padding: 21px 17px;
+  }
+  .worlds-mobile-back {
+    display: block;
+    margin-bottom: 18px;
+  }
+  .worlds-mobile-back button {
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+    background: none;
+    border: 0;
+    color: #6a5ba9;
+    padding: 0;
+  }
+  .worlds-editor-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .worlds-visibility {
+    align-items: start;
+  }
+  .worlds-recent a {
+    grid-template-columns: 40px minmax(0, 1fr);
+  }
+  .worlds-recent small {
+    display: none;
+  }
+  .worlds-books-editor .v7-lorebook-page {
+    min-height: 550px;
+  }
+
+}
+.worlds-source-label {
+  display: block;
+  width: 100%;
+  font-size: 11px;
+  color: #69778d;
+}
+.worlds-source-label button {
+  border: 0;
+  background: #fff3d6;
+  color: #9b682c;
+  padding: 3px 7px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 7px;
+}
+.worlds-source-review {
+  width: min(760px, calc(100vw - 30px)) !important;
+  max-height: 85vh;
+  overflow: auto;
+}
+.worlds-source-review .worlds-editor-grid {
+  margin: 15px 0;
+}
+.worlds-source-review h3 {
+  font-size: 13px;
+  margin: 0 0 7px;
+}
+.worlds-source-review pre {
+  font:
+    12px/1.65 ui-monospace,
+    Consolas,
+    monospace;
+  white-space: pre-wrap;
+  max-height: 180px;
+  overflow: auto;
+  padding: 10px;
+  background: #f6f7fa;
+  border-radius: 8px;
+}
+.worlds-source-review .worlds-field textarea {
+  min-height: 110px;
+}
+.worlds-reader-body p {
+  margin: 0;
+  white-space: pre-wrap;
+}
+.worlds-reader-body h4 {
+  font-family: Georgia, "Noto Serif SC", serif;
+  color: #31405b;
+  line-height: 1.45;
+  margin: 19px 0 8px;
+}
+.worlds-markdown-h1 {
+  font-size: 23px;
+}
+.worlds-markdown-h2 {
+  font-size: 20px;
+}
+.worlds-markdown-h3 {
+  font-size: 17px;
+}
+.worlds-markdown-h4 {
+  font-size: 15px;
+}
+.worlds-markdown-gap {
+  height: 14px;
+}
+.worlds-reader-body .worlds-markdown-list {
+  padding-left: 18px;
+}
+.worlds-reader-body blockquote {
+  border-left: 3px solid #b5a9d9;
+  margin: 7px 0;
+  padding: 3px 0 3px 13px;
+  color: #6e648b;
+}
+
+/* Keep world/archive surfaces aligned with the active reading theme. */
+.worlds-page { color: var(--ink); }
+.worlds-page :is(h1, h2, h3, h4, strong, .worlds-card-title, .worlds-record-list strong, .worlds-overview-tiles a strong, .worlds-recent strong) { color: var(--ink); }
+.worlds-page :is(p, small, .worlds-back, .worlds-list-toolbar small, .worlds-heading p, .worlds-detail-head p, .worlds-card-desc, .worlds-card-stats, .worlds-guide li span, .worlds-muted, .worlds-books-intro p, .worlds-record-list span, .worlds-field small, .worlds-overview-tiles a span, .worlds-recent a, .worlds-reader-body, .worlds-reader-field p, .worlds-reader-summary, .worlds-reader-foot, .worlds-source-label) { color: var(--muted); }
+.worlds-page :is(.worlds-card, .worlds-guide, .worlds-panel, .worlds-overview-tiles a, .worlds-archive-layout, .worlds-books-editor, .worlds-modal, .worlds-next-card) { border-color: var(--line); background: var(--surface); color: var(--ink); box-shadow: var(--shadow); }
+.worlds-page .worlds-empty,
+.worlds-page .worlds-record-empty { border-color: var(--line); background: var(--surface-soft); color: var(--muted); }
+.worlds-page .worlds-record-detail .worlds-record-empty { background: transparent; box-shadow: none; }
+.worlds-page :is(.worlds-card-icon, .worlds-title-icon, .worlds-list-head button) { background: var(--sea-soft); color: var(--sea); }
+.worlds-page :is(.worlds-card-arrow, .worlds-guide li, .worlds-guide > a, .worlds-panel-head a, .worlds-tabs a.active, .worlds-overview-tiles a, .worlds-record-empty > a, .worlds-mobile-back button, .worlds-text-action, .worlds-reader-meta span, .worlds-next-card a) { color: var(--sea); }
+.worlds-page :is(.worlds-guide, .worlds-panel, .worlds-next-card) { border-color: var(--line); }
+.worlds-page :is(.worlds-list-toolbar input, .worlds-search input, .worlds-modal input, .worlds-modal select, .worlds-modal textarea, .worlds-overview-form input, .worlds-overview-form textarea, .worlds-field input, .worlds-field textarea, .worlds-field select) { border-color: var(--line); background: var(--paper); color: var(--ink); }
+.worlds-page :is(.worlds-list-toolbar input, .worlds-modal input, .worlds-modal textarea, .worlds-overview-form textarea, .worlds-field input, .worlds-field textarea, .worlds-field select):focus { border-color: var(--sea); box-shadow: 0 0 0 3px color-mix(in srgb, var(--sea) 18%, transparent); }
+.worlds-page :is(.worlds-note, .worlds-draft-note, .worlds-subtabs button.active, .worlds-record-list > button.active, .worlds-record-list > button:hover, .worlds-recent a:hover) { background: var(--sea-soft); color: var(--ink); }
+.worlds-page :is(.worlds-tabs, .worlds-bio-fields, .worlds-reader-foot, .worlds-archive-list) { border-color: var(--line); }
+.worlds-page .worlds-tabs a { color: var(--muted); }
+.worlds-page .worlds-tabs a.active { border-color: var(--sea); }
+.worlds-page .worlds-subtabs button,
+.worlds-page .worlds-search { border-color: var(--line); background: var(--surface); color: var(--muted); }
+.worlds-page .worlds-archived { background: var(--warning-soft); color: var(--amber); }
+.worlds-page .worlds-reader-meta span { background: var(--sea-soft); }
+.worlds-page .worlds-reader h3,
+.worlds-page .worlds-reader-body h4 { color: var(--ink); }
+.worlds-page .worlds-reader-body blockquote { border-color: var(--sea); background: var(--sea-soft); color: var(--ink); }
+.worlds-page .worlds-danger { border-color: color-mix(in srgb, var(--danger) 45%, var(--line)); background: var(--surface); color: var(--danger); }
+.worlds-page .worlds-source-label button { background: var(--warning-soft); color: var(--amber); }
+.worlds-page .worlds-source-review pre { background: var(--surface-soft); color: var(--ink); }
+.worlds-page .worlds-brief-text { color: var(--ink) !important; }
+.worlds-page .worlds-next-card h3 { color: var(--ink); }
+.worlds-page .worlds-next-card p { color: var(--muted); }
+
+.biology-import-dialog {
+  width: min(640px, calc(100vw - 28px));
+  max-height: calc(100dvh - 32px);
+  overflow: auto;
+}
+.biology-import-dialog.v7-dialog-content p { max-height: none; }
+.biology-import-dialog select {
+  display: block;
+  width: 100%;
+  margin-top: 7px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--paper, var(--surface));
+  color: var(--ink);
+}
+.biology-import-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 14px;
+  max-height: min(420px, 50dvh);
+  overflow: auto;
+}
+.biology-import-dialog label.biology-import-row {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  margin-top: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 400;
+}
+.biology-import-row input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 3px 0 0;
+  accent-color: var(--sea);
+}
+.biology-import-row strong { color: var(--ink); }
+.biology-import-row small,
+.biology-import-hint { display: block; color: var(--muted); line-height: 1.6; }
+.biology-import-chip {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: var(--surface-soft);
+  color: var(--muted);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+}
+.biology-import-chip.is-imported { background: var(--sea-soft); color: var(--sea); }
+.biology-import-chip.is-updated { background: var(--warning-soft); color: var(--amber); }
+@media (max-width: 720px) {
+  .biology-import-dialog .worlds-modal-actions { flex-wrap: wrap; }
+}

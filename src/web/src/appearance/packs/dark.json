@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "id": "dark",
+  "name": "深海夜读",
+  "note": "墨绿海水与柔和月光",
+  "order": 2,
+  "color_scheme": "dark",
+  "preview": [
+    "#19252a",
+    "#99d2cd",
+    "#dfb979",
+    "#b3abd2"
+  ],
+  "palette": {
+    "page": "#19252a",
+    "surface": "#223238",
+    "surfaceSoft": "#2d3f43",
+    "text": "#edf0e8",
+    "textMuted": "#a9b8b7",
+    "border": "#3b5254",
+    "primary": "#99d2cd",
+    "primaryHover": "#b5e1dc",
+    "primaryButton": "#326f73",
+    "primaryButtonHover": "#285e64",
+    "onPrimary": "#ffffff",
+    "primarySoft": "#304c4e",
+    "accent": "#dfb979",
+    "secondary": "#b3abd2",
+    "nav": "#111d22",
+    "navText": "#edf0e8",
+    "navMuted": "#9ab4b5",
+    "rail": "#1d2d33",
+    "focus": "#a8d8d5",
+    "danger": "#f0aaa0",
+    "dangerSoft": "color-mix(in srgb, #783f3d 34%, var(--surface))",
+    "success": "#a4d9b8",
+    "successSoft": "color-mix(in srgb, #286044 34%, var(--surface))",
+    "warningSoft": "color-mix(in srgb, #755b2e 38%, var(--surface))",
+    "brandStart": "#e6edf3",
+    "brandEnd": "#cdd9e4"
+  },
+  "shadows": {
+    "panel": "0 14px 40px rgba(0, 0, 0, 0.16)",
+    "card": "0 8px 24px rgba(0, 0, 0, 0.2)"
+  },
+  "assets": {
+    "nav_art": "/brand/themes/astral/sidebar-palace.jpg",
+    "story_cover_forest": "/brand/themes/astral/story-forest.jpg",
+    "story_cover_ocean": "/brand/themes/astral/story-ocean.jpg",
+    "story_cover_moon": "/brand/themes/astral/story-moon.jpg"
+  }
+}

@@ -1,0 +1,153 @@
+/* Button (and IconButton, which is a square ghost Button). Spec section 5. */
+@layer ui.primitives {
+  .ui-btn,
+  .ui-btn::before,
+  .ui-btn::after {
+    box-sizing: border-box;
+  }
+
+  .ui-btn {
+    --btn-h: var(--size-md);
+    --btn-px: var(--pad-md);
+    --btn-icon: var(--icon-md);
+    --btn-bg: var(--surface-1);
+    --btn-fg: var(--text-1);
+    --btn-bd: var(--border-default);
+    position: relative;
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    height: var(--btn-h);
+    margin: 0;
+    padding: 0 var(--btn-px);
+    border: var(--border-width) solid var(--btn-bd);
+    border-radius: var(--radius-control);
+    background: var(--btn-bg);
+    color: var(--btn-fg);
+    font: var(--fw-semibold) var(--fs-sm) / 1 var(--font-ui);
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color var(--dur-hover) var(--ease), border-color var(--dur-hover) var(--ease),
+      color var(--dur-hover) var(--ease), transform var(--dur-press) var(--ease), filter var(--dur-hover) var(--ease);
+  }
+  .ui-btn:focus-visible {
+    outline: var(--focus-width) solid var(--focus);
+    outline-offset: var(--focus-offset);
+  }
+  .ui-btn .ui-icon { width: var(--btn-icon); height: var(--btn-icon); }
+  .ui-btn:hover {
+    background: linear-gradient(var(--overlay-hover), var(--overlay-hover)), var(--btn-bg);
+  }
+  .ui-btn:active {
+    background: linear-gradient(var(--overlay-active), var(--overlay-active)), var(--btn-bg);
+    transform: translateY(1px);
+  }
+
+  .ui-btn--sm { --btn-h: var(--size-sm); --btn-px: var(--pad-sm); --btn-icon: var(--icon-sm); }
+  .ui-btn--lg { --btn-h: var(--size-lg); --btn-px: var(--pad-lg); --btn-icon: var(--icon-lg); }
+
+  .ui-btn--tonal { --btn-bg: var(--accent-soft); --btn-bd: transparent; --btn-fg: var(--accent); }
+  .ui-btn--secondary:hover { --btn-bd: var(--border-strong); }
+
+  .ui-btn--ghost {
+    --btn-bg: transparent;
+    --btn-bd: transparent;
+    --btn-fg: var(--icon-rest, var(--text-2));
+  }
+  .ui-btn--ghost:hover { --btn-fg: var(--text-1); }
+
+  .ui-btn--danger {
+    --btn-bg: var(--danger-soft);
+    --btn-bd: var(--danger);
+    --btn-fg: var(--danger);
+  }
+
+  .ui-btn--primary {
+    --btn-bg: var(--btn-primary-bg);
+    --btn-bd: var(--gold-border);
+    --btn-fg: var(--gold-text);
+    box-shadow: var(--btn-primary-hi), var(--shadow-none);
+  }
+  .ui-btn--primary:hover {
+    background: var(--btn-bg);
+    box-shadow: var(--btn-primary-hi), var(--btn-primary-glow-hover);
+    filter: brightness(1.05) saturate(1.05);
+  }
+  .ui-btn--primary:active { background: var(--btn-bg); filter: brightness(0.94); }
+
+  .ui-btn--icon { width: var(--btn-h); padding: 0; }
+  .ui-btn--block { width: 100%; }
+
+  /* Toggle state (aria-pressed) */
+  .ui-btn[aria-pressed="true"] {
+    --btn-bg: var(--accent-soft);
+    --btn-bd: var(--accent);
+    --btn-fg: var(--accent);
+    box-shadow: none;
+  }
+  .ui-btn--ghost[aria-pressed="true"] { --btn-bd: transparent; }
+  .ui-btn[aria-pressed="true"]:hover { --btn-fg: var(--accent); }
+
+  /* Loading keeps the width: the label stays in flow but is hidden */
+  .ui-btn__spin { display: none; }
+  .ui-btn[aria-busy="true"] {
+    color: transparent;
+    pointer-events: none;
+  }
+  .ui-btn[aria-busy="true"] .ui-icon:not(.ui-btn__spin) { visibility: hidden; }
+  .ui-btn[aria-busy="true"] .ui-btn__spin {
+    position: absolute;
+    inset: 0;
+    display: block;
+    margin: auto;
+    width: var(--btn-icon);
+    height: var(--btn-icon);
+    color: var(--btn-fg);
+    animation: ui-spin 800ms linear infinite;
+  }
+
+  .ui-btn:disabled,
+  .ui-btn[aria-disabled="true"] {
+    opacity: var(--opacity-disabled);
+    pointer-events: none;
+  }
+
+  @keyframes ui-spin { to { transform: rotate(360deg); } }
+  @keyframes ui-pulse { 50% { opacity: 0.35; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ui-btn:active { transform: none; }
+    .ui-btn[aria-busy="true"] .ui-btn__spin { animation: ui-pulse 1.6s ease-in-out infinite; }
+  }
+}
+@layer ui.primitives {
+  .ui-btn__skin { display: none; }
+  .ui-btn__label { display: inline-flex; align-items: center; justify-content: center; min-width: 0; }
+  @media (min-width: 900px) {
+    :root[data-ornament="rich"] .ui-btn[data-skin] {
+      --skin-left: var(--skin-normal-left); --skin-center: var(--skin-normal-center); --skin-right: var(--skin-normal-right);
+      --skin-body-h: var(--skin-normal-body-h); --skin-body-y: var(--skin-normal-body-y);
+      --skin-cap-h: var(--skin-normal-cap-h); --skin-cap-y: var(--skin-normal-cap-y); --skin-cap-w: var(--skin-normal-cap-w);
+      padding-inline: calc(var(--btn-h) + var(--space-2)); background: transparent; border-color: transparent; box-shadow: var(--shadow-none); isolation: isolate; overflow: visible;
+    }
+    :root[data-ornament="rich"] .ui-btn[data-skin] .ui-btn__skin { display: block; position: absolute; inset: calc(var(--border-width) * -1); z-index: -1; pointer-events: none; }
+    .ui-btn__skin-body { position: absolute; inset: 0; border-radius: var(--radius-pill); background: var(--skin-center) no-repeat center var(--skin-body-y) / 100% var(--skin-body-h); }
+    .ui-btn__skin-left, .ui-btn__skin-right { position: absolute; inset-block: 0; width: var(--skin-cap-w); background-repeat: no-repeat; background-position: center var(--skin-cap-y); background-size: 100% var(--skin-cap-h); }
+    .ui-btn__skin-left { left: 0; background-image: var(--skin-left); mask-image: linear-gradient(to right, currentColor 65%, transparent); }
+    .ui-btn__skin-right { right: 0; background-image: var(--skin-right); mask-image: linear-gradient(to left, currentColor 65%, transparent); }
+    :root[data-ornament="rich"] .ui-btn[data-skin]:hover:not(:disabled):not([aria-busy="true"]):not([aria-disabled="true"]) {
+      --skin-left: var(--skin-hover-left); --skin-center: var(--skin-hover-center); --skin-right: var(--skin-hover-right);
+      --skin-body-h: var(--skin-hover-body-h); --skin-body-y: var(--skin-hover-body-y); --skin-cap-h: var(--skin-hover-cap-h); --skin-cap-y: var(--skin-hover-cap-y); --skin-cap-w: var(--skin-hover-cap-w);
+      background: transparent; filter: none; box-shadow: var(--shadow-none);
+    }
+    :root[data-ornament="rich"] .ui-btn[data-skin]:active:not(:disabled):not([aria-busy="true"]):not([aria-disabled="true"]) {
+      --skin-left: var(--skin-pressed-left); --skin-center: var(--skin-pressed-center); --skin-right: var(--skin-pressed-right);
+      --skin-body-h: var(--skin-pressed-body-h); --skin-body-y: var(--skin-pressed-body-y); --skin-cap-h: var(--skin-pressed-cap-h); --skin-cap-y: var(--skin-pressed-cap-y); --skin-cap-w: var(--skin-pressed-cap-w);
+    }
+  }
+}

@@ -1,0 +1,47 @@
+/* PageHeader: title, meta line, actions. The mark takes the page region colour. Spec section 5. */
+@layer ui.primitives {
+  .ui-pageheader {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-4);
+    min-width: 0;
+  }
+  .ui-pageheader__mark {
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: var(--size-lg);
+    height: var(--size-lg);
+    border-radius: var(--radius-control);
+    background: var(--region-soft);
+    color: var(--region);
+  }
+  /* The title keeps a readable minimum; on narrow screens the actions wrap below it */
+  .ui-pageheader__text {
+    flex: 1 1 160px;
+    min-width: 0;
+  }
+  .ui-pageheader__title {
+    margin: 0;
+    color: var(--text-1);
+    font: var(--fw-regular) var(--fs-2xl) / var(--lh-heading) var(--font-display);
+  }
+  .ui-pageheader__meta {
+    margin: var(--space-1) 0 0;
+    color: var(--text-2);
+    font: var(--fw-regular) var(--fs-sm) / var(--lh-ui) var(--font-ui);
+  }
+  .ui-pageheader__actions {
+    display: flex;
+    flex: none;
+    align-items: center;
+    gap: var(--space-2);
+    margin-left: auto;
+  }
+}
+@layer ui.primitives {
+  .ui-pageheader__art { display: none; width: var(--size-lg); height: var(--size-lg); object-fit: contain; flex: none; pointer-events: none; }
+  :root[data-ornament="rich"] .ui-pageheader__art { display: block; }
+  :root[data-ornament="rich"] .ui-pageheader__art + .ui-pageheader__mark { display: none; }
+}

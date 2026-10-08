@@ -1,0 +1,134 @@
+/* Responsive behavior shared by mobile routes and the LAN settings panel. */
+.lan-session-shade { position:fixed; z-index:300; inset:0; display:grid; place-items:center; padding:calc(18px + env(safe-area-inset-top)) 18px calc(18px + env(safe-area-inset-bottom)); background:rgba(16,31,34,.58); backdrop-filter:blur(5px); }
+.lan-session-dialog { width:min(100%,440px); max-height:calc(var(--mrp-visual-height,100dvh) - 32px); overflow:auto; padding:26px; border:1px solid var(--line); border-radius:18px; background:var(--surface); color:var(--ink); box-shadow:0 24px 80px rgba(13,28,31,.3); }
+.lan-session-kicker { color:var(--sea); font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+.lan-session-dialog h2 { margin:8px 0 8px; font:500 26px/1.2 Georgia,"Songti SC",serif; }
+.lan-session-dialog p { margin:8px 0 17px; color:var(--muted); font-size:13px; line-height:1.65; }
+.lan-session-dialog form > label:first-child { display:block; margin:0 0 7px; color:var(--ink); font-size:12px; font-weight:700; }
+.lan-session-dialog form > input { width:100%; min-height:46px; padding:11px 12px; border:1px solid var(--line); border-radius:9px; background:var(--surface-soft); color:var(--ink); font:600 18px ui-monospace,monospace; letter-spacing:.06em; }
+.lan-session-remember { display:flex; align-items:flex-start; gap:10px; margin:15px 0; color:var(--ink); font-size:13px; cursor:pointer; }
+.lan-session-remember input { width:17px; height:17px; margin:2px 0 0; accent-color:var(--sea); flex:none; }
+.lan-session-remember strong,.lan-session-remember small { display:block; }
+.lan-session-remember small { margin-top:3px; color:var(--muted); font-size:11px; line-height:1.5; }
+.lan-session-dialog form > button { width:100%; min-height:44px; border:0; border-radius:9px; background:var(--sea-button); color:var(--on-sea-button); font-weight:700; cursor:pointer; }
+.lan-session-dialog form > button:disabled { opacity:.55; cursor:wait; }
+.lan-session-error { margin:10px 0 !important; color:var(--danger) !important; }
+.lan-session-foot { display:block; margin-top:15px; color:var(--muted); font-size:11px; line-height:1.55; }
+.v7-lan-card { min-width: 0; }
+.v7-lan-state { display:flex; align-items:center; gap:12px; min-width:0; padding-bottom:18px; border-bottom:1px solid var(--line); }
+.v7-lan-state > div { flex:1; min-width:0; }
+.v7-lan-state strong,.v7-lan-state small { display:block; }
+.v7-lan-state strong { color:var(--ink); font-size:14px; }
+.v7-lan-state small { margin-top:4px; color:var(--muted); font-size:11px; }
+.v7-lan-state-dot { width:11px; height:11px; flex:none; border-radius:50%; background:#a8b0ae; }
+.v7-lan-state-dot.is-on { background:#4c9875; box-shadow:0 0 0 4px #4c98751b; }
+.v7-lan-launch,.v7-lan-howto,.v7-lan-troubleshoot { margin-top:20px; }
+.v7-lan-launch h3,.v7-lan-section-head h3,.v7-lan-troubleshoot h3 { margin:0; color:var(--ink); font-size:14px; }
+.v7-lan-launch p,.v7-lan-section-head p,.v7-lan-howto p,.v7-lan-troubleshoot p { color:var(--muted); font-size:12px; line-height:1.65; overflow-wrap:anywhere; }
+.v7-lan-card code { max-width:100%; padding:2px 5px; border-radius:5px; background:var(--surface-soft); color:var(--ink); white-space:pre-wrap; overflow-wrap:anywhere; }
+.v7-lan-address-list { margin-top:23px; }
+.v7-lan-section-head { margin-bottom:12px; }
+.v7-lan-address { display:grid; grid-template-columns:184px minmax(0,1fr); align-items:center; gap:22px; padding:17px 0; border-top:1px solid var(--line); }
+.v7-lan-qr { display:grid; place-items:center; width:184px; max-width:100%; padding:10px; border:1px solid var(--line); border-radius:12px; background:#fff; }
+.v7-lan-qr svg { display:block; width:100%; height:auto; }
+.v7-lan-address-copy { display:grid; justify-items:start; gap:10px; min-width:0; }
+.v7-lan-ip { color:var(--ink); font-size:17px; font-weight:700; }
+.v7-lan-address-copy code { display:block; font-size:12px; }
+.v7-lan-howto > div { display:flex; align-items:center; gap:8px; color:var(--sea); }
+.v7-lan-howto ol,.v7-lan-troubleshoot ol { padding-left:20px; color:var(--ink); font-size:12px; line-height:1.7; }
+.v7-lan-howto li,.v7-lan-troubleshoot li { padding-left:3px; margin:5px 0; overflow-wrap:anywhere; }
+.v7-lan-certificate { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:start; gap:12px 18px; margin-top:20px; padding:15px; border:1px solid var(--line); border-radius:11px; background:var(--surface-soft); }
+.v7-lan-certificate h3 { margin:0; color:var(--ink); font-size:14px; }
+.v7-lan-certificate p,.v7-lan-certificate small { display:block; margin:7px 0 0; color:var(--muted); font-size:12px; line-height:1.6; overflow-wrap:anywhere; }
+.v7-lan-certificate > div > code { display:block; margin-top:8px; font-size:11px; }
+.v7-lan-certificate > p { grid-column:1/-1; margin:0; }
+.v7-lan-warning { margin-top:20px; padding:14px 16px; border:1px solid color-mix(in srgb,var(--amber) 35%,var(--line)); border-radius:11px; background:var(--warning-soft); color:var(--amber); }
+.v7-lan-warning strong { font-size:13px; }
+.v7-lan-warning p { margin:6px 0 0; font-size:12px; line-height:1.6; }
+.v7-lan-troubleshoot { padding-top:18px; border-top:1px solid var(--line); }
+.v7-lan-empty,.v7-lan-error { padding:12px; border-radius:9px; background:var(--surface-soft); color:var(--muted); font-size:12px; line-height:1.6; overflow-wrap:anywhere; }
+.v7-lan-error { margin:12px 0 0; background:var(--danger-soft); color:var(--danger); }
+.v7-lan-actions { display:flex; align-items:center; gap:13px; margin-top:20px; padding-top:18px; border-top:1px solid var(--line); }
+.v7-lan-actions small { color:var(--muted); font-size:11px; line-height:1.5; }
+.v7-lan-local-only { margin:18px 0 0; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:12px; line-height:1.6; }
+.v7-lan-devices { margin-top:22px; padding-top:18px; border-top:1px solid var(--line); }
+.v7-lan-devices-heading { display:flex; align-items:flex-start; justify-content:space-between; gap:16px; }
+.v7-lan-devices h3 { margin:0; color:var(--ink); font-size:14px; }
+.v7-lan-devices-heading p,.v7-lan-device-empty { margin:6px 0 0; color:var(--muted); font-size:12px; line-height:1.6; }
+.v7-lan-device-actions { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:8px; }
+.v7-lan-device-list { display:grid; gap:10px; margin:14px 0 0; padding:0; list-style:none; }
+.v7-lan-device-list li { display:flex; align-items:center; justify-content:space-between; gap:14px; padding:12px; border:1px solid var(--line); border-radius:10px; background:var(--surface); }
+.v7-lan-device-info { display:grid; min-width:0; gap:4px; }
+.v7-lan-device-info strong { overflow-wrap:anywhere; color:var(--ink); font-size:12px; }
+.v7-lan-device-info small,.v7-lan-rotated-code small { color:var(--muted); font-size:11px; line-height:1.5; overflow-wrap:anywhere; }
+.v7-lan-rotated-code { display:grid; justify-items:start; gap:9px; margin-top:14px; padding:14px; border:1px solid color-mix(in srgb,var(--amber) 35%,var(--line)); border-radius:11px; background:var(--warning-soft); color:var(--amber); }
+.v7-lan-rotated-code code { font-size:18px; font-weight:700; letter-spacing:.08em; }
+.v7-lan-close { color:var(--danger); }
+
+.v7-worldline-detail-shade,.v7-worldline-mobile-close { display:none; }
+
+@media (max-width:650px) {
+  .v7-app { display:flex; flex-direction:column; height:var(--mrp-visual-height,100dvh); min-height:0; }
+  .v7-app-main { display:flex; flex:1; flex-direction:column; height:auto; min-height:0; overflow:auto; }
+  .v7-mobile-top { box-sizing:border-box; flex:none; height:calc(52px + env(safe-area-inset-top)); padding:env(safe-area-inset-top) 13px 0; }
+  .v7-mobile-top > button { display:grid; place-items:center; width:40px; height:40px; flex:none; }
+  .v7-page,.v7-settings { padding-bottom:calc(58px + env(safe-area-inset-bottom)); }
+  .v7-chat { flex:1; min-height:0; }
+  .v7-chat-main { min-height:0; }
+  .v7-composer { padding-bottom:calc(9px + env(safe-area-inset-bottom)); }
+  .v7-input-tools button,.v7-composer-mode select,.v7-message-actions-toggle { min-height:40px; }
+  .v7-chat-actions .v7-btn { min-height:40px; }
+  .v7-assist-panel { padding-top:env(safe-area-inset-top); padding-bottom:env(safe-area-inset-bottom); }
+  .v7-memory-panel { padding-top:env(safe-area-inset-top); padding-bottom:env(safe-area-inset-bottom); }
+  .v7-settings { padding-right:14px; padding-left:14px; }
+  .v7-settings-layout { gap:16px; margin-top:20px; }
+  .v7-settings-nav { gap:5px; }
+  .v7-settings-nav a { min-height:42px; padding:8px 10px; }
+  .v7-lan-address { grid-template-columns:minmax(0,1fr); gap:14px; }
+  .v7-lan-qr { width:min(184px,100%); }
+  .v7-lan-state { flex-wrap:wrap; }
+  .v7-lan-state > div { flex-basis:calc(100% - 42px); }
+  .v7-lan-state > button { margin-left:23px; }
+  .v7-lan-actions { align-items:stretch; flex-direction:column; }
+  .v7-lan-actions .v7-btn { align-self:flex-start; }
+  .v7-lan-devices-heading { flex-direction:column; }
+  .v7-lan-device-actions { justify-content:flex-start; }
+  .v7-lan-device-list li { align-items:flex-start; flex-direction:column; }
+  .v7-lan-certificate { grid-template-columns:minmax(0,1fr); }
+  .v7-dialog-content { top:calc(env(safe-area-inset-top) + 50%); left:50%; width:min(430px,calc(100vw - 24px)); max-height:calc(var(--mrp-visual-height,100dvh) - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 24px); overflow:auto; padding:20px 17px; }
+  .v7-character-editor > div { max-height:calc(var(--mrp-visual-height,100dvh) - env(safe-area-inset-top) - env(safe-area-inset-bottom)); padding-bottom:env(safe-area-inset-bottom); }
+  .v7-tool-content { min-height:0; overflow:auto; overscroll-behavior:contain; }
+}
+
+@media (max-width:800px) {
+  .v7-worldline { min-height:0; }
+  .v7-worldline-body { position:relative; display:block; flex:1; min-height:0; }
+  .v7-worldline-canvas { width:100%; height:100%; min-height:0; }
+  .v7-worldline-detail { display:none; }
+  .v7-worldline-body.has-selection .v7-worldline-detail-shade { display:block; position:fixed; z-index:72; inset:0; width:100%; border:0; background:rgba(20,40,42,.4); }
+  .v7-worldline-body.has-selection .v7-worldline-detail { display:block; position:fixed; z-index:73; right:0; bottom:0; left:0; width:auto; height:min(76dvh,720px); max-height:calc(var(--mrp-visual-height,100dvh) - 24px); padding:14px 17px calc(18px + env(safe-area-inset-bottom)); overflow-y:auto; border:1px solid var(--line); border-radius:17px 17px 0 0; background:var(--surface); box-shadow:0 -15px 45px rgba(17,39,44,.2); }
+  .v7-worldline-mobile-close { position:sticky; top:-14px; z-index:1; display:flex; align-items:center; justify-content:center; gap:7px; width:100%; min-height:40px; margin:-14px 0 15px; border:0; border-bottom:1px solid var(--line); background:var(--surface); color:var(--muted); }
+  .v7-worldline-detail .v7-detail-actions .v7-btn,.v7-worldline-detail button { min-height:40px; }
+  .asset-import-dialog { height:var(--mrp-visual-height,100dvh); max-height:var(--mrp-visual-height,100dvh); padding:calc(18px + env(safe-area-inset-top)) 14px calc(18px + env(safe-area-inset-bottom)); }
+  .asset-import-page { padding-bottom:calc(58px + env(safe-area-inset-bottom)); }
+}
+
+@media (max-width:360px) {
+  .v7-settings-layout { grid-template-columns:minmax(0,1fr); }
+  .v7-lan-address { grid-template-columns:minmax(0,1fr); }
+  .v7-lan-qr { justify-self:center; width:min(184px,100%); }
+  .v7-lan-address-copy { width:100%; }
+}
+
+@media (max-width:900px) and (orientation:landscape) and (max-height:520px) {
+  .v7-worldline-head { flex-direction:row; align-items:center; gap:12px; padding:8px 15px; }
+  .v7-worldline-head .v7-back { margin-bottom:4px; }
+  .v7-worldline-head h1 { font-size:24px; }
+  .v7-worldline-head p { display:none; }
+  .v7-worldline-controls { width:auto; gap:7px; }
+  .v7-worldline-controls .v7-search { width:min(36vw,270px); }
+  .v7-worldline-body { display:flex; flex-direction:row; }
+  .v7-worldline-canvas { min-height:0; }
+  .v7-worldline-detail { display:block; width:min(36vw,290px); max-height:none; padding:14px; border-top:0; border-left:1px solid var(--line); }
+  .v7-worldline-detail-shade,.v7-worldline-mobile-close { display:none !important; }
+}

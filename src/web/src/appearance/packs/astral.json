@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "id": "astral",
+  "name": "星织书卷",
+  "note": "珍珠蓝、藤紫与金色星仪",
+  "order": 0,
+  "color_scheme": "light",
+  "preview": [
+    "#f5f6fc",
+    "#365da8",
+    "#ac854e",
+    "#9381c4"
+  ],
+  "palette": {
+    "page": "#f5f6fc",
+    "surface": "#fdfcff",
+    "surfaceSoft": "#edf0fa",
+    "text": "#263552",
+    "textMuted": "#66728b",
+    "border": "#dce1f0",
+    "primary": "#365da8",
+    "primaryHover": "#294b8c",
+    "primaryButton": "#365da8",
+    "primaryButtonHover": "#294b8c",
+    "onPrimary": "#ffffff",
+    "primarySoft": "#e6ecfa",
+    "accent": "#ac854e",
+    "secondary": "#9381c4",
+    "nav": "#1c2946",
+    "navText": "#f3edf9",
+    "navMuted": "#bac4dc",
+    "rail": "#e9edf7",
+    "focus": "#5278c1",
+    "danger": "#a74b4e",
+    "dangerSoft": "#fcecec",
+    "success": "#2c6c59",
+    "successSoft": "#e7f3eb",
+    "warningSoft": "#f6eadb",
+    "brandStart": "#fafbff",
+    "brandEnd": "#e7e8f6"
+  },
+  "shadows": {
+    "panel": "0 14px 40px rgba(35, 47, 83, 0.07)",
+    "card": "0 8px 28px rgba(43, 58, 99, 0.06)"
+  },
+  "assets": {
+    "nav_art": "/brand/themes/astral/sidebar-palace.jpg",
+    "story_cover_forest": "/brand/themes/astral/story-forest.jpg",
+    "story_cover_ocean": "/brand/themes/astral/story-ocean.jpg",
+    "story_cover_moon": "/brand/themes/astral/story-moon.jpg"
+  }
+}

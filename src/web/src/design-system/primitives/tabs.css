@@ -1,0 +1,60 @@
+/* Tabs, underline style. The indicator takes the page region colour. Spec section 5. */
+@layer ui.primitives {
+  .ui-tab {
+    box-sizing: border-box;
+  }
+
+  .ui-tabs {
+    display: flex;
+    gap: var(--space-5);
+    overflow-x: auto;
+    border-bottom: var(--border-width) solid var(--border-subtle);
+  }
+  .ui-tab {
+    position: relative;
+    flex: none;
+    height: var(--size-lg);
+    margin: 0;
+    padding: 0 var(--space-1);
+    border: 0;
+    border-top-left-radius: var(--radius-control);
+    border-top-right-radius: var(--radius-control);
+    background: transparent;
+    box-shadow: var(--shadow-none);
+    color: var(--text-2);
+    font: var(--fw-semibold) var(--fs-sm) / 1 var(--font-ui);
+    white-space: nowrap;
+    cursor: pointer;
+    transition: color var(--dur-hover) var(--ease);
+  }
+  .ui-tab:hover { color: var(--text-1); }
+  .ui-tab:active { background: var(--overlay-hover); }
+  .ui-tab::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 -1px;
+    height: var(--focus-width);
+    background: transparent;
+    transition: background-color var(--dur-press) var(--ease);
+  }
+  .ui-tab[aria-selected="true"] { color: var(--region); }
+  .ui-tab[aria-selected="true"]::after { background: var(--region); }
+  .ui-tab:focus-visible {
+    outline: var(--focus-width) solid var(--focus);
+    outline-offset: var(--focus-offset);
+  }
+  .ui-tab:disabled {
+    opacity: var(--opacity-disabled);
+    pointer-events: none;
+  }
+
+  .ui-tabs__panel {
+    padding: var(--space-4) var(--space-1);
+    color: var(--text-2);
+  }
+  .ui-tabs__panel:focus-visible {
+    outline: var(--focus-width) solid var(--focus);
+    outline-offset: var(--focus-offset);
+    border-radius: var(--radius-control);
+  }
+}

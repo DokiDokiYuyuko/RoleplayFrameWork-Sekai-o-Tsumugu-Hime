@@ -1,0 +1,370 @@
+/*
+ * 星织绮庭 visual silhouette.
+ * Palette colors remain semantic ThemePack values; this layer only shapes
+ * surfaces, controls, borders and local decoration.
+ */
+html[data-visual-style="celestial-atelier"] {
+  --atelier-gold: var(--accent-gold, var(--gold, #d6bc89));
+  --atelier-silver: color-mix(in srgb, var(--sea) 72%, var(--ink) 28%);
+  --atelier-hairline: color-mix(in srgb, var(--line) 54%, var(--atelier-silver));
+  --atelier-innerline: color-mix(in srgb, var(--atelier-gold) 36%, transparent);
+  --atelier-glint: color-mix(in srgb, var(--surface) 82%, transparent);
+  --atelier-shadow: 0 20px 52px color-mix(in srgb, var(--ink) 19%, transparent);
+  --atelier-foil: linear-gradient(112deg,
+    color-mix(in srgb, var(--atelier-gold) 68%, transparent),
+    color-mix(in srgb, var(--sea) 42%, transparent) 46%,
+    color-mix(in srgb, var(--atelier-gold) 20%, transparent));
+}
+
+html[data-visual-style="celestial-atelier"] .app-main {
+  background-image:
+    radial-gradient(ellipse at 92% 0%, color-mix(in srgb, var(--lilac, var(--secondary)) 17%, transparent), transparent 52%),
+    radial-gradient(ellipse at 10% 90%, color-mix(in srgb, var(--sea) 7%, transparent), transparent 57%);
+}
+
+html[data-visual-style="celestial-atelier"] .app-rail {
+  border-right-color: color-mix(in srgb, var(--atelier-gold) 62%, var(--line));
+  box-shadow: 5px 0 30px color-mix(in srgb, var(--ink) 13%, transparent),
+    inset -1px 0 color-mix(in srgb, var(--surface) 28%, transparent);
+  background-image:
+    linear-gradient(180deg, color-mix(in srgb, var(--atelier-gold) 7%, transparent), transparent 27%),
+    var(--nav-art, none);
+}
+
+html[data-visual-style="celestial-atelier"] .app-nav-link {
+  border-radius: 17px 9px 17px 9px;
+}
+
+html[data-visual-style="celestial-atelier"] .app-nav-link.is-active {
+  background:
+    linear-gradient(112deg, color-mix(in srgb, var(--sea) 13%, transparent), transparent 62%),
+    color-mix(in srgb, var(--surface) 80%, transparent);
+  box-shadow: inset 0 1px var(--atelier-glint), inset 0 0 0 1px color-mix(in srgb, var(--atelier-gold) 14%, transparent);
+}
+
+/* Main working surfaces keep different corner rhythms by purpose. */
+html[data-visual-style="celestial-atelier"] :is(
+  .v7-settings-card, .sc-config, .v7-assist-panel, .v7-composer-inner,
+  .home-featured, .story-card, .home-trash, .home-empty,
+  .v7-dialog-content, .player-switch-dialog, .lan-session-dialog
+) {
+  border-color: var(--atelier-hairline);
+  box-shadow: var(--atelier-shadow), inset 0 1px var(--atelier-glint),
+    inset 0 0 0 1px color-mix(in srgb, var(--atelier-gold) 10%, transparent);
+}
+
+html[data-visual-style="celestial-atelier"] .v7-settings-card {
+  position: relative;
+  border-radius: 27px 13px 26px 13px;
+  background-image:
+    radial-gradient(ellipse at 100% 0%, color-mix(in srgb, var(--atelier-gold) 10%, transparent), transparent 43%),
+    linear-gradient(142deg, color-mix(in srgb, var(--sea) 7%, var(--surface)), var(--surface) 58%);
+}
+
+html[data-visual-style="celestial-atelier"] .v7-settings-card::before,
+html[data-visual-style="celestial-atelier"] .sc-config::before,
+html[data-visual-style="celestial-atelier"] .story-card::before,
+html[data-visual-style="celestial-atelier"] .home-featured::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 8%;
+  width: 84%;
+  height: 1px;
+  background: var(--atelier-foil);
+  opacity: .82;
+  pointer-events: none;
+}
+
+html[data-visual-style="celestial-atelier"] .home-featured {
+  position: relative;
+  border-radius: 27px 12px 26px 12px;
+  box-shadow: var(--atelier-shadow), inset 0 0 0 1px color-mix(in srgb, var(--atelier-gold) 13%, transparent);
+}
+
+html[data-visual-style="celestial-atelier"] .story-card,
+html[data-visual-style="celestial-atelier"] .home-empty {
+  position: relative;
+  border-radius: 22px 10px 21px 10px;
+  background-image: linear-gradient(145deg, color-mix(in srgb, var(--sea) 5%, transparent), transparent 54%);
+}
+
+html[data-visual-style="celestial-atelier"] .v7-dialog-overlay {
+  background: color-mix(in srgb, var(--page) 52%, #080e1c 48%);
+  backdrop-filter: blur(5px);
+}
+
+html[data-visual-style="celestial-atelier"] .v7-dialog-content,
+html[data-visual-style="celestial-atelier"] .player-switch-dialog,
+html[data-visual-style="celestial-atelier"] .lan-session-dialog {
+  border-radius: 27px 14px 27px 14px;
+  background-image: linear-gradient(145deg, color-mix(in srgb, var(--sea) 6%, var(--surface)), var(--surface) 54%);
+}
+
+html[data-visual-style="celestial-atelier"] .v7-dialog-content::before,
+html[data-visual-style="celestial-atelier"] .player-switch-dialog::before,
+html[data-visual-style="celestial-atelier"] .lan-session-dialog::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 1px solid var(--atelier-innerline);
+  border-radius: 21px 9px 20px 9px;
+  pointer-events: none;
+}
+
+/* Story composer and its floating panels share one writing-desk material. */
+html[data-visual-style="celestial-atelier"] .v7-composer-inner {
+  position: relative;
+  border-color: color-mix(in srgb, var(--atelier-silver) 58%, var(--atelier-gold));
+  border-radius: 27px 12px 0 0;
+  background:
+    var(--atelier-foil) top / 100% 2px no-repeat,
+    radial-gradient(ellipse at 98% 0%, color-mix(in srgb, var(--atelier-gold) 12%, transparent), transparent 38%),
+    linear-gradient(125deg, color-mix(in srgb, var(--secondary, var(--sea)) 7%, var(--surface)), var(--surface) 51%);
+  box-shadow: inset 0 1px var(--atelier-glint), 0 -11px 32px color-mix(in srgb, var(--ink) 9%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--atelier-gold) 12%, transparent);
+}
+
+html[data-visual-style="celestial-atelier"] .player-control-bar {
+  padding: 2px 1px 9px;
+}
+
+html[data-visual-style="celestial-atelier"] .player-control-person strong {
+  color: var(--sea);
+  font-family: var(--font-display, serif);
+  letter-spacing: .025em;
+}
+
+html[data-visual-style="celestial-atelier"] .v7-composer-popover {
+  position: relative;
+  border-color: color-mix(in srgb, var(--atelier-silver) 48%, var(--atelier-gold));
+  border-radius: 28px 13px 27px 13px;
+  background:
+    radial-gradient(ellipse at 96% 0%, color-mix(in srgb, var(--atelier-gold) 13%, transparent), transparent 44%),
+    linear-gradient(150deg, color-mix(in srgb, var(--sea) 8%, var(--surface)), var(--surface) 58%),
+    var(--surface);
+  box-shadow: 0 26px 72px color-mix(in srgb, var(--ink) 31%, transparent), inset 0 1px var(--atelier-glint),
+    inset 0 0 0 1px color-mix(in srgb, var(--atelier-gold) 12%, transparent);
+}
+
+html[data-visual-style="celestial-atelier"] .v7-composer-popover::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 1px solid var(--atelier-innerline);
+  border-radius: 23px 9px 22px 9px;
+  pointer-events: none;
+}
+
+html[data-visual-style="celestial-atelier"] .v7-composer-popover::after {
+  content: "✦  ·  ✧";
+  position: absolute;
+  top: 7px;
+  right: 46px;
+  color: var(--atelier-gold);
+  font-family: var(--font-display, serif);
+  font-size: 13px;
+  letter-spacing: .18em;
+  opacity: .88;
+  pointer-events: none;
+}
+
+html[data-visual-style="celestial-atelier"] .v7-composer-panel-head {
+  position: relative;
+  padding: 11px 16px 10px;
+  border-bottom-color: color-mix(in srgb, var(--atelier-gold) 22%, var(--line));
+  background: linear-gradient(100deg, color-mix(in srgb, var(--sea) 5%, transparent), transparent 70%);
+  font-family: var(--font-display, serif);
+  letter-spacing: .035em;
+}
+
+html[data-visual-style="celestial-atelier"] .v7-composer-panel-head strong {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+html[data-visual-style="celestial-atelier"] .v7-composer-panel-head button,
+html[data-visual-style="celestial-atelier"] .sc-config-title button {
+  border-radius: 50%;
+}
+
+html[data-visual-style="celestial-atelier"] .v7-composer-popover .v7-recipient-option,
+html[data-visual-style="celestial-atelier"] .v7-member-row {
+  border-color: var(--atelier-hairline);
+  border-radius: 16px 8px 15px 8px;
+  background: color-mix(in srgb, var(--sea) 3%, var(--paper));
+  transition: border-color .16s ease, background-color .16s ease, box-shadow .16s ease;
+}
+
+html[data-visual-style="celestial-atelier"] .v7-composer-popover .v7-recipient-option.is-active {
+  border-color: color-mix(in srgb, var(--atelier-gold) 72%, var(--sea));
+  background: linear-gradient(105deg, color-mix(in srgb, var(--atelier-gold) 12%, var(--surface)), var(--sea-soft));
+  color: var(--sea);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--atelier-gold) 22%, transparent);
+}
+
+html[data-visual-style="celestial-atelier"] .v7-composer-popover .v7-member-force,
+html[data-visual-style="celestial-atelier"] .v7-composer-popover .composer-panel-done {
+  border-color: var(--atelier-hairline);
+  border-radius: 14px 7px 14px 7px;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--sea) 5%, var(--surface)), var(--paper));
+}
+
+html[data-visual-style="celestial-atelier"] .v7-composer-popover .composer-panel-done {
+  border-color: color-mix(in srgb, var(--atelier-gold) 40%, var(--line));
+  color: var(--sea);
+}
+
+html[data-visual-style="celestial-atelier"] .v7-composer-popover .v7-field :is(select, input, textarea),
+html[data-visual-style="celestial-atelier"] .v7-composer-popover .conversation-directive textarea,
+html[data-visual-style="celestial-atelier"] .sc-config-grid :is(input:not([type=checkbox]), select, textarea),
+html[data-visual-style="celestial-atelier"] .sc-compose textarea,
+html[data-visual-style="celestial-atelier"] .v7-field :is(input, select, textarea) {
+  border-color: var(--atelier-hairline);
+  border-radius: 14px 8px 14px 8px;
+  box-shadow: inset 0 1px color-mix(in srgb, var(--surface) 64%, transparent);
+}
+
+html[data-visual-style="celestial-atelier"] .v7-input-box {
+  position: relative;
+  padding: 8px;
+  border: 1px solid var(--atelier-hairline);
+  border-radius: 21px 10px 21px 10px;
+  background:
+    linear-gradient(105deg, transparent, color-mix(in srgb, var(--atelier-gold) 40%, transparent) 30%, transparent 80%) top / 100% 1px no-repeat,
+    color-mix(in srgb, var(--sea) 3%, var(--surface));
+  box-shadow: inset 0 1px var(--atelier-glint), 0 7px 20px color-mix(in srgb, var(--ink) 5%, transparent);
+}
+
+html[data-visual-style="celestial-atelier"] .v7-input-box textarea {
+  border: 0;
+  border-radius: 14px 7px 14px 7px;
+  background: transparent;
+  box-shadow: none;
+}
+
+html[data-visual-style="celestial-atelier"] .v7-input-box textarea:focus {
+  border: 0;
+  outline: 2px solid color-mix(in srgb, var(--sea) 40%, transparent);
+  outline-offset: 2px;
+}
+
+html[data-visual-style="celestial-atelier"] .v7-input-tools button,
+html[data-visual-style="celestial-atelier"] .v7-composer-toolbar button {
+  border-color: transparent;
+  border-radius: 13px 7px 13px 7px;
+  background: transparent;
+  transition: color .16s ease, background-color .16s ease;
+}
+
+html[data-visual-style="celestial-atelier"] .v7-input-tools button:hover,
+html[data-visual-style="celestial-atelier"] .v7-composer-toolbar button:hover,
+html[data-visual-style="celestial-atelier"] .v7-input-tools button[aria-expanded="true"] {
+  border-color: color-mix(in srgb, var(--atelier-gold) 25%, transparent);
+  background: color-mix(in srgb, var(--sea) 8%, var(--surface));
+}
+
+/* Simple chat follows the same frame, with its own compact geometry. */
+html[data-visual-style="celestial-atelier"] .sc-compose {
+  position: relative;
+  border-top-color: var(--atelier-hairline);
+  border-radius: 22px 22px 0 0;
+  background:
+    linear-gradient(90deg, transparent, color-mix(in srgb, var(--atelier-gold) 45%, transparent), transparent) top / 100% 1px no-repeat,
+    var(--surface);
+  box-shadow: 0 -8px 26px color-mix(in srgb, var(--ink) 5%, transparent);
+}
+
+html[data-visual-style="celestial-atelier"] .sc-compose > .sc-primary,
+html[data-visual-style="celestial-atelier"] .sc-compose > .sc-stop {
+  min-height: 46px;
+}
+
+html[data-visual-style="celestial-atelier"] .sc-config {
+  position: relative;
+  border-color: var(--atelier-hairline);
+  border-radius: 25px 12px 24px 12px;
+  background: linear-gradient(145deg, color-mix(in srgb, var(--sea) 5%, var(--surface)), var(--surface) 52%);
+}
+
+html[data-visual-style="celestial-atelier"] .sc-head {
+  border-bottom-color: color-mix(in srgb, var(--atelier-gold) 20%, var(--line));
+}
+
+/* The assistant sidebar gets chapter rhythm instead of repeated hard rules. */
+html[data-visual-style="celestial-atelier"] .v7-assist-panel {
+  border-left: 1px solid color-mix(in srgb, var(--atelier-gold) 40%, var(--line));
+  background:
+    radial-gradient(ellipse at 100% 0%, color-mix(in srgb, var(--sea) 7%, transparent), transparent 46%),
+    var(--surface);
+  box-shadow: -13px 0 34px color-mix(in srgb, var(--ink) 9%, transparent);
+}
+
+html[data-visual-style="celestial-atelier"] .v7-assist-panel > * {
+  border-color: color-mix(in srgb, var(--line) 64%, transparent);
+}
+
+html[data-visual-style="celestial-atelier"] .v7-settings-title h2,
+html[data-visual-style="celestial-atelier"] .home-page-title h1,
+html[data-visual-style="celestial-atelier"] .home-section-heading h2,
+html[data-visual-style="celestial-atelier"] .v7-composer-panel-head strong,
+html[data-visual-style="celestial-atelier"] .v7-settings-card h3 {
+  letter-spacing: .035em;
+}
+
+html[data-visual-style="celestial-atelier"] :is(
+  .home-search, .home-sort, .home-tool-button, .v7-library-search,
+  .v7-composer-popover .v7-member-force, .v7-composer-popover .v7-recipient-option
+) {
+  border-radius: 15px 8px 15px 8px;
+}
+
+html[data-visual-style="celestial-atelier"] :is(
+  .v7-composer-popover, .v7-dialog-content, .player-switch-dialog,
+  .lan-session-dialog, .sc-config, .v7-settings-card,
+  .app-rail, .app-main, .story-home
+) :is(button, input, textarea, select, a):focus-visible {
+  outline-color: var(--focus, var(--sea));
+  outline-offset: 3px;
+}
+
+html[data-decoration="none"][data-visual-style="celestial-atelier"] .v7-composer-popover::before,
+html[data-decoration="none"][data-visual-style="celestial-atelier"] .v7-composer-popover::after,
+html[data-decoration="none"][data-visual-style="celestial-atelier"] .v7-dialog-content::before,
+html[data-decoration="none"][data-visual-style="celestial-atelier"] .player-switch-dialog::before,
+html[data-decoration="none"][data-visual-style="celestial-atelier"] .lan-session-dialog::before {
+  content: none;
+}
+
+@media (max-width: 760px) {
+  html[data-visual-style="celestial-atelier"] .v7-composer-popover {
+    border-radius: 22px 12px 21px 12px;
+  }
+  html[data-visual-style="celestial-atelier"] .v7-composer-inner {
+    border-radius: 19px 10px 0 0;
+  }
+  html[data-visual-style="celestial-atelier"] .app-rail {
+    border-radius: 0 20px 20px 0;
+  }
+  html[data-visual-style="celestial-atelier"] .sc-compose {
+    border-radius: 17px 17px 0 0;
+  }
+}
+
+@media (max-width: 430px) {
+  html[data-visual-style="celestial-atelier"] .v7-composer-popover::after {
+    top: 8px;
+    right: 43px;
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-visual-style="celestial-atelier"] *,
+  html[data-visual-style="celestial-atelier"] *::before,
+  html[data-visual-style="celestial-atelier"] *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}

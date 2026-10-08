@@ -1,0 +1,14 @@
+@layer ui.primitives {
+  .ui-portrait { position: relative; display: block; flex: none; overflow: hidden; isolation: isolate; background: linear-gradient(145deg, var(--region-soft), var(--surface-2)); color: var(--region); }
+  .ui-portrait--portrait { aspect-ratio: 9 / 16; }
+  .ui-portrait--wide { aspect-ratio: 16 / 9; }
+  .ui-portrait--square { aspect-ratio: 1; }
+  .ui-portrait__image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .ui-portrait__initial { position: absolute; bottom: var(--space-4); left: 50%; transform: translateX(-50%); display: grid; place-items: center; width: var(--size-lg); height: var(--size-lg); border: var(--border-width) solid var(--border-strong); border-radius: var(--radius-pill); background: var(--surface-1); font: var(--fw-regular) var(--fs-xl) / var(--lh-heading) var(--font-display); }
+}
+@layer ui.primitives {
+  .ui-portrait[data-tone="iris"] { --region: var(--accent); --region-soft: var(--accent-soft); }
+  .ui-portrait[data-tone="teal"] { --region: var(--region-story); --region-soft: var(--region-story-soft); }
+  .ui-portrait[data-tone="rose"] { --region: var(--region-character); --region-soft: var(--region-character-soft); }
+  .ui-portrait[data-tone="gold"] { --region: var(--gold-text); --region-soft: var(--gold-1); }
+}

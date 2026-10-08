@@ -1,0 +1,121 @@
+[
+  {
+    "id": "moonweave-modern-coast",
+    "title": "现代海岸",
+    "theme": "modern-coast",
+    "theme_label": "现代海岸",
+    "filename": "v3/worlds/world-modern-coast-cover.webp"
+  },
+  {
+    "id": "moonweave-rain-mystery",
+    "title": "雨夜悬案",
+    "theme": "rain-mystery",
+    "theme_label": "雨夜悬案",
+    "filename": "v3/worlds/world-rain-mystery-cover.webp"
+  },
+  {
+    "id": "moonweave-orbital-station",
+    "title": "轨道站",
+    "theme": "orbital-station",
+    "theme_label": "轨道站",
+    "filename": "v3/worlds/world-orbital-station-cover.webp"
+  },
+  {
+    "id": "moonweave-cyber-district",
+    "title": "赛博街区",
+    "theme": "cyber-district",
+    "theme_label": "赛博街区",
+    "filename": "v3/worlds/world-cyber-district-cover.webp"
+  },
+  {
+    "id": "moonweave-steam-workshop",
+    "title": "蒸汽工坊",
+    "theme": "steam-workshop",
+    "theme_label": "蒸汽工坊",
+    "filename": "v3/worlds/world-steam-workshop-cover.webp"
+  },
+  {
+    "id": "moonweave-desert-route",
+    "title": "沙漠路线",
+    "theme": "desert-route",
+    "theme_label": "沙漠路线",
+    "filename": "v3/worlds/world-desert-route-cover.webp"
+  },
+  {
+    "id": "moonweave-wasteland-railway",
+    "title": "废土铁路",
+    "theme": "wasteland-railway",
+    "theme_label": "废土铁路",
+    "filename": "v3/worlds/world-wasteland-railway-cover.webp"
+  },
+  {
+    "id": "moonweave-mountain-folk",
+    "title": "山地民居",
+    "theme": "mountain-folk",
+    "theme_label": "山地民居",
+    "filename": "v3/worlds/world-mountain-folk-cover.webp"
+  },
+  {
+    "id": "moonweave-flower-valley",
+    "title": "花谷",
+    "theme": "flower-valley",
+    "theme_label": "花谷",
+    "filename": "v3/worlds/world-flower-valley-cover.webp"
+  },
+  {
+    "id": "moonweave-classical-market",
+    "title": "古典集市",
+    "theme": "classical-market",
+    "theme_label": "古典集市",
+    "filename": "v3/worlds/world-classical-market-cover.webp"
+  },
+  {
+    "id": "moonweave-volcanic-fort",
+    "title": "火山要塞",
+    "theme": "volcanic-fort",
+    "theme_label": "火山要塞",
+    "filename": "v3/worlds/world-volcanic-fort-cover.webp"
+  },
+  {
+    "id": "moonweave-mirror-lake",
+    "title": "镜湖",
+    "theme": "mirror-lake",
+    "theme_label": "镜湖",
+    "filename": "v3/worlds/world-mirror-lake-cover.webp"
+  },
+  {
+    "id": "moonweave-v1-ancient-forest",
+    "title": "古林",
+    "theme": "v1-ancient-forest",
+    "theme_label": "古林",
+    "filename": "worlds/cover-ancient-forest-800.webp"
+  },
+  {
+    "id": "moonweave-v1-deep-palace",
+    "title": "水下宫殿",
+    "theme": "v1-deep-palace",
+    "theme_label": "水下宫殿",
+    "filename": "worlds/cover-deep-palace-800.webp"
+  },
+  {
+    "id": "moonweave-v1-sky-academy",
+    "title": "天空学院",
+    "theme": "v1-sky-academy",
+    "theme_label": "天空学院",
+    "filename": "worlds/cover-sky-academy-800.webp"
+  },
+  {
+    "id": "moonweave-v1-snow-citadel",
+    "title": "雪山要塞",
+    "theme": "v1-snow-citadel",
+    "theme_label": "雪山要塞",
+    "filename": "worlds/cover-snow-citadel-800.webp"
+  },
+  {
+    "id": "moonweave-v1-star-isles",
+    "title": "星之群岛",
+    "theme": "v1-star-isles",
+    "theme_label": "星之群岛",
+    "filename": "worlds/cover-star-isles-800.webp"
+  }
+]

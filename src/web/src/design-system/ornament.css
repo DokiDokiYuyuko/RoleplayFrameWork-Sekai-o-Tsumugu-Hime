@@ -1,0 +1,117 @@
+/*
+ * Ornament levels (spec section 4). The root carries data-ornament="none|subtle|rich";
+ * the unmarked root is the 素雅 (subtle) baseline, none and rich override it.
+ * Only switches live here; the components that draw the decoration read them.
+ * Theme-dependent assets follow the colour scheme the app already exposes
+ * (data-color-scheme on the root).
+ */
+@layer ui.tokens {
+  :root {
+    --corner: 36px;
+    --frame-pad-x: var(--corner);
+    --frame-pad-y: var(--corner);
+    --frame-band: var(--corner);
+    --c-tl: url("/brand/moonweave/v1/iris-corner-tl.svg");
+    --c-br: url("/brand/moonweave/v1/iris-corner-br.svg");
+    --c-tl-story: url("/brand/moonweave/v1/iris-corner-tl-teal.svg");
+    --c-br-story: url("/brand/moonweave/v1/iris-corner-br-teal.svg");
+    --c-tl-char: url("/brand/moonweave/v1/iris-corner-tl-rose.svg");
+    --c-br-char: url("/brand/moonweave/v1/iris-corner-br-rose.svg");
+    --corner-tl: var(--c-tl);
+    --corner-br: var(--c-br);
+    --glow-region: color-mix(in srgb, var(--region) 32%, transparent);
+    --nav-surface:
+      linear-gradient(180deg, var(--nav-moon), transparent 240px),
+      repeating-linear-gradient(135deg, var(--weave-line) 0 1px, transparent 1px 14px),
+      var(--bg-shell);
+    --page-bg:
+      radial-gradient(900px 520px at 8% -8%, var(--wash-a), transparent 70%),
+      radial-gradient(760px 480px at 100% 0, var(--wash-b), transparent 70%),
+      var(--bg-page);
+    --header-bg: color-mix(in srgb, var(--bg-shell) 84%, transparent);
+    --header-blur: blur(12px);
+    --frame-rail: transparent;
+    --frame-blur: none;
+    --deco-corners: block;
+    --crest-display: block;
+    --crest-size: 40px;
+    --weave-display: block;
+    --art-display: block;
+    --mark-display: grid;
+    --diamond-display: none;
+    --dialog-corner: 24px;
+    --dialog-corner-off: 0px;
+    --nav-active-shadow: var(--shadow-none);
+  }
+
+  :root[data-color-scheme="dark"] {
+    --c-tl: url("/brand/moonweave/v1/iris-corner-tl-night.svg");
+    --c-br: url("/brand/moonweave/v1/iris-corner-br-night.svg");
+    --c-tl-story: url("/brand/moonweave/v1/iris-corner-tl-teal-night.svg");
+    --c-br-story: url("/brand/moonweave/v1/iris-corner-br-teal-night.svg");
+    --c-tl-char: url("/brand/moonweave/v1/iris-corner-tl-rose-night.svg");
+    --c-br-char: url("/brand/moonweave/v1/iris-corner-br-rose-night.svg");
+    --glow-region: color-mix(in srgb, var(--region) 26%, transparent);
+  }
+
+  [data-region="story"] { --corner-tl: var(--c-tl-story); --corner-br: var(--c-br-story); }
+  [data-region="character"] { --corner-tl: var(--c-tl-char); --corner-br: var(--c-br-char); }
+  [data-region="neutral"] { --corner-tl: var(--c-tl); --corner-br: var(--c-br); }
+
+  :root[data-ornament="none"] {
+    --frame-pad-x: var(--space-6);
+    --frame-pad-y: var(--space-6);
+    --frame-band: 0px;
+    --deco-corners: none;
+    --nav-surface: var(--bg-shell);
+    --page-bg: var(--bg-page);
+    --crest-display: none;
+    --weave-display: none;
+    --art-display: none;
+    --btn-primary-bg: var(--btn-primary-bg-flat);
+    --btn-primary-hi: var(--shadow-none);
+  }
+
+  /* 华丽: larger corners and safe areas, glass, double rail, threads with diamonds */
+  :root[data-ornament="rich"] {
+    --corner: 60px;
+    --frame-pad-x: 64px;
+    --frame-pad-y: var(--space-6);
+    --frame-band: var(--corner);
+    --nav-surface:
+      radial-gradient(150px 110px at 50% 76px, var(--nav-halo), transparent 72%),
+      linear-gradient(180deg, var(--nav-top) 0%, var(--bg-shell) 58%, var(--nav-bottom) 100%);
+    --page-bg:
+      radial-gradient(1000px 700px at 0% 0%, var(--glow-iris), transparent 70%),
+      radial-gradient(1000px 700px at 100% 100%, var(--glow-region), transparent 70%),
+      var(--bg-page);
+    --header-bg: linear-gradient(180deg, var(--glass-hi), var(--glass-lo));
+    --header-blur: blur(16px) saturate(1.4);
+    --frame-rail: var(--gold-hair);
+    --frame-blur: blur(10px);
+    --crest-size: 56px;
+    --mark-display: none;
+    --diamond-display: block;
+    --dialog-corner: 48px;
+    --dialog-corner-off: calc(var(--space-4) * -1);
+    --btn-primary-bg: var(--btn-primary-bg-enamel);
+    --btn-primary-hi: var(--btn-primary-bg-enamel-hi);
+    --btn-primary-glow: var(--shadow-none);
+    --btn-primary-glow-hover: var(--btn-primary-glow-rich);
+    --nav-active-shadow: var(--shadow-nav-active);
+  }
+
+  /* Phone: smaller corners and tighter safe areas */
+  @media (max-width: 899px) {
+    :root { --corner: 28px; }
+    :root[data-ornament="rich"] { --corner: 40px; --frame-pad-x: var(--space-4); --frame-pad-y: 44px; }
+  }
+}
+
+@layer ui.primitives {
+  .ui-empty__art { pointer-events: none; }
+  :root[data-ornament="rich"] .ui-empty__art { display: block; }
+  :root[data-ornament="rich"] .ui-empty__icon:has(+ .ui-empty__art) { display: none; }
+  :root[data-ornament="rich"] .ui-empty[data-art-failed] .ui-empty__icon { display: grid; }
+  :root[data-ornament="rich"] .ui-empty__art[hidden] { display: none; }
+}

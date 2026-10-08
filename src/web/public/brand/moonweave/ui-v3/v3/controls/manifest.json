@@ -1,0 +1,235 @@
+{
+  "assets": [
+    {
+      "id": "btn-primary-hover-night",
+      "skin": "skins/btn-primary-hover-night.png",
+      "source": "sources/controls/btn-primary-hover-night.png",
+      "sha256": "e7930731700bbe32e1d82a562865512370b23d5add045bb1a94bee1965dd986d",
+      "canvas": [
+        600,
+        132
+      ],
+      "visibleAlpha16Bbox": [
+        0,
+        15,
+        600,
+        117
+      ],
+      "visibleCenterY": 66.0,
+      "labelOffsetYRatio": 0.0,
+      "splitX": [
+        120,
+        480
+      ],
+      "capWidthPerHeight": 0.9090909090909091
+    },
+    {
+      "id": "btn-primary-hover",
+      "skin": "skins/btn-primary-hover.png",
+      "source": "sources/controls/btn-primary-hover.png",
+      "sha256": "f597e04402af5efca6f0d79127e9b5d3c01eab0c476136b3c504d45e9a065a7c",
+      "canvas": [
+        600,
+        132
+      ],
+      "visibleAlpha16Bbox": [
+        0,
+        17,
+        600,
+        114
+      ],
+      "visibleCenterY": 65.5,
+      "labelOffsetYRatio": -0.003787878787878788,
+      "splitX": [
+        120,
+        480
+      ],
+      "capWidthPerHeight": 0.9090909090909091
+    },
+    {
+      "id": "btn-primary-night",
+      "skin": "skins/btn-primary-night.png",
+      "source": "sources/controls/btn-primary-night.png",
+      "sha256": "df66e658ce11627bac83c2273e4c22540a4797d93c6ecc2bfba7f7f8bc6a2ae1",
+      "canvas": [
+        600,
+        132
+      ],
+      "visibleAlpha16Bbox": [
+        0,
+        18,
+        600,
+        114
+      ],
+      "visibleCenterY": 66.0,
+      "labelOffsetYRatio": 0.0,
+      "splitX": [
+        120,
+        480
+      ],
+      "capWidthPerHeight": 0.9090909090909091
+    },
+    {
+      "id": "btn-primary-pressed-night",
+      "skin": "skins/btn-primary-pressed-night.png",
+      "source": "sources/controls/btn-primary-pressed-night.png",
+      "sha256": "7787d93404fb19afa0aa32d9a402078a4ad0c3dfd8feca480237fd54d69222f5",
+      "canvas": [
+        600,
+        132
+      ],
+      "visibleAlpha16Bbox": [
+        0,
+        17,
+        600,
+        114
+      ],
+      "visibleCenterY": 65.5,
+      "labelOffsetYRatio": -0.003787878787878788,
+      "splitX": [
+        120,
+        480
+      ],
+      "capWidthPerHeight": 0.9090909090909091
+    },
+    {
+      "id": "btn-primary-pressed",
+      "skin": "skins/btn-primary-pressed.png",
+      "source": "sources/controls/btn-primary-pressed.png",
+      "sha256": "778dae5aa6faae2d724339c1d6f73e098ce2e81aec86120203eadb4e24eccfd7",
+      "canvas": [
+        600,
+        132
+      ],
+      "visibleAlpha16Bbox": [
+        0,
+        17,
+        600,
+        114
+      ],
+      "visibleCenterY": 65.5,
+      "labelOffsetYRatio": -0.003787878787878788,
+      "splitX": [
+        120,
+        480
+      ],
+      "capWidthPerHeight": 0.9090909090909091
+    },
+    {
+      "id": "btn-primary",
+      "skin": "skins/btn-primary.png",
+      "source": "sources/controls/btn-primary.png",
+      "sha256": "f3bd615a80400f03edd54bd0025a39eb438629712281492fd5645a867fec5560",
+      "canvas": [
+        600,
+        132
+      ],
+      "visibleAlpha16Bbox": [
+        0,
+        17,
+        600,
+        114
+      ],
+      "visibleCenterY": 65.5,
+      "labelOffsetYRatio": -0.003787878787878788,
+      "splitX": [
+        120,
+        480
+      ],
+      "capWidthPerHeight": 0.9090909090909091
+    },
+    {
+      "id": "btn-secondary-hover-night",
+      "skin": "skins/btn-secondary-hover-night.png",
+      "source": "sources/controls/btn-secondary-hover-night.png",
+      "sha256": "a767b95728ce87ce08b43b26605a6a2731227bac469e6d61ea58b550555227fc",
+      "canvas": [
+        600,
+        132
+      ],
+      "visibleAlpha16Bbox": [
+        0,
+        17,
+        600,
+        115
+      ],
+      "visibleCenterY": 66.0,
+      "labelOffsetYRatio": 0.0,
+      "splitX": [
+        120,
+        480
+      ],
+      "capWidthPerHeight": 0.9090909090909091
+    },
+    {
+      "id": "btn-secondary-hover",
+      "skin": "skins/btn-secondary-hover.png",
+      "source": "sources/controls/btn-secondary-hover.png",
+      "sha256": "69c499c9e76890271acd78d9e2950ae8c74616dc45249d727598e94b0e80e45a",
+      "canvas": [
+        600,
+        132
+      ],
+      "visibleAlpha16Bbox": [
+        0,
+        14,
+        600,
+        115
+      ],
+      "visibleCenterY": 64.5,
+      "labelOffsetYRatio": -0.011363636363636364,
+      "splitX": [
+        120,
+        480
+      ],
+      "capWidthPerHeight": 0.9090909090909091
+    },
+    {
+      "id": "btn-secondary-night",
+      "skin": "skins/btn-secondary-night.png",
+      "source": "sources/controls/btn-secondary-night.png",
+      "sha256": "afe42afde113ea8ddab0d69c3d01e9a5c16cf7e60b5fe62f299bdf4374239073",
+      "canvas": [
+        600,
+        132
+      ],
+      "visibleAlpha16Bbox": [
+        0,
+        17,
+        600,
+        115
+      ],
+      "visibleCenterY": 66.0,
+      "labelOffsetYRatio": 0.0,
+      "splitX": [
+        120,
+        480
+      ],
+      "capWidthPerHeight": 0.9090909090909091
+    },
+    {
+      "id": "btn-secondary",
+      "skin": "skins/btn-secondary.png",
+      "source": "sources/controls/btn-secondary.png",
+      "sha256": "0b3e19090e06a03a5e1dd0ab2ad21091384740b6ab3a77cadc94059848b5e136",
+      "canvas": [
+        600,
+        132
+      ],
+      "visibleAlpha16Bbox": [
+        0,
+        18,
+        600,
+        114
+      ],
+      "visibleCenterY": 66.0,
+      "labelOffsetYRatio": 0.0,
+      "splitX": [
+        120,
+        480
+      ],
+      "capWidthPerHeight": 0.9090909090909091
+    }
+  ],
+  "changes": "preserved full skins; native three-slice crops plus measured optical-center metadata; geometry/state adapter supplied, not applied to app"
+}

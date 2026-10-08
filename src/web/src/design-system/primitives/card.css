@@ -1,0 +1,33 @@
+/* Card: radius 12, padding 16, subtle border. Spec section 5. */
+@layer ui.primitives {
+  .ui-card {
+    display: block;
+    box-sizing: border-box;
+    padding: var(--space-4);
+    border: var(--border-width) solid var(--border-subtle);
+    border-radius: var(--radius-card);
+    background: var(--surface-1);
+    box-shadow: var(--shadow-none);
+    color: var(--text-1);
+    text-decoration: none;
+    transition: border-color var(--dur-hover) var(--ease), box-shadow var(--dur-hover) var(--ease);
+  }
+  .ui-card--interactive { cursor: pointer; }
+  .ui-card--interactive:hover {
+    border-color: var(--border-default);
+    box-shadow: var(--shadow-e2);
+  }
+  .ui-card--interactive:active {
+    background: linear-gradient(var(--overlay-hover), var(--overlay-hover)), var(--surface-1);
+    box-shadow: var(--shadow-e1);
+  }
+  .ui-card--interactive:focus-visible {
+    outline: var(--focus-width) solid var(--focus);
+    outline-offset: var(--focus-offset);
+  }
+  .ui-card__title {
+    margin: 0 0 var(--space-2);
+    color: var(--text-1);
+    font: var(--fw-semibold) var(--fs-sm) / var(--lh-ui) var(--font-ui);
+  }
+}

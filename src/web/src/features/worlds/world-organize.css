@@ -1,0 +1,106 @@
+/* Reuse the story shelf silhouette and semantic theme tokens. */
+.world-organizer { width: 100%; }
+.world-organizer .worlds-back { margin-bottom: 16px; }
+.organize-header { align-items: center; }
+.organize-header > p { margin: 0; color: var(--muted); overflow-wrap: anywhere; }
+.organize-navigation, .organize-category, .organize-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.organize-navigation { margin-bottom: 23px; }
+.story-home .home-button.is-active { border-color: var(--sea); background: var(--sea-soft); color: var(--sea); }
+.organize-surface.home-featured { display: block; padding: clamp(20px, 3vw, 30px); min-height: 0; margin-bottom: 24px; overflow: visible; }
+.organize-surface > .home-section-heading { margin: 8px 0 22px; }
+.organize-category { margin: 14px 0; }
+.world-organizer .worlds-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; margin: 18px 0; color: var(--ink); font-size: 14px; }
+.world-organizer .worlds-field :is(input, textarea, select), .world-edit-dialog .worlds-overview-form :is(input, textarea), .lorebook-entry-fields .worlds-field :is(input, textarea, select) { width: 100%; min-width: 0; max-width: 100%; box-sizing: border-box; border: 1px solid var(--line); border-radius: 9px; padding: 11px 12px; background: var(--surface-soft); color: var(--ink); font: inherit; line-height: 1.7; }
+.world-organizer textarea { resize: vertical; }
+.world-organizer .organize-original-input { min-height: 320px; }
+.organize-muted, .organize-actions > span, .organize-check small { color: var(--muted); font-size: 13px; line-height: 1.7; }
+.organize-target-context, .organize-before, .organize-evidence { margin: 20px 0; padding: 18px; border: 1px solid var(--line); border-radius: 13px; background: var(--surface-soft); }
+.organize-target-context p { margin: 8px 0; font-size: 13px; line-height: 1.7; }
+.organize-context-preview { max-height: 160px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 13px; line-height: 1.8; color: var(--muted); }
+.organize-reference-list { min-width: 0; margin: 24px 0; padding: 16px 18px; border: 1px solid var(--line); border-radius: 13px; background: var(--surface-soft); }
+.organize-reference-list legend { padding: 0 8px; color: var(--ink); font-size: 14px; font-weight: 650; }
+.organize-reference-list p { margin: 0 0 12px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.organize-reference-list label, .organize-check { display: flex; align-items: flex-start; gap: 10px; min-width: 0; margin: 13px 0; color: var(--ink); line-height: 1.6; font-size: 14px; }
+.organize-reference-list label > span { min-width: 0; overflow-wrap: anywhere; }
+.organize-reference-list small { display: block; color: var(--muted); font-size: 12px; }
+.world-organizer input[type=checkbox], .organize-confirm-dialog input[type=checkbox], .lorebook-entry-fields input[type=checkbox] { flex: none; width: 18px; height: 18px; margin: 3px 0 0; accent-color: var(--sea); }
+.organize-check { flex-wrap: wrap; }
+.organize-model-summary { display: flex; align-items: flex-start; gap: 10px; margin: 24px 0 16px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--sea); font-size: 13px; line-height: 1.8; }
+.organize-model-summary > svg { flex: none; margin-top: 3px; }
+.organize-model-summary > span { min-width: 0; overflow-wrap: anywhere; }
+.organize-model-summary small { display: block; color: var(--muted); }
+.organize-model-summary > a { margin-left: auto; flex-shrink: 0; text-decoration: underline; text-underline-offset: 4px; }
+.organize-actions { margin: 20px 0 10px; }
+.organize-job-select { max-width: 700px; }
+.organize-progress { display: flex; align-items: flex-start; gap: 12px; }
+.organize-progress > svg { flex: none; margin-top: 4px; }
+.organize-progress > div { flex: 1; min-width: 0; }
+.organize-progress strong { color: var(--ink); }
+.organize-progress small { color: var(--muted); }
+.organize-candidate-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; }
+.organize-candidate.story-card { flex-direction: row; align-items: stretch; padding: 17px; box-shadow: none; }
+.organize-select-check { display: flex; align-items: flex-start; flex: none; padding: 3px 12px 0 0; }
+.organize-candidate-open { flex: 1; min-width: 0; border: 0; padding: 0; text-align: left; color: var(--ink); background: transparent; }
+.organize-candidate-open strong { display: block; margin: 0 0 10px; padding-right: 10px; font-family: var(--font-display); font-size: 22px; line-height: 1.4; overflow-wrap: anywhere; }
+.organize-candidate-open > span { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; color: var(--muted); font-size: 13px; line-height: 1.8; overflow-wrap: anywhere; }
+.organize-candidate-open > small { display: block; margin-top: 12px; color: var(--sea); font-size: 12px; }
+.organize-candidate-arrow { flex: none; align-self: center; color: var(--accent-gold); font-size: 27px; padding-left: 8px; }
+.organize-editor-back { margin-bottom: 14px; }
+.organize-editor-fields, .organize-workflow-fields { min-width: 0; margin: 0; padding: 0; border: 0; }
+.organize-candidate-editor .worlds-editor-grid, .lorebook-entry-fields .worlds-editor-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.worlds-entry-options { display: flex; flex-wrap: wrap; gap: 14px 20px; margin: 20px 0; }
+.worlds-entry-options label { display: flex; align-items: flex-start; gap: 9px; min-width: 0; color: var(--ink); font-size: 14px; line-height: 1.7; }
+.organize-candidate-editor .worlds-editor-actions { flex-wrap: wrap; }
+.world-organizer .v7-btn { min-height: 42px; white-space: nowrap; }
+.organize-evidence blockquote { margin: 12px 0; padding: 8px 14px; border-left: 2px solid var(--accent-gold); color: var(--muted); white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.8; }
+.organize-readonly-fields > div { margin: 18px 0; }
+.organize-readonly-fields strong { color: var(--ink); font-size: 14px; }
+.organize-readonly-fields pre, .organize-original-readonly { white-space: pre-wrap; overflow-wrap: anywhere; max-width: 100%; margin: 10px 0; font-family: var(--font-ui); font-size: 14px; line-height: 1.9; color: var(--ink); }
+.organize-original-readonly { padding: 18px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface-soft); }
+.organize-history-list { display: grid; gap: 10px; margin-bottom: 28px; }
+.organize-history-row { display: flex; align-items: center; gap: 18px; min-width: 0; padding: 15px 18px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface-soft); color: var(--ink); text-align: left; font: inherit; font-size: 14px; }
+.organize-history-row > span { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.organize-history-row > strong, .organize-history-row > small { flex-shrink: 0; color: var(--muted); font-size: 12px; }
+.organize-history-row:hover { border-color: var(--sea); }
+.organize-confirm-dialog, .world-edit-dialog { width: min(720px, calc(100vw - 28px)); max-height: calc(100dvh - 32px); overflow: auto; }
+.organize-confirm-dialog ul { padding: 0; list-style: none; }
+.organize-confirm-dialog li { display: flex; align-items: flex-start; gap: 10px; margin: 14px 0; color: var(--sea); }
+.organize-confirm-dialog li > svg { flex: none; margin-top: 4px; }
+.organize-confirm-dialog li span { min-width: 0; }
+.organize-confirm-dialog li strong { display: block; color: var(--ink); overflow-wrap: anywhere; }
+.organize-confirm-dialog li small { display: block; color: var(--muted); line-height: 1.7; }
+.world-edit-dialog .worlds-overview-form label { display: flex; flex-direction: column; gap: 8px; margin: 18px 0; color: var(--ink); }
+.world-edit-dialog .worlds-overview-form small { display: block; margin: 12px 0; color: var(--muted); }
+.world-edit-dialog > .v7-btn { margin-top: 12px; }
+.worlds-refined-head { display: flex; align-items: center; flex-wrap: wrap; gap: 18px; }
+.worlds-refined-head .home-title-moon { margin: 0; }
+.worlds-refined-head > div:first-of-type { min-width: 0; flex: 1; }
+.worlds-refined-head .worlds-heading-actions { margin-left: auto; }
+.worlds-refined-head h1 { font-family: var(--font-display); font-weight: 650; letter-spacing: .04em; overflow-wrap: anywhere; }
+.worlds-detail .worlds-panel.story-card { display: block; }
+.world-organizer :is(a, button, input, select, textarea):focus-visible, .world-edit-dialog :focus-visible { outline: 2px solid var(--sea); outline-offset: 3px; }
+@media (max-width: 700px) {
+  .organize-candidate-list { grid-template-columns: minmax(0, 1fr); }
+  .organize-candidate-editor .worlds-editor-grid, .lorebook-entry-fields .worlds-editor-grid { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .organize-header { flex-wrap: wrap; gap: 10px; }
+  .organize-header > p { width: 100%; padding-left: 46px; }
+  .organize-model-summary { flex-wrap: wrap; }
+  .organize-model-summary > a { margin-left: 27px; }
+  .organize-history-row { flex-wrap: wrap; gap: 8px 14px; }
+  .organize-history-row > span { flex-basis: 100%; }
+  .organize-progress { flex-wrap: wrap; }
+  .organize-progress > .home-button { margin-left: 30px; }
+  .worlds-refined-head > div:first-of-type { flex-basis: calc(100% - 78px); }
+  .worlds-refined-head .worlds-heading-actions { margin-left: 0; width: 100%; }
+}
+@media (max-width: 430px) {
+  .organize-surface.home-featured { padding: 18px 15px; }
+  .organize-navigation { gap: 8px; }
+  .story-home.world-organizer .organize-navigation .home-button { padding: 9px 10px; font-size: 13px; }
+  .world-organizer .home-page-title h1 { font-size: 34px; letter-spacing: .03em; }
+  .world-organizer .organize-original-input { min-height: 260px; font-size: 16px; }
+  .organize-reference-list { padding: 13px; }
+  .organize-actions .home-button { flex: 0 1 auto; }
+  .organize-actions > span { flex-basis: 100%; }
+  .organize-confirm-dialog .v7-dialog-actions { flex-wrap: wrap; }
+}

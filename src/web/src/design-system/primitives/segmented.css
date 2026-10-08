@@ -1,0 +1,52 @@
+/* Segmented: pill group for one choice. Spec section 5. */
+@layer ui.primitives {
+  .ui-segmented,
+  .ui-segmented__btn {
+    box-sizing: border-box;
+  }
+
+  .ui-segmented {
+    --seg-h: var(--size-md);
+    display: inline-flex;
+    flex: none;
+    height: var(--seg-h);
+    padding: var(--space-1);
+    border: var(--border-width) solid var(--border-default);
+    border-radius: var(--radius-pill);
+    background: var(--surface-2);
+  }
+  .ui-segmented--sm { --seg-h: var(--size-sm); }
+  .ui-segmented--lg { --seg-h: var(--size-lg); }
+
+  .ui-segmented__btn {
+    height: 100%;
+    margin: 0;
+    padding: 0 var(--pad-md);
+    border: 0;
+    border-radius: var(--radius-pill);
+    background: transparent;
+    box-shadow: var(--shadow-none);
+    color: var(--text-2);
+    font: var(--fw-semibold) var(--fs-sm) / 1 var(--font-ui);
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color var(--dur-hover) var(--ease), color var(--dur-hover) var(--ease);
+  }
+  .ui-segmented__btn:hover {
+    background: var(--overlay-hover);
+    color: var(--text-1);
+  }
+  .ui-segmented__btn:active { background: var(--overlay-active); }
+  .ui-segmented__btn[aria-checked="true"] {
+    background: var(--accent-soft);
+    color: var(--accent);
+  }
+  .ui-segmented__btn:focus-visible {
+    outline: var(--focus-width) solid var(--focus);
+    outline-offset: calc(var(--focus-width) * -1);
+  }
+  .ui-segmented__btn:disabled {
+    opacity: var(--opacity-disabled);
+    pointer-events: none;
+  }
+}

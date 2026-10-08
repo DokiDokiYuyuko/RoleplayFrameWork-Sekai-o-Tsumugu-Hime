@@ -1,0 +1,12 @@
+/* Icon sizing. Glyphs come from design-system/Icon.tsx; put .ui-icon on them. */
+@layer ui.primitives {
+  .ui-icon {
+    display: inline-block;
+    flex: none;
+    width: var(--icon-md);
+    height: var(--icon-md);
+    fill: currentColor;
+  }
+  .ui-icon--sm { width: var(--icon-sm); height: var(--icon-sm); }
+  .ui-icon--lg { width: var(--icon-lg); height: var(--icon-lg); }
+}

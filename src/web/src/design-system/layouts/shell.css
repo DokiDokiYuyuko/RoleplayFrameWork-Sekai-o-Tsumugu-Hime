@@ -1,0 +1,318 @@
+/*
+ * Application shell (spec section 6.1): 220px nav, 64px icon rail, or a drawer
+ * with one 48px bar on phones. Ported from the approved demo (.tpl-shell).
+ * The main column keeps the contract unmigrated pages were built against:
+ * the shell is exactly viewport height, .tpl-main scrolls, and conversation /
+ * editor routes manage their own scrolling (data-layout, data-editor).
+ */
+@layer ui.layouts {
+  [class^="tpl-"],
+  [class*=" tpl-"],
+  [class^="tpl-"]::before,
+  [class*=" tpl-"]::before,
+  [class^="tpl-"]::after,
+  [class*=" tpl-"]::after {
+    box-sizing: border-box;
+  }
+
+  .tpl-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .tpl-shell {
+    --nav-w: 220px;
+    /* fixed overlays of unmigrated pages sit beside the nav (see picturebook.css) */
+    --app-rail-width: var(--nav-w);
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    grid-template-columns: var(--nav-w) minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+    height: 100dvh;
+    min-height: 0;
+    background: var(--page-bg);
+    font-family: var(--font-ui);
+  }
+  .tpl-main {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    overflow: auto;
+  }
+  .tpl-shell[data-layout="conversation"] .tpl-main { overflow: hidden; }
+  .tpl-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    min-height: 0;
+  }
+  .tpl-shell[data-editor] .tpl-content { overflow-y: auto; }
+
+  /* ---------- Navigation ---------- */
+  .tpl-nav {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    height: 100%;
+    min-height: 0;
+    padding: var(--space-4) var(--space-3);
+    overflow: hidden auto;
+    border-right: var(--border-width) solid var(--border-subtle);
+    background: var(--nav-surface);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+  .tpl-nav__close { display: none; }
+  .tpl-nav__brand {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    min-height: var(--size-bar);
+    padding: 0 var(--space-2);
+    border-radius: var(--radius-control);
+    color: inherit;
+    text-decoration: none;
+  }
+  .tpl-nav__brand:focus-visible {
+    outline: var(--focus-width) solid var(--focus);
+    outline-offset: var(--focus-offset);
+  }
+  .tpl-nav__crest {
+    display: var(--crest-display);
+    flex: none;
+    width: var(--crest-size);
+    height: var(--crest-size);
+    pointer-events: none;
+  }
+  .tpl-nav__name { display: grid; min-width: 0; }
+  .tpl-nav__name strong {
+    color: var(--text-1);
+    font: var(--fw-regular) var(--fs-lg) / var(--lh-heading) var(--font-display);
+    white-space: nowrap;
+  }
+  .tpl-nav__name span { color: var(--text-3); font-size: var(--fs-xs); }
+  .tpl-rule {
+    position: relative;
+    display: none;
+    height: var(--space-3);
+    pointer-events: none;
+  }
+  .tpl-rule::before {
+    content: "";
+    position: absolute;
+    inset: 50% 0 auto;
+    height: var(--border-width);
+    background: linear-gradient(90deg, transparent, var(--thread) 22%, var(--thread) 78%, transparent);
+  }
+  .tpl-rule::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 7px;
+    height: 7px;
+    background: var(--diamond);
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  /* Rich: title plate (crest above name, thread with diamond below) */
+  :root[data-ornament="rich"] .tpl-nav__brand {
+    flex-direction: column;
+    gap: var(--space-1);
+    padding: var(--space-2) 0 0;
+    text-align: center;
+  }
+  :root[data-ornament="rich"] .tpl-nav__name strong { font-size: var(--fs-xl); letter-spacing: 0.06em; }
+  :root[data-ornament="rich"] .tpl-nav__brand .tpl-rule { display: block; align-self: stretch; margin-top: var(--space-2); }
+
+  .tpl-nav__group { display: grid; gap: var(--space-1); }
+  .tpl-nav__group + .tpl-nav__group { padding-top: var(--space-2); }
+  .tpl-nav__label {
+    margin: 0 0 var(--space-1);
+    padding: 0 var(--space-3);
+    color: var(--text-3);
+    font: var(--fw-semibold) var(--fs-xs) / var(--lh-ui) var(--font-ui);
+  }
+  .tpl-nav__foot {
+    display: grid;
+    gap: var(--space-1);
+    margin-top: auto;
+    padding-top: var(--space-3);
+    border-top: var(--border-width) solid var(--border-subtle);
+  }
+  .tpl-alert {
+    margin: 0;
+    padding: var(--space-1) var(--space-3);
+    color: var(--danger);
+    font: var(--fw-regular) var(--fs-xs) / var(--lh-ui) var(--font-ui);
+  }
+  .tpl-alert--bar { display: none; }
+
+  .tpl-scrim {
+    position: fixed;
+    inset: 0;
+    z-index: 39;
+    display: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: var(--scrim);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--dur-layer) var(--ease);
+  }
+
+  /* The phone bar: only visible below 900px */
+  .tpl-appbar { display: none; }
+
+  /* ---------- Mid width: icon rail ---------- */
+  @media (min-width: 900px) and (max-width: 1199px) {
+    .tpl-shell { --nav-w: 64px; }
+    .tpl-nav { padding-inline: var(--space-2); }
+    .tpl-nav__brand { justify-content: center; padding: 0; }
+    .tpl-nav__crest { width: 40px; height: 40px; }
+    :root[data-ornament="rich"] .tpl-nav__brand { padding: var(--space-2) 0 0; }
+    :root[data-ornament="rich"] .tpl-nav__brand .tpl-rule { display: none; }
+    .tpl-nav__name,
+    .tpl-nav .ui-navitem__text,
+    .tpl-nav .tpl-alert {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+    }
+    .tpl-nav__label {
+      height: var(--border-width);
+      margin: var(--space-1) var(--space-2);
+      padding: 0;
+      background: var(--border-subtle);
+      font-size: 0;
+    }
+    .tpl-nav .ui-navitem { justify-content: center; padding: 0; }
+  }
+
+  /* ---------- Phone: drawer + a single bar ---------- */
+  @media (max-width: 899px) {
+    .tpl-shell {
+      --nav-w: 0px;
+      grid-template-columns: minmax(0, 1fr);
+      height: var(--mrp-visual-height, 100dvh);
+      max-height: 100dvh;
+    }
+    .tpl-nav {
+      position: fixed;
+      inset: 0 auto 0 0;
+      z-index: 40;
+      width: min(280px, 86vw);
+      height: auto;
+      padding-top: calc(var(--space-4) + env(safe-area-inset-top));
+      padding-bottom: calc(var(--space-4) + env(safe-area-inset-bottom));
+      border-right: 0;
+      box-shadow: var(--shadow-e3);
+      visibility: hidden;
+      transform: translateX(-102%);
+      transition: transform var(--dur-layer) var(--ease), visibility 0s linear var(--dur-layer);
+    }
+    .tpl-shell[data-nav="open"] .tpl-nav { visibility: visible; transform: none; transition-delay: 0s; }
+    .tpl-nav__close {
+      position: absolute;
+      top: calc(var(--space-2) + env(safe-area-inset-top));
+      right: var(--space-2);
+      display: inline-flex;
+      z-index: 1;
+    }
+    .tpl-scrim { display: block; }
+    .tpl-shell[data-nav="open"] .tpl-scrim { opacity: 1; pointer-events: auto; }
+    .tpl-shell[data-nav="open"] .tpl-main { overflow: hidden; }
+
+    .tpl-appbar {
+      position: sticky;
+      top: 0;
+      z-index: 8;
+      display: flex;
+      flex: none;
+      align-items: center;
+      gap: var(--space-2);
+      height: calc(var(--size-bar) + env(safe-area-inset-top));
+      padding: env(safe-area-inset-top) var(--space-3) 0;
+      border-bottom: var(--border-width) solid var(--border-subtle);
+      background: var(--header-bg);
+      -webkit-backdrop-filter: var(--header-blur);
+      backdrop-filter: var(--header-blur);
+    }
+    :root[data-ornament="rich"] .tpl-appbar { border-bottom-color: transparent; }
+    :root[data-ornament="rich"] .tpl-appbar::before {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: var(--border-width);
+      background: linear-gradient(90deg, transparent, var(--thread) 18%, var(--thread) 82%, transparent);
+      pointer-events: none;
+    }
+    :root[data-ornament="rich"] .tpl-appbar::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 7px;
+      height: 7px;
+      background: var(--diamond);
+      transform: translate(-50%, 50%) rotate(45deg);
+      pointer-events: none;
+    }
+    .tpl-appbar__title {
+      min-width: 0;
+      overflow: hidden;
+      color: var(--text-1);
+      font: var(--fw-regular) var(--fs-lg) / var(--lh-heading) var(--font-display);
+      text-decoration: none;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .tpl-appbar__title:focus-visible {
+      outline: var(--focus-width) solid var(--focus);
+      outline-offset: var(--focus-offset);
+    }
+    .tpl-alert--bar { display: block; padding: var(--space-2) var(--space-3); background: var(--surface-1); }
+
+    .tpl-content { flex: 1 0 auto; }
+    .tpl-shell[data-layout="conversation"] .tpl-content { flex: 1; min-height: 0; overflow: hidden; }
+    .tpl-shell[data-immersive] .tpl-main { overflow: hidden; }
+    .tpl-shell[data-immersive] .tpl-content { flex: 1; min-height: 0; }
+    .tpl-shell[data-editor] .tpl-content { overflow-y: auto; padding-bottom: env(safe-area-inset-bottom); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .tpl-nav,
+    .tpl-scrim { transition: none; }
+  }
+}
+@layer ui.layouts {
+  .tpl-nav__art, .tpl-content__art { display: none; position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; user-select: none; z-index: -1; }
+  :root[data-ornament="rich"][data-background-art="true"] .tpl-nav__art { display: block; opacity: .3; mask-image: linear-gradient(currentColor, transparent 80%); }
+  :root[data-ornament="rich"][data-background-art="true"] .tpl-content__art { display: block; opacity: .12; }
+  .tpl-nav__compact { display: none; width: var(--size-md); height: var(--size-md); pointer-events: none; }
+  .tpl-appbar__brand { width: var(--space-6); height: var(--space-6); flex: none; pointer-events: none; }
+  @media (min-width: 900px) and (max-width: 1199px) {
+    .tpl-nav__compact { display: block; }
+    .tpl-nav__brand:has(.tpl-nav__compact) .tpl-nav__crest { display: none; }
+  }
+}

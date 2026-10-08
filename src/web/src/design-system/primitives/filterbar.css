@@ -1,0 +1,14 @@
+/* FilterBar: one wrapping row; children keep their own md height. Spec section 5. */
+@layer ui.primitives {
+  .ui-filterbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+  }
+  .ui-filterbar__search {
+    flex: 1 1 240px;
+    max-width: 420px;
+  }
+  .ui-filterbar__spacer { flex: 1; }
+}

@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "id": "amber-night",
+  "name": "曜金夜读",
+  "note": "暖金灯火与墨石色",
+  "order": 8,
+  "color_scheme": "dark",
+  "preview": [
+    "#201f1b",
+    "#e0c37f",
+    "#e2bd78",
+    "#b5a1c3"
+  ],
+  "palette": {
+    "page": "#201f1b",
+    "surface": "#2b2922",
+    "surfaceSoft": "#39362c",
+    "text": "#f1eee5",
+    "textMuted": "#b7b29f",
+    "border": "#4e4a3d",
+    "primary": "#e0c37f",
+    "primaryHover": "#eed69f",
+    "primaryButton": "#75613c",
+    "primaryButtonHover": "#625131",
+    "onPrimary": "#ffffff",
+    "primarySoft": "#494333",
+    "accent": "#e2bd78",
+    "secondary": "#b5a1c3",
+    "nav": "#181712",
+    "navText": "#f1eee5",
+    "navMuted": "#b7b29f",
+    "rail": "#25241e",
+    "focus": "#e7ce94",
+    "danger": "#f0aaa0",
+    "dangerSoft": "color-mix(in srgb, #783f3d 34%, var(--surface))",
+    "success": "#a4d9b8",
+    "successSoft": "color-mix(in srgb, #286044 34%, var(--surface))",
+    "warningSoft": "color-mix(in srgb, #755b2e 38%, var(--surface))",
+    "brandStart": "#f2eddf",
+    "brandEnd": "#e5dbc1"
+  },
+  "shadows": {
+    "panel": "0 14px 40px rgba(0, 0, 0, 0.16)",
+    "card": "0 8px 24px rgba(0, 0, 0, 0.2)"
+  },
+  "assets": {
+    "nav_art": "/brand/themes/astral/sidebar-palace.jpg",
+    "story_cover_forest": "/brand/themes/astral/story-forest.jpg",
+    "story_cover_ocean": "/brand/themes/astral/story-ocean.jpg",
+    "story_cover_moon": "/brand/themes/astral/story-moon.jpg"
+  }
+}

@@ -1,0 +1,49 @@
+/* Select trigger and list. The trigger is a TextInput box (textinput.css) and the list uses menu.css. */
+@layer ui.primitives {
+  .ui-select__trigger {
+    cursor: pointer;
+  }
+  .ui-select__trigger[data-state="open"],
+  .ui-select__trigger:focus-visible {
+    border-color: var(--accent);
+  }
+  .ui-select__trigger:focus-visible {
+    outline: var(--focus-width) solid var(--focus);
+    outline-offset: var(--focus-offset);
+  }
+  .ui-select__trigger[aria-invalid="true"] { border-color: var(--danger); }
+  .ui-select__trigger[data-disabled] {
+    border-color: var(--border-default);
+    background: var(--surface-2);
+    color: var(--text-3);
+    opacity: var(--opacity-disabled);
+    pointer-events: none;
+  }
+  .ui-select__trigger.ui-select__trigger--auto { width: auto; }
+
+  .ui-select__prefix {
+    flex: none;
+    color: var(--text-2);
+    white-space: nowrap;
+  }
+  .ui-select__value {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .ui-select__trigger[data-placeholder] .ui-select__value { color: var(--text-3); }
+  .ui-select__caret {
+    margin-left: auto;
+    transition: transform var(--dur-press) var(--ease);
+  }
+  .ui-select__trigger[data-state="open"] .ui-select__caret { transform: rotate(180deg); }
+
+  /* The list is at least as wide as its trigger; menu.css reads this hook */
+  .ui-select__content { --menu-min-w: var(--radix-select-trigger-width); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ui-select__caret { transition: none; }
+  }
+}

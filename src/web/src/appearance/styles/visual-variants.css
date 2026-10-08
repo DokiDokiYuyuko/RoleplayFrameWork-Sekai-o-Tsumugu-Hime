@@ -1,0 +1,259 @@
+/* Geometry and material are independent of the selected light/dark palette. */
+:root {
+  --shape-panel: 24px 12px 24px 12px;
+  --shape-card: 20px 10px 20px 10px;
+  --shape-control: 12px 7px 12px 7px;
+  --style-border: color-mix(in srgb, var(--gold) 24%, var(--line));
+  --style-shadow: 0 8px 26px color-mix(in srgb, var(--ink) 6%, transparent);
+  --surface-texture: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--sea) 4%, transparent),
+    transparent 65%
+  );
+  --page-pattern: none;
+}
+html[data-visual-style="ink-scroll"] {
+  --shape-panel: 3px;
+  --shape-card: 2px;
+  --shape-control: 3px;
+  --style-border: color-mix(in srgb, var(--ink) 22%, var(--line));
+  --style-shadow: 3px 4px 0 color-mix(in srgb, var(--ink) 5%, transparent);
+  --surface-texture: repeating-linear-gradient(
+    97deg,
+    transparent 0 3px,
+    color-mix(in srgb, var(--ink) 2%, transparent) 3px 4px
+  );
+  --page-pattern: radial-gradient(
+    ellipse at 100% 100%,
+    color-mix(in srgb, var(--sea) 8%, transparent),
+    transparent 55%
+  );
+}
+html[data-visual-style="prism"] {
+  --shape-panel: 30px;
+  --shape-card: 24px;
+  --shape-control: 14px;
+  --style-border: color-mix(in srgb, var(--surface) 45%, var(--line));
+  --style-shadow:
+    0 14px 36px color-mix(in srgb, var(--sea) 13%, transparent),
+    inset 0 1px color-mix(in srgb, var(--surface) 80%, transparent);
+  --surface-texture: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--lilac) 8%, transparent),
+    transparent 55%
+  );
+  --page-pattern:
+    radial-gradient(
+      ellipse at 90% 15%,
+      color-mix(in srgb, var(--lilac) 18%, transparent),
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 0% 95%,
+      color-mix(in srgb, var(--sea) 14%, transparent),
+      transparent 50%
+    );
+}
+html[data-visual-style="starship"] {
+  --shape-panel: 2px 20px 2px 20px;
+  --shape-card: 2px 16px 2px 16px;
+  --shape-control: 2px 9px 2px 9px;
+  --style-border: color-mix(in srgb, var(--sea) 40%, var(--line));
+  --style-shadow:
+    inset 3px 0 color-mix(in srgb, var(--sea) 35%, transparent),
+    0 5px 18px color-mix(in srgb, var(--ink) 5%, transparent);
+  --surface-texture: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--sea) 5%, transparent),
+    transparent 30%
+  );
+  --page-pattern:
+    linear-gradient(
+      color-mix(in srgb, var(--sea) 4%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--sea) 4%, transparent) 1px,
+      transparent 1px
+    );
+}
+html[data-visual-style="quiet-study"] {
+  --shape-panel: 8px;
+  --shape-card: 6px;
+  --shape-control: 5px;
+  --style-border: var(--line);
+  --style-shadow: none;
+  --surface-texture: none;
+  --page-pattern: none;
+}
+html[data-visual-style]:not([data-visual-style="celestial-atelier"]) .app-main {
+  background-image: var(--page-pattern);
+}
+html[data-visual-style="starship"] .app-main {
+  background-size: 36px 36px;
+}
+html[data-visual-style]:not([data-visual-style="celestial-atelier"])
+  :is(
+    .v7-settings-card,
+    .sc-config,
+    .home-featured,
+    .v7-dialog-content,
+    .player-switch-dialog,
+    .lan-session-dialog,
+    .v7-composer-popover,
+    .v7-assist-panel
+  ) {
+  border-radius: var(--shape-panel);
+  border-color: var(--style-border);
+  box-shadow: var(--style-shadow);
+  background-image: var(--surface-texture);
+}
+html[data-visual-style]:not([data-visual-style="celestial-atelier"])
+  :is(
+    .story-card,
+    .home-empty,
+    .home-trash,
+    .worlds-card,
+    .worlds-panel,
+    .asset-import-card,
+    .worlds-next-card
+  ) {
+  border-radius: var(--shape-card);
+  border-color: var(--style-border);
+  box-shadow: var(--style-shadow);
+  background-image: var(--surface-texture);
+}
+html[data-visual-style]:not([data-visual-style="celestial-atelier"])
+  :is(
+    .app-nav-link,
+    .v7-field input,
+    .v7-field select,
+    .v7-field textarea
+  ) {
+  border-radius: var(--shape-control);
+}
+html[data-visual-style]:not([data-visual-style="celestial-atelier"])
+  .v7-composer-inner {
+  border-radius: var(--shape-panel);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-color: var(--style-border);
+  background-image: var(--surface-texture);
+  box-shadow: var(--style-shadow);
+}
+html[data-visual-style="prism"]
+  :is(.v7-settings-card, .library-chapter, .sc-config) {
+  background-color: color-mix(in srgb, var(--surface) 92%, transparent);
+  backdrop-filter: blur(12px);
+}
+html[data-visual-style="starship"]
+  :is(.v7-eyebrow, .sc-kicker, .library-chapter-top, .v7-breadcrumb) {
+  font-family: ui-monospace, monospace;
+  letter-spacing: 0.12em;
+}
+html[data-visual-style="quiet-study"]
+  :is(
+    .app-main__stars,
+    .app-rail__stars,
+    .home-title-moon,
+    .library-chapter-art,
+    .library-closing,
+    .sc-welcome-art
+  ) {
+  display: none;
+}
+html[data-visual-style="quiet-study"] .library-chapter {
+  min-height: 260px;
+}
+html[data-visual-style="quiet-study"] :is(.app-rail, .app-nav-link.is-active) {
+  box-shadow: none;
+  background-image: none;
+}
+html[data-decoration="none"] :is(.library-chapter-art, .sc-welcome-art) {
+  visibility: hidden;
+}
+
+/* Preview cards use the same corner rhythms as the actual workspace. */
+.appearance-style-preview[data-style="ink-scroll"],
+.appearance-style-preview[data-style="ink-scroll"] :is(b, em, small) {
+  border-radius: 2px;
+  box-shadow: 3px 3px 0 #1c301815;
+}
+.appearance-style-preview[data-style="prism"],
+.appearance-style-preview[data-style="prism"] :is(b, em, small) {
+  border-radius: 22px;
+}
+.appearance-style-preview[data-style="starship"],
+.appearance-style-preview[data-style="starship"] :is(b, em, small) {
+  border-radius: 2px 14px 2px 14px;
+}
+.appearance-style-preview[data-style="quiet-study"],
+.appearance-style-preview[data-style="quiet-study"] :is(b, em, small) {
+  border-radius: 4px;
+  box-shadow: none;
+}
+.appearance-style-preview[data-style="quiet-study"]::before {
+  display: none;
+}
+/* Ornament families change with the silhouette, without changing the palette. */
+html[data-visual-style="ink-scroll"]
+  :is(.app-main__stars, .app-rail__stars, .app-rail__art) {
+  display: none;
+}
+html[data-visual-style="ink-scroll"] .library-chapter-art :is(i, b) {
+  display: none;
+}
+html[data-visual-style="ink-scroll"] .library-chapter-art::before {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 90px;
+  opacity: 0.13;
+  background: var(--sea);
+  clip-path: polygon(0 100%, 30% 20%, 48% 60%, 64% 5%, 100% 100%);
+}
+html[data-visual-style="ink-scroll"] .home-title-moon {
+  opacity: 0.5;
+}
+html[data-visual-style="starship"]
+  :is(.app-main__stars, .app-rail__stars, .app-rail__art) {
+  display: none;
+}
+html[data-visual-style="starship"] .app-rail {
+  background-image:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nav-ink) 4%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      color-mix(in srgb, var(--nav-ink) 4%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 24px 24px;
+}
+html[data-visual-style="starship"] .library-chapter-art i {
+  border-radius: 0;
+  transform: rotate(45deg);
+  width: 86px;
+  height: 86px;
+}
+html[data-visual-style="starship"] .library-chapter-art b {
+  border-radius: 0;
+  transform: none;
+  width: 130px;
+  height: 60px;
+  border-style: dashed;
+}
+html[data-visual-style="quiet-study"] .app-rail__art {
+  display: none;
+}
+html[data-visual-style="quiet-study"] .library-masthead .v7-lead {
+  padding-left: 0;
+}
+html[data-visual-style="prism"] .library-chapter-art i {
+  box-shadow: 0 0 35px color-mix(in srgb, var(--lilac) 20%, transparent);
+  border-color: color-mix(in srgb, var(--surface) 70%, var(--line));
+  background: color-mix(in srgb, var(--lilac) 4%, transparent);
+}

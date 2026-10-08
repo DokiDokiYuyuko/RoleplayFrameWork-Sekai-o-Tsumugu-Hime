@@ -1,0 +1,463 @@
+{
+  "version": 2,
+  "scope": "story mutation routes; legacy protocols explicitly tracked",
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/conversation-runs",
+      "handler": "conversation_runs.start",
+      "protocol": "generation-operation",
+      "rationale": "使用已有运行/操作身份及checkpoint恢复，不可嵌套一次性分支提交。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/conversation-runs/{run_id}/pause",
+      "handler": "conversation_runs.pause",
+      "protocol": "generation-operation",
+      "rationale": "使用已有运行/操作身份及checkpoint恢复，不可嵌套一次性分支提交。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/conversation-runs/{run_id}/stop",
+      "handler": "conversation_runs.stop",
+      "protocol": "generation-operation",
+      "rationale": "使用已有运行/操作身份及checkpoint恢复，不可嵌套一次性分支提交。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/conversation-runs/{run_id}/resume",
+      "handler": "conversation_runs.resume",
+      "protocol": "generation-operation",
+      "rationale": "使用已有运行/操作身份及checkpoint恢复，不可嵌套一次性分支提交。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/groups/draft",
+      "handler": "groups.draft_group",
+      "protocol": "temporary-generation",
+      "rationale": "不提交故事正文的生成或草稿；不能盲目自动重试付费模型调用。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/groups",
+      "handler": "groups.create_group",
+      "protocol": "branch-command",
+      "rationale": "分支内变更通过应用提交和持久化命令结果。"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/sessions/{session_id}/groups/{group_id}",
+      "handler": "groups.patch_group",
+      "protocol": "branch-command",
+      "rationale": "分支内变更通过应用提交和持久化命令结果。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/groups/{group_id}/leave",
+      "handler": "groups.leave_group",
+      "protocol": "branch-command",
+      "rationale": "分支内变更通过应用提交和持久化命令结果。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/groups/{group_id}/reply",
+      "handler": "groups.reply_as_group",
+      "protocol": "branch-command",
+      "rationale": "分支内变更通过应用提交和持久化命令结果。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/groups/{group_id}/messages/{message_id}/swipe",
+      "handler": "groups.swipe_group_message",
+      "protocol": "branch-command",
+      "rationale": "分支内变更通过应用提交和持久化命令结果。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/memory/records",
+      "handler": "memory.remember_event",
+      "protocol": "memory-command",
+      "rationale": "分支记忆变化、历史版本、回执与事件同事务提交；整理先持久占用身份，模型在事务之外。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/memory/consolidate",
+      "handler": "memory.consolidate_memory",
+      "protocol": "memory-job",
+      "rationale": "分支记忆变化、历史版本、回执与事件同事务提交；整理先持久占用身份，模型在事务之外。"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/characters/{character_id}/memories/{record_id}",
+      "handler": "memory.update_memory",
+      "protocol": "memory-command",
+      "rationale": "分支记忆变化、历史版本、回执与事件同事务提交；整理先持久占用身份，模型在事务之外。",
+      "compatibility_exception": "仅 session_id 为空且记录本身确实无分支归属的旧记忆，沿用独立旧存储写入，不具备故事命令重放保证；不得新增此类写入入口。"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v1/characters/{character_id}/memories/{record_id}",
+      "handler": "memory.delete_memory",
+      "protocol": "memory-command",
+      "rationale": "分支记忆变化、历史版本、回执与事件同事务提交；整理先持久占用身份，模型在事务之外。",
+      "compatibility_exception": "仅 session_id 为空且记录本身确实无分支归属的旧记忆，沿用独立旧存储写入，不具备故事命令重放保证；不得新增此类写入入口。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/messages",
+      "handler": "messages.send_message",
+      "protocol": "generation-operation",
+      "rationale": "使用已有运行/操作身份及checkpoint恢复，不可嵌套一次性分支提交。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/turn-runs/{operation_id}/resume",
+      "handler": "messages.resume_turn",
+      "protocol": "generation-operation",
+      "rationale": "使用已有运行/操作身份及checkpoint恢复，不可嵌套一次性分支提交。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/turn-runs/{operation_id}/stop",
+      "handler": "messages.stop_turn",
+      "protocol": "generation-operation",
+      "rationale": "使用已有运行/操作身份及checkpoint恢复，不可嵌套一次性分支提交。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/messages/{message_id}/swipe",
+      "handler": "messages.swipe_message",
+      "protocol": "branch-command",
+      "rationale": "分支内变更通过应用提交和持久化命令结果。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/messages/{message_id}/regenerate-one",
+      "handler": "messages.regenerate_one",
+      "protocol": "generation-operation",
+      "rationale": "使用已有运行/操作身份及checkpoint恢复，不可嵌套一次性分支提交。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/messages/{message_id}/regenerate-dependents",
+      "handler": "messages.regenerate_dependents",
+      "protocol": "generation-operation",
+      "rationale": "使用已有运行/操作身份及checkpoint恢复，不可嵌套一次性分支提交。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/messages/{message_id}/accept-dependencies",
+      "handler": "messages.accept_dependencies",
+      "protocol": "generation-operation",
+      "rationale": "使用已有运行/操作身份及checkpoint恢复，不可嵌套一次性分支提交。"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/sessions/{session_id}/messages/{message_id}",
+      "handler": "messages.patch_message",
+      "protocol": "branch-command",
+      "rationale": "分支内变更通过应用提交和持久化命令结果。"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/sessions/{session_id}/messages/{message_id}/input-group",
+      "handler": "messages.patch_input_group",
+      "protocol": "branch-command",
+      "rationale": "分支内变更通过应用提交和持久化命令结果。"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v1/sessions/{session_id}/messages/{message_id}",
+      "handler": "messages.delete_message",
+      "protocol": "branch-command",
+      "rationale": "分支内变更通过应用提交和持久化命令结果。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/messages/{message_id}/regenerate",
+      "handler": "messages.regenerate_message",
+      "protocol": "branch-command",
+      "rationale": "分支内变更通过应用提交和持久化命令结果。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/messages/{message_id}/hygiene/recheck",
+      "handler": "messages.recheck_hygiene",
+      "protocol": "branch-command",
+      "rationale": "分支内变更通过应用提交和持久化命令结果。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/messages/{message_id}/continue",
+      "handler": "messages.continue_message",
+      "protocol": "branch-command",
+      "rationale": "分支内变更通过应用提交和持久化命令结果。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/pinned-facts",
+      "handler": "pinned_facts.create_pinned_fact",
+      "protocol": "branch-command",
+      "rationale": "分支内变更通过应用提交和持久化命令结果。"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/sessions/{session_id}/pinned-facts/{fact_id}",
+      "handler": "pinned_facts.patch_pinned_fact",
+      "protocol": "branch-command",
+      "rationale": "分支内变更通过应用提交和持久化命令结果。"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v1/sessions/{session_id}/pinned-facts/{fact_id}",
+      "handler": "pinned_facts.delete_pinned_fact",
+      "protocol": "branch-command",
+      "rationale": "分支内变更通过应用提交和持久化命令结果。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/player/switch",
+      "handler": "sessions.switch_player_role",
+      "protocol": "player-switch",
+      "rationale": "身份切换保留现有幂等键与补偿协议。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions",
+      "handler": "sessions.create_session",
+      "protocol": "entity-publication",
+      "rationale": "新实体集合需要独立操作日志和隐藏发布；存档原身份恢复使用单分支协议。"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v1/sessions/{session_id}",
+      "handler": "sessions.delete_session",
+      "protocol": "story-lifecycle",
+      "rationale": "完整目标集合与修订 CAS；可见性、生命周期结果同事务提交，文件清理单独恢复。"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/sessions/{session_id}",
+      "handler": "sessions.patch_session",
+      "protocol": "branch-command",
+      "rationale": "分支内变更通过应用提交和持久化命令结果。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/continue",
+      "handler": "sessions.force_continue",
+      "protocol": "branch-command",
+      "rationale": "分支内变更通过应用提交和持久化命令结果。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/scene/switch",
+      "handler": "sessions.scene_switch",
+      "protocol": "branch-command",
+      "rationale": "分支内变更通过应用提交和持久化命令结果。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/assist/candidates",
+      "handler": "sessions.assist_candidates",
+      "protocol": "temporary-generation",
+      "rationale": "不提交故事正文的生成或草稿；不能盲目自动重试付费模型调用。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/assist/draft",
+      "handler": "sessions.assist_draft",
+      "protocol": "temporary-generation",
+      "rationale": "不提交故事正文的生成或草稿；不能盲目自动重试付费模型调用。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/director/pending/confirm",
+      "handler": "sessions.director_pending_confirm",
+      "protocol": "checkpoint-command",
+      "rationale": "导演决策会继续多checkpoint生成，需要操作终态协议。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/director/pending/reject",
+      "handler": "sessions.director_pending_reject",
+      "protocol": "checkpoint-command",
+      "rationale": "导演决策会继续多checkpoint生成，需要操作终态协议。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/participants",
+      "handler": "sessions.add_participant",
+      "protocol": "branch-command",
+      "rationale": "分支内变更通过应用提交和持久化命令结果。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/characters/{character_id}",
+      "handler": "sessions.character_action",
+      "protocol": "branch-command",
+      "rationale": "分支内变更通过应用提交和持久化命令结果。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/save",
+      "handler": "sessions.save_session",
+      "protocol": "entity-publication",
+      "rationale": "新实体集合需要独立操作日志和隐藏发布；存档原身份恢复使用单分支协议。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/saves/{save_id}/restore",
+      "handler": "sessions.restore_save",
+      "protocol": "entity-publication",
+      "rationale": "新实体集合需要独立操作日志和隐藏发布；存档原身份恢复使用单分支协议。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/sessions/{session_id}/messages/{message_id}/regenerate-corrected",
+      "handler": "stage3.regenerate_corrected",
+      "protocol": "generation-operation",
+      "rationale": "使用已有运行/操作身份及checkpoint恢复，不可嵌套一次性分支提交。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/chat-import/st/preview",
+      "handler": "stage3.st_preview",
+      "protocol": "preview",
+      "rationale": "只解析预览，不发布故事。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/chat-import/st",
+      "handler": "stage3.st_import",
+      "protocol": "entity-publication",
+      "rationale": "新实体集合需要独立操作日志和隐藏发布；存档原身份恢复使用单分支协议。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/chat-import/st/file",
+      "handler": "stage3.st_import_file",
+      "protocol": "entity-publication",
+      "rationale": "新实体集合需要独立操作日志和隐藏发布；存档原身份恢复使用单分支协议。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/branches/{branch_id}/asset-updates/apply",
+      "handler": "stage3.branch_apply_updates",
+      "protocol": "branch-command",
+      "rationale": "分支内变更通过应用提交和持久化命令结果。"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v1/stories/{story_id}",
+      "handler": "worldlines.delete_story",
+      "protocol": "story-lifecycle",
+      "rationale": "完整目标集合与修订 CAS；可见性、生命周期结果同事务提交，文件清理单独恢复。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/stories/trash/{story_id}/restore",
+      "handler": "worldlines.restore_story",
+      "protocol": "story-lifecycle",
+      "rationale": "完整目标集合与修订 CAS；可见性、生命周期结果同事务提交，文件清理单独恢复。"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v1/stories/trash/{story_id}",
+      "handler": "worldlines.purge_story",
+      "protocol": "story-lifecycle",
+      "rationale": "完整目标集合与修订 CAS；可见性、生命周期结果同事务提交，文件清理单独恢复。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/stories/import",
+      "handler": "worldlines.import_story_zip",
+      "protocol": "entity-publication",
+      "rationale": "新实体集合需要独立操作日志和隐藏发布；存档原身份恢复使用单分支协议。"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/stories/{story_id}/prompt-preset",
+      "handler": "worldlines.set_story_prompt_preset",
+      "protocol": "story-lifecycle",
+      "rationale": "完整目标集合与修订 CAS；可见性、生命周期结果同事务提交，文件清理单独恢复。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/branches/{branch_id}/bookmarks",
+      "handler": "worldlines.create_bookmark",
+      "protocol": "branch-command",
+      "rationale": "分支内变更通过应用提交和持久化命令结果。"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/branches/{branch_id}/bookmarks/{bookmark_id}",
+      "handler": "worldlines.patch_bookmark",
+      "protocol": "branch-command",
+      "rationale": "分支内变更通过应用提交和持久化命令结果。"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v1/branches/{branch_id}/bookmarks/{bookmark_id}",
+      "handler": "worldlines.delete_bookmark",
+      "protocol": "branch-command",
+      "rationale": "分支内变更通过应用提交和持久化命令结果。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/branches/{branch_id}/fork",
+      "handler": "worldlines.fork_branch",
+      "protocol": "entity-publication",
+      "rationale": "新实体集合需要独立操作日志和隐藏发布；存档原身份恢复使用单分支协议。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/saves/{save_id}/fork",
+      "handler": "worldlines.fork_save",
+      "protocol": "entity-publication",
+      "rationale": "新实体集合需要独立操作日志和隐藏发布；存档原身份恢复使用单分支协议。"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/branches/{branch_id}",
+      "handler": "worldlines.patch_branch",
+      "protocol": "branch-command",
+      "rationale": "分支内变更通过应用提交和持久化命令结果。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/branches/{branch_id}/events",
+      "handler": "worldlines.create_event",
+      "protocol": "branch-command",
+      "rationale": "分支内变更通过应用提交和持久化命令结果。"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/branches/{branch_id}/events/{event_id}",
+      "handler": "worldlines.patch_event",
+      "protocol": "branch-command",
+      "rationale": "分支内变更通过应用提交和持久化命令结果。"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v1/branches/{branch_id}/events/{event_id}",
+      "handler": "worldlines.delete_event",
+      "protocol": "branch-command",
+      "rationale": "分支内变更通过应用提交和持久化命令结果。"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/scenarios/{scenario_id}/start",
+      "handler": "scenarios.start_scenario",
+      "protocol": "entity-publication",
+      "rationale": "Reserve the creation identity before loading the scenario; publish the staged story and receipt together."
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/sessions/{session_id}/scenes/{scene_id}/image",
+      "handler": "sessions.patch_scene_image",
+      "protocol": "branch-command",
+      "rationale": "Explicit public scene artwork metadata; staged CAS commit and operation receipt, no scene switch or model generation."
+    }
+  ]
+}

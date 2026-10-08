@@ -1,0 +1,49 @@
+@layer ui.pages {
+.worlds-page { padding: var(--space-4) var(--space-6); color: var(--text-1); }
+.worlds-heading { margin-bottom: var(--space-6); align-items: center; }
+.worlds-heading h1,.worlds-detail-head h1 { font: var(--fw-semibold) var(--fs-3xl)/var(--lh-heading) var(--font-display); }
+.worlds-heading p,.worlds-detail-head p { color: var(--text-2); font-size: var(--fs-sm); }
+.worlds-back { margin-bottom: var(--space-3); font-size: var(--fs-xs); }
+.worlds-library { min-height: calc(100dvh - 220px); }
+.worlds-banner { position: relative; display: block; overflow: hidden; border-radius: var(--radius-panel); color: var(--on-accent); margin: var(--space-4) 0 var(--space-6); }
+.worlds-banner-art { width: 100%; aspect-ratio: 21/9; max-height: 430px; }
+.worlds-banner::after,.worlds-card-image::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg,var(--scrim),transparent); pointer-events: none; }
+.worlds-banner-content { position: absolute; z-index: 1; left: var(--space-7); bottom: var(--space-7); max-width: 65%; }
+.worlds-banner-label { font-size: var(--fs-xs); }
+.worlds-banner h2 { color: inherit; font: var(--fw-semibold) var(--fs-3xl)/var(--lh-heading) var(--font-display); margin: var(--space-3) 0; }
+.worlds-banner p { color: inherit; font-size: var(--fs-sm); line-height: var(--lh-ui); margin-bottom: var(--space-5); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.worlds-banner-enter { position: absolute; z-index: 1; bottom: var(--space-7); right: var(--space-7); display: flex; align-items: center; gap: var(--space-2); font-size: var(--fs-sm); }
+.worlds-card-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(min(100%,340px),1fr)); gap: var(--space-5); }
+.worlds-card { display: block; padding: 0; min-height: 0; border-radius: var(--radius-card); overflow: hidden; border: var(--border-width) solid var(--border-subtle); background: var(--surface-1); }
+.worlds-card-image { position: relative; }
+.worlds-card-image .ui-portrait { width: 100%; }
+.worlds-card-image::after { background: linear-gradient(0deg,var(--scrim),transparent 75%); }
+.worlds-card-title { position: absolute; left: var(--space-5); bottom: var(--space-4); z-index: 1; color: var(--on-accent); font: var(--fw-semibold) var(--fs-2xl)/var(--lh-heading) var(--font-display); }
+.worlds-card-title small { color: inherit; font-size: var(--fs-xs); }
+.worlds-card-body { padding: var(--space-4) var(--space-5); }
+.worlds-card-desc { font-size: var(--fs-sm); color: var(--text-2); margin: 0 0 var(--space-4); min-height: 3em; }
+.worlds-stats { display: flex; align-items: center; gap: var(--space-4); font-size: var(--fs-xs); flex-wrap: wrap; }
+.worlds-stats strong { color: inherit; font-weight: var(--fw-semibold); }
+.worlds-sigil { width: var(--space-6); height: var(--space-6); mask-size: contain; mask-repeat: no-repeat; mask-position: center; background: currentColor; }
+.worlds-banner-content .worlds-stats { color: inherit; }
+.worlds-detail-head { gap: var(--space-5); }
+.worlds-detail-cover { max-height: 360px; aspect-ratio: 21/9; }
+.worlds-help { max-width: 560px; }
+.worlds-help li { margin: var(--space-4) 0; }
+.worlds-help > .ui-btn { margin: var(--space-5) 0 0; }
+.worlds-books-editor { min-height: 0; overflow: hidden; }
+.worlds-books-editor .lorebook-page { min-height: 620px; }
+.worlds-page :is(a,button):focus-visible { outline: var(--focus-width) solid var(--focus); outline-offset: var(--focus-offset); }
+@media (max-width: 700px) {
+ .worlds-page { padding: var(--space-4); }
+ .worlds-heading { gap: var(--space-4); }
+ .worlds-heading-actions { gap: var(--space-2); }
+ .worlds-banner-art { min-height: 270px; }
+ .worlds-banner-content { left: var(--space-4); bottom: var(--space-8); max-width: calc(100% - 32px); }
+ .worlds-banner h2 { font-size: var(--fs-2xl); }
+ .worlds-banner p { margin-bottom: var(--space-3); }
+ .worlds-banner-enter { bottom: var(--space-4); right: var(--space-4); }
+ .worlds-stats { gap: var(--space-3); }
+ .worlds-books-editor .lorebook-page { min-height: 550px; }
+}
+}

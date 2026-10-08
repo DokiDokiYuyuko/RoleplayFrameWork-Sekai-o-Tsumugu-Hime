@@ -1,0 +1,5 @@
+/* Shared page/dialog chapters use the same paper and content inset. */
+@layer ui.pages {
+  .character-editor-chapter:focus-visible { outline: var(--focus-width) solid var(--focus); outline-offset: calc(var(--focus-width) * -1); }
+  .character-directory-links a:focus-visible, .character-overview button:focus-visible { outline: var(--focus-width) solid var(--focus); outline-offset: var(--focus-offset); }
+}

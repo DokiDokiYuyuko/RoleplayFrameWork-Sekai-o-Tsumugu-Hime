@@ -1,0 +1,11 @@
+.page-load-state { width: min(620px, calc(100% - 32px)); margin: 28px auto; padding: 24px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); color: var(--ink); }
+.page-load-state__heading { display: flex; align-items: center; gap: 12px; }
+.page-load-state h2 { margin: 0; font-family: var(--font-display); font-size: 23px; }
+.page-load-state p { margin: 14px 0; color: var(--muted); line-height: 1.7; overflow-wrap: anywhere; }
+.page-load-state details { margin-top: 16px; font-size: 12px; color: var(--muted); }
+.page-load-state pre { max-height: 200px; overflow: auto; white-space: pre-wrap; }
+.page-load-back { align-self: center; margin-bottom: 20px; color: var(--sea); }
+.page-load-spinner { animation: page-load-spin 1s linear infinite; flex: none; }
+@keyframes page-load-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .page-load-spinner { animation: none; } }
+@media (max-width:760px) { .page-load-state { margin-block: 16px; padding: 18px; } }

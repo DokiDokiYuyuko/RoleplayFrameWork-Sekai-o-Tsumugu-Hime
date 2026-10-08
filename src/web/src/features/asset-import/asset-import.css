@@ -1,0 +1,76 @@
+@layer ui.pages {
+.asset-import-page { flex:1; color:var(--text-1); }
+.asset-import-page h3 { margin:0; font:var(--fw-semibold) var(--fs-md)/var(--lh-ui) var(--font-ui); }
+.asset-import-page p { margin:0; }
+.asset-import-input-body { display:flex; flex-direction:column; gap:var(--space-4); }
+.asset-import-results-body { display:flex; flex-direction:column; gap:var(--space-4); }
+.asset-import-muted { margin:0; color:var(--text-3); font-size:var(--fs-xs); line-height:var(--lh-ui); overflow-wrap:anywhere; }
+.asset-import-field, .asset-import-world-select { display:grid; gap:var(--space-2); color:var(--text-2); font-size:var(--fs-sm); min-width:0; }
+.asset-import-field > span { font-weight:var(--fw-semibold); }
+.asset-import-source-field { display:flex; flex:1; min-height:220px; flex-direction:column; }
+.asset-import-source-field > textarea { flex:1; width:100%; min-height:180px; box-sizing:border-box; padding:var(--space-3); resize:vertical; border:1px solid var(--border-default); border-radius:var(--radius-control); background:var(--surface-1); color:var(--text-1); font:inherit; line-height:var(--lh-ui); }
+.asset-import-source-field > textarea:focus-visible { outline:2px solid var(--focus); outline-offset:2px; }
+.asset-import-hidden-file { display:none; }
+.asset-import-foot { flex-direction:column; align-items:stretch; padding-block:var(--space-3); }
+.asset-import-foot .asset-import-muted { margin:0; }
+.asset-import-tasks-list, .asset-import-drafts { display:grid; gap:var(--space-2); }
+.asset-import-row { display:flex; min-width:0; gap:var(--space-3); align-items:center; min-height:64px; padding:var(--space-3); border:1px solid var(--border-default); border-radius:var(--radius-control); background:var(--surface-1); color:var(--text-1); text-decoration:none; }
+.asset-import-row:hover { background:var(--surface-2); border-color:var(--border-strong); }
+.asset-import-row:focus-visible { outline:2px solid var(--focus); outline-offset:2px; }
+.asset-import-row > svg { flex:none; color:var(--accent); }
+.asset-import-row > span:not(.asset-import-status) { flex:1; min-width:0; display:grid; gap:var(--space-1); }
+.asset-import-row strong { font-size:var(--fs-sm); font-weight:var(--fw-semibold); overflow-wrap:anywhere; }
+.asset-import-row small { color:var(--text-3); font-size:var(--fs-xs); }
+.asset-import-status { display:inline-flex; flex:none; align-self:center; color:var(--text-2); background:var(--surface-2); border:1px solid var(--border-subtle); border-radius:var(--radius-pill); font-size:var(--fs-xs); padding:2px var(--space-2); }
+.asset-import-status[data-state="saved"] { color:var(--success); background:var(--success-soft); }
+.asset-import-status[data-state="failed"] { color:var(--warning); background:var(--warning-soft); }
+.asset-import-empty { display:grid; place-items:center; min-height:180px; color:var(--text-3); font-size:var(--fs-sm); line-height:var(--lh-ui); }
+.asset-import-candidates { display:grid; gap:var(--space-3); }
+.asset-import-candidate { display:grid; gap:var(--space-3); padding:var(--space-4); border:1px solid var(--border-default); border-radius:var(--radius-control); }
+.asset-import-candidate-head { display:flex; gap:var(--space-2); align-items:center; min-width:0; }
+.asset-import-candidate-head > .ui-select { flex:0 1 160px; }
+.asset-import-candidate-head > .ui-input { flex:1; min-width:120px; }
+.asset-import-candidate-head > .ui-btn { flex:none; }
+.asset-import-actions { display:flex; flex-wrap:wrap; gap:var(--space-2); }
+.asset-import-source-text { margin:0; max-height:440px; overflow:auto; white-space:pre-wrap; overflow-wrap:anywhere; font:var(--fw-regular) var(--fs-sm)/var(--lh-ui) var(--font-reading); color:var(--text-2); }
+.asset-import-overlay { position:fixed; inset:0; display:grid; place-items:center; padding:var(--space-6); }
+.asset-import-dialog { display:flex; flex-direction:column; gap:var(--space-4); width:min(1180px,100%); max-height:min(860px,calc(100dvh - 48px)); overflow:auto; padding:var(--space-6); box-sizing:border-box; border:1px solid var(--border-default); border-radius:var(--radius-panel); background:var(--surface-1); color:var(--text-1); box-shadow:var(--shadow-e3); }
+.asset-import-dialog > header { display:flex; flex:none; justify-content:space-between; align-items:flex-start; gap:var(--space-3); }
+.asset-import-dialog header h2 { margin:var(--space-1) 0 0; font:var(--fw-regular) var(--fs-xl)/var(--lh-heading) var(--font-display); }
+.asset-import-head-actions { display:flex; flex-wrap:wrap; gap:var(--space-2); }
+.asset-import-notice { border:1px solid var(--border-default); border-radius:var(--radius-control); padding:var(--space-3); background:var(--warning-soft); color:var(--warning); font-size:var(--fs-sm); line-height:var(--lh-ui); }
+.asset-import-proposal { display:grid; gap:var(--space-3); padding:var(--space-3); border:1px solid var(--border-default); border-radius:var(--radius-control); background:var(--accent-soft); color:var(--text-1); font-size:var(--fs-sm); }
+.asset-import-proposal p { margin:0; line-height:var(--lh-ui); }
+.asset-import-proposal pre { margin:0; white-space:pre-wrap; overflow-wrap:anywhere; font-size:var(--fs-xs); }
+.asset-import-review-grid { display:grid; grid-template-columns:minmax(0,1fr) 320px; gap:var(--space-6); align-items:start; min-width:0; }
+.asset-import-form { display:grid; min-width:0; gap:var(--space-4); margin:0; padding:0; border:0; }
+.asset-import-form > .worlds-editor, .asset-import-form > .worlds-overview-form { width:100%; max-width:none; box-sizing:border-box; border:0; padding:0; background:transparent; box-shadow:none; color:var(--text-1); }
+.asset-import-form :is(.worlds-field,.worlds-overview-form > label) { display:grid; gap:var(--space-2); min-width:0; font-size:var(--fs-sm); color:var(--text-2); }
+.asset-import-form :is(.worlds-editor-grid,.worlds-bio-fields) { min-width:0; }
+.asset-import-form :is(input:not([type="checkbox"]),textarea,select) { box-sizing:border-box; width:100%; min-width:0; max-width:100%; padding:var(--space-3); border:1px solid var(--border-default); border-radius:var(--radius-control); background:var(--surface-1); color:var(--text-1); font:inherit; line-height:var(--lh-ui); }
+.asset-import-form :is(input,textarea,select):focus-visible { outline:2px solid var(--focus); outline-offset:2px; }
+.asset-import-form small { color:var(--text-3); font-size:var(--fs-xs); }
+.asset-import-form .worlds-visibility { color:var(--text-2); }
+.asset-import-form .worlds-bio-fields { background:var(--surface-2); border-color:var(--border-subtle); color:var(--text-1); }
+.asset-import-form .worlds-bio-fields h3 { color:var(--text-1); }
+.asset-import-source { display:grid; gap:var(--space-3); padding:var(--space-4); border:1px solid var(--border-subtle); border-radius:var(--radius-card); background:var(--surface-2); color:var(--text-2); font-size:var(--fs-sm); line-height:var(--lh-ui); }
+.asset-import-source p { margin:0; }
+.asset-import-source blockquote { white-space:pre-wrap; overflow-wrap:anywhere; max-height:340px; overflow:auto; margin:0; border-left:3px solid var(--accent); padding-left:var(--space-3); }
+.asset-import-source pre { white-space:pre-wrap; overflow-wrap:anywhere; max-height:420px; overflow:auto; margin:0; }
+.asset-import-world-select { margin:0; }
+.asset-import-mobile-tabs { display:none; }
+@media (max-width:980px) { .asset-import-review-grid { grid-template-columns:minmax(0,1fr); } }
+@media (max-width:899px) {
+ .asset-import-page > .workbench-bar { padding-inline:var(--space-4); }
+ .asset-import-desk[data-layout="form-main"] { grid-template-columns:minmax(0,1fr); grid-template-rows:auto minmax(0,1fr); }
+ .asset-import-mobile-tabs { display:flex; gap:var(--space-2); padding:var(--space-2) var(--space-4); border-bottom:1px solid var(--border-subtle); }
+ .asset-import-desk > .workbench-column { border-left:0; }
+ .asset-import-desk[data-pane="input"] > .asset-import-results, .asset-import-desk[data-pane="result"] > .asset-import-input { display:none; }
+ .asset-import-overlay { padding:0; }
+ .asset-import-dialog { width:100%; height:100dvh; max-height:100dvh; border-radius:0; padding:var(--space-4); }
+ .asset-import-dialog > header { flex-wrap:wrap; }
+ .asset-import-candidate-head { flex-wrap:wrap; }
+ .asset-import-candidate-head > .ui-input { flex-basis:100%; }
+ .asset-import-row { flex-wrap:wrap; }
+}
+}

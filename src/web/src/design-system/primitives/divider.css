@@ -1,0 +1,42 @@
+/* Divider: plain rule and labelled variant. Spec section 5. */
+@layer ui.primitives {
+  .ui-divider {
+    height: 0;
+    margin: 0;
+    border: 0;
+    border-top: var(--border-width) solid var(--border-subtle);
+  }
+  .ui-divider--label {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    height: auto;
+    border: 0;
+    color: var(--text-3);
+    font: var(--fw-regular) var(--fs-xs) / var(--lh-ui) var(--font-ui);
+  }
+  .ui-divider--label::before,
+  .ui-divider--label::after {
+    content: "";
+    flex: 1;
+    height: var(--border-width);
+    background: linear-gradient(90deg, transparent, var(--border-default));
+  }
+  .ui-divider--label::after { background: linear-gradient(270deg, transparent, var(--border-default)); }
+  .ui-divider__text {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    white-space: nowrap;
+  }
+  /* Diamonds appear only where the ornament layer sets --diamond-display (rich level) */
+  .ui-divider__text::before,
+  .ui-divider__text::after {
+    content: "";
+    display: var(--diamond-display, none);
+    width: 6px;
+    height: 6px;
+    background: var(--diamond);
+    transform: rotate(45deg);
+  }
+}

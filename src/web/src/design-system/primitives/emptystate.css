@@ -1,0 +1,63 @@
+/* EmptyState. The illustration stays hidden here; the ornament layer reveals it. Spec sections 4 and 5. */
+@layer ui.primitives {
+  .ui-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+    box-sizing: border-box;
+    padding: var(--space-8) var(--space-6);
+    text-align: center;
+  }
+  .ui-empty__icon {
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-pill);
+    background: var(--region-soft);
+    color: var(--region);
+  }
+  .ui-empty__icon > svg {
+    width: 28px;
+    height: 28px;
+  }
+  .ui-empty__art {
+    display: none;
+    width: min(280px, 100%);
+    height: auto;
+    border-radius: var(--radius-card);
+  }
+  .ui-empty__title {
+    margin: 0;
+    color: var(--text-1);
+    font: var(--fw-semibold) var(--fs-md) / var(--lh-ui) var(--font-ui);
+  }
+  .ui-empty__text {
+    max-width: 44ch;
+    margin: 0;
+    color: var(--text-2);
+    font: var(--fw-regular) var(--fs-sm) / var(--lh-ui) var(--font-ui);
+  }
+
+  .ui-empty--compact {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    column-gap: var(--space-4);
+    row-gap: 0;
+    padding: var(--space-4);
+    border-radius: var(--radius-card);
+    background: var(--surface-2);
+    text-align: left;
+  }
+  .ui-empty--compact .ui-empty__icon {
+    grid-row: span 2;
+    width: var(--size-lg);
+    height: var(--size-lg);
+  }
+  .ui-empty--compact .ui-empty__icon > svg {
+    width: var(--icon-lg);
+    height: var(--icon-lg);
+  }
+}

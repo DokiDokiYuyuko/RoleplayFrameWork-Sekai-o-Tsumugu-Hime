@@ -1,0 +1,67 @@
+/* Radio. Native input hidden over a drawn ring. Spec section 5. */
+@layer ui.primitives {
+  .ui-radio,
+  .ui-radio__dot {
+    box-sizing: border-box;
+  }
+
+  .ui-radio {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: var(--size-sm);
+    color: var(--text-1);
+    font: var(--fw-regular) var(--fs-sm) / var(--lh-ui) var(--font-ui);
+    cursor: pointer;
+  }
+  .ui-radio__input {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: var(--icon-md);
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    cursor: inherit;
+  }
+  .ui-radio__dot {
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: var(--icon-md);
+    height: var(--icon-md);
+    border: var(--border-width) solid var(--border-strong);
+    border-radius: var(--radius-pill);
+    background: var(--surface-1);
+    transition: background-color var(--dur-hover) var(--ease), border-color var(--dur-hover) var(--ease);
+  }
+  .ui-radio__dot::after {
+    content: "";
+    width: var(--space-2);
+    height: var(--space-2);
+    border-radius: var(--radius-pill);
+    background: var(--on-accent);
+    opacity: 0;
+  }
+
+  .ui-radio:hover .ui-radio__dot { border-color: var(--border-strong-hover); }
+  .ui-radio:active .ui-radio__dot { background: linear-gradient(var(--overlay-active), var(--overlay-active)), var(--surface-1); }
+  .ui-radio__input:checked + .ui-radio__dot {
+    border-color: var(--accent);
+    background: var(--accent);
+  }
+  .ui-radio__input:checked + .ui-radio__dot::after { opacity: 1; }
+  .ui-radio__input:checked:active + .ui-radio__dot { filter: brightness(0.92); }
+  .ui-radio__input:focus-visible + .ui-radio__dot {
+    outline: var(--focus-width) solid var(--focus);
+    outline-offset: var(--focus-offset);
+  }
+  .ui-radio:has(.ui-radio__input:disabled) {
+    opacity: var(--opacity-disabled);
+    cursor: not-allowed;
+  }
+
+  @media (pointer: coarse) {
+    .ui-radio { min-height: var(--size-lg); }
+  }
+}

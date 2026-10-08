@@ -1,0 +1,101 @@
+/* Shared writing ergonomics. Settings float above the composer, never expand its rows. */
+.story-composer-context { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 12px; }
+.story-composer-context .player-control-bar { flex: 1; margin: 0; }
+.story-composer-form { display: flex; flex-direction: column; min-width: 0; gap: 10px; }
+.story-composer-manuscript { min-width: 0; }
+.story-composer-manuscript textarea { width: 100%; }
+.story-composer-foundation { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
+.story-composer-foundation > .v7-input-tools { order: 0; }
+.story-composer-channel-tools { display: inline-flex; align-items: center; }
+.story-composer-primary { flex: none; }
+.story-composer-primary > button { min-height: 48px; }
+.story-identity-switch-current { display: none; }
+.story-manuscript-heading { display: flex; justify-content: space-between; gap: 12px; padding: 8px 12px; color: var(--muted); font-size: 12px; }
+.story-manuscript-heading > span:last-child { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.v7-input-box textarea.composer-autosize,
+.sc-compose textarea.composer-autosize {
+  height: auto;
+  min-height: 72px;
+  max-height: none;
+  resize: none;
+  overflow-y: hidden;
+  line-height: 1.65;
+  scrollbar-gutter: stable;
+}
+.v7-input-box > button { height: 48px; min-height: 48px; }
+.sc-compose > button { min-height: 48px; }
+.v7-input-tools button[aria-expanded="true"] {
+  background: var(--sea-soft);
+  color: var(--sea);
+  box-shadow: inset 0 0 0 1px var(--sea);
+}
+.v7-composer-popover {
+  z-index: 85;
+  display: flex;
+  flex-direction: column;
+  width: min(580px, calc(100vw - 24px));
+  max-height: min(560px, 65dvh, var(--radix-popover-content-available-height));
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  color: var(--ink);
+  background: var(--surface);
+  box-shadow: 0 16px 48px rgb(0 0 0 / .24);
+  font-family: var(--font-body, inherit);
+  font-size: 13px;
+  isolation: isolate;
+}
+.v7-composer-popover .v7-composer-panel-head { flex: none; padding: 10px 16px; font-size: 14px; }
+.v7-composer-popover .v7-composer-panel-head button { display: grid; place-items: center; width: 36px; height: 36px; }
+.v7-composer-popover .v7-composer-panel-content {
+  min-height: 0;
+  max-height: none;
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: 16px;
+}
+.v7-composer-popover .v7-response-style-body {
+  width: auto; max-height: none; overflow: visible; margin: 0; padding: 0; border: 0; border-radius: 0;
+}
+.v7-composer-popover .v7-field { display: grid; gap: 8px; }
+.v7-composer-popover :is(select, input, textarea) {
+  min-width: 0; border: 1px solid var(--line); border-radius: 8px;
+  background: var(--paper); color: var(--ink); padding: 9px 10px; font: inherit;
+}
+.v7-composer-popover select { min-height: 40px; }
+.v7-composer-popover :is(button, select, textarea, input, summary, a):focus-visible { outline: 2px solid var(--sea); outline-offset: 3px; }
+.v7-composer-popover :is(button, summary, a) { cursor: pointer; }
+.v7-composer-popover button:disabled { opacity: .45; cursor: not-allowed; }
+.v7-composer-popover :is(.composer-panel-description, .v7-muted) { color: var(--muted); line-height: 1.65; margin: 0 0 14px; }
+.v7-composer-popover .v7-recipient-option {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 38px;
+  padding: 7px 10px; border: 1px solid var(--line); border-radius: 8px;
+  color: var(--ink); background: var(--paper); text-align: left;
+}
+.v7-composer-popover .v7-recipient-option.is-active { border-color: var(--sea); background: var(--sea-soft); color: var(--sea); }
+.v7-composer-popover .composer-panel-done { justify-self: end; padding: 8px 16px; border: 1px solid var(--line); border-radius: 8px; color: var(--sea); background: var(--paper); }
+.composer-observation-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px; }
+.composer-observation-heading button { padding: 5px 0; color: var(--sea); font-size: 12px; }
+.v7-composer-popover .conversation-start-actions { position: sticky; bottom: -16px; margin-bottom: -16px; padding: 12px 0 16px; background: var(--surface); }
+.v7-composer-popover .v7-member-grid { grid-template-columns: 1fr; }
+@media (max-width: 650px) {
+  .v7-input-box textarea.composer-autosize, .sc-compose textarea.composer-autosize { min-height: 64px; font-size: 16px; }
+  .v7-input-box > button { height: 44px; min-height: 44px; padding-inline: 12px; }
+  .v7-composer-popover { max-height: min(65dvh, var(--radix-popover-content-available-height)); }
+  .v7-composer-popover :is(input, textarea, select) { font-size: 16px; }
+  .v7-composer-popover .v7-composer-panel-content { padding: 12px; }
+  .v7-composer-popover .conversation-start-actions { bottom: -12px; margin-bottom: -12px; padding-bottom: 12px; }
+  .composer-observation-heading { align-items: start; }
+}
+
+.story-composer .story-composer-reply-mode {
+  display: inline-flex; align-items: center; gap: 6px; color: var(--muted); font: 12px/1.4 var(--font-ui, sans-serif);
+}
+.story-composer .story-composer-reply-mode select {
+  min-height: 34px; max-width: 128px; padding: 4px 7px; border: 1px solid var(--line); border-radius: 8px;
+  background: var(--surface); color: var(--ink); font: inherit;
+}
+.story-composer .story-composer-notice { display: flex; align-items: start; gap: 10px; margin-bottom: 10px; color: var(--danger); font-size: 12px; }
+.story-composer .story-composer-notice p { flex: 1; margin: 0; overflow-wrap: anywhere; }
+.story-composer .story-composer-notice button { flex: none; padding: 2px 6px; border: 1px solid currentColor; border-radius: 5px; font: inherit; }

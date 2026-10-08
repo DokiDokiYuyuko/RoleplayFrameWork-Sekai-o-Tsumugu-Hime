@@ -1,0 +1,63 @@
+/* Checkbox. Native input hidden over a drawn box. Spec section 5. */
+@layer ui.primitives {
+  .ui-check,
+  .ui-check__box {
+    box-sizing: border-box;
+  }
+
+  .ui-check {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: var(--size-sm);
+    color: var(--text-1);
+    font: var(--fw-regular) var(--fs-sm) / var(--lh-ui) var(--font-ui);
+    cursor: pointer;
+  }
+  .ui-check__input {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: var(--icon-md);
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    cursor: inherit;
+  }
+  .ui-check__box {
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: var(--icon-md);
+    height: var(--icon-md);
+    border: var(--border-width) solid var(--border-strong);
+    border-radius: var(--radius-mark);
+    background: var(--surface-1);
+    color: var(--on-accent);
+    transition: background-color var(--dur-hover) var(--ease), border-color var(--dur-hover) var(--ease);
+  }
+  .ui-check__box > svg { opacity: 0; }
+
+  .ui-check:hover .ui-check__box { border-color: var(--border-strong-hover); }
+  .ui-check:active .ui-check__box { background: linear-gradient(var(--overlay-active), var(--overlay-active)), var(--surface-1); }
+  .ui-check__input:checked + .ui-check__box {
+    border-color: var(--accent);
+    background: var(--accent);
+  }
+  .ui-check__input:checked + .ui-check__box > svg { opacity: 1; }
+  .ui-check__input:checked:active + .ui-check__box { filter: brightness(0.92); }
+  .ui-check__input:focus-visible + .ui-check__box {
+    outline: var(--focus-width) solid var(--focus);
+    outline-offset: var(--focus-offset);
+  }
+  .ui-check__input[aria-invalid="true"] + .ui-check__box { border-color: var(--danger); }
+  .ui-check:has(.ui-check__input:disabled) {
+    opacity: var(--opacity-disabled);
+    cursor: not-allowed;
+  }
+
+  /* Touch targets: the whole row reaches the lg control height */
+  @media (pointer: coarse) {
+    .ui-check { min-height: var(--size-lg); }
+  }
+}

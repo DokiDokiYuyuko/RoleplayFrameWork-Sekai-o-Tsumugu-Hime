@@ -1,0 +1,142 @@
+/* Layout for the /dev/ui-kit page only. Forced-state wrappers mirror the demo's demo-force-* helpers. */
+@layer ui.pages {
+  .kit-gallery {
+    display: grid;
+    gap: var(--space-8);
+    box-sizing: border-box;
+    max-width: 1248px;
+    margin: 0 auto;
+    padding: var(--space-6);
+    color: var(--text-1);
+    font: var(--fw-regular) var(--fs-sm) / var(--lh-ui) var(--font-ui);
+  }
+  .kit-title {
+    margin: 0;
+    font: var(--fw-regular) var(--fs-2xl) / var(--lh-heading) var(--font-display);
+  }
+  .kit-lead {
+    max-width: 72ch;
+    margin: 0;
+    color: var(--text-2);
+  }
+  .kit-sec {
+    display: grid;
+    gap: var(--space-4);
+    min-width: 0;
+  }
+  .kit-sec__title {
+    margin: 0;
+    padding-bottom: var(--space-2);
+    border-bottom: var(--border-width) solid var(--border-subtle);
+    font: var(--fw-semibold) var(--fs-xl) / var(--lh-heading) var(--font-ui);
+  }
+  .kit-sec__lead {
+    margin: calc(var(--space-2) * -1) 0 0;
+    color: var(--text-2);
+  }
+  .kit-sub {
+    margin: var(--space-2) 0 0;
+    color: var(--text-2);
+    font: var(--fw-semibold) var(--fs-sm) / var(--lh-ui) var(--font-ui);
+  }
+  .kit-p {
+    margin: 0;
+    color: var(--text-2);
+  }
+
+  .kit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
+    align-items: start;
+    gap: var(--space-4);
+  }
+  .kit-grid__wide { grid-column: 1 / -1; }
+  .kit-stack {
+    display: grid;
+    gap: var(--space-2);
+  }
+  .kit-narrow { max-width: 640px; }
+  .kit-cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+    align-items: start;
+    gap: var(--space-6);
+  }
+  .kit-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+    min-width: 0;
+  }
+  .kit-col--wide {
+    grid-column: span 2;
+    align-items: stretch;
+    width: 100%;
+  }
+  .kit-inline {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+  }
+  .kit-cardrow {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+    align-items: stretch;
+    gap: var(--space-4);
+  }
+
+  .kit-rows { display: grid; }
+  .kit-row {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-3) 0;
+    border-top: var(--border-width) solid var(--border-subtle);
+  }
+  .kit-row__label {
+    color: var(--text-1);
+    font-weight: var(--fw-semibold);
+  }
+  .kit-row__label small {
+    display: block;
+    color: var(--text-3);
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-regular);
+  }
+  .kit-row__items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .kit-skel {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+  }
+  .kit-skel__gap { margin-top: var(--space-2); }
+
+  /* Forced states, applied to the primitive inside the wrapper */
+  .kit-force-hover .ui-input { border-color: var(--border-strong-hover); }
+  .kit-force-focus .ui-input {
+    border-color: var(--accent);
+    outline: var(--focus-width) solid var(--focus);
+    outline-offset: var(--focus-offset);
+  }
+  .kit-force-card .ui-card {
+    border-color: var(--border-default);
+    box-shadow: var(--shadow-e2);
+  }
+
+  @media (max-width: 899px) {
+    .kit-col--wide { grid-column: auto; }
+    .kit-row {
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--space-2);
+    }
+  }
+}

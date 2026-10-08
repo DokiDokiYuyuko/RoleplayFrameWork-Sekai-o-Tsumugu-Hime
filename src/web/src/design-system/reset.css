@@ -1,0 +1,17 @@
+/*
+ * Native controls that carry a ui- class start from the browser default,
+ * not from whatever the legacy stylesheets (Tailwind preflight, bare `button`
+ * and `input` rules, skin layers) say about that element. Layers only settle
+ * properties both sides declare; this layer removes the properties the
+ * primitives do not declare. `all: revert` leaves custom properties alone and
+ * every later ui.* layer still wins over it.
+ */
+@layer ui.reset {
+  :is(button, input, select, textarea, a, summary, fieldset)[class^="ui-"],
+  :is(button, input, select, textarea, a, summary, fieldset)[class*=" ui-"] {
+    all: revert;
+    box-sizing: border-box;
+    color: inherit;
+    font: inherit;
+  }
+}

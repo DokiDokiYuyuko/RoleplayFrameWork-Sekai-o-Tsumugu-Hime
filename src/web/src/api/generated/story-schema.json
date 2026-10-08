@@ -1,0 +1,4019 @@
+{
+  "$defs": {
+    "ApiError": {
+      "properties": {
+        "code": {
+          "title": "Code",
+          "type": "string"
+        },
+        "details": {
+          "additionalProperties": true,
+          "title": "Details",
+          "type": "object"
+        },
+        "message": {
+          "title": "Message",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "message"
+      ],
+      "title": "ApiError",
+      "type": "object"
+    },
+    "BranchSummary": {
+      "properties": {
+        "archived": {
+          "default": false,
+          "title": "Archived",
+          "type": "boolean"
+        },
+        "branch_name": {
+          "default": "",
+          "title": "Branch Name",
+          "type": "string"
+        },
+        "branch_revision": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Branch Revision",
+          "type": "integer"
+        },
+        "character_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Character Ids",
+          "type": "array"
+        },
+        "character_names": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Character Names",
+          "type": "array"
+        },
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        },
+        "director_mode": {
+          "default": "auto",
+          "enum": [
+            "auto",
+            "confirm",
+            "rules"
+          ],
+          "title": "Director Mode",
+          "type": "string"
+        },
+        "hygiene_enabled": {
+          "default": true,
+          "title": "Hygiene Enabled",
+          "type": "boolean"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "narrative_density": {
+          "default": "balanced",
+          "enum": [
+            "dialogue",
+            "balanced",
+            "atmosphere"
+          ],
+          "title": "Narrative Density",
+          "type": "string"
+        },
+        "narrative_pov": {
+          "default": "free",
+          "enum": [
+            "free",
+            "second",
+            "third"
+          ],
+          "title": "Narrative Pov",
+          "type": "string"
+        },
+        "options_direct_send": {
+          "default": false,
+          "title": "Options Direct Send",
+          "type": "boolean"
+        },
+        "options_enabled": {
+          "default": true,
+          "title": "Options Enabled",
+          "type": "boolean"
+        },
+        "options_style": {
+          "default": "mixed",
+          "title": "Options Style",
+          "type": "string"
+        },
+        "parent_branch_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Parent Branch Id"
+        },
+        "persona": {
+          "default": "",
+          "title": "Persona",
+          "type": "string"
+        },
+        "player_character_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Player Character Id"
+        },
+        "prompt_preset_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Prompt Preset Id"
+        },
+        "reply_max_tokens": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reply Max Tokens"
+        },
+        "response_style_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Response Style Id"
+        },
+        "response_style_overrides": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Response Style Overrides",
+          "type": "object"
+        },
+        "short_input_padding": {
+          "default": true,
+          "title": "Short Input Padding",
+          "type": "boolean"
+        },
+        "source_world_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source World Id"
+        },
+        "story_id": {
+          "default": "",
+          "title": "Story Id",
+          "type": "string"
+        },
+        "streaming_enabled": {
+          "default": true,
+          "title": "Streaming Enabled",
+          "type": "boolean"
+        },
+        "title": {
+          "default": "",
+          "title": "Title",
+          "type": "string"
+        },
+        "turn": {
+          "default": 0,
+          "title": "Turn",
+          "type": "integer"
+        }
+      },
+      "title": "BranchSummary",
+      "type": "object"
+    },
+    "Character": {
+      "additionalProperties": true,
+      "description": "角色 = 卡（不变人设）+ 运行时状态（R1.2 分离原则）。",
+      "properties": {
+        "aliases": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Aliases",
+          "type": "array"
+        },
+        "authoring_source": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/CharacterAuthoringSource"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "bound_lorebook_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Bound Lorebook Ids",
+          "type": "array"
+        },
+        "card": {
+          "$ref": "#/$defs/CharacterCard"
+        },
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        },
+        "followup_enabled": {
+          "default": false,
+          "title": "Followup Enabled",
+          "type": "boolean"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "interject_enabled": {
+          "default": false,
+          "title": "Interject Enabled",
+          "type": "boolean"
+        },
+        "llm": {
+          "$ref": "#/$defs/ModelConfig"
+        },
+        "muted": {
+          "default": false,
+          "title": "Muted",
+          "type": "boolean"
+        },
+        "present": {
+          "default": true,
+          "title": "Present",
+          "type": "boolean"
+        },
+        "revision": {
+          "default": 1,
+          "minimum": 1,
+          "title": "Revision",
+          "type": "integer"
+        },
+        "schema_version": {
+          "default": 1,
+          "minimum": 1,
+          "title": "Schema Version",
+          "type": "integer"
+        },
+        "source_asset_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Asset Id"
+        },
+        "source_asset_revision": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Asset Revision"
+        },
+        "source_world_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source World Id"
+        },
+        "talkativeness": {
+          "default": 0.5,
+          "title": "Talkativeness",
+          "type": "number"
+        },
+        "updated_at": {
+          "format": "date-time",
+          "title": "Updated At",
+          "type": "string"
+        }
+      },
+      "required": [
+        "card"
+      ],
+      "title": "Character",
+      "type": "object"
+    },
+    "CharacterAuthoringSource": {
+      "description": "Retained author manuscript, never part of a character persona.",
+      "properties": {
+        "captured_at": {
+          "format": "date-time",
+          "title": "Captured At",
+          "type": "string"
+        },
+        "import_job_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Import Job Id"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "title": "CharacterAuthoringSource",
+      "type": "object"
+    },
+    "CharacterCard": {
+      "additionalProperties": true,
+      "description": "归一化角色卡：CCv2 为主，CCv3 按 V2 超集收（R1.1，导入器负责归一）。",
+      "properties": {
+        "alternate_greetings": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Alternate Greetings",
+          "type": "array"
+        },
+        "appearance": {
+          "default": "",
+          "title": "Appearance",
+          "type": "string"
+        },
+        "avatar_path": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Avatar Path"
+        },
+        "character_version": {
+          "default": "",
+          "title": "Character Version",
+          "type": "string"
+        },
+        "creator": {
+          "default": "",
+          "title": "Creator",
+          "type": "string"
+        },
+        "creator_notes": {
+          "default": "",
+          "title": "Creator Notes",
+          "type": "string"
+        },
+        "description": {
+          "default": "",
+          "title": "Description",
+          "type": "string"
+        },
+        "extensions": {
+          "additionalProperties": true,
+          "title": "Extensions",
+          "type": "object"
+        },
+        "first_mes": {
+          "default": "",
+          "title": "First Mes",
+          "type": "string"
+        },
+        "mes_example": {
+          "default": "",
+          "title": "Mes Example",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "personality": {
+          "default": "",
+          "title": "Personality",
+          "type": "string"
+        },
+        "post_history_instructions": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Post History Instructions"
+        },
+        "scenario": {
+          "default": "",
+          "title": "Scenario",
+          "type": "string"
+        },
+        "source_format": {
+          "default": "ccv2",
+          "title": "Source Format",
+          "type": "string"
+        },
+        "spec": {
+          "default": "chara_card_v2",
+          "title": "Spec",
+          "type": "string"
+        },
+        "spec_version": {
+          "default": "2.0",
+          "title": "Spec Version",
+          "type": "string"
+        },
+        "system_prompt": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "System Prompt"
+        },
+        "tags": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Tags",
+          "type": "array"
+        },
+        "traits": {
+          "default": "",
+          "title": "Traits",
+          "type": "string"
+        },
+        "traits_label": {
+          "default": "能力与实力",
+          "title": "Traits Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "CharacterCard",
+      "type": "object"
+    },
+    "CommandResult": {
+      "properties": {
+        "branch_revision": {
+          "title": "Branch Revision",
+          "type": "integer"
+        },
+        "messages": {
+          "items": {
+            "$ref": "#/$defs/MessageView"
+          },
+          "title": "Messages",
+          "type": "array"
+        },
+        "operation_id": {
+          "title": "Operation Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "operation_id",
+        "branch_revision"
+      ],
+      "title": "CommandResult",
+      "type": "object"
+    },
+    "ConversationRunView": {
+      "properties": {
+        "completed_replies": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Completed Replies",
+          "type": "integer"
+        },
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        },
+        "cumulative_usage": {
+          "$ref": "#/$defs/TokenUsage"
+        },
+        "current_attempt_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Current Attempt Id"
+        },
+        "current_generation_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Current Generation Id"
+        },
+        "current_message_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Current Message Id"
+        },
+        "current_reply_to_message_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Current Reply To Message Ids",
+          "type": "array"
+        },
+        "current_speaker_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Current Speaker Id"
+        },
+        "current_step_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Current Step Id"
+        },
+        "current_trigger_message_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Current Trigger Message Ids",
+          "type": "array"
+        },
+        "current_usage": {
+          "$ref": "#/$defs/TokenUsage"
+        },
+        "directive": {
+          "default": "",
+          "title": "Directive",
+          "type": "string"
+        },
+        "epoch": {
+          "default": 0,
+          "title": "Epoch",
+          "type": "integer"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "last_committed_message_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Last Committed Message Id"
+        },
+        "last_committed_step_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Last Committed Step Id"
+        },
+        "last_error": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Last Error"
+        },
+        "max_replies": {
+          "default": 6,
+          "minimum": 1,
+          "title": "Max Replies",
+          "type": "integer"
+        },
+        "mode": {
+          "default": "observe",
+          "enum": [
+            "free",
+            "observe"
+          ],
+          "title": "Mode",
+          "type": "string"
+        },
+        "operation_id": {
+          "title": "Operation Id",
+          "type": "string"
+        },
+        "participant_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Participant Ids",
+          "type": "array"
+        },
+        "pause_requested": {
+          "default": false,
+          "title": "Pause Requested",
+          "type": "boolean"
+        },
+        "player_identity_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Player Identity Id"
+        },
+        "request_fingerprint": {
+          "default": "",
+          "title": "Request Fingerprint",
+          "type": "string"
+        },
+        "scene_id": {
+          "title": "Scene Id",
+          "type": "string"
+        },
+        "seed_message_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Seed Message Ids",
+          "type": "array"
+        },
+        "session_id": {
+          "title": "Session Id",
+          "type": "string"
+        },
+        "stage": {
+          "default": "boundary",
+          "enum": [
+            "selecting",
+            "generating",
+            "committing",
+            "boundary"
+          ],
+          "title": "Stage",
+          "type": "string"
+        },
+        "status": {
+          "default": "queued",
+          "enum": [
+            "queued",
+            "running",
+            "paused",
+            "awaiting_user",
+            "completed",
+            "failed",
+            "interrupted",
+            "cancelled"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "stop_reason": {
+          "default": "",
+          "title": "Stop Reason",
+          "type": "string"
+        },
+        "stop_requested": {
+          "default": false,
+          "title": "Stop Requested",
+          "type": "boolean"
+        },
+        "turn": {
+          "default": 0,
+          "title": "Turn",
+          "type": "integer"
+        },
+        "updated_at": {
+          "format": "date-time",
+          "title": "Updated At",
+          "type": "string"
+        },
+        "usage_incomplete": {
+          "default": false,
+          "title": "Usage Incomplete",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "session_id",
+        "operation_id",
+        "scene_id"
+      ],
+      "title": "ConversationRunView",
+      "type": "object"
+    },
+    "DirectorDecision": {
+      "description": "导演决策（R2.2）：为什么选他——可复现（rng_seed）可审计。\nR35 v2：action 三态 + rationale + scene 载荷（trigger 枚举 additive 扩展）。",
+      "properties": {
+        "action": {
+          "default": "pick_speaker",
+          "enum": [
+            "pick_speaker",
+            "switch_scene",
+            "end_scene"
+          ],
+          "title": "Action",
+          "type": "string"
+        },
+        "candidates": {
+          "items": {
+            "$ref": "#/$defs/ScoredCandidate"
+          },
+          "title": "Candidates",
+          "type": "array"
+        },
+        "chosen": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Chosen",
+          "type": "array"
+        },
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        },
+        "rationale": {
+          "default": "",
+          "title": "Rationale",
+          "type": "string"
+        },
+        "rng_seed": {
+          "default": 0,
+          "title": "Rng Seed",
+          "type": "integer"
+        },
+        "scene": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SceneAction"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "trigger": {
+          "enum": [
+            "mention",
+            "talkativeness",
+            "manual_force",
+            "open_round",
+            "explicit_mention",
+            "llm_route",
+            "llm_switch_scene",
+            "llm_end_scene",
+            "player_scene"
+          ],
+          "title": "Trigger",
+          "type": "string"
+        },
+        "turn": {
+          "title": "Turn",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "turn",
+        "trigger"
+      ],
+      "title": "DirectorDecision",
+      "type": "object"
+    },
+    "GenerationView": {
+      "properties": {
+        "attempt_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Attempt Id"
+        },
+        "completion_state": {
+          "default": "unknown",
+          "enum": [
+            "complete",
+            "truncated",
+            "filtered",
+            "unknown"
+          ],
+          "title": "Completion State",
+          "type": "string"
+        },
+        "finish_reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Finish Reason"
+        },
+        "generation_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Generation Id"
+        },
+        "injected_entry_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Injected Entry Ids",
+          "type": "array"
+        },
+        "message_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Message Id"
+        },
+        "model": {
+          "default": "",
+          "title": "Model",
+          "type": "string"
+        },
+        "operation_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Operation Id"
+        },
+        "plan_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Plan Id"
+        },
+        "prompt_tokens_by_section": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "title": "Prompt Tokens By Section",
+          "type": "object"
+        },
+        "provenance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProvenanceView"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "request_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Request Ids",
+          "type": "array"
+        },
+        "usage": {
+          "$ref": "#/$defs/TokenUsage"
+        }
+      },
+      "title": "GenerationView",
+      "type": "object"
+    },
+    "GroupActor": {
+      "additionalProperties": true,
+      "description": "会话内的群体参与者；不是独立角色卡或独立引擎。",
+      "properties": {
+        "aliases": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 30,
+          "title": "Aliases",
+          "type": "array"
+        },
+        "count": {
+          "anyOf": [
+            {
+              "maximum": 1000000,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Count"
+        },
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        },
+        "creation_key": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Creation Key"
+        },
+        "creation_request_hash": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Creation Request Hash"
+        },
+        "current_state": {
+          "default": "",
+          "maxLength": 2000,
+          "title": "Current State",
+          "type": "string"
+        },
+        "director_note": {
+          "default": "",
+          "maxLength": 4000,
+          "title": "Director Note",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "joined_seq": {
+          "minimum": 0,
+          "title": "Joined Seq",
+          "type": "integer"
+        },
+        "label": {
+          "maxLength": 120,
+          "minLength": 1,
+          "title": "Label",
+          "type": "string"
+        },
+        "last_spoke_turn": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Last Spoke Turn"
+        },
+        "participation": {
+          "default": "on_cue",
+          "enum": [
+            "on_cue",
+            "occasional"
+          ],
+          "title": "Participation",
+          "type": "string"
+        },
+        "public_brief": {
+          "default": "",
+          "maxLength": 4000,
+          "title": "Public Brief",
+          "type": "string"
+        },
+        "scene_id": {
+          "title": "Scene Id",
+          "type": "string"
+        },
+        "source": {
+          "additionalProperties": true,
+          "title": "Source",
+          "type": "object"
+        },
+        "source_snapshot": {
+          "default": "",
+          "maxLength": 8000,
+          "title": "Source Snapshot",
+          "type": "string"
+        },
+        "status": {
+          "default": "active",
+          "enum": [
+            "active",
+            "left"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "updated_at": {
+          "format": "date-time",
+          "title": "Updated At",
+          "type": "string"
+        }
+      },
+      "required": [
+        "label",
+        "scene_id",
+        "joined_seq"
+      ],
+      "title": "GroupActor",
+      "type": "object"
+    },
+    "HygieneReport": {
+      "description": "一条（候选）回复的输出卫生校验报告（R34）。",
+      "properties": {
+        "attempts": {
+          "default": 1,
+          "title": "Attempts",
+          "type": "integer"
+        },
+        "corrected": {
+          "default": false,
+          "title": "Corrected",
+          "type": "boolean"
+        },
+        "passed": {
+          "default": true,
+          "title": "Passed",
+          "type": "boolean"
+        },
+        "usage": {
+          "$ref": "#/$defs/TokenUsage"
+        },
+        "violations": {
+          "items": {
+            "$ref": "#/$defs/Violation"
+          },
+          "title": "Violations",
+          "type": "array"
+        }
+      },
+      "title": "HygieneReport",
+      "type": "object"
+    },
+    "LegacyRestoreResult": {
+      "additionalProperties": true,
+      "description": "Preserve the legacy full-state response; new readers should use StoryView.",
+      "properties": {
+        "memory_restore_status": {
+          "anyOf": [
+            {
+              "enum": [
+                "complete",
+                "unavailable"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Memory Restore Status"
+        },
+        "meta": {
+          "additionalProperties": true,
+          "title": "Meta",
+          "type": "object"
+        }
+      },
+      "required": [
+        "meta"
+      ],
+      "title": "LegacyRestoreResult",
+      "type": "object"
+    },
+    "LorebookSummary": {
+      "properties": {
+        "entries": {
+          "items": {},
+          "title": "Entries",
+          "type": "array"
+        },
+        "entry_count": {
+          "title": "Entry Count",
+          "type": "integer"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "source_format": {
+          "title": "Source Format",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "source_format",
+        "entry_count"
+      ],
+      "title": "LorebookSummary",
+      "type": "object"
+    },
+    "MemoryDeleteResult": {
+      "properties": {
+        "ok": {
+          "title": "Ok",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "ok"
+      ],
+      "title": "MemoryDeleteResult",
+      "type": "object"
+    },
+    "MemoryJobView": {
+      "properties": {
+        "branch_revision": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Branch Revision"
+        },
+        "error": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Error"
+        },
+        "fingerprint": {
+          "title": "Fingerprint",
+          "type": "string"
+        },
+        "operation_id": {
+          "title": "Operation Id",
+          "type": "string"
+        },
+        "result": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/MemoryRecordsResult"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "status": {
+          "enum": [
+            "pending",
+            "committed",
+            "failed"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "operation_id",
+        "status",
+        "fingerprint"
+      ],
+      "title": "MemoryJobView",
+      "type": "object"
+    },
+    "MemoryRecordView": {
+      "properties": {
+        "category": {
+          "default": "experience",
+          "enum": [
+            "experience",
+            "relationship",
+            "unfinished"
+          ],
+          "title": "Category",
+          "type": "string"
+        },
+        "character_id": {
+          "title": "Character Id",
+          "type": "string"
+        },
+        "commit_seq": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Commit Seq",
+          "type": "integer"
+        },
+        "content": {
+          "title": "Content",
+          "type": "string"
+        },
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        },
+        "effective_message_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Effective Message Id"
+        },
+        "evidence": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Evidence",
+          "type": "object"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "importance": {
+          "default": 3,
+          "title": "Importance",
+          "type": "integer"
+        },
+        "important": {
+          "default": false,
+          "title": "Important",
+          "type": "boolean"
+        },
+        "inherited_from_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Inherited From Id"
+        },
+        "invalidated": {
+          "default": false,
+          "title": "Invalidated",
+          "type": "boolean"
+        },
+        "keywords": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Keywords",
+          "type": "array"
+        },
+        "kind": {
+          "default": "summary",
+          "enum": [
+            "summary",
+            "fact",
+            "manual",
+            "episodic",
+            "scene"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "manually_revised": {
+          "default": false,
+          "title": "Manually Revised",
+          "type": "boolean"
+        },
+        "matter_status": {
+          "default": "unknown",
+          "enum": [
+            "open",
+            "completed",
+            "cancelled",
+            "unknown"
+          ],
+          "title": "Matter Status",
+          "type": "string"
+        },
+        "participant_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Participant Ids",
+          "type": "array"
+        },
+        "participants": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Participants",
+          "type": "array"
+        },
+        "revision": {
+          "default": 1,
+          "minimum": 1,
+          "title": "Revision",
+          "type": "integer"
+        },
+        "revisions": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Revisions",
+          "type": "array"
+        },
+        "scene_id": {
+          "default": "",
+          "title": "Scene Id",
+          "type": "string"
+        },
+        "session_id": {
+          "default": "",
+          "title": "Session Id",
+          "type": "string"
+        },
+        "source_changed": {
+          "default": false,
+          "title": "Source Changed",
+          "type": "boolean"
+        },
+        "source_fingerprints": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Source Fingerprints",
+          "type": "object"
+        },
+        "source_message_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Message Ids",
+          "type": "array"
+        },
+        "supersedes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Supersedes",
+          "type": "array"
+        },
+        "turn_end": {
+          "default": 0,
+          "title": "Turn End",
+          "type": "integer"
+        },
+        "turn_start": {
+          "default": 0,
+          "title": "Turn Start",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "character_id",
+        "content"
+      ],
+      "title": "MemoryRecordView",
+      "type": "object"
+    },
+    "MemoryRecordsResult": {
+      "properties": {
+        "branch_revision": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Branch Revision"
+        },
+        "operation_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Operation Id"
+        },
+        "records": {
+          "items": {
+            "$ref": "#/$defs/MemoryRecordView"
+          },
+          "title": "Records",
+          "type": "array"
+        },
+        "status": {
+          "anyOf": [
+            {
+              "const": "committed",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Status"
+        }
+      },
+      "title": "MemoryRecordsResult",
+      "type": "object"
+    },
+    "MemoryScheduledResult": {
+      "properties": {
+        "operation_id": {
+          "title": "Operation Id",
+          "type": "string"
+        },
+        "scheduled": {
+          "const": true,
+          "default": true,
+          "title": "Scheduled",
+          "type": "boolean"
+        },
+        "status": {
+          "const": "pending",
+          "default": "pending",
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "operation_id"
+      ],
+      "title": "MemoryScheduledResult",
+      "type": "object"
+    },
+    "MessagePage": {
+      "properties": {
+        "branch_revision": {
+          "title": "Branch Revision",
+          "type": "integer"
+        },
+        "latest_seq": {
+          "default": -1,
+          "title": "Latest Seq",
+          "type": "integer"
+        },
+        "messages": {
+          "items": {
+            "$ref": "#/$defs/MessageView"
+          },
+          "title": "Messages",
+          "type": "array"
+        },
+        "next_before_seq": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Next Before Seq"
+        },
+        "turn": {
+          "title": "Turn",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "messages",
+        "branch_revision",
+        "turn"
+      ],
+      "title": "MessagePage",
+      "type": "object"
+    },
+    "MessageSourceRef": {
+      "description": "The exact active text a generation or scheduling decision consumed.",
+      "properties": {
+        "fingerprint": {
+          "title": "Fingerprint",
+          "type": "string"
+        },
+        "message_id": {
+          "title": "Message Id",
+          "type": "string"
+        },
+        "variant_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Variant Id"
+        }
+      },
+      "required": [
+        "message_id",
+        "fingerprint"
+      ],
+      "title": "MessageSourceRef",
+      "type": "object"
+    },
+    "MessageView": {
+      "properties": {
+        "accepted_dependency_sources": {
+          "items": {
+            "$ref": "#/$defs/MessageSourceRef"
+          },
+          "title": "Accepted Dependency Sources",
+          "type": "array"
+        },
+        "active_variant": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Active Variant"
+        },
+        "actor": {
+          "title": "Actor",
+          "type": "string"
+        },
+        "attempt_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Attempt Id"
+        },
+        "content": {
+          "title": "Content",
+          "type": "string"
+        },
+        "control_event": {
+          "default": false,
+          "title": "Control Event",
+          "type": "boolean"
+        },
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        },
+        "dependency_stale": {
+          "default": false,
+          "title": "Dependency Stale",
+          "type": "boolean"
+        },
+        "dependency_stale_sources": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Dependency Stale Sources",
+          "type": "array"
+        },
+        "edited": {
+          "default": false,
+          "title": "Edited",
+          "type": "boolean"
+        },
+        "executed_reply_mode": {
+          "anyOf": [
+            {
+              "enum": [
+                "parallel",
+                "serial",
+                "free"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Executed Reply Mode"
+        },
+        "fingerprint": {
+          "default": "",
+          "title": "Fingerprint",
+          "type": "string"
+        },
+        "generation_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Generation Id"
+        },
+        "generation_meta": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/GenerationView"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "hygiene": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/HygieneReport"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "idempotency_key": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Idempotency Key"
+        },
+        "input_group_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Input Group Id"
+        },
+        "kind": {
+          "default": "roleplay",
+          "enum": [
+            "roleplay",
+            "scene",
+            "ooc",
+            "system_event",
+            "inner"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "known_to": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Known To"
+        },
+        "mentions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Mentions",
+          "type": "array"
+        },
+        "operation_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Operation Id"
+        },
+        "person_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Person Id"
+        },
+        "player_identity_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Player Identity Id"
+        },
+        "post_state_revision_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Post State Revision Id"
+        },
+        "reply_basis_fingerprint": {
+          "default": "",
+          "title": "Reply Basis Fingerprint",
+          "type": "string"
+        },
+        "reply_mode": {
+          "anyOf": [
+            {
+              "enum": [
+                "auto",
+                "parallel",
+                "serial",
+                "free"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reply Mode"
+        },
+        "reply_order": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Reply Order",
+          "type": "array"
+        },
+        "reply_reason": {
+          "default": "",
+          "title": "Reply Reason",
+          "type": "string"
+        },
+        "reply_shared_scene": {
+          "default": "",
+          "title": "Reply Shared Scene",
+          "type": "string"
+        },
+        "scene_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Scene Id"
+        },
+        "seq": {
+          "title": "Seq",
+          "type": "integer"
+        },
+        "session_id": {
+          "title": "Session Id",
+          "type": "string"
+        },
+        "status": {
+          "default": "final",
+          "enum": [
+            "pending",
+            "final",
+            "retracted"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "turn": {
+          "title": "Turn",
+          "type": "integer"
+        },
+        "variants": {
+          "items": {
+            "$ref": "#/$defs/VariantView"
+          },
+          "title": "Variants",
+          "type": "array"
+        },
+        "visible_to": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "const": "all",
+              "type": "string"
+            }
+          ],
+          "default": "all",
+          "title": "Visible To"
+        }
+      },
+      "required": [
+        "session_id",
+        "seq",
+        "turn",
+        "actor",
+        "content"
+      ],
+      "title": "MessageView",
+      "type": "object"
+    },
+    "ModelConfig": {
+      "additionalProperties": true,
+      "description": "每角色独立模型配置（R1.3）。进程级单选——ADR-0001 每角色一进程的依据。",
+      "properties": {
+        "api_key_env": {
+          "default": "OPENROUTER_API_KEY",
+          "title": "Api Key Env",
+          "type": "string"
+        },
+        "base_url": {
+          "default": "https://openrouter.ai/api/v1",
+          "title": "Base Url",
+          "type": "string"
+        },
+        "effective_provider": {
+          "default": "",
+          "title": "Effective Provider",
+          "type": "string"
+        },
+        "inherit_base_url": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Inherit Base Url"
+        },
+        "inherit_model": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Inherit Model"
+        },
+        "model": {
+          "default": "deepseek/deepseek-v4-flash",
+          "title": "Model",
+          "type": "string"
+        },
+        "provider": {
+          "default": "deepseek-official",
+          "title": "Provider",
+          "type": "string"
+        },
+        "sampling": {
+          "additionalProperties": true,
+          "title": "Sampling",
+          "type": "object"
+        }
+      },
+      "title": "ModelConfig",
+      "type": "object"
+    },
+    "PinnedFact": {
+      "description": "玩家在本局明确固定的剧情事实；与可检索的长期记忆分开保存。",
+      "properties": {
+        "content": {
+          "maxLength": 10000,
+          "minLength": 1,
+          "title": "Content",
+          "type": "string"
+        },
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "source_actor": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Actor"
+        },
+        "source_message_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Message Id"
+        },
+        "visible_to": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "const": "all",
+              "type": "string"
+            }
+          ],
+          "default": "all",
+          "title": "Visible To"
+        }
+      },
+      "required": [
+        "content"
+      ],
+      "title": "PinnedFact",
+      "type": "object"
+    },
+    "PlayerIdentity": {
+      "properties": {
+        "avatar_ref": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Avatar Ref"
+        },
+        "character": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Character"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "idempotency_key": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Idempotency Key"
+        },
+        "media_captured": {
+          "default": false,
+          "title": "Media Captured",
+          "type": "boolean"
+        },
+        "name": {
+          "default": "玩家",
+          "title": "Name",
+          "type": "string"
+        },
+        "person_id": {
+          "title": "Person Id",
+          "type": "string"
+        },
+        "persona": {
+          "default": "",
+          "title": "Persona",
+          "type": "string"
+        },
+        "previous_disposition": {
+          "anyOf": [
+            {
+              "enum": [
+                "npc",
+                "leave"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Previous Disposition"
+        },
+        "request_fingerprint": {
+          "default": "",
+          "title": "Request Fingerprint",
+          "type": "string"
+        },
+        "source_character_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Character Id"
+        },
+        "start_seq": {
+          "default": 0,
+          "title": "Start Seq",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "person_id"
+      ],
+      "title": "PlayerIdentity",
+      "type": "object"
+    },
+    "ProvenanceView": {
+      "properties": {
+        "complete": {
+          "default": false,
+          "title": "Complete",
+          "type": "boolean"
+        },
+        "mode": {
+          "default": "single",
+          "enum": [
+            "single",
+            "serial",
+            "parallel",
+            "free"
+          ],
+          "title": "Mode",
+          "type": "string"
+        },
+        "participants": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Participants",
+          "type": "array"
+        },
+        "reply_to_message_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Reply To Message Ids",
+          "type": "array"
+        },
+        "run_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Run Id"
+        },
+        "scheduling_sources": {
+          "items": {
+            "$ref": "#/$defs/MessageSourceRef"
+          },
+          "title": "Scheduling Sources",
+          "type": "array"
+        },
+        "sources": {
+          "items": {
+            "$ref": "#/$defs/MessageSourceRef"
+          },
+          "title": "Sources",
+          "type": "array"
+        },
+        "step_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Step Id"
+        },
+        "trigger_message_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Trigger Message Ids",
+          "type": "array"
+        }
+      },
+      "title": "ProvenanceView",
+      "type": "object"
+    },
+    "RestoredIdentity": {
+      "properties": {
+        "new_id": {
+          "title": "New Id",
+          "type": "string"
+        },
+        "old_id": {
+          "title": "Old Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "old_id",
+        "new_id"
+      ],
+      "title": "RestoredIdentity",
+      "type": "object"
+    },
+    "Scene": {
+      "description": "一段连续的叙事场景（地点/时间/在场快照）。\n\n不变式：v2 会话恒有 active scene（end_scene 也开后继场景）。\nscene_id 不参与 prompt 过滤——\"楼下听不见\"由 visible_to 机器保证\n（场景切换=批量 presence 变更，design/v3/m9-r35 §5）。scene_id 只承担\nUI 分隔线 / R36.3 摘要边界 / 审计归属三职。",
+      "properties": {
+        "builtin_image_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Builtin Image Id"
+        },
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        },
+        "description": {
+          "default": "",
+          "title": "Description",
+          "type": "string"
+        },
+        "group_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Group Ids",
+          "type": "array"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "member_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Member Ids",
+          "type": "array"
+        },
+        "title": {
+          "default": "",
+          "title": "Title",
+          "type": "string"
+        },
+        "turn_end": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Turn End"
+        },
+        "turn_start": {
+          "default": 0,
+          "title": "Turn Start",
+          "type": "integer"
+        }
+      },
+      "title": "Scene",
+      "type": "object"
+    },
+    "SceneAction": {
+      "description": "switch_scene 决策载荷（LLM 导演输出或玩家手动指定）。",
+      "properties": {
+        "description": {
+          "default": "",
+          "title": "Description",
+          "type": "string"
+        },
+        "member_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Member Ids",
+          "type": "array"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "transition_hint": {
+          "default": "",
+          "title": "Transition Hint",
+          "type": "string"
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "title": "SceneAction",
+      "type": "object"
+    },
+    "ScoredCandidate": {
+      "properties": {
+        "character_id": {
+          "title": "Character Id",
+          "type": "string"
+        },
+        "reasons": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Reasons",
+          "type": "array"
+        },
+        "score": {
+          "title": "Score",
+          "type": "number"
+        }
+      },
+      "required": [
+        "character_id",
+        "score"
+      ],
+      "title": "ScoredCandidate",
+      "type": "object"
+    },
+    "SessionSetup": {
+      "properties": {
+        "characters": {
+          "items": {
+            "$ref": "#/$defs/Character"
+          },
+          "title": "Characters",
+          "type": "array"
+        },
+        "lorebooks": {
+          "items": {
+            "$ref": "#/$defs/LorebookSummary"
+          },
+          "title": "Lorebooks",
+          "type": "array"
+        },
+        "meta": {
+          "$ref": "#/$defs/SetupMeta"
+        }
+      },
+      "required": [
+        "meta",
+        "characters",
+        "lorebooks"
+      ],
+      "title": "SessionSetup",
+      "type": "object"
+    },
+    "SessionView": {
+      "properties": {
+        "archived": {
+          "default": false,
+          "title": "Archived",
+          "type": "boolean"
+        },
+        "branch_name": {
+          "default": "",
+          "title": "Branch Name",
+          "type": "string"
+        },
+        "branch_revision": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Branch Revision",
+          "type": "integer"
+        },
+        "character_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Character Ids",
+          "type": "array"
+        },
+        "character_names": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Character Names",
+          "type": "array"
+        },
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        },
+        "director_mode": {
+          "default": "auto",
+          "enum": [
+            "auto",
+            "confirm",
+            "rules"
+          ],
+          "title": "Director Mode",
+          "type": "string"
+        },
+        "hygiene_enabled": {
+          "default": true,
+          "title": "Hygiene Enabled",
+          "type": "boolean"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "memory_enabled": {
+          "default": true,
+          "title": "Memory Enabled",
+          "type": "boolean"
+        },
+        "narrative_density": {
+          "default": "balanced",
+          "enum": [
+            "dialogue",
+            "balanced",
+            "atmosphere"
+          ],
+          "title": "Narrative Density",
+          "type": "string"
+        },
+        "narrative_pov": {
+          "default": "free",
+          "enum": [
+            "free",
+            "second",
+            "third"
+          ],
+          "title": "Narrative Pov",
+          "type": "string"
+        },
+        "options_direct_send": {
+          "default": false,
+          "title": "Options Direct Send",
+          "type": "boolean"
+        },
+        "options_enabled": {
+          "default": true,
+          "title": "Options Enabled",
+          "type": "boolean"
+        },
+        "options_style": {
+          "default": "mixed",
+          "title": "Options Style",
+          "type": "string"
+        },
+        "parent_branch_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Parent Branch Id"
+        },
+        "persona": {
+          "default": "",
+          "title": "Persona",
+          "type": "string"
+        },
+        "pinned_facts": {
+          "items": {
+            "$ref": "#/$defs/PinnedFact"
+          },
+          "title": "Pinned Facts",
+          "type": "array"
+        },
+        "player_character_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Player Character Id"
+        },
+        "player_identities": {
+          "items": {
+            "$ref": "#/$defs/PlayerIdentity"
+          },
+          "title": "Player Identities",
+          "type": "array"
+        },
+        "player_identity_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Player Identity Id"
+        },
+        "player_people": {
+          "additionalProperties": {
+            "$ref": "#/$defs/Character"
+          },
+          "title": "Player People",
+          "type": "object"
+        },
+        "proactive_turn_limit": {
+          "default": 1,
+          "title": "Proactive Turn Limit",
+          "type": "integer"
+        },
+        "prompt_preset_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Prompt Preset Id"
+        },
+        "reply_max_tokens": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reply Max Tokens"
+        },
+        "response_style_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Response Style Id"
+        },
+        "response_style_overrides": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Response Style Overrides",
+          "type": "object"
+        },
+        "short_input_padding": {
+          "default": true,
+          "title": "Short Input Padding",
+          "type": "boolean"
+        },
+        "source_world_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source World Id"
+        },
+        "source_world_revision": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source World Revision"
+        },
+        "story_id": {
+          "default": "",
+          "title": "Story Id",
+          "type": "string"
+        },
+        "streaming_enabled": {
+          "default": true,
+          "title": "Streaming Enabled",
+          "type": "boolean"
+        },
+        "title": {
+          "default": "",
+          "title": "Title",
+          "type": "string"
+        },
+        "turn": {
+          "default": 0,
+          "title": "Turn",
+          "type": "integer"
+        },
+        "world_core_brief": {
+          "default": "",
+          "title": "World Core Brief",
+          "type": "string"
+        }
+      },
+      "title": "SessionView",
+      "type": "object"
+    },
+    "SetupMeta": {
+      "properties": {
+        "branch_revision": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Branch Revision",
+          "type": "integer"
+        },
+        "character_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Character Ids",
+          "type": "array"
+        },
+        "director_mode": {
+          "default": "auto",
+          "enum": [
+            "auto",
+            "confirm",
+            "rules"
+          ],
+          "title": "Director Mode",
+          "type": "string"
+        },
+        "hygiene_enabled": {
+          "default": true,
+          "title": "Hygiene Enabled",
+          "type": "boolean"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "lorebook_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Lorebook Ids",
+          "type": "array"
+        },
+        "memory_compress_horizon_turns": {
+          "default": 15,
+          "title": "Memory Compress Horizon Turns",
+          "type": "integer"
+        },
+        "memory_enabled": {
+          "default": true,
+          "title": "Memory Enabled",
+          "type": "boolean"
+        },
+        "memory_interval_turns": {
+          "default": 5,
+          "title": "Memory Interval Turns",
+          "type": "integer"
+        },
+        "memory_top_k": {
+          "default": 3,
+          "title": "Memory Top K",
+          "type": "integer"
+        },
+        "narrative_density": {
+          "default": "balanced",
+          "enum": [
+            "dialogue",
+            "balanced",
+            "atmosphere"
+          ],
+          "title": "Narrative Density",
+          "type": "string"
+        },
+        "narrative_pov": {
+          "default": "free",
+          "enum": [
+            "free",
+            "second",
+            "third"
+          ],
+          "title": "Narrative Pov",
+          "type": "string"
+        },
+        "options_direct_send": {
+          "default": false,
+          "title": "Options Direct Send",
+          "type": "boolean"
+        },
+        "options_enabled": {
+          "default": true,
+          "title": "Options Enabled",
+          "type": "boolean"
+        },
+        "options_style": {
+          "default": "mixed",
+          "title": "Options Style",
+          "type": "string"
+        },
+        "player_character_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Player Character Id"
+        },
+        "player_identity_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Player Identity Id"
+        },
+        "player_persona": {
+          "default": "",
+          "title": "Player Persona",
+          "type": "string"
+        },
+        "proactive_turn_limit": {
+          "default": 1,
+          "title": "Proactive Turn Limit",
+          "type": "integer"
+        },
+        "prompt_preset_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Prompt Preset Id"
+        },
+        "reply_max_tokens": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reply Max Tokens"
+        },
+        "response_style_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Response Style Id"
+        },
+        "response_style_overrides": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Response Style Overrides",
+          "type": "object"
+        },
+        "short_input_padding": {
+          "default": true,
+          "title": "Short Input Padding",
+          "type": "boolean"
+        },
+        "streaming_enabled": {
+          "default": true,
+          "title": "Streaming Enabled",
+          "type": "boolean"
+        },
+        "title": {
+          "default": "",
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "title": "SetupMeta",
+      "type": "object"
+    },
+    "StoryDeleteResult": {
+      "properties": {
+        "backup_sha256": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Backup Sha256"
+        },
+        "branch_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Branch Ids",
+          "type": "array"
+        },
+        "branch_revision": {
+          "title": "Branch Revision",
+          "type": "integer"
+        },
+        "cleanup_pending": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cleanup Pending"
+        },
+        "generation_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Generation Id"
+        },
+        "ok": {
+          "title": "Ok",
+          "type": "boolean"
+        },
+        "recoverable": {
+          "title": "Recoverable",
+          "type": "boolean"
+        },
+        "saves_deleted": {
+          "title": "Saves Deleted",
+          "type": "integer"
+        },
+        "story_id": {
+          "title": "Story Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ok",
+        "story_id",
+        "branch_ids",
+        "saves_deleted",
+        "recoverable",
+        "branch_revision"
+      ],
+      "title": "StoryDeleteResult",
+      "type": "object"
+    },
+    "StoryListSummary": {
+      "properties": {
+        "branch_count": {
+          "title": "Branch Count",
+          "type": "integer"
+        },
+        "cover_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cover Id"
+        },
+        "event_count": {
+          "title": "Event Count",
+          "type": "integer"
+        },
+        "latest_branch_id": {
+          "title": "Latest Branch Id",
+          "type": "string"
+        },
+        "membership_revision": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Membership Revision"
+        },
+        "save_count": {
+          "default": 0,
+          "title": "Save Count",
+          "type": "integer"
+        },
+        "story_id": {
+          "title": "Story Id",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "updated_at": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Updated At"
+        }
+      },
+      "required": [
+        "story_id",
+        "title",
+        "branch_count",
+        "event_count",
+        "latest_branch_id",
+        "updated_at"
+      ],
+      "title": "StoryListSummary",
+      "type": "object"
+    },
+    "StoryPresetResult": {
+      "properties": {
+        "branch_revision": {
+          "title": "Branch Revision",
+          "type": "integer"
+        },
+        "branches_updated": {
+          "title": "Branches Updated",
+          "type": "integer"
+        },
+        "cleanup_pending": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cleanup Pending"
+        },
+        "membership_revision": {
+          "title": "Membership Revision",
+          "type": "string"
+        },
+        "preset_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Preset Id"
+        },
+        "story_id": {
+          "title": "Story Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "story_id",
+        "preset_id",
+        "branches_updated",
+        "branch_revision",
+        "membership_revision"
+      ],
+      "title": "StoryPresetResult",
+      "type": "object"
+    },
+    "StoryPurgeResult": {
+      "properties": {
+        "branch_revision": {
+          "title": "Branch Revision",
+          "type": "integer"
+        },
+        "cleanup_pending": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cleanup Pending"
+        },
+        "generation_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Generation Id"
+        },
+        "ok": {
+          "title": "Ok",
+          "type": "boolean"
+        },
+        "story_id": {
+          "title": "Story Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ok",
+        "story_id",
+        "branch_revision"
+      ],
+      "title": "StoryPurgeResult",
+      "type": "object"
+    },
+    "StoryRestoreResult": {
+      "additionalProperties": true,
+      "properties": {
+        "branch_revision": {
+          "title": "Branch Revision",
+          "type": "integer"
+        },
+        "branches": {
+          "items": {
+            "$ref": "#/$defs/RestoredIdentity"
+          },
+          "title": "Branches",
+          "type": "array"
+        },
+        "cleanup_pending": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cleanup Pending"
+        },
+        "saves": {
+          "items": {
+            "$ref": "#/$defs/RestoredIdentity"
+          },
+          "title": "Saves",
+          "type": "array"
+        },
+        "source_story_id": {
+          "title": "Source Story Id",
+          "type": "string"
+        },
+        "story_id": {
+          "title": "Story Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "story_id",
+        "source_story_id",
+        "branches",
+        "saves",
+        "branch_revision"
+      ],
+      "title": "StoryRestoreResult",
+      "type": "object"
+    },
+    "StoryTrashView": {
+      "additionalProperties": true,
+      "properties": {
+        "branch_count": {
+          "title": "Branch Count",
+          "type": "integer"
+        },
+        "created_at": {
+          "title": "Created At",
+          "type": "string"
+        },
+        "external_avatar_characters": {
+          "items": {
+            "type": "string"
+          },
+          "title": "External Avatar Characters",
+          "type": "array"
+        },
+        "generation_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Generation Id"
+        },
+        "memory_count": {
+          "title": "Memory Count",
+          "type": "integer"
+        },
+        "message_count": {
+          "title": "Message Count",
+          "type": "integer"
+        },
+        "save_count": {
+          "title": "Save Count",
+          "type": "integer"
+        },
+        "sha256": {
+          "title": "Sha256",
+          "type": "string"
+        },
+        "story_id": {
+          "title": "Story Id",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "story_id",
+        "title",
+        "created_at",
+        "branch_count",
+        "message_count",
+        "save_count",
+        "memory_count",
+        "sha256"
+      ],
+      "title": "StoryTrashView",
+      "type": "object"
+    },
+    "StoryView": {
+      "properties": {
+        "active_scene_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Active Scene Id"
+        },
+        "branch_revision": {
+          "title": "Branch Revision",
+          "type": "integer"
+        },
+        "characters": {
+          "items": {
+            "$ref": "#/$defs/Character"
+          },
+          "title": "Characters",
+          "type": "array"
+        },
+        "contract_version": {
+          "const": 1,
+          "default": 1,
+          "title": "Contract Version",
+          "type": "integer"
+        },
+        "conversation_runs": {
+          "items": {
+            "$ref": "#/$defs/ConversationRunView"
+          },
+          "title": "Conversation Runs",
+          "type": "array"
+        },
+        "event_cursor": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Event Cursor"
+        },
+        "groups": {
+          "items": {
+            "$ref": "#/$defs/GroupActor"
+          },
+          "title": "Groups",
+          "type": "array"
+        },
+        "latest_seq": {
+          "default": -1,
+          "title": "Latest Seq",
+          "type": "integer"
+        },
+        "lorebooks": {
+          "items": {},
+          "title": "Lorebooks",
+          "type": "array"
+        },
+        "messages": {
+          "items": {
+            "$ref": "#/$defs/MessageView"
+          },
+          "title": "Messages",
+          "type": "array"
+        },
+        "next_before_seq": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Next Before Seq"
+        },
+        "pending_director": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/DirectorDecision"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "player_identities": {
+          "items": {
+            "$ref": "#/$defs/PlayerIdentity"
+          },
+          "title": "Player Identities",
+          "type": "array"
+        },
+        "player_people": {
+          "additionalProperties": {
+            "$ref": "#/$defs/Character"
+          },
+          "title": "Player People",
+          "type": "object"
+        },
+        "scenes": {
+          "items": {
+            "$ref": "#/$defs/Scene"
+          },
+          "title": "Scenes",
+          "type": "array"
+        },
+        "session": {
+          "$ref": "#/$defs/SessionView"
+        },
+        "turn": {
+          "title": "Turn",
+          "type": "integer"
+        },
+        "turn_runs": {
+          "items": {
+            "$ref": "#/$defs/TurnRunView"
+          },
+          "title": "Turn Runs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "messages",
+        "branch_revision",
+        "turn",
+        "session",
+        "characters",
+        "groups",
+        "scenes",
+        "active_scene_id",
+        "player_identities",
+        "player_people",
+        "turn_runs",
+        "conversation_runs",
+        "pending_director",
+        "event_cursor"
+      ],
+      "title": "StoryView",
+      "type": "object"
+    },
+    "TokenUsage": {
+      "properties": {
+        "cached_tokens": {
+          "default": 0,
+          "title": "Cached Tokens",
+          "type": "integer"
+        },
+        "input_tokens": {
+          "default": 0,
+          "title": "Input Tokens",
+          "type": "integer"
+        },
+        "output_tokens": {
+          "default": 0,
+          "title": "Output Tokens",
+          "type": "integer"
+        }
+      },
+      "title": "TokenUsage",
+      "type": "object"
+    },
+    "TurnRunView": {
+      "properties": {
+        "basis_fingerprint": {
+          "default": "",
+          "title": "Basis Fingerprint",
+          "type": "string"
+        },
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        },
+        "epoch": {
+          "default": 0,
+          "title": "Epoch",
+          "type": "integer"
+        },
+        "errors": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Errors",
+          "type": "array"
+        },
+        "followups": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Followups",
+          "type": "object"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "input_message_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Input Message Ids",
+          "type": "array"
+        },
+        "last_error": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Last Error"
+        },
+        "operation_id": {
+          "title": "Operation Id",
+          "type": "string"
+        },
+        "padding_prepared": {
+          "default": false,
+          "title": "Padding Prepared",
+          "type": "boolean"
+        },
+        "plan": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Plan"
+        },
+        "player_identity_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Player Identity Id"
+        },
+        "prepared_scene_message_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Prepared Scene Message Ids",
+          "type": "array"
+        },
+        "request_fingerprint": {
+          "title": "Request Fingerprint",
+          "type": "string"
+        },
+        "scene_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Scene Id"
+        },
+        "session_id": {
+          "title": "Session Id",
+          "type": "string"
+        },
+        "slots": {
+          "items": {
+            "$ref": "#/$defs/TurnSlot"
+          },
+          "title": "Slots",
+          "type": "array"
+        },
+        "status": {
+          "default": "running",
+          "enum": [
+            "running",
+            "awaiting_director",
+            "completed",
+            "failed",
+            "interrupted",
+            "cancelled"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "stop_reason": {
+          "default": "",
+          "title": "Stop Reason",
+          "type": "string"
+        },
+        "turn": {
+          "default": 0,
+          "title": "Turn",
+          "type": "integer"
+        },
+        "updated_at": {
+          "format": "date-time",
+          "title": "Updated At",
+          "type": "string"
+        }
+      },
+      "required": [
+        "session_id",
+        "operation_id",
+        "request_fingerprint"
+      ],
+      "title": "TurnRunView",
+      "type": "object"
+    },
+    "TurnSlot": {
+      "properties": {
+        "actor_id": {
+          "title": "Actor Id",
+          "type": "string"
+        },
+        "error": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Error"
+        },
+        "generation_id": {
+          "title": "Generation Id",
+          "type": "string"
+        },
+        "message_id": {
+          "title": "Message Id",
+          "type": "string"
+        },
+        "seq": {
+          "title": "Seq",
+          "type": "integer"
+        },
+        "status": {
+          "default": "pending",
+          "enum": [
+            "pending",
+            "committed",
+            "failed",
+            "cancelled"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "actor_id",
+        "seq"
+      ],
+      "title": "TurnSlot",
+      "type": "object"
+    },
+    "VariantView": {
+      "properties": {
+        "accepted_dependency_sources": {
+          "items": {
+            "$ref": "#/$defs/MessageSourceRef"
+          },
+          "title": "Accepted Dependency Sources",
+          "type": "array"
+        },
+        "content": {
+          "title": "Content",
+          "type": "string"
+        },
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        },
+        "generation_meta": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/GenerationView"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "hygiene": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/HygieneReport"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "content"
+      ],
+      "title": "VariantView",
+      "type": "object"
+    },
+    "Violation": {
+      "description": "一次校验违规（R34.1）：类别 + 回复原文中的证据句。",
+      "properties": {
+        "category": {
+          "enum": [
+            "C1",
+            "C2",
+            "C3",
+            "C4"
+          ],
+          "title": "Category",
+          "type": "string"
+        },
+        "evidence": {
+          "title": "Evidence",
+          "type": "string"
+        }
+      },
+      "required": [
+        "category",
+        "evidence"
+      ],
+      "title": "Violation",
+      "type": "object"
+    },
+    "WorldlineBranchView": {
+      "properties": {
+        "archived": {
+          "title": "Archived",
+          "type": "boolean"
+        },
+        "branch_revision": {
+          "title": "Branch Revision",
+          "type": "integer"
+        },
+        "created_at": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Created At"
+        },
+        "events": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Events",
+          "type": "array"
+        },
+        "first_message_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "First Message Id"
+        },
+        "fork_message_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Fork Message Id"
+        },
+        "fork_save_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Fork Save Id"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "last_message_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Last Message Id"
+        },
+        "message_count": {
+          "title": "Message Count",
+          "type": "integer"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "parent_branch_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Parent Branch Id"
+        },
+        "updated_at": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Updated At"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "parent_branch_id",
+        "fork_message_id",
+        "fork_save_id",
+        "branch_revision",
+        "archived",
+        "message_count",
+        "first_message_id",
+        "last_message_id",
+        "created_at",
+        "updated_at"
+      ],
+      "title": "WorldlineBranchView",
+      "type": "object"
+    },
+    "WorldlineView": {
+      "properties": {
+        "branches": {
+          "items": {
+            "$ref": "#/$defs/WorldlineBranchView"
+          },
+          "title": "Branches",
+          "type": "array"
+        },
+        "matched_branches": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Matched Branches"
+        },
+        "membership_revision": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Membership Revision"
+        },
+        "next_cursor": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Next Cursor"
+        },
+        "story_id": {
+          "title": "Story Id",
+          "type": "string"
+        },
+        "total_branches": {
+          "title": "Total Branches",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "story_id",
+        "total_branches",
+        "branches"
+      ],
+      "title": "WorldlineView",
+      "type": "object"
+    }
+  }
+}

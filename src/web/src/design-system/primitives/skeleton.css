@@ -1,0 +1,18 @@
+/* Skeleton: shimmering placeholder block. Spec section 5. */
+@layer ui.primitives {
+  .ui-skeleton {
+    display: block;
+    height: var(--space-3);
+    border-radius: var(--radius-control);
+    background: linear-gradient(90deg, var(--surface-2) 0%, var(--border-subtle) 50%, var(--surface-2) 100%);
+    background-size: 200% 100%;
+    animation: ui-skeleton-shimmer 1.4s linear infinite;
+  }
+  .ui-skeleton--circle { border-radius: var(--radius-pill); }
+
+  @keyframes ui-skeleton-shimmer { to { background-position: -200% 0; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ui-skeleton { animation: none; }
+  }
+}

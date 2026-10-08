@@ -1,0 +1,64 @@
+@layer ui.primitives {
+.page-art {
+  --page-art-width: 320px;
+  position: relative;
+  display: block;
+  flex: none;
+  inline-size: var(--page-art-width);
+  max-inline-size: 100%;
+  aspect-ratio: 16 / 9;
+  isolation: isolate;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Theme tokens tint a soft support wash; generated pixels keep their original alpha. */
+.page-art::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 10% 6%;
+  background: radial-gradient(ellipse, color-mix(in srgb, var(--region) 12%, transparent), transparent 72%);
+}
+
+.page-art__image {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: contain;
+}
+
+.page-art__image[hidden] {
+  display: none;
+}
+
+.page-art:has(.page-art__image[hidden]) {
+  visibility: hidden;
+}
+
+.page-art--characters {
+  --page-art-width: 320px;
+  aspect-ratio: 8 / 5;
+}
+
+.page-art--character-editor {
+  --page-art-width: 120px;
+  aspect-ratio: 1;
+}
+
+.page-art--crest {
+  --page-art-width: 96px;
+  aspect-ratio: 1;
+}
+
+.page-art--header {
+  --page-art-width: 64px;
+  aspect-ratio: 16 / 9;
+}
+
+@media (max-width: 640px) {
+  .page-art--characters { --page-art-width: 160px; }
+  .page-art--character-editor { --page-art-width: 72px; }
+}
+
+}

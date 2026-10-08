@@ -1,0 +1,196 @@
+/*
+ * Design tokens (document/design/界面设计系统规格.md section 3).
+ * Static tokens live here. The colours below are the light-scheme fallback
+ * (iris-light); applyThemePack writes the active pack's values to the root, and
+ * appearance/semanticTokens.ts owns how they are derived.
+ */
+@layer ui.tokens {
+  :root {
+    /* spacing (4px grid) */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-7: 32px;
+    --space-8: 48px;
+    --space-label: 6px; /* label -> control */
+
+    /* radius */
+    --radius-control: 8px;
+    --radius-card: 12px;
+    --radius-panel: 16px;
+    --radius-pill: 999px;
+    --radius-mark: 4px;
+
+    /* control sizes */
+    --size-sm: 32px;
+    --size-md: 36px;
+    --size-lg: 44px;
+    --size-tag: 24px;
+    --size-nav-item: 40px;
+    --size-bar: 48px;
+    --pad-sm: 10px;
+    --pad-md: 12px;
+    --pad-lg: 16px;
+    --icon-sm: 16px;
+    --icon-md: 18px;
+    --icon-lg: 20px;
+    --border-width: 1px;
+    --focus-width: 2px;
+    --focus-offset: 2px;
+
+    /* type; --font-ui and --font-display are written by the font preference */
+    --font-ui: system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;
+    --font-display: "Sekai XiaoWei", "Songti SC", "SimSun", serif;
+    --font-reading: var(--font-story, "Sekai WenKai", "Microsoft YaHei", serif);
+    --fs-xs: 12px;
+    --fs-sm: 14px;
+    --fs-md: 16px;
+    --fs-lg: 18px;
+    --fs-xl: 20px;
+    --fs-title: 22px;
+    --fs-2xl: 24px;
+    --fs-3xl: 30px;
+    --fw-regular: 400;
+    --fw-semibold: 600;
+    --lh-ui: 1.5;
+    --lh-heading: 1.25;
+    --reading-size: 17px;
+    --reading-lh: 1.85;
+    --reading-gap: 0.8em;
+
+    /* motion */
+    --dur-hover: 120ms;
+    --dur-press: 160ms;
+    --dur-layer: 200ms;
+    --ease: cubic-bezier(0.2, 0, 0, 1);
+    --opacity-disabled: 0.5;
+
+    /* stacking: menus and selects sit above the dialogs of dialogs.css (100-121) */
+    --z-menu: 150;
+    --z-toast: 160;
+    --z-tooltip: 170;
+
+    /* surfaces */
+    --bg-page: #F3F1F8;
+    --bg-shell: #FAF8FD;
+    --surface-1: #FFFFFF;
+    --surface-2: #F6F3FA;
+    --surface-3: #FFFFFF;
+    --surface-reading: #F8F7FB;
+    --border-subtle: #E4DDEF;
+    --border-default: #CFC5E0;
+    --border-strong: #9286AA;
+    --border-strong-hover: #7F719B;
+    --text-1: #2B2438;
+    --text-2: #5E5470;
+    --text-3: #6E657B;
+    --accent: #6A4FB0;
+    --accent-soft: #EDE6FA;
+    --on-accent: #FFFFFF;
+
+    /* regions */
+    --region-story: #23708A;
+    --region-story-soft: #E3F1F5;
+    --region-character: #94476A;
+    --region-character-soft: #F8E8EF;
+
+    /* gold */
+    --gold-1: #F6E3B8;
+    --gold-2: #E3C385;
+    --gold-3: #C9A265;
+    --gold-border: #B08D52;
+    --gold-text: #3B291A;
+    --gold-highlight: rgba(255, 255, 255, 0.65);
+
+    /* status */
+    --danger: #A33653;
+    --danger-soft: #FAEAF0;
+    --success: #296E55;
+    --success-soft: #E4F2EB;
+    --warning: #8A5A12;
+    --warning-soft: #FCF1DA;
+    --focus: #7651B0;
+
+    /* overlays, scrim and decoration washes */
+    --overlay-hover: rgba(43, 36, 56, 0.06);
+    --overlay-active: rgba(43, 36, 56, 0.11);
+    --scrim: rgba(43, 36, 56, 0.42);
+    --wash-a: rgba(106, 79, 176, 0.09);
+    --wash-b: rgba(35, 112, 138, 0.07);
+    --weave-line: rgba(106, 79, 176, 0.06);
+    --nav-moon: rgba(201, 162, 101, 0.16);
+    --nav-top: #EDE6F8;
+    --nav-bottom: #F2ECF9;
+    --nav-halo: rgba(214, 176, 112, 0.42);
+    --glow-iris: rgba(106, 79, 176, 0.30);
+    --gold-hair: rgba(176, 141, 82, 0.42);
+    --gold-glow: rgba(227, 195, 133, 0.62);
+    --gold-shade: rgba(120, 78, 22, 0.30);
+    --glass-hi: rgba(255, 255, 255, 0.80);
+    --glass-lo: rgba(250, 248, 253, 0.64);
+    --glass-tint: #FFFFFF;
+
+    /* elevation */
+    --shadow-e1: 0 1px 2px rgba(43, 36, 56, 0.06);
+    --shadow-e2: 0 4px 16px rgba(43, 36, 56, 0.10);
+    --shadow-e3: 0 16px 48px rgba(43, 36, 56, 0.22);
+
+    /* derived from the tokens above, so they follow the pack */
+    --thread: color-mix(in srgb, var(--gold-border) 62%, transparent);
+    --diamond: var(--gold-3);
+    --shadow-crop-overlay: 0 0 0 100px var(--overlay-backdrop);
+    --shadow-ornament-inset: inset 0 0 0 var(--space-1) var(--glass-lo);
+    --shadow-none: 0 0 0 0 transparent;
+    --shadow-nav-active: inset 0 0 0 1px var(--gold-hair), 0 0 14px var(--gold-hair);
+    --shadow-rail-story-active: inset 3px 0 0 var(--region-story);
+    --shadow-tab-story-active: inset 0 -3px 0 var(--region-story);
+
+    /* primary action surface; the ornament level picks one (ornament.css) */
+    --btn-primary-bg-flat: var(--gold-2);
+    --btn-primary-bg-grad: linear-gradient(180deg, var(--gold-1) 0%, var(--gold-2) 55%, var(--gold-3) 100%);
+    --btn-primary-bg-enamel:
+      radial-gradient(120% 80% at 50% 0%, var(--gold-highlight), transparent 62%),
+      linear-gradient(180deg, var(--gold-1) 0%, var(--gold-2) 52%, var(--gold-3) 100%);
+    --btn-primary-bg-enamel-hi: inset 0 1px 0 var(--gold-highlight), inset 0 -2px 3px var(--gold-shade);
+    --btn-primary-bg: var(--btn-primary-bg-grad);
+    --btn-primary-hi: inset 0 1px 0 var(--gold-highlight);
+    --btn-primary-glow: var(--shadow-none);
+    --btn-primary-glow-hover: var(--shadow-none);
+    --btn-primary-glow-rich: 0 3px 14px var(--gold-glow);
+
+    /* region defaults to the iris accent */
+    --region: var(--accent);
+    --region-soft: var(--accent-soft);
+  }
+
+  /* Region mapping: primitives only read --region / --region-soft */
+  [data-region="story"] {
+    --region: var(--region-story);
+    --region-soft: var(--region-story-soft);
+  }
+  [data-region="character"] {
+    --region: var(--region-character);
+    --region-soft: var(--region-character-soft);
+  }
+  [data-region="neutral"] {
+    --region: var(--accent);
+    --region-soft: var(--accent-soft);
+  }
+
+  /* md controls grow to the touch size on coarse pointers */
+  @media (pointer: coarse) {
+    :root { --size-md: 44px; }
+  }
+
+  /* Reduced motion: state changes become instant */
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+      --dur-hover: 0ms;
+      --dur-press: 0ms;
+      --dur-layer: 0ms;
+    }
+  }
+}

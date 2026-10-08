@@ -1,0 +1,12 @@
+/* Panel: radius 16, padding 24 (20 compact). Spec section 5. */
+@layer ui.primitives {
+  .ui-panel {
+    box-sizing: border-box;
+    padding: var(--space-6);
+    border: var(--border-width) solid var(--border-subtle);
+    border-radius: var(--radius-panel);
+    background: var(--surface-1);
+    color: var(--text-1);
+  }
+  .ui-panel--compact { padding: var(--space-5); }
+}

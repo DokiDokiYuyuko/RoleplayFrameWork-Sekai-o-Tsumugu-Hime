@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "id": "midnight",
+  "name": "月蚀蓝",
+  "note": "银蓝夜色，适合暗光环境",
+  "order": 3,
+  "color_scheme": "dark",
+  "preview": [
+    "#151c2b",
+    "#a9c6f3",
+    "#e7c38a",
+    "#baabd8"
+  ],
+  "palette": {
+    "page": "#151c2b",
+    "surface": "#202b3d",
+    "surfaceSoft": "#2a3850",
+    "text": "#edf2fb",
+    "textMuted": "#aebbd0",
+    "border": "#3b4a64",
+    "primary": "#a9c6f3",
+    "primaryHover": "#c2d6f5",
+    "primaryButton": "#4b6695",
+    "primaryButtonHover": "#3e567f",
+    "onPrimary": "#ffffff",
+    "primarySoft": "#2a3c58",
+    "accent": "#e7c38a",
+    "secondary": "#baabd8",
+    "nav": "#101728",
+    "navText": "#edf2fb",
+    "navMuted": "#aebbd0",
+    "rail": "#1a2537",
+    "focus": "#b8d0ff",
+    "danger": "#f0aaa0",
+    "dangerSoft": "color-mix(in srgb, #783f3d 34%, var(--surface))",
+    "success": "#a4d9b8",
+    "successSoft": "color-mix(in srgb, #286044 34%, var(--surface))",
+    "warningSoft": "color-mix(in srgb, #755b2e 38%, var(--surface))",
+    "brandStart": "#e9eef9",
+    "brandEnd": "#d1d9e9"
+  },
+  "shadows": {
+    "panel": "0 14px 40px rgba(0, 0, 0, 0.16)",
+    "card": "0 8px 24px rgba(0, 0, 0, 0.2)"
+  },
+  "assets": {
+    "nav_art": "/brand/themes/astral/sidebar-palace.jpg",
+    "story_cover_forest": "/brand/themes/astral/story-forest.jpg",
+    "story_cover_ocean": "/brand/themes/astral/story-ocean.jpg",
+    "story_cover_moon": "/brand/themes/astral/story-moon.jpg"
+  }
+}

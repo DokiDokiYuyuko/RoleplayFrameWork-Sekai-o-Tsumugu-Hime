@@ -1,0 +1,22 @@
+.v7-character-editor .creation-intro { color: var(--muted); font-size: .85rem; line-height: 1.6; }
+.v7-character-editor .creation-world { display: grid; gap: .4rem; margin-bottom: 1rem; font-size: .85rem; color: var(--muted); }
+.v7-character-editor .creation-world select, .v7-character-editor .creation-manuscript { width: 100%; padding: .8rem; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--ink); }
+.v7-character-editor .creation-manuscript { min-height: 20rem; font-size: .95rem; line-height: 1.8; resize: vertical; }
+.v7-character-editor .creation-notice { padding: .75rem; border: 1px solid var(--line); border-radius: 10px; background: var(--warning-soft); color: var(--ink); font-size: .8rem; }
+.v7-character-editor .creation-candidate { width: 100%; min-height: 8rem; resize: vertical; border: 1px solid var(--line); border-radius: 8px; padding: .6rem; background: var(--surface); color: var(--ink); }
+.v7-character-editor .creation-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
+.v7-character-editor .creation-error { color: var(--danger); font-size: .8rem; }
+.v7-character-editor summary { cursor: pointer; }
+.v7-character-editor button:focus-visible, .v7-character-editor textarea:focus-visible, .v7-character-editor select:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.v7-character-editor .creation-source { white-space: pre-wrap; max-height: 20rem; overflow: auto; color: var(--ink); background: var(--surface-soft); padding: .8rem; }
+.v7-character-editor .creation-organize { margin-top: .75rem; }
+.v7-character-editor .creation-organize-panel { margin-top: .75rem; padding: 1rem; border: 1px solid var(--line); border-radius: 10px; background: var(--surface-soft); display: grid; gap: .8rem; }
+.v7-character-editor .creation-organize-fields { display: flex; flex-wrap: wrap; gap: .6rem 1rem; color: var(--ink); font-size: .85rem; }
+.v7-character-editor .creation-organize-fields > p { flex-basis: 100%; }
+.v7-character-editor .creation-organize-fields > label { display: inline-flex; align-items: center; gap: .4rem; }
+.v7-character-editor .creation-reference { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem; font-size: .85rem; color: var(--ink); }
+.v7-character-editor .creation-reference small { flex-basis: 100%; color: var(--muted); }
+@media (max-width: 650px) {
+  .v7-character-editor > div > div:first-child > .creation-header-actions { flex-wrap: wrap; overflow: visible; padding-bottom: 0; }
+  .v7-character-editor .creation-actions > button { white-space: normal; max-width: 100%; }
+}

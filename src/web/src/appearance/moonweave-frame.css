@@ -1,0 +1,21 @@
+@layer ui.layouts {
+  .moonweave-frame { position: relative; isolation: isolate; }
+  .moonweave-ornament { position: absolute; inset: 0; z-index: 2; border: var(--border-width) solid var(--border-default); border-radius: inherit; pointer-events: none; user-select: none; }
+  .moonweave-ornament__corner { position: absolute; width: var(--corner); height: var(--corner); background: center / contain no-repeat; }
+  .moonweave-ornament__corner--tl { top: 0; left: 0; background-image: var(--corner-tl); }
+  .moonweave-ornament__corner--br { bottom: 0; right: 0; background-image: var(--corner-br); }
+  .moonweave-ornament__corner--tr { top: 0; right: 0; }
+  .moonweave-ornament__corner--bl { bottom: 0; left: 0; }
+  .moonweave-ornament__corner img { display: none; width: 100%; height: 100%; object-fit: contain; }
+  .moonweave-ornament__crest, .moonweave-ornament__corner--tr, .moonweave-ornament__corner--bl { display: none; }
+  :root[data-ornament="rich"] .moonweave-ornament { box-shadow: var(--shadow-ornament-inset); }
+  :root[data-ornament="rich"] .moonweave-ornament__corner { width: 96px; height: 96px; }
+  :root[data-ornament="rich"] .moonweave-ornament__corner img { display: block; }
+  :root[data-ornament="rich"] .moonweave-ornament__corner:has(img) { background: none; }
+  :root[data-ornament="rich"] .moonweave-ornament__crest { display: block; position: absolute; top: calc(var(--space-5) * -1); left: 50%; transform: translateX(-50%); width: var(--size-lg); height: var(--size-lg); object-fit: contain; }
+  :root[data-ornament="none"] .moonweave-ornament__corner { display: none; }
+  .moonweave-ornament[data-variant="panel"] .moonweave-ornament__corner { display: none; }
+  :root[data-ornament="rich"] .moonweave-ornament[data-variant="dialog"] .moonweave-ornament__corner { width: var(--size-lg); height: var(--size-lg); }
+  @media (max-width: 899px) { :root[data-ornament="rich"] .moonweave-ornament__corner { width: var(--size-md); height: var(--size-md); } }
+  @media (forced-colors: active) { .moonweave-ornament__corner, .moonweave-ornament__crest { visibility: hidden; } }
+}

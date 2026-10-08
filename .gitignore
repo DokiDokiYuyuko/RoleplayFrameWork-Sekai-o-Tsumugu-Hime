@@ -1,0 +1,63 @@
+# ===== 运行时数据（本地内容，不入库；schema 见 document/design/data-model.md） =====
+data/characters/*
+data/lorebooks/*
+data/memories/*
+data/saves/*
+data/engines/*
+data/sessions/*
+!data/**/.gitkeep
+data/settings.json
+
+# ===== 第三方（third_party/README.md 登记的锁定策略；克隆仓库不入库） =====
+third_party/deepseek-harness/
+third_party/node_modules/
+
+# ===== 依赖与构建 =====
+node_modules/
+dist/
+src/web/.lan-dist-*
+src/web/.player-switch-acceptance-dist/
+build/
+# 前端构建辅助源码（不是构建产物）
+!src/web/build/
+!src/web/build/**
+.venv/
+venv/
+__pycache__/
+*.pyc
+.turbo/
+.next/
+
+# ===== 环境与密钥 =====
+.env
+.env.*
+*.local
+*.key
+*.p12
+*.pfx
+*.pem
+*.crt
+data/security/lan-tls/
+
+# ===== 编辑器/系统 =====
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# ===== 临时与日志 =====
+*.log
+tmp/
+.cache/
+.playwright-cli/
+
+# Complete private runtime and local migration boundary
+data/
+backups/
+external_data/
+.pytest_cache/
+third_party/*
+!third_party/README.md
+!third_party/fonts.json
+!third_party/public-assets.json
+!third_party/dependencies.json

@@ -1,0 +1,69 @@
+@layer ui.pages {
+.inspiration-desk { position: relative; }
+.inspiration-desk[data-layout="form-main"] { grid-template-columns: 420px minmax(0, 1fr) 360px; }
+.inspiration-desk h2, .inspiration-desk h3, .inspiration-desk h4 { color: var(--text-1); }
+.inspiration-desk p { margin: 0; }
+.inspiration-desk a { color: var(--accent); overflow-wrap: anywhere; }
+.inspiration-desk .inspiration-muted { color: var(--text-3); font-size: var(--fs-sm); line-height: var(--lh-ui); }
+.inspiration-fields { display: grid; gap: var(--space-4); }
+.inspiration-field { display: grid; gap: var(--space-2); min-width: 0; }
+.inspiration-field > span { font-size: var(--fs-sm); color: var(--text-2); font-weight: var(--fw-semibold); }
+.inspiration-field > :is(textarea,input), .inspiration-agent-input { box-sizing:border-box; width:100%; min-width:0; border:1px solid var(--border-default); border-radius:var(--radius-control); padding:var(--space-3); background:var(--surface-1); color:var(--text-1); font:inherit; line-height:var(--lh-ui); }
+.inspiration-field > textarea { resize:vertical; min-height:88px; }
+.inspiration-field > :is(textarea,input):focus-visible, .inspiration-agent-input:focus-visible { outline:2px solid var(--focus); outline-offset:2px; }
+.inspiration-search { display:grid; gap:var(--space-3); }
+.inspiration-search-row, .inspiration-actions { display:flex; flex-wrap:wrap; gap:var(--space-2); align-items:center; }
+.inspiration-search-row > .ui-input { flex:1; min-width:160px; }
+.inspiration-sources, .inspiration-tags, .inspiration-refs { display:flex; flex-wrap:wrap; gap:var(--space-2); }
+.inspiration-sources label { display:flex; gap:var(--space-2); align-items:center; color:var(--text-2); font-size:var(--fs-sm); }
+.inspiration-status { display:inline-flex; flex:none; border:1px solid var(--border-subtle); border-radius:var(--radius-pill); padding:2px var(--space-2); color:var(--text-2); background:var(--surface-2); font-size:var(--fs-xs); }
+.inspiration-status[data-tone="success"] { color:var(--success); background:var(--success-soft); }
+.inspiration-status[data-tone="warning"] { color:var(--text-2); background:var(--warning-soft); }
+.inspiration-list { display:grid; gap:var(--space-3); }
+.inspiration-row { display:grid; min-width:0; gap:var(--space-3); padding:var(--space-4); border:1px solid var(--border-default); border-radius:var(--radius-card); background:var(--surface-1); }
+.inspiration-row[data-selected="true"] { border-color:var(--accent); background:var(--accent-soft); }
+.inspiration-row h4, .inspiration-row h3 { margin:0; font-size:var(--fs-md); font-weight:var(--fw-semibold); overflow-wrap:anywhere; }
+.inspiration-row-head { display:flex; gap:var(--space-3); justify-content:space-between; align-items:flex-start; min-width:0; }
+.inspiration-row-head > div { flex:1; min-width:0; }
+.inspiration-copy { white-space:pre-wrap; overflow-wrap:anywhere; color:var(--text-2); font-size:var(--fs-sm); line-height:var(--lh-ui); }
+.inspiration-summary { display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+.inspiration-tags > span { background:var(--surface-2); color:var(--text-3); border-radius:var(--radius-mark); padding:2px var(--space-2); font-size:var(--fs-xs); }
+.inspiration-site { display:grid; gap:var(--space-3); margin-bottom:var(--space-5); }
+.inspiration-site-head { display:flex; align-items:center; flex-wrap:wrap; gap:var(--space-2); }
+.inspiration-site-head h3 { flex:1; margin:0; font-size:var(--fs-md); }
+.inspiration-empty { display:grid; gap:var(--space-3); padding:var(--space-7) 0; color:var(--text-3); font-size:var(--fs-sm); line-height:var(--lh-ui); }
+.inspiration-fields-preview { display:grid; gap:var(--space-4); }
+.inspiration-fields-preview strong { display:block; margin-bottom:var(--space-2); font-size:var(--fs-xs); color:var(--text-3); }
+.inspiration-task-button { width:100%; text-align:left; cursor:pointer; color:var(--text-1); font:inherit; }
+.inspiration-task-button:hover { background:var(--surface-2); }
+.inspiration-task-button:focus-visible { outline:2px solid var(--focus); outline-offset:2px; }
+.inspiration-task-header { display:flex; align-items:center; gap:var(--space-2); }
+.inspiration-task-header > h3 { flex:1; margin:0; }
+.inspiration-detail-body { display:grid; gap:var(--space-4); align-content:start; }
+.inspiration-detail-body .workshop-disclosure { margin:0; }
+.inspiration-agent-messages { display:grid; gap:var(--space-3); max-height:360px; overflow:auto; }
+.inspiration-agent-message { display:grid; gap:var(--space-2); border:1px solid var(--border-subtle); border-radius:var(--radius-card); padding:var(--space-3); background:var(--surface-2); }
+.inspiration-agent-message[data-role="user"] { background:var(--accent-soft); }
+.inspiration-agent-message strong { font-size:var(--fs-xs); color:var(--text-3); }
+.inspiration-history { display:grid; gap:var(--space-3); margin-top:var(--space-2); }
+.inspiration-history > div { border-bottom:1px solid var(--border-subtle); padding-bottom:var(--space-3); }
+.inspiration-foot { flex-direction:column; align-items:stretch; padding-block:var(--space-3); }
+.inspiration-foot p { font-size:var(--fs-xs); color:var(--text-3); }
+.inspiration-mobile-tabs { display:none; }
+.inspiration-result-tabs { display:flex; align-items:center; gap:var(--space-2); flex:1; }
+.inspiration-detail-close { display:none; }
+@media (max-width:1499px) {
+  .inspiration-desk[data-layout="form-main"] { grid-template-columns:420px minmax(0,1fr); }
+  .inspiration-aside { display:none; }
+  .inspiration-desk[data-detail-open="true"] .inspiration-aside { display:flex; position:absolute; z-index:4; inset:0 0 0 auto; width:min(440px,calc(100% - 24px)); background:var(--surface-1); box-shadow:var(--shadow-e3); }
+  .inspiration-detail-close { display:inline-flex; }
+}
+@media (max-width:899px) {
+  .inspiration-desk[data-layout="form-main"] { grid-template-columns:minmax(0,1fr); grid-template-rows:auto minmax(0,1fr); }
+  .inspiration-mobile-tabs { display:flex; gap:var(--space-2); padding:var(--space-2) var(--space-4); border-bottom:1px solid var(--border-subtle); }
+  .inspiration-desk[data-pane="input"] > .inspiration-results, .inspiration-desk[data-pane="result"] > .inspiration-input { display:none; }
+  .inspiration-desk > .workbench-column { border-left:0; }
+  .inspiration-desk[data-detail-open="true"] .inspiration-aside { width:100%; }
+}
+
+}

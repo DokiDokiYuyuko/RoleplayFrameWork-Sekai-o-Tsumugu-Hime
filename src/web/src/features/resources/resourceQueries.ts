@@ -1,0 +1,30 @@
+import { worldCreationApi } from '../worlds/worldCreationApi';
+import { api } from '../../api/client';
+/** Every shared remote resource has exactly one key, independent of the calling screen. */
+export const resourceQueries = {
+  assetJobs: () => ({ queryKey: ['asset-import-jobs'] as const, queryFn: worldCreationApi.list }),
+  memoryWindows: (sid: string, cid: string) => ({ queryKey: ['memory-windows', sid, cid] as const, queryFn: () => api.memoryWindows(sid, cid) }),
+  modelRequest: (sid: string, id: string) => ({ queryKey: ['model-request', sid, id] as const, queryFn: () => api.getModelRequest(sid, id) }),
+  characters: () => ({ queryKey: ['characters'] as const, queryFn: api.listCharacters }),
+  lorebooks: () => ({ queryKey: ['lorebooks'] as const, queryFn: api.listLorebooks }),
+  settings: () => ({ queryKey: ['settings'] as const, queryFn: api.getSettings }),
+  scenarios: () => ({ queryKey: ['scenarios'] as const, queryFn: ({ signal }: { signal: AbortSignal }) => api.listScenarios({ signal }) }),
+  promptPresets: () => ({ queryKey: ['prompt-presets'] as const, queryFn: api.listPromptPresets }),
+  models: (profile: string) => ({ queryKey: ['gateway-models', profile] as const, queryFn: ({ signal }: { signal: AbortSignal }) => api.listGatewayModels(profile, { signal }) }),
+  providers: (model: string) => ({ queryKey: ['model-providers', model] as const, queryFn: ({ signal }: { signal: AbortSignal }) => api.listModelProviders(model, { signal }) }),
+  world: (id: string) => ({ queryKey: ['world', id] as const, queryFn: ({ signal }: { signal: AbortSignal }) => api.getWorld(id, { signal }) }),
+  owners: () => ({ queryKey: ['world-owners'] as const, queryFn: api.listWorldOwners }),
+  covers: () => ({ queryKey: ['world-covers'] as const, queryFn: api.listWorldCovers }),
+  voices: () => ({ queryKey: ['tts-voices'] as const, queryFn: api.listVoiceProfiles }),
+  tts: () => ({ queryKey: ['tts-status'] as const, queryFn: api.getTTSStatus }),
+  worlds: () => ({ queryKey: ['worlds'] as const, queryFn: api.listWorlds }),
+  cardSources: () => ({ queryKey: ['card-sources'] as const, queryFn: api.listCardSources }),
+  cardJobs: () => ({ queryKey: ['card-inspiration-jobs'] as const, queryFn: api.listCardInspirationJobs }),
+  lorebookJobs: () => ({ queryKey: ['lorebook-agent-jobs'] as const, queryFn: api.listLorebookAgentJobs }),
+  modelRequests: (sid: string) => ({ queryKey: ['model-requests', sid] as const, queryFn: () => api.listModelRequests(sid) }),
+  memories: (cid: string, sid?: string) => ({ queryKey: ['memories', sid ?? '', cid] as const, queryFn: () => api.listMemories(cid, sid) }),
+  memoryJob: (sid: string, op: string) => ({ queryKey: ['memory-job', sid, op] as const, queryFn: () => api.getMemoryJob(sid, op) }),
+  saves: (sid: string) => ({ queryKey: ['story-saves', sid] as const, queryFn: () => api.listSaves(sid) }),
+  cost: (sid: string) => ({ queryKey: ['story-cost', sid] as const, queryFn: () => api.getCost(sid) }),
+  simpleChats: () => ({ queryKey: ['simple-chats'] as const, queryFn: ({ signal }: { signal: AbortSignal }) => api.listSimpleChats({ signal }) }),
+};
