@@ -78,11 +78,72 @@ def test_development_documents_and_private_runtime_are_excluded(tmp_path: Path) 
     assert 'CLAUDE.md' not in files and 'AGENTS.md' not in files
 
 
+def test_only_the_user_character_art_skill_is_publishable(tmp_path: Path) -> None:
+    _minimal_code_tree(tmp_path)
+    approved = '.agents/skills/character-card-art/SKILL.md'
+    extras = ['.agents/skills/character-card-art/private-notes.md',
+              '.agents/skills/character-card-art/agents/openai.yaml',
+              '.agents/skills/developer-quality/SKILL.md',
+              '.claude/skills/character-card-art/SKILL.md']
+    for name in [approved, *extras]:
+        path = tmp_path / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text('Synthetic skill content', encoding='utf-8')
+    files = set(source_files(tmp_path))
+    assert {name for name in files if name.startswith(('.agents/', '.claude/'))} == {approved}
+
+
+def test_user_skill_still_obeys_privacy_scan(tmp_path: Path) -> None:
+    _minimal_code_tree(tmp_path)
+    skill = tmp_path / '.agents/skills/character-card-art/SKILL.md'
+    skill.parent.mkdir(parents=True)
+    fake_key = 'sk-' + 'or-v1-' + 'a' * 40
+    skill.write_text('Synthetic token ' + fake_key, encoding='utf-8')
+    with pytest.raises(ValueError, match='publication stopped'):
+        source_files(tmp_path)
+
+
 def test_stored_test_data_requires_reviewed_synthetic_origin(tmp_path: Path) -> None:
     _minimal_code_tree(tmp_path)
     fixture = tmp_path / 'src/mrp/tests/fixtures/unreviewed.json'
     fixture.parent.mkdir(parents=True)
     fixture.write_text('{"messages":[]}', encoding='utf-8')
+    with pytest.raises(ValueError, match='test-data fixture'):
+        source_files(tmp_path)
+
+
+def _reviewed_fixture(tmp_path: Path, payload: bytes) -> str:
+    _minimal_code_tree(tmp_path)
+    name = 'src/mrp/tests/fixtures/synthetic-session-v1.json'
+    fixture = tmp_path / name
+    fixture.parent.mkdir(parents=True)
+    fixture.write_bytes(payload)
+    return name
+
+
+def _reviewed_fixture_lf() -> bytes:
+    path = Path(__file__).resolve().parents[2] / 'src/mrp/tests/fixtures/synthetic-session-v1.json'
+    return path.read_bytes().replace(b'\r\n', b'\n')
+
+
+@pytest.mark.parametrize('newline', [b'\n', b'\r\n'], ids=['git-lf', 'windows-crlf'])
+def test_reviewed_fixture_accepts_only_checkout_line_ending_equivalence(tmp_path: Path, newline: bytes) -> None:
+    name = _reviewed_fixture(tmp_path, _reviewed_fixture_lf().replace(b'\n', newline))
+    assert name in source_files(tmp_path)
+
+
+@pytest.mark.parametrize('mutation', ['body', 'indent', 'extra-line', 'bare-cr', 'bom'])
+def test_reviewed_fixture_still_rejects_other_byte_changes(tmp_path: Path, mutation: str) -> None:
+    payload = _reviewed_fixture_lf()
+    changes = {
+        'body': payload.replace(b'Synthetic migration message 0.', b'Different synthetic message 0.'),
+        'indent': payload.replace(b'  ', b'   ', 1),
+        'extra-line': payload + b'\n',
+        'bare-cr': payload.replace(b'\n', b'\r'),
+        'bom': b'\xef\xbb\xbf' + payload,
+    }
+    assert changes[mutation] != payload
+    _reviewed_fixture(tmp_path, changes[mutation])
     with pytest.raises(ValueError, match='test-data fixture'):
         source_files(tmp_path)
 

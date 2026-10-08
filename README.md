@@ -151,6 +151,8 @@ $env:MRP_PORT = '8000'
 
 ## 开发
 
+可选的 Codex 角色插画功能：在 Codex 打开本项目后，可使用角色编辑器的「复制给 Codex」或调用 `$character-card-art`。仓库保留了这一个面向用户的[角色插画技能](.agents/skills/character-card-art/SKILL.md)；需要 Codex 的内置图像生成工具，普通应用启动和聊天不依赖 Codex。
+
 后端是 **Python / FastAPI**，内部包名保留 `mrp`；前端是 **React / TypeScript / Vite**。Python 依赖由 `uv.lock` 锁定，前端由 `src/web/package-lock.json` 锁定。
 
 ```text

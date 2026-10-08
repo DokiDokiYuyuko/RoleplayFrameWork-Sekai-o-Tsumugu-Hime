@@ -14,6 +14,7 @@ ROOT_FILES = {
     "README.md", "LICENSE", "pyproject.toml", "uv.lock", "requirements-lock.txt", ".gitignore", "run.sh",
     "启动织界之姬.bat", "启动酒馆.bat", "手机访问.bat", "停止服务.bat",
     "start_lan.bat", "stop_server.bat", "disable_lan_firewall.ps1",
+    ".agents/skills/character-card-art/SKILL.md",
 }
 SOURCE_TREES = ("src/mrp", "src/web", "tools", "docs", "third_party")
 EXCLUDED_PARTS = {
@@ -28,8 +29,9 @@ EXCLUDED_FILES = {
     'tools/maintenance/verify_modelscope.py',
 }
 # Stored test data requires an independently reviewed synthetic origin and pinned bytes.
+# Only CRLF -> LF is normalized so Git checkout policy cannot alter approval.
 SYNTHETIC_FIXTURE_HASHES = {
-    'src/mrp/tests/fixtures/synthetic-session-v1.json': 'c8e2c3fdeae21eecbfa8bb1a6eb1dd986deedf19b90d4206ce42a4c34678c87b',
+    'src/mrp/tests/fixtures/synthetic-session-v1.json': '91a031616b35382471c28a0307bddb574eb04690f345ddc39a9e355cd9df380b',
 }
 TEXT_SUFFIXES = {".py", ".ps1", ".bat", ".sh", ".md", ".json", ".ts", ".mts", ".tsx", ".js", ".mjs", ".css", ".toml", ".lock", ".html", ".yml", ".yaml", ".svg", ".txt"}
 SECRET = re.compile(r"(?:sk-(?:or-v1-)?[A-Za-z0-9_-]{24,}|ms-[0-9a-f]{8}-[0-9a-f-]{27,})")
@@ -93,7 +95,8 @@ def source_files(root: Path = PROJECT_ROOT) -> list[str]:
             continue
         if '/tests/' in rel and path.suffix.lower() in {'.json', '.yaml', '.yml'}:
             expected = SYNTHETIC_FIXTURE_HASHES.get(rel)
-            if not expected or hashlib.sha256(path.read_bytes()).hexdigest() != expected:
+            fixture_bytes = path.read_bytes().replace(b'\r\n', b'\n')
+            if not expected or hashlib.sha256(fixture_bytes).hexdigest() != expected:
                 raise ValueError(f'Unreviewed or changed test-data fixture; publication stopped: {rel}')
         if path.suffix.lower() in TEXT_SUFFIXES or path.name in {'.gitignore', 'LICENSE'}:
             content = path.read_text(encoding="utf-8-sig", errors="replace")
@@ -216,7 +219,7 @@ def main() -> None:
             print(f"Privacy and Git-history audit passed for {len(files)} allowlisted files.")
         return
     payload = {"scope": "source-and-public-guides", "files": files,
-               "excluded": ["data", "backups", "tmp", "external_data", "research", "document", ".agents", ".claude", "AGENTS.md", "CLAUDE.md", ".git", ".venv", "node_modules", "dist"]}
+               "excluded": ["data", "backups", "tmp", "external_data", "research", "document", ".agents (except .agents/skills/character-card-art/SKILL.md)", ".claude", "AGENTS.md", "CLAUDE.md", ".git", ".venv", "node_modules", "dist"]}
     rendered = json.dumps(payload, ensure_ascii=False, indent=2)
     if args.output:
         args.output.parent.mkdir(parents=True, exist_ok=True)
